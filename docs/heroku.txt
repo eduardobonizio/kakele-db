@@ -1,0 +1,14 @@
+// Buildpack para utilizar somente react
+  https://github.com/mars/create-react-app-buildpack#usage
+
+// vincular o repot do github com um app heroku existente
+  heroku git:remote -a example-app
+
+// Login
+  heroku login
+
+// Rodar localmente:
+  heroku local web
+
+// Deploy
+  git push heroku-origin master
