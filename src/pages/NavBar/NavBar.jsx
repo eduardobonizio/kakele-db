@@ -30,11 +30,6 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/quiz" className="nav-link">
-                Quiz
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/kakele" className="nav-link">
                 Kakele
               </Link>

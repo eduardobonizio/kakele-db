@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import PrivateRoute from '../../api/PrivateRoute';
+// import PrivateRoute from '../../api/PrivateRoute';
 import Home from '../Home/Home';
 import Kakele from '../Kakele/Kakele';
 import OreCalculator from '../Kakele/OreCalculator';
@@ -11,8 +11,6 @@ import ShowItem from '../Kakele/ShowItem';
 import ShowSet from '../Kakele/ShowSet';
 import WikiDataBaseToJson from '../Kakele/WikiDataBaseToJson';
 import NotFound from '../NotFound/NotFound';
-import GameSetup from '../Quiz/GameSetup';
-import StartGame from '../Quiz/StartGame';
 import Login from '../UserControll/Login';
 import SignUp from '../UserControll/SignUp';
 
@@ -33,23 +31,14 @@ export default function Rotas() {
 
       <Route path="/WikiDataBaseToJson" element={<WikiDataBaseToJson />} />
 
-      <Route
+      {/* <Route
         path="/quiz"
         element={
           <PrivateRoute>
             <GameSetup />
           </PrivateRoute>
         }
-      />
-
-      <Route
-        path="/quiz/start"
-        element={
-          <PrivateRoute>
-            <StartGame />
-          </PrivateRoute>
-        }
-      />
+      /> */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
