@@ -85,7 +85,7 @@ export default function ShowSet() {
       <div className="d-flex flex-column">
         {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
         <ButtonForKakele
-          onClick={() => navigate('/kakele/search-item')}
+          onClick={() => navigate('/search-item')}
           text={text.searchItems}
         />
         <ButtonForKakele onClick={copyLink} text={text.copy} />

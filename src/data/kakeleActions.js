@@ -27,8 +27,8 @@ const genereateLinkToViewSet = (setList, origin, language) => {
     }
     return anterior;
   }, '');
-  if (origin) return `${origin}/kakele/set/${link}`;
-  return `/kakele/set/${link}`;
+  if (origin) return `${origin}/set/${link}`;
+  return `/set/${link}`;
 };
 
 const activateAlert = setShowAlert => {
