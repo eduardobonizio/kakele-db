@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-const kakeleJsx = {
+const navBarJsx = {
   EN: {
     showSet: 'Show Set',
-    generateSet: 'Generate Set',
-    searchItem: 'Search',
+    generateSet: 'Set Generator',
+    searchItem: 'Search Item',
     oreCalculator: 'Upgrades',
   },
   PTBR: {
     showSet: 'Ver Set',
-    generateSet: 'Gerar Set',
+    generateSet: 'Gerador de set',
     searchItem: 'Procurar Item',
     oreCalculator: 'Forja',
   },
@@ -242,7 +242,7 @@ const showItemJsx = {
 };
 
 export {
-  kakeleJsx,
+  navBarJsx,
   itemCardJsx,
   setMakerJsx,
   showSetStatusJsx,

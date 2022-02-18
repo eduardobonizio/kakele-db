@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 // import app from '../../api/Firebase';
-import { kakeleJsx as textOptions } from '../Kakele/Data/dataLanguages';
+import { navBarJsx as textOptions } from '../Kakele/Data/dataLanguages';
 
 function NavBar() {
   const { language } = useSelector(state => state.currentKakeleFilters);
