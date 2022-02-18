@@ -3,7 +3,7 @@ import React from 'react';
 
 import Footer from './pages/Footer/Footer';
 import NavBar from './pages/NavBar/NavBar';
-import Routes from './pages/Routes/Routes';
+import Routes from './Routes/Routes';
 import './App.css';
 
 export default function App() {
