@@ -98,7 +98,7 @@ export default function SetMaker() {
           )}
         </div>
         <ButtonForKakele
-          onClick={() => navigate('/kakele/search-item')}
+          onClick={() => navigate('/search-item')}
           text={text.searchItens}
         />
 
