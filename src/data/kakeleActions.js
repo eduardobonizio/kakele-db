@@ -27,7 +27,7 @@ const genereateLinkToViewSet = (setList, origin, language) => {
     }
     return anterior;
   }, '');
-  if (origin) return `${origin}/set/${link}`;
+  if (origin) return `${origin}/kakele-db/set/${link}`;
   return `/set/${link}`;
 };
 
