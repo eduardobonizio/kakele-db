@@ -38,7 +38,7 @@ export default function ItemCard(props) {
     },
   } = props;
 
-  const showDetails = window.location.href.includes('kakele-db/item/');
+  const showDetails = window.location.href.includes('/item/');
   const currentSet = useSelector(state => state.currentSet);
   const { language } = useSelector(state => state.currentKakeleFilters);
   const text = textOptions[language];
