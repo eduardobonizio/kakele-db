@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import Alert from './Componentes/Alert';
-import ButtonForKakele from './Componentes/ButtonForKakele';
-import InputCheckBox from './Componentes/InputCheckBox';
-import OrePriceUpdater from './Componentes/OrePriceUpdater';
-import UpgradeSelector from './Componentes/UpgradeSelector';
-import { oreCalculatorJsx as textOptions } from './Data/dataLanguages';
+import Alert from '../../componentes/Alert';
+import ButtonForKakele from '../../componentes/ButtonForKakele';
+import InputCheckBox from '../../componentes/InputCheckBox';
+import OrePriceUpdater from '../../componentes/OrePriceUpdater';
+import UpgradeSelector from '../../componentes/UpgradeSelector';
+import { oreCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import {
   activateAlert,
   addDotToKks,
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
-} from './Data/kakele';
+} from '../../data/kakeleActions';
 
 export default function OreCalculator() {
   const { language } = useSelector(state => state.currentKakeleFilters);

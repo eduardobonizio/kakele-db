@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
-import './css/ShowStatusFilterAndCards.css';
+import './ShowStatusFilterAndCards.css';
 
-import ButtonForKakele from './Componentes/ButtonForKakele';
-import ItemCard from './Componentes/ItemCard';
-import ShowSetStatus from './Componentes/ShowSetStatus';
-import { setMakerJsx as textOptions } from './Data/dataLanguages';
+import ButtonForKakele from '../../componentes/ButtonForKakele';
+import ItemCard from '../../componentes/ItemCard';
+import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
+import ShowSetStatus from '../../componentes/ShowSetStatus';
+import { setMakerJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
   genereateLinkToViewSet,
-} from './Data/kakele';
-import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './Data/kakeleData';
-import KakeleItemsFilters from './KakeleItemsFilters';
+} from '../../data/kakeleActions';
+import {
+  equipments,
+  weapons,
+  ALL_ITENS_SLOTS_LIST,
+} from '../../data/kakeleData';
 
 export default function SetMaker() {
   const navigate = useNavigate();

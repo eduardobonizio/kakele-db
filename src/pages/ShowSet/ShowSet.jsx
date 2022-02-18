@@ -2,26 +2,26 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import './css/ShowStatusFilterAndCards.css';
+import './ShowSet.css';
 
 import copy from 'copy-to-clipboard';
 
-import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
-import ButtonForKakele from './Componentes/ButtonForKakele';
-import ItemCard from './Componentes/ItemCard';
-import ShowSetStatus from './Componentes/ShowSetStatus';
-import { showSetJsx as textOptions } from './Data/dataLanguages';
+import ButtonForKakele from '../../componentes/ButtonForKakele';
+import ItemCard from '../../componentes/ItemCard';
+import ShowSetStatus from '../../componentes/ShowSetStatus';
+import { showSetJsx as textOptions } from '../../data/dataLanguages';
 import {
   findItemByName,
   genereateLinkToViewSet,
   urlParamsToObject,
-} from './Data/kakele';
+} from '../../data/kakeleActions';
 import {
   equipments,
   weapons,
   ALL_ITENS_SLOTS_LIST,
   FAKE_ITEM,
-} from './Data/kakeleData';
+} from '../../data/kakeleData';
+import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 
 export default function ShowSet() {
   const navigate = useNavigate();

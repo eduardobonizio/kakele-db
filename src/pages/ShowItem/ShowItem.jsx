@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { useParams } from 'react-router-dom';
 
-import ButtonForKakele from './Componentes/ButtonForKakele';
-import ItemCard from './Componentes/ItemCard';
-import { showItemJsx as textOptions } from './Data/dataLanguages';
-import { genereateLinkToViewSet } from './Data/kakele';
-import { equipments, weapons } from './Data/kakeleData';
-import './css/ShowItem.css';
+import ButtonForKakele from '../../componentes/ButtonForKakele';
+import ItemCard from '../../componentes/ItemCard';
+import { showItemJsx as textOptions } from '../../data/dataLanguages';
+import { genereateLinkToViewSet } from '../../data/kakeleActions';
+import { equipments, weapons } from '../../data/kakeleData';
+import './ShowItem.css';
 
 export default function ShowItem() {
   const navigate = useNavigate();

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Kakele from '../pages/Kakele/Kakele';
-import OreCalculator from '../pages/Kakele/OreCalculator';
-import SearchItem from '../pages/Kakele/SearchItem';
-import SetMaker from '../pages/Kakele/SetMaker';
-import ShowItem from '../pages/Kakele/ShowItem';
-import ShowSet from '../pages/Kakele/ShowSet';
+import Home from '../pages/Home/Home';
 import NotFound from '../pages/NotFound/NotFound';
+import OreCalculator from '../pages/OreCalculator/OreCalculator';
+import SearchItem from '../pages/SearchItem/SearchItem';
+import SetMaker from '../pages/SetMaker/SetMaker';
+import ShowItem from '../pages/ShowItem/ShowItem';
+import ShowSet from '../pages/ShowSet/ShowSet';
 // import PrivateRoute from '../../api/PrivateRoute';
 // import WikiDataBaseToJson from '../pages/Kakele/WikiDataBaseToJson';
 // import Login from '../pages/UserControll/Login';
@@ -16,7 +16,7 @@ import NotFound from '../pages/NotFound/NotFound';
 export default function Rotas() {
   return (
     <Routes>
-      <Route path="/" element={<Kakele />}>
+      <Route path="/" element={<Home />}>
         <Route path="set-maker" element={<SetMaker />} />
         <Route path="search-item" element={<SearchItem />} />
         <Route path="ore-calculator" element={<OreCalculator />} />

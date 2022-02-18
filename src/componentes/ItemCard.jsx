@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router';
 
 import copy from 'copy-to-clipboard';
 
+import { itemCardJsx as textOptions } from '../data/dataLanguages';
+import { FAKE_ITEM } from '../data/kakeleData';
 import {
   udateOneEquipment,
   updateCurrentSet,
-} from '../../../store/actions/kakeleCurrentSet.actions';
-import { itemCardJsx as textOptions } from '../Data/dataLanguages';
-import { FAKE_ITEM } from '../Data/kakeleData';
+} from '../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './ButtonForKakele';
 
 import './css/ItemCard.css';

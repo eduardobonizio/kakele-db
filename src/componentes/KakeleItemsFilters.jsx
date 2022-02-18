@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
 import {
   ITEM_FILTERS_NAME,
   kakeleItemsFiltersJsx as textOptions,
   SLOTS_NAMES,
-} from './Data/dataLanguages';
-import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from './Data/kakeleData';
+} from '../data/dataLanguages';
+import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../data/kakeleData';
+import { updateItensFilter } from '../store/actions/KakeleFilters.actions';
 
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;

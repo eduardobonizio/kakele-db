@@ -10,6 +10,6 @@
 
 .card .button-container {
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=ItemCard.css.map */

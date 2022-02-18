@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
+import ButtonForKakele from '../../componentes/ButtonForKakele';
 import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
-import ButtonForKakele from './Componentes/ButtonForKakele';
 
-export default function Kakele() {
+export default function Home() {
   const dispatch = useDispatch();
   const { language } = useSelector(state => state.currentKakeleFilters);
 

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import { showSetStatusJsx as textOptions } from '../Data/dataLanguages';
-import { checkSetElement } from '../Data/kakele';
+import { showSetStatusJsx as textOptions } from '../data/dataLanguages';
+import { checkSetElement } from '../data/kakeleActions';
 
 export default function ShowSetStatus(props) {
   const { itensListToShowStatus } = props;

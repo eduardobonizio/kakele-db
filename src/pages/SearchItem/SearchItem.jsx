@@ -3,21 +3,21 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
-import './css/SearchItem.css';
+import './SearchItem.css';
 
-import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
-import ButtonForKakele from './Componentes/ButtonForKakele';
-import ItemCard from './Componentes/ItemCard';
-import { searchItemJsx as textOptions } from './Data/dataLanguages';
+import ButtonForKakele from '../../componentes/ButtonForKakele';
+import ItemCard from '../../componentes/ItemCard';
+import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
+import { searchItemJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByElement,
   filterItensByLevelAndClass,
   filterItensBySlot,
   findItemsByName,
   genereateLinkToViewSet,
-} from './Data/kakele';
-import { equipments, weapons, FAKE_ITEM } from './Data/kakeleData';
-import KakeleItemsFilters from './KakeleItemsFilters';
+} from '../../data/kakeleActions';
+import { equipments, weapons, FAKE_ITEM } from '../../data/kakeleData';
+import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 
 export default function SearchItem() {
   const navigate = useNavigate();
