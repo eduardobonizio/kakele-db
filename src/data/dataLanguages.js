@@ -1,4 +1,13 @@
 /* eslint-disable no-unused-vars */
+const homeContentJsx = {
+  EN: {
+    underConstruction: 'Home under construction',
+  },
+  PTBR: {
+    underConstruction: 'Página inical em construção',
+  },
+};
+
 const navBarJsx = {
   EN: {
     showSet: 'Show Set',
@@ -242,6 +251,7 @@ const showItemJsx = {
 };
 
 export {
+  homeContentJsx,
   navBarJsx,
   itemCardJsx,
   setMakerJsx,
