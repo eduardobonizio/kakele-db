@@ -27,7 +27,6 @@ yarn-error.log*
 *.log
 *.tmp
 *.temp
-*.css.map
 
 # temp
 temp
