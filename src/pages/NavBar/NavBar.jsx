@@ -32,6 +32,11 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
+              <Link to="set-maker" className="nav-link">
+                {text.generateSet}
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="set" className="nav-link">
                 {text.showSet}
               </Link>
@@ -44,11 +49,6 @@ function NavBar() {
             <li className="nav-item">
               <Link to="search-item" className="nav-link">
                 {text.searchItem}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="set-maker" className="nav-link">
-                {text.generateSet}
               </Link>
             </li>
           </ul>
