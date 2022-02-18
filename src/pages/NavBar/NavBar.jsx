@@ -7,7 +7,7 @@ import { navBarJsx as textOptions } from '../../data/dataLanguages';
 
 function NavBar() {
   const { language } = useSelector(state => state.currentKakeleFilters);
-  const text = textOptions[language];
+  const text = textOptions[language] || textOptions.PTBR;
 
   return (
     <div
@@ -43,7 +43,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link to="ore-calculator" className="nav-link">
-                {textOptions[language].oreCalculator}
+                {text.oreCalculator}
               </Link>
             </li>
             <li className="nav-item">
