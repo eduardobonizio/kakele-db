@@ -22,8 +22,8 @@ export default function Rotas() {
         <Route path="ore-calculator" element={<OreCalculator />} />
         <Route path="set/*" element={<ShowSet />} />
         <Route path="item/:name" element={<ShowItem />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
-      <Route path="*" element={<NotFound />} />
 
       {/* <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} /> */}
