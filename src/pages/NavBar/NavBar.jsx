@@ -2,10 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import app from '../../api/Firebase';
+// import app from '../../api/Firebase';
+import { kakeleJsx as textOptions } from '../Kakele/Data/dataLanguages';
 
 function NavBar() {
-  const globalUser = useSelector(state => state.globalUser);
+  const { language } = useSelector(state => state.currentKakeleFilters);
+  const text = textOptions[language];
 
   return (
     <div
@@ -30,12 +32,27 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/kakele" className="nav-link">
-                Kakele
+              <Link to="set" className="nav-link">
+                {text.showSet}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="ore-calculator" className="nav-link">
+                {textOptions[language].oreCalculator}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="search-item" className="nav-link">
+                {text.searchItem}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="set-maker" className="nav-link">
+                {text.generateSet}
               </Link>
             </li>
           </ul>
-          <ul className="navbar-nav">
+          {/* <ul className="navbar-nav">
             {globalUser && (
               <>
                 <li className="nav-item">
@@ -67,7 +84,7 @@ function NavBar() {
                 </li>
               </>
             )}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>
