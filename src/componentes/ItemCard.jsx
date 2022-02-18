@@ -38,7 +38,7 @@ export default function ItemCard(props) {
     },
   } = props;
 
-  const showDetails = window.location.href.includes('kakele/item/');
+  const showDetails = window.location.href.includes('kakele-db/item/');
   const currentSet = useSelector(state => state.currentSet);
   const { language } = useSelector(state => state.currentKakeleFilters);
   const text = textOptions[language];
@@ -204,9 +204,7 @@ export default function ItemCard(props) {
             />
             {!showDetails && (
               <ButtonForKakele
-                onClick={() =>
-                  navigate(`/kakele/item/${item[`name${language}`]}`)
-                }
+                onClick={() => navigate(`/item/${item[`name${language}`]}`)}
                 text={text.showItem}
               />
             )}
