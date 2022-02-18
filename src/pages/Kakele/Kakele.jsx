@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
+import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 import ButtonForKakele from './Componentes/ButtonForKakele';
-import { kakeleJsx as textOptions } from './Data/dataLanguages';
 
 export default function Kakele() {
   const dispatch = useDispatch();
@@ -15,12 +16,14 @@ export default function Kakele() {
     dispatch(updateItensFilter('CHANGE_LANGUAGE', selectedLanguage));
   }, []);
 
-  const changeLanguage = newLanguage =>
+  const changeLanguage = newLanguage => {
+    localStorage.setItem('language', newLanguage);
     dispatch(updateItensFilter('CHANGE_LANGUAGE', newLanguage));
+  };
 
   if (!language)
     return (
-      <div className="container d-flex flex-column align-items-center">
+      <div className="body-container container d-flex flex-column align-items-center">
         <ButtonForKakele onClick={() => changeLanguage('EN')} text="English" />
         <ButtonForKakele
           onClick={() => changeLanguage('PTBR')}
@@ -30,14 +33,12 @@ export default function Kakele() {
     );
 
   return (
-    <div className="container d-flex justify-content-center flex-column">
-      <div className="container d-flex justify-content-around mb-2">
-        <Link to="set">{textOptions[language].showSet}</Link>
-        <Link to="set-maker">{textOptions[language].generateSet}</Link>
-        <Link to="search-item">{textOptions[language].searchItem}</Link>
-        <Link to="ore-calculator">{textOptions[language].oreCalculator}</Link>
+    <div className="body-container">
+      <NavBar />
+      <div className="container d-flex justify-content-center flex-column">
+        <Outlet />
       </div>
-      <Outlet />
+      <Footer />
     </div>
   );
 }
