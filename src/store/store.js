@@ -1,5 +1,4 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 import globalUser from './reducers/currentLoggedUser.reducer';
@@ -14,9 +13,6 @@ const rootReducer = combineReducers({
   currentKakeleFilters,
 });
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
