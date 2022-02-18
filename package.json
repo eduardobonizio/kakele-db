@@ -8,6 +8,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc . --ext .js .jsx"
   },
