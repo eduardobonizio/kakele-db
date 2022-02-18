@@ -13,10 +13,8 @@ README.md
 yarn.lock
 package-lock.json
 docker-compose.yml
-.env
 .env.example
 .env.test
-.env
 dist/*
 build/*
 debug/*
