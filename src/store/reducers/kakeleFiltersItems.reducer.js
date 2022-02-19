@@ -6,7 +6,7 @@ const CURRENT_FILTERS = {
   itemName: '',
   slot: 'All',
   orderBy: 'level',
-  language: false,
+  language: 'PTBR',
 };
 
 export default function reducer(state = CURRENT_FILTERS, action) {

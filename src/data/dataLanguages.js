@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 const homeContentJsx = {
   EN: {
+    selectLanguage: 'Select language / Selecione o idioma',
     underConstruction: 'Home under construction',
   },
   PTBR: {
+    selectLanguage: 'Selecione o idioma / Select language ',
     underConstruction: 'Página inical em construção',
   },
 };
