@@ -1,0 +1,57 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+// body {
+//   background-image: url(./assets/Kakele-background.webp);
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: center;
+//   height: 100vh;
+// }
+
+.body-container {
+  min-height: 73vh;
+}
+
+.Nature {
+  color: green;
+}
+.Dark {
+  color: #722f37;
+}
+.Light {
+  color: gold;
+}
+
+.footer-container a {
+  margin-right: 10px;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .body-container {
+    min-height: 80vh;
+  }
+
+  #navbar-itens {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ore-upgrader-container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    .ore-upgrader-filter-container {
+      min-width: 312px;
+    }
+  }
+}
