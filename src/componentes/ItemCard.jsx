@@ -1,20 +1,20 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useRouter } from "next/router";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
-import copy from "copy-to-clipboard";
+import copy from 'copy-to-clipboard';
 
-import { itemCardJsx as textOptions } from "../data/dataLanguages";
-import { FAKE_ITEM } from "../data/kakeleData";
+import { itemCardJsx as textOptions } from '../data/dataLanguages';
+import { FAKE_ITEM } from '../data/kakeleData';
 import {
   udateOneEquipment,
   updateCurrentSet,
-} from "../store/actions/kakeleCurrentSet.actions";
-import ButtonForKakele from "./ButtonForKakele";
+} from '../store/actions/kakeleCurrentSet.actions';
+import ButtonForKakele from './ButtonForKakele';
 
-import "./css/ItemCard.module.css";
-import Link from "next/link";
-import Image from "next/image";
+import './css/ItemCard.module.css';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ItemCard(props) {
   const dispatch = useDispatch();
@@ -39,37 +39,37 @@ export default function ItemCard(props) {
     },
   } = props;
 
-  const showDetails = router.pathname.includes("/item/");
-  const currentSet = useSelector((state) => state.currentSet);
-  const { language } = useSelector((state) => state.currentKakeleFilters);
+  const showDetails = router.pathname.includes('/item/');
+  const currentSet = useSelector(state => state.currentSet);
+  const { language } = useSelector(state => state.currentKakeleFilters);
   const text = textOptions[language];
 
-  const equipItem = (thisItem) => {
-    if (thisItem.nameEN !== "-----------") {
-      if (thisItem.slot === "weapon") {
+  const equipItem = thisItem => {
+    if (thisItem.nameEN !== '-----------') {
+      if (thisItem.slot === 'weapon') {
         if (thisItem.twoHanded) {
           dispatch(
             updateCurrentSet({
               ...currentSet,
               weapon: thisItem,
-              book: { ...FAKE_ITEM, sloot: "book" },
-              shield: { ...FAKE_ITEM, slot: "shield" },
-            })
+              book: { ...FAKE_ITEM, sloot: 'book' },
+              shield: { ...FAKE_ITEM, slot: 'shield' },
+            }),
           );
           return;
         }
         dispatch(udateOneEquipment(thisItem));
         return;
       }
-      if (thisItem.slot === "shield") {
+      if (thisItem.slot === 'shield') {
         if (currentSet.weapon.twoHanded) {
           dispatch(
             updateCurrentSet({
               ...currentSet,
               shield: thisItem,
-              weapon: { ...FAKE_ITEM, slot: "weapon" },
-              book: { ...FAKE_ITEM, sloot: "book" },
-            })
+              weapon: { ...FAKE_ITEM, slot: 'weapon' },
+              book: { ...FAKE_ITEM, sloot: 'book' },
+            }),
           );
           return;
         }
@@ -77,20 +77,20 @@ export default function ItemCard(props) {
           updateCurrentSet({
             ...currentSet,
             shield: thisItem,
-            book: { ...FAKE_ITEM, sloot: "book" },
-          })
+            book: { ...FAKE_ITEM, sloot: 'book' },
+          }),
         );
         return;
       }
-      if (thisItem.slot === "book") {
+      if (thisItem.slot === 'book') {
         if (currentSet.weapon.twoHanded) {
           dispatch(
             updateCurrentSet({
               ...currentSet,
               book: thisItem,
-              weapon: { ...FAKE_ITEM, slot: "weapon" },
-              shield: { ...FAKE_ITEM, sloot: "shield" },
-            })
+              weapon: { ...FAKE_ITEM, slot: 'weapon' },
+              shield: { ...FAKE_ITEM, sloot: 'shield' },
+            }),
           );
           return;
         }
@@ -98,8 +98,8 @@ export default function ItemCard(props) {
           updateCurrentSet({
             ...currentSet,
             book: thisItem,
-            shield: { ...FAKE_ITEM, sloot: "shield" },
-          })
+            shield: { ...FAKE_ITEM, sloot: 'shield' },
+          }),
         );
         return;
       }
@@ -117,7 +117,7 @@ export default function ItemCard(props) {
               {imgUrl && (
                 <Image
                   alt={item[`name${language}`]}
-                  src={imgUrl.replaceAll('"', "")}
+                  src={imgUrl.replace('"', '').replace('"', '')}
                   width={32}
                   height={32}
                 />
@@ -152,7 +152,7 @@ export default function ItemCard(props) {
 
             {currentSet[slot] &&
               currentSet[slot][`name${language}`] === item[`name${language}`] &&
-              currentSet[slot].nameEN !== "-----------" && (
+              currentSet[slot].nameEN !== '-----------' && (
                 <span className="equiped-item">{text.equiped}</span>
               )}
           </div>
@@ -167,9 +167,7 @@ export default function ItemCard(props) {
                     id={`exclude-item-${index}`}
                     checked={ignoredItens.includes(item[`name${language}`])}
                     aria-label="Checkbox for following text input"
-                    onChange={(e) =>
-                      ignoreItens(e.target.name, e.target.checked)
-                    }
+                    onChange={e => ignoreItens(e.target.name, e.target.checked)}
                   />
                 </div>
                 <label
@@ -188,7 +186,7 @@ export default function ItemCard(props) {
                     id={`ignore-slot-element-${index}`}
                     checked={ignoreThisSlotsElement.includes(slot)}
                     aria-label="Checkbox for following text input"
-                    onChange={(e) =>
+                    onChange={e =>
                       ignoreElementForThisSlot(e.target.name, e.target.checked)
                     }
                   />
