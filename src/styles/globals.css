@@ -24,22 +24,12 @@
 }
 
 .footer-container a {
-  margin-right: 10px;
   color: inherit;
 }
 
 @media screen and (min-width: 768px) {
   .body-container {
     min-height: 80vh;
-  }
-  #navbar-itens {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
   }
   .ore-upgrader-container {
     display: -webkit-box !important;
