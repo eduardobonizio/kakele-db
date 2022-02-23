@@ -16,7 +16,7 @@ import { saveSetInLocalStorage } from '../data/kakeleActions';
 export default function ItemCard(props) {
   const {
     state: { currentSet, language },
-    actions: { updateCurrentSet, udateOneEquipment },
+    actions: { updateCurrentSet },
   } = useAppContext();
   const router = useRouter();
   const {
@@ -42,58 +42,51 @@ export default function ItemCard(props) {
   const showDetails = router.pathname.includes('/item/');
   const text = textOptions[language];
 
-  const equipItem = thisItem => {
-    if (thisItem.nameEN !== '-----------') {
-      if (thisItem.slot === 'weapon') {
-        if (thisItem.twoHanded) {
-          updateCurrentSet({
-            ...currentSet,
+  const decide = thisItem => {
+    if (thisItem.slot === 'weapon') {
+      return thisItem.twoHanded
+        ? {
             weapon: thisItem,
             book: { ...FAKE_ITEM, sloot: 'book' },
             shield: { ...FAKE_ITEM, slot: 'shield' },
-          });
-        } else {
-          udateOneEquipment(currentSet, thisItem);
-        }
-      }
-      if (thisItem.slot === 'shield') {
-        if (currentSet.weapon.twoHanded) {
-          updateCurrentSet({
-            ...currentSet,
+          }
+        : { weapon: thisItem };
+    }
+    if (thisItem.slot === 'shield') {
+      return currentSet.weapon.twoHanded
+        ? {
             shield: thisItem,
             weapon: { ...FAKE_ITEM, slot: 'weapon' },
             book: { ...FAKE_ITEM, sloot: 'book' },
-          });
-        } else {
-          updateCurrentSet({
-            ...currentSet,
-            shield: thisItem,
-            book: { ...FAKE_ITEM, sloot: 'book' },
-          });
-        }
-      }
-      if (thisItem.slot === 'book') {
-        if (currentSet.weapon.twoHanded) {
-          updateCurrentSet({
-            ...currentSet,
+          }
+        : { shield: thisItem, book: { ...FAKE_ITEM, sloot: 'book' } };
+    }
+    if (thisItem.slot === 'book') {
+      return currentSet.weapon.twoHanded
+        ? {
             book: thisItem,
             weapon: { ...FAKE_ITEM, slot: 'weapon' },
             shield: { ...FAKE_ITEM, sloot: 'shield' },
-          });
-        } else {
-          updateCurrentSet({
-            ...currentSet,
+          }
+        : {
             book: thisItem,
             shield: { ...FAKE_ITEM, sloot: 'shield' },
-          });
-        }
-      }
-      udateOneEquipment(currentSet, thisItem);
+          };
+    }
+    return { [thisItem.slot]: thisItem };
+  };
+
+  const equipItem = thisItem => {
+    if (thisItem.nameEN !== '-----------') {
+      const whatToDo = decide(thisItem);
+
+      updateCurrentSet({ ...currentSet, ...whatToDo });
 
       const newSet = Object.values({
         ...currentSet,
-        [thisItem.slot]: thisItem,
+        ...whatToDo,
       }).map(item => item);
+
       saveSetInLocalStorage(newSet);
     }
   };
