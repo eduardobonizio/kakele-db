@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-
 import Alert from '../../componentes/Alert';
 import ButtonForKakele from '../../componentes/ButtonForKakele';
 import InputCheckBox from '../../componentes/InputCheckBox';
 import OrePriceUpdater from '../../componentes/OrePriceUpdater';
 import UpgradeSelector from '../../componentes/UpgradeSelector';
+import { useAppContext } from '../../componentes/useAppState';
 import { oreCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import {
   activateAlert,
@@ -15,7 +14,9 @@ import {
 } from '../../data/kakeleActions';
 
 export default function OreCalculator() {
-  const { language } = useSelector(state => state.currentKakeleFilters);
+  const {
+    state: { language },
+  } = useAppContext();
   const text = textOptions[language];
 
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);

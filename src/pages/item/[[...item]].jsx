@@ -1,22 +1,25 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import ItemCard from "../../componentes/ItemCard";
-import { showItemJsx as textOptions } from "../../data/dataLanguages";
-import { equipments, weapons } from "../../data/kakeleData";
-import "./ShowItem.module.css";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+
+import ItemCard from '../../componentes/ItemCard';
+import { useAppContext } from '../../componentes/useAppState';
+import { showItemJsx as textOptions } from '../../data/dataLanguages';
+import { equipments, weapons } from '../../data/kakeleData';
+import './ShowItem.module.css';
 
 export default function ShowItem() {
   const router = useRouter();
   const allItens = [...equipments, ...weapons];
-  const { language } = useSelector((state) => state.currentKakeleFilters);
+  const {
+    state: { language },
+  } = useAppContext();
   const [item, setItem] = useState(allItens[0]);
   const [previousItemLink, setPreviousItemLink] = useState(
-    `/item/${allItens[allItens.length - 1].nameEN}`
+    `/item/${allItens[allItens.length - 1].nameEN}`,
   );
   const [nextItemLink, setNextItemLink] = useState(
-    `/item/${allItens[1].nameEN}`
+    `/item/${allItens[1].nameEN}`,
   );
   const text = textOptions[language];
 
@@ -24,7 +27,7 @@ export default function ShowItem() {
     if (Object.keys(router.query).length > 0) {
       const [itemName] = router.query.item;
       const currentItem = allItens.find(
-        (e) => e.nameEN === itemName || e.namePTBR === itemName
+        e => e.nameEN === itemName || e.namePTBR === itemName,
       );
       const itemIndex = allItens.indexOf(currentItem);
       const previousIndex = itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
