@@ -1,3 +1,4 @@
+import styles from './ShowItem.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -6,7 +7,7 @@ import { useAppContext } from '../../context/appContext/useAppState';
 
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 import { equipments, weapons } from '../../data/kakeleData';
-import './ShowItem.module.css';
+import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowItem() {
   const router = useRouter();
@@ -43,7 +44,18 @@ export default function ShowItem() {
   }, [router.query]);
 
   return (
-    <div className="container d-flex flex-column align-items-center show-item-container">
+    <div className={`container ${styles.itemContainer}`}>
+      <div className={`${styles.buttonContainer}`}>
+        <Link href={previousItemLink} passHref>
+          <LinkButton text={text.previous} />
+        </Link>
+        <Link href="/set" passHref>
+          <LinkButton text={text.showSet} />
+        </Link>
+        <Link href={nextItemLink} passHref>
+          <LinkButton text={text.next} />
+        </Link>
+      </div>
       {item ? (
         <div className="row">
           <ItemCard item={item} />
@@ -51,17 +63,6 @@ export default function ShowItem() {
       ) : (
         <div>Item não encontrado</div>
       )}
-      <div className="button-container">
-        <Link href={previousItemLink}>
-          <a>{text.previous}</a>
-        </Link>
-        <Link href="/set">
-          <a>{text.showSet}</a>
-        </Link>
-        <Link href={nextItemLink}>
-          <a>{text.next}</a>
-        </Link>
-      </div>
     </div>
   );
 }
