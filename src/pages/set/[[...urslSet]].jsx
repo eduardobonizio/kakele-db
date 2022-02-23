@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import './ShowSet.module.css';
+import styles from './ShowSet.module.css';
 
 import copy from 'copy-to-clipboard';
 
@@ -22,8 +22,9 @@ import Link from 'next/link';
 
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { useAppContext } from '../../context/appContext/useAppState';
-import ShowSetStatus from '../../componentes/others/ShowSetStatus';
+import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
+import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowSet() {
   const router = useRouter();
@@ -91,16 +92,18 @@ export default function ShowSet() {
   };
 
   return (
-    <div className="container status-and-card-container">
+    <div className={`container ${styles.statusAndCardContainer}`}>
       <div className="d-flex flex-column">
-        {showSet && <ShowSetStatus itensListToShowStatus={showSet} />}
-        <Link href="/search-item">
-          <a>{text.searchItems}</a>
+        <div className={styles.statusContainer}>
+          {showSet && <ShowSetStatus itensListToShowStatus={showSet} />}
+        </div>
+        <Link href="/search-item" passHref>
+          <LinkButton text={text.searchItems} />
         </Link>
         <ButtonForKakele onClick={copyLink} text={text.copy} />
       </div>
       {showSet && (
-        <div className="row row-cols-auto d-flex justify-content-center">
+        <div className={`row row-cols-auto ${styles.row}`}>
           {showSet.necklace && (
             <ItemCard item={showSet.necklace} index={showSet.necklace.nameEN} />
           )}

@@ -37,10 +37,7 @@
 
 @media screen and (max-width: 767px) {
   .card {
-    margin-bottom: 5px;
-  }
-  .button-for-kakele {
-    margin-right: 10px;
+    width: 90%;
   }
 }
 /*# sourceMappingURL=ItemCard.module.css.map */

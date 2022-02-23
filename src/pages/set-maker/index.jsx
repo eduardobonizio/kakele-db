@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
-import ShowSetStatus from '../../componentes/others/ShowSetStatus';
+import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
