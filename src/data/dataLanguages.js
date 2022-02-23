@@ -256,6 +256,7 @@ const showItemJsx = {
 
 const expCalculatorJsx = {
   EN: {
+    title: 'Kakele exp calculator',
     initialLevel: 'Starting Level',
     desiredLevel: 'Target Level',
     totalExp: 'Your total exp',
@@ -263,6 +264,7 @@ const expCalculatorJsx = {
     result: 'Total exp needed',
   },
   PTBR: {
+    title: 'Kakele calculadora de exp',
     initialLevel: 'Level inicial',
     desiredLevel: 'Level desejado',
     totalExp: 'Sua exp total',

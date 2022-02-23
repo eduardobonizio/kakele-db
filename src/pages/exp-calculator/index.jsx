@@ -29,7 +29,8 @@ export default function ExpCalculator() {
   };
 
   return (
-    <div className="container d-flex justify-content-around">
+    <div className="container d-flex flex-column justify-content-around align-items-center">
+      <h3>{text.title}</h3>
       <div className={`form-group row ${style.formContainer}`}>
         <form action="" onSubmit={e => calExp(e)}>
           <Input
