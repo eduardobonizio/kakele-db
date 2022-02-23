@@ -83,8 +83,11 @@ export default function SetMaker() {
         <h3 className="">{text.title}</h3>
 
         <KakeleItemsFilters statusPrincipal />
-        <div className="container d-flex justify-content-around">
+        <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
+          <Link href="/search-item" passHref>
+            <LinkButton text={text.searchItens} />
+          </Link>
           {recomendedSet && (
             <Link href="/set" passHref>
               <LinkButton
@@ -94,9 +97,6 @@ export default function SetMaker() {
             </Link>
           )}
         </div>
-        <Link href="/search-item" passHref>
-          <LinkButton text={text.searchItens} />
-        </Link>
 
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
