@@ -1,12 +1,9 @@
 import { AppProvider } from '../componentes/useAppState';
-import { Provider } from 'react-redux';
 import Layout from '../componentes/Layout';
 import Script from 'next/script';
-import store from '../store/store';
 import Head from 'next/head';
 
 import '../styles/globals.css';
-import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -20,13 +17,11 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <Provider store={store}>
-        <AppProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </AppProvider>
-      </Provider>
+      <AppProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AppProvider>
 
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
