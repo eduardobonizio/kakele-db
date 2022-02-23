@@ -60,19 +60,19 @@ export default function ShowSet() {
       { ...selectedItems },
     );
 
-  const itensOnUrlToItensList = (urlText, allItens) => {
-    const itensOnUrl = urlParamsToObject(urlText);
-
-    const allSlotItens = addMissingItens(itensOnUrl, allItens);
-
-    const normalizedSet = normalizeSet(allSlotItens);
-
-    updateCurrentSet(normalizedSet);
-  };
-
   useEffect(() => {
+    const itensOnUrlToItensList = (urlText, allItens) => {
+      const itensOnUrl = urlParamsToObject(urlText);
+
+      const allSlotItens = addMissingItens(itensOnUrl, allItens);
+
+      const normalizedSet = normalizeSet(allSlotItens);
+
+      updateCurrentSet(normalizedSet);
+    };
+
     itensOnUrlToItensList(urlParams, [...equipments, ...weapons]);
-  }, []);
+  }, [updateCurrentSet, urlParams]);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
