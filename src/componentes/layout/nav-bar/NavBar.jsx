@@ -24,7 +24,7 @@ function NavBar() {
 
   return (
     <div
-      className="navbar navbar-expand-md navbar-dark bg-dark mb-3"
+      className={`navbar navbar-expand-md navbar-dark bg-dark mb-3 ${styles.navBarContainer}`}
       id="navbar"
     >
       <div className="container">
