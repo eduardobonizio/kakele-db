@@ -29,14 +29,17 @@ export default function ShowItem() {
       const currentItem = allItens.find(
         e => e.nameEN === itemName || e.namePTBR === itemName,
       );
-      const itemIndex = allItens.indexOf(currentItem);
-      const previousIndex = itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
-      const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
-      setPreviousItemLink(`/item/${allItens[previousIndex].nameEN}`);
-      setNextItemLink(`/item/${allItens[nextIndex].nameEN}`);
-      setItem(currentItem);
+      if (currentItem) {
+        const itemIndex = allItens.indexOf(currentItem);
+        const previousIndex =
+          itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
+        const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
+        setPreviousItemLink(`/item/${allItens[previousIndex].nameEN}`);
+        setNextItemLink(`/item/${allItens[nextIndex].nameEN}`);
+        setItem(currentItem);
+      }
     }
-  }, [router.query]);
+  }, [allItens, router.query]);
 
   return (
     <div className="container d-flex flex-column align-items-center show-item-container">
