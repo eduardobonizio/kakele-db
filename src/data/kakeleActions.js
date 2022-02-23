@@ -290,13 +290,14 @@ const findBestSet = (
   return bestItem || false;
 };
 
-const filterItensByLevelAndClass = (listaDeItens, level, classe) =>
-  listaDeItens.filter(
+const filterItensByLevelAndClass = (listaDeItens, level, classe) => {
+  const useLevel = Number(level) > 0 ? Number(level) : 1;
+  return listaDeItens.filter(
     item =>
-      level >= Number(item.level) &&
+      useLevel >= Number(item.level) &&
       (item.vocation === classe || item.vocation === 'All'),
   );
-
+};
 const elementQuantityInSet = (itensList, element) =>
   itensList.filter(item => item.energy === element).length;
 

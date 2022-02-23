@@ -56,7 +56,7 @@ export default function KakeleItemsFilters(props) {
           aria-label="Nivel do Personagem"
           aria-describedby="nivel-do-personagem"
           value={level}
-          onChange={e => updateFilter('level', Number(e.target.value))}
+          onChange={e => updateFilter('level', e.target.value)}
         />
       </div>
       <div className="input-group mb-2">

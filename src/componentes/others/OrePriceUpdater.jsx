@@ -15,14 +15,13 @@ export default function OrePriceUpdater(props) {
           <input
             type="number"
             className="form-control"
-            placeholder={text}
-            aria-label={text}
+            placeholder={text[key]}
+            aria-label={text[key]}
             aria-describedby={`preco-${key}-bruto`}
-            value={oresPrice[key]}
             onChange={e =>
               setOresPrice({
                 ...oresPrice,
-                [key]: Number(e.target.value),
+                [key]: e.target.value,
               })
             }
           />
