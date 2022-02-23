@@ -1,4 +1,4 @@
-import style from './LevelCalculator.module.css';
+import style from './ExpCalculator.module.css';
 import { useState } from 'react';
 
 import Input from '../../componentes/inputs/Input';
@@ -8,7 +8,7 @@ import { totalExpToLevel } from '../../data/KakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { levelCalculatorJsx as textOptions } from '../../data/dataLanguages';
 
-export default function LevelCalculator() {
+export default function ExpCalculator() {
   const {
     state: { language },
   } = useAppContext();

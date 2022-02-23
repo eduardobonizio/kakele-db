@@ -63,8 +63,8 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/level-calculator">
-                <a className="nav-link">{text.levelCalculator}</a>
+              <Link href="/exp-calculator">
+                <a className="nav-link">{text.expCalculator}</a>
               </Link>
             </li>
           </ul>

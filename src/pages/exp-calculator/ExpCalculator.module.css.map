@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,KAAK;CACb",
     "sources": [
-        "LevelCalculator.module.scss"
+        "ExpCalculator.module.scss"
     ],
     "names": [],
-    "file": "LevelCalculator.module.css"
+    "file": "ExpCalculator.module.css"
 }

@@ -16,14 +16,14 @@ const navBarJsx = {
     generateSet: 'Set Generator',
     searchItem: 'Search Item',
     oreCalculator: 'Upgrades',
-    levelCalculator: 'Exp Calculator',
+    expCalculator: 'Exp Calculator',
   },
   PTBR: {
     showSet: 'Ver Set',
     generateSet: 'Gerador de set',
     searchItem: 'Procurar Item',
     oreCalculator: 'Forja',
-    levelCalculator: 'Calculadora de Exp',
+    expCalculator: 'Calculadora de Exp',
   },
 };
 
