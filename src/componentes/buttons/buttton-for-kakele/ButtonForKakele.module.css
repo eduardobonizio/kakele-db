@@ -1,4 +1,4 @@
-.button-for-kakele {
+.button {
   margin-bottom: 5px;
   border: none;
   background-color: none;
@@ -11,7 +11,7 @@
       align-self: center;
 }
 
-.button-for-kakele:hover {
+.button:hover {
   background-color: black;
   color: white;
 }

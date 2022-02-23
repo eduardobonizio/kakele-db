@@ -1,4 +1,4 @@
-import './set-maker.module.css';
+import styles from './set-maker.module.css';
 import React, { useState } from 'react';
 import { useAppContext } from '../../context/appContext/useAppState';
 
@@ -6,7 +6,6 @@ import { setMakerJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
-  genereateLinkToViewSet,
   saveSetInLocalStorage,
 } from '../../data/kakeleActions';
 import {
@@ -79,8 +78,8 @@ export default function SetMaker() {
   };
 
   return (
-    <div className="container status-and-card-container">
-      <div className="d-flex flex-column set-maker-filters-container">
+    <div className={`container ${styles.statusAndCardContainer}`}>
+      <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h3 className="">{text.title}</h3>
 
         <KakeleItemsFilters statusPrincipal />
@@ -95,26 +94,28 @@ export default function SetMaker() {
             </Link>
           )}
         </div>
-        <Link href="/search-item">
-          <a>{text.searchItens}</a>
+        <Link href="/search-item" passHref>
+          <LinkButton text={text.searchItens} />
         </Link>
 
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
-      <div className="row row-cols-auto">
+      <div className={`row row-cols-auto ${styles.row}`}>
         {recomendedSet &&
           recomendedSet.map((item, i) => {
             if (item) {
               return (
-                <ItemCard
-                  index={i}
-                  ignoredItens={ignoredItens}
-                  ignoreItens={ignoreItens}
-                  ignoreThisSlotsElement={ignoreThisSlotsElement}
-                  ignoreElementForThisSlot={ignoreElementForThisSlot}
-                  item={item}
-                  key={item.nameEN}
-                />
+                <div className={`col ${styles.col}`} key={item.nameEN}>
+                  <ItemCard
+                    index={i}
+                    ignoredItens={ignoredItens}
+                    ignoreItens={ignoreItens}
+                    ignoreThisSlotsElement={ignoreThisSlotsElement}
+                    ignoreElementForThisSlot={ignoreElementForThisSlot}
+                    item={item}
+                    stleFromParent={styles}
+                  />
+                </div>
               );
             }
             return false;

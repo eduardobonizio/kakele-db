@@ -1,15 +1,11 @@
 import React from 'react';
 
-import './ButtonForKakele.module.css';
+import styles from './ButtonForKakele.module.css';
 
 export default function ButtonForKakele(props) {
   const { onClick, text } = props;
   return (
-    <button
-      type="button"
-      className="button-for-kakele"
-      onClick={() => onClick()}
-    >
+    <button type="button" className={styles.button} onClick={() => onClick()}>
       {text}
     </button>
   );

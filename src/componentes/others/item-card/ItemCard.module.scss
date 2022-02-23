@@ -1,17 +1,39 @@
-@import "../../styles/variables";
+@import '../../../styles/_variables';
 
-.card {
-  .equiped-item {
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    background-color: $equiped-item-tag-color;
-    color: white;
-    border-radius: 10px;
-    padding: 3px;
+.equiped {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: $equiped-item-tag-color;
+  color: white;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 0px;
+    width: auto;
+    width: 280px;
+  }
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    margin-bottom: 5px;
   }
 
-  .button-container {
-    justify-content: space-around;
+  .button-for-kakele {
+    margin-right: 10px;
   }
 }
