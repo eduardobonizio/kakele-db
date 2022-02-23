@@ -1,24 +1,15 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
 import ButtonForKakele from '../componentes/ButtonForKakele';
+import { useAppContext } from '../componentes/useAppState';
 import { homeContentJsx as textOptions } from '../data/dataLanguages';
 import { updateItensFilter } from '../store/actions/KakeleFilters.actions';
 
 export default function HomeContent() {
-  const dispatch = useDispatch();
-
-  const { language } = useSelector(state => state.currentKakeleFilters);
-  const text = textOptions[language] || textOptions.PTBR;
-
-  useEffect(() => {
-    const selectedLanguage = localStorage.getItem('language') || false;
-    dispatch(updateItensFilter('CHANGE_LANGUAGE', selectedLanguage));
-  }, []);
+  const { state, actions } = useAppContext();
+  const text = textOptions[state.language];
 
   const changeLanguage = newLanguage => {
     localStorage.setItem('language', newLanguage);
-    dispatch(updateItensFilter('CHANGE_LANGUAGE', newLanguage));
+    actions.changeLanguage(newLanguage);
   };
 
   return (

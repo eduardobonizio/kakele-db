@@ -1,13 +1,23 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { navBarJsx as textOptions } from '../data/dataLanguages';
+import { useAppContext } from './useAppState';
 
 // import app from '../../api/Firebase';
-import { navBarJsx as textOptions } from '../data/dataLanguages';
 
 function NavBar() {
-  const { language } = useSelector(state => state.currentKakeleFilters);
-  const text = textOptions[language] || textOptions.PTBR;
+  const {
+    state: { language },
+    actions: { changeLanguage },
+  } = useAppContext();
+  const text = textOptions[language];
+
+  useEffect(() => {
+    const userLanguage = localStorage.getItem('language');
+    if (userLanguage !== language) {
+      changeLanguage(userLanguage);
+    }
+  }, [changeLanguage, language]);
 
   return (
     <div
