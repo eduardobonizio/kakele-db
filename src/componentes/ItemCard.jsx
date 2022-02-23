@@ -89,9 +89,13 @@ export default function ItemCard(props) {
         }
       }
       udateOneEquipment(currentSet, thisItem);
-    }
 
-    saveSetInLocalStorage(Object.values(currentSet).map(item => item));
+      const newSet = Object.values({
+        ...currentSet,
+        [thisItem.slot]: thisItem,
+      }).map(item => item);
+      saveSetInLocalStorage(newSet);
+    }
   };
 
   return (
