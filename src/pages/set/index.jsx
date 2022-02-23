@@ -45,12 +45,15 @@ export default function ShowSet() {
     return { ...setItems, shield: { ...shield }, book: { ...book } };
   };
 
-  const addMissingItens = (selectedItems, allItens) =>
-    ALL_ITENS_SLOTS_LIST.reduce(
+  const addMissingItens = (selectedItems, allItens) => {
+    return ALL_ITENS_SLOTS_LIST.reduce(
       (current, next, index) => {
         const currentSlot = ALL_ITENS_SLOTS_LIST[index];
 
-        const item = findItemByName(allItens, selectedItems[currentSlot]);
+        const useFakeItem = { ...FAKE_ITEM, slot: ALL_ITENS_SLOTS_LIST[index] };
+
+        const item =
+          findItemByName(allItens, selectedItems[currentSlot]) || useFakeItem;
 
         return {
           ...current,
@@ -59,6 +62,7 @@ export default function ShowSet() {
       },
       { ...selectedItems },
     );
+  };
 
   useEffect(() => {
     const storedSet = localStorage.getItem('currentSet') || '""';
