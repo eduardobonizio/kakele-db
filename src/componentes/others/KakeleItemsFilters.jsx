@@ -1,12 +1,12 @@
 import React from 'react';
+import { useAppContext } from '../../context/appContext/useAppState';
 
 import {
   ITEM_FILTERS_NAME,
   kakeleItemsFiltersJsx as textOptions,
   SLOTS_NAMES,
-} from '../data/dataLanguages';
-import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../data/kakeleData';
-import { useAppContext } from './useAppState';
+} from '../../data/dataLanguages';
+import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../../data/kakeleData';
 
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { navBarJsx as textOptions } from '../data/dataLanguages';
-import { useAppContext } from './useAppState';
+import { useAppContext } from '../../../context/appContext/useAppState';
+import { navBarJsx as textOptions } from '../../../data/dataLanguages';
 
 // import app from '../../api/Firebase';
 

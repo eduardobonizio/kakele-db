@@ -1,8 +1,8 @@
+import styles from './SearchItem.module.css';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
-import ButtonForKakele from '../../componentes/ButtonForKakele';
-import ItemCard from '../../componentes/ItemCard';
-import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
+import { useAppContext } from '../../context/appContext/useAppState';
 import { searchItemJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByElement,
@@ -11,10 +11,11 @@ import {
   findItemsByName,
 } from '../../data/kakeleActions';
 import { equipments, weapons } from '../../data/kakeleData';
-import Link from 'next/link';
-import { useAppContext } from '../../componentes/useAppState';
 
-import './SearchItem.module.css';
+import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import ItemCard from '../../componentes/others/item-card/ItemCard';
+import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function SearchItem() {
   const {
@@ -52,19 +53,25 @@ export default function SearchItem() {
   };
 
   return (
-    <div className="container d-flex kakele-search-item">
-      <div className="d-flex d-flex flex-column kakele-search-item-filters">
+    <div className={`container d-flex ${styles.container}`}>
+      <div className={`d-flex d-flex flex-column ${styles.filters}`}>
         <KakeleItemsFilters manualFilters />
-        <ButtonForKakele onClick={lookForItens} text={text.search} />
-        <Link href="/set">
-          <a>{text.showSet}</a>
-        </Link>
+        <div className="container-fluid d-flex justify-content-around">
+          <ButtonForKakele onClick={lookForItens} text={text.search} />
+          <Link href="/set" passHref>
+            <LinkButton text={text.showSet} />
+          </Link>
+        </div>
       </div>
-      <div className="row row-cols-auto">
+      <div className={`row row-cols-auto ${styles.row}`}>
         {foundItens.length > 0 ? (
           foundItens.map((item, i) => {
             if (item) {
-              return <ItemCard index={i} item={item} key={item.nameEN} />;
+              return (
+                <div className={`col ${styles.col}`} key={item.nameEN}>
+                  <ItemCard index={i} item={item} />
+                </div>
+              );
             }
             return false;
           })

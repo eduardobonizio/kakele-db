@@ -1,17 +1,11 @@
-import { useAppContext } from '../../componentes/useAppState';
+import styles from './set-maker.module.css';
 import React, { useState } from 'react';
+import { useAppContext } from '../../context/appContext/useAppState';
 
-import './set-maker.module.css';
-
-import ButtonForKakele from '../../componentes/ButtonForKakele';
-import ItemCard from '../../componentes/ItemCard';
-import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
-import ShowSetStatus from '../../componentes/ShowSetStatus';
 import { setMakerJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
-  genereateLinkToViewSet,
   saveSetInLocalStorage,
 } from '../../data/kakeleActions';
 import {
@@ -20,7 +14,12 @@ import {
   ALL_ITENS_SLOTS_LIST,
 } from '../../data/kakeleData';
 import Link from 'next/link';
-import LinkButton from '../../componentes/LinkButton';
+
+import ItemCard from '../../componentes/others/item-card/ItemCard';
+import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
+import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
+import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function SetMaker() {
   const {
@@ -79,13 +78,16 @@ export default function SetMaker() {
   };
 
   return (
-    <div className="container status-and-card-container">
-      <div className="d-flex flex-column set-maker-filters-container">
+    <div className={`container ${styles.statusAndCardContainer}`}>
+      <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h3 className="">{text.title}</h3>
 
         <KakeleItemsFilters statusPrincipal />
-        <div className="container d-flex justify-content-around">
+        <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
+          <Link href="/search-item" passHref>
+            <LinkButton text={text.searchItens} />
+          </Link>
           {recomendedSet && (
             <Link href="/set" passHref>
               <LinkButton
@@ -95,26 +97,25 @@ export default function SetMaker() {
             </Link>
           )}
         </div>
-        <Link href="/search-item">
-          <a>{text.searchItens}</a>
-        </Link>
 
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
-      <div className="row row-cols-auto">
+      <div className={`row row-cols-auto ${styles.row}`}>
         {recomendedSet &&
           recomendedSet.map((item, i) => {
             if (item) {
               return (
-                <ItemCard
-                  index={i}
-                  ignoredItens={ignoredItens}
-                  ignoreItens={ignoreItens}
-                  ignoreThisSlotsElement={ignoreThisSlotsElement}
-                  ignoreElementForThisSlot={ignoreElementForThisSlot}
-                  item={item}
-                  key={item.nameEN}
-                />
+                <div className={`col ${styles.col}`} key={item.nameEN}>
+                  <ItemCard
+                    index={i}
+                    ignoredItens={ignoredItens}
+                    ignoreItens={ignoreItens}
+                    ignoreThisSlotsElement={ignoreThisSlotsElement}
+                    ignoreElementForThisSlot={ignoreElementForThisSlot}
+                    item={item}
+                    stleFromParent={styles}
+                  />
+                </div>
               );
             }
             return false;

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,IAAI;EACtB,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,GAAG;EACZ,mBAAmB,EAAE,IAAI;EACzB,UAAU,EAAE,MAAM;CACnB;;AAED,AAAA,OAAO,AAAA,MAAM,CAAC;EACZ,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "ButtonForKakele.module.scss"
+    ],
+    "names": [],
+    "file": "ButtonForKakele.module.css"
+}

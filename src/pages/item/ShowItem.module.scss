@@ -1,12 +1,11 @@
-.show-item-container {
-  display: flex !important;
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .card {
-    align-items: center;
-  }
-  .button-container {
-    min-width: 300px;
-    display: flex;
-    justify-content: space-around;
-  }
+.buttonContainer {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-around;
 }
