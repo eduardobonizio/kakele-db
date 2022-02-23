@@ -6,6 +6,7 @@ import { useAppContext } from '../../context/appContext/useAppState';
 import { addDotToKks } from '../../data/kakeleActions';
 import { totalExpToLevel } from '../../data/KakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import { levelCalculatorJsx as textOptions } from '../../data/dataLanguages';
 
 export default function LevelCalculator() {
   const {
@@ -15,6 +16,8 @@ export default function LevelCalculator() {
   const [desiredLevel, setDesiredLevel] = useState(2);
   const [totalExp, setTotalExp] = useState(0);
   const [result, setResult] = useState(0);
+
+  const text = textOptions[language];
 
   const calExp = event => {
     event.preventDefault();
@@ -33,26 +36,28 @@ export default function LevelCalculator() {
             type="number"
             value={currentLevel}
             onChange={e => setCurrentLevel(e.target.value)}
-            labelText="Level inicial: "
+            labelText={text.initialLevel}
           />
           <Input
             type="number"
             value={desiredLevel}
-            labelText="Level desejado: "
+            labelText={text.desiredLevel}
             onChange={e => setDesiredLevel(e.target.value)}
           />
           <Input
             type="number"
             value={totalExp}
-            labelText="Sua exp total: "
+            labelText={text.totalExp}
             onChange={e => setTotalExp(e.target.value)}
           />
           <div className="d-flex justify-content-around">
-            <ButtonForKakele type="submit" text={'calcular'} />
+            <ButtonForKakele type="submit" text={text.calculate} />
           </div>
         </form>
         <div className="d-flex justify-content-around">
-          <div>Exp total para upar: {addDotToKks(result)}</div>
+          <span>
+            {text.result} {addDotToKks(result)}
+          </span>
         </div>
       </div>
     </div>

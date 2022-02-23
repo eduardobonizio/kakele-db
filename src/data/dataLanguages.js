@@ -16,12 +16,14 @@ const navBarJsx = {
     generateSet: 'Set Generator',
     searchItem: 'Search Item',
     oreCalculator: 'Upgrades',
+    levelCalculator: 'Exp Calculator',
   },
   PTBR: {
     showSet: 'Ver Set',
     generateSet: 'Gerador de set',
     searchItem: 'Procurar Item',
     oreCalculator: 'Forja',
+    levelCalculator: 'Calculadora de Exp',
   },
 };
 
@@ -252,6 +254,23 @@ const showItemJsx = {
   },
 };
 
+const levelCalculatorJsx = {
+  EN: {
+    initialLevel: 'Starting Level',
+    desiredLevel: 'Target Level',
+    totalExp: 'Your total exp',
+    calculate: 'calculate',
+    result: 'Total exp needed',
+  },
+  PTBR: {
+    initialLevel: 'Level inicial',
+    desiredLevel: 'Level desejado',
+    totalExp: 'Sua exp total',
+    calculate: 'calcular',
+    result: 'Exp total necessária:',
+  },
+};
+
 export {
   homeContentJsx,
   navBarJsx,
@@ -265,4 +284,5 @@ export {
   showItemJsx,
   SLOTS_NAMES,
   ITEM_FILTERS_NAME,
+  levelCalculatorJsx,
 };
