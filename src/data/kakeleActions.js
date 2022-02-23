@@ -17,9 +17,10 @@ const urlParamsToObject = paramsText => {
   }
 };
 
-const genereateLinkToViewSet = (setList, origin, language) => {
+const genereateLinkToViewSet = (setList, origin) => {
   if (!setList) return false;
   const name = 'nameEN';
+  console.log(setList);
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
@@ -32,6 +33,14 @@ const genereateLinkToViewSet = (setList, origin, language) => {
   }, '');
   if (origin) return `${origin}/set/${link}`;
   return `/set/${link}`;
+};
+
+const saveSetInLocalStorage = newSet => {
+  if (!newSet) return;
+  const link = genereateLinkToViewSet(newSet, false);
+  if (!link) return;
+
+  localStorage.setItem('currentSet', JSON.stringify(link.replace('/set/', '')));
 };
 
 const activateAlert = setShowAlert => {
@@ -346,4 +355,5 @@ export {
   filterItensBySlot,
   filterItensByElement,
   findItemsByName,
+  saveSetInLocalStorage,
 };

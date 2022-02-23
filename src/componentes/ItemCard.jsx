@@ -11,6 +11,7 @@ import './css/ItemCard.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useAppContext } from './useAppState';
+import { saveSetInLocalStorage } from '../data/kakeleActions';
 
 export default function ItemCard(props) {
   const {
@@ -51,11 +52,9 @@ export default function ItemCard(props) {
             book: { ...FAKE_ITEM, sloot: 'book' },
             shield: { ...FAKE_ITEM, slot: 'shield' },
           });
-
-          return;
+        } else {
+          udateOneEquipment(currentSet, thisItem);
         }
-        udateOneEquipment(currentSet, thisItem);
-        return;
       }
       if (thisItem.slot === 'shield') {
         if (currentSet.weapon.twoHanded) {
@@ -65,17 +64,13 @@ export default function ItemCard(props) {
             weapon: { ...FAKE_ITEM, slot: 'weapon' },
             book: { ...FAKE_ITEM, sloot: 'book' },
           });
-
-          return;
+        } else {
+          updateCurrentSet({
+            ...currentSet,
+            shield: thisItem,
+            book: { ...FAKE_ITEM, sloot: 'book' },
+          });
         }
-
-        updateCurrentSet({
-          ...currentSet,
-          shield: thisItem,
-          book: { ...FAKE_ITEM, sloot: 'book' },
-        });
-
-        return;
       }
       if (thisItem.slot === 'book') {
         if (currentSet.weapon.twoHanded) {
@@ -85,20 +80,18 @@ export default function ItemCard(props) {
             weapon: { ...FAKE_ITEM, slot: 'weapon' },
             shield: { ...FAKE_ITEM, sloot: 'shield' },
           });
-
-          return;
+        } else {
+          updateCurrentSet({
+            ...currentSet,
+            book: thisItem,
+            shield: { ...FAKE_ITEM, sloot: 'shield' },
+          });
         }
-
-        updateCurrentSet({
-          ...currentSet,
-          book: thisItem,
-          shield: { ...FAKE_ITEM, sloot: 'shield' },
-        });
-
-        return;
       }
       udateOneEquipment(currentSet, thisItem);
     }
+
+    saveSetInLocalStorage(Object.values(currentSet).map(item => item));
   };
 
   return (

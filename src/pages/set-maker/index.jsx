@@ -12,6 +12,7 @@ import {
   filterItensByLevelAndClass,
   findBestSet,
   genereateLinkToViewSet,
+  saveSetInLocalStorage,
 } from '../../data/kakeleActions';
 import {
   equipments,
@@ -28,14 +29,8 @@ export default function SetMaker() {
   const text = textOptions[language];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
-  const [linkToSetPage, setLinkToSetPage] = useState();
 
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
-
-  const generateLinkToShowSetPage = setToLink => {
-    const link = genereateLinkToViewSet(setToLink, false, language);
-    if (link) setLinkToSetPage(link);
-  };
 
   const generateSet = () => {
     const itensList = filterItensByLevelAndClass(
@@ -56,7 +51,6 @@ export default function SetMaker() {
         language,
       ),
     );
-    generateLinkToShowSetPage(bestItens);
     setRecomendedSet(bestItens);
   };
 
@@ -84,12 +78,6 @@ export default function SetMaker() {
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
-  const saveToLocalStorage = fullSet =>
-    localStorage.setItem(
-      'currentSet',
-      JSON.stringify(fullSet.replace('/set/', '')),
-    );
-
   return (
     <div className="container status-and-card-container">
       <div className="d-flex flex-column set-maker-filters-container">
@@ -102,7 +90,7 @@ export default function SetMaker() {
             <Link href="/set" passHref>
               <LinkButton
                 text={text.equipAll}
-                onClick={() => saveToLocalStorage(linkToSetPage)}
+                onClick={() => saveSetInLocalStorage(recomendedSet)}
               />
             </Link>
           )}
