@@ -57,7 +57,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/ore-calculator">
+              <Link href="/upgrades">
                 <a className="nav-link">{text.oreCalculator}</a>
               </Link>
             </li>
