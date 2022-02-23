@@ -1,6 +1,5 @@
 import { useAppContext } from '../../componentes/useAppState';
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 import './set-maker.module.css';
 

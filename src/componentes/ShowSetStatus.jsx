@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 
 import { showSetStatusJsx as textOptions } from '../data/dataLanguages';
 import { checkSetElement } from '../data/kakeleActions';

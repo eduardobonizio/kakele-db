@@ -1,7 +1,6 @@
 import ButtonForKakele from '../componentes/ButtonForKakele';
 import { useAppContext } from '../componentes/useAppState';
 import { homeContentJsx as textOptions } from '../data/dataLanguages';
-import { updateItensFilter } from '../store/actions/KakeleFilters.actions';
 
 export default function HomeContent() {
   const { state, actions } = useAppContext();
