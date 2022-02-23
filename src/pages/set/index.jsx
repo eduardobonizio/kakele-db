@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
 import './ShowSet.module.css';
@@ -21,7 +20,6 @@ import {
   ALL_ITENS_SLOTS_LIST,
   FAKE_ITEM,
 } from '../../data/kakeleData';
-import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import Link from 'next/link';
 import { useAppContext } from '../../componentes/useAppState';
 
