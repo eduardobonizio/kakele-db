@@ -34,7 +34,6 @@ const AppProvider = ({ children }) => {
 
   // Esse componente tem um estado, que será acessado por todos os outros
   const [state, setState] = useState(initialState);
-  console.log(state);
   /*
   Aqui construimos as ações, o get actions está ali em baixo e ele será
   responsável por criar todas as ações que alteram o estado deste componente

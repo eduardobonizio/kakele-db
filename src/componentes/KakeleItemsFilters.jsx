@@ -1,5 +1,4 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 
 import {
   ITEM_FILTERS_NAME,
@@ -7,7 +6,6 @@ import {
   SLOTS_NAMES,
 } from '../data/dataLanguages';
 import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../data/kakeleData';
-import { updateItensFilter } from '../store/actions/KakeleFilters.actions';
 import { useAppContext } from './useAppState';
 
 export default function KakeleItemsFilters(props) {
