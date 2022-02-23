@@ -25,6 +25,7 @@ import { useAppContext } from '../../context/appContext/useAppState';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import Head from 'next/head';
 
 export default function ShowSet() {
   const router = useRouter();
@@ -93,6 +94,14 @@ export default function ShowSet() {
 
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
+      <Head>
+        <title>Kakele Tools - Show set</title>
+        <meta
+          property="og:title"
+          content="Kakele Tools - Show set"
+          key="title"
+        />
+      </Head>
       <div className="d-flex flex-column">
         <div className={styles.statusContainer}>
           {showSet && <ShowSetStatus itensListToShowStatus={showSet} />}

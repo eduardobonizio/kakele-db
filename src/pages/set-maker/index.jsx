@@ -20,6 +20,7 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import Head from 'next/head';
 
 export default function SetMaker() {
   const {
@@ -79,6 +80,14 @@ export default function SetMaker() {
 
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
+      <Head>
+        <title>Kakele Tools - Set generator</title>
+        <meta
+          property="og:title"
+          content="Kakele Tools - Set generator"
+          key="title"
+        />
+      </Head>
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h3 className="">{text.title}</h3>
 

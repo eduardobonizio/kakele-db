@@ -16,6 +16,7 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import Head from 'next/head';
 
 export default function SearchItem() {
   const {
@@ -54,6 +55,14 @@ export default function SearchItem() {
 
   return (
     <div className={`container d-flex ${styles.container}`}>
+      <Head>
+        <title>Kakele Tools - Search items</title>
+        <meta
+          property="og:title"
+          content="Kakele Tools - Search items"
+          key="title"
+        />
+      </Head>
       <div className={`d-flex d-flex flex-column ${styles.filters}`}>
         <KakeleItemsFilters manualFilters />
         <div className="container-fluid d-flex justify-content-around">

@@ -7,6 +7,7 @@ import { addDotToKks } from '../../data/kakeleActions';
 import { totalExpToLevel } from '../../data/KakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { expCalculatorJsx as textOptions } from '../../data/dataLanguages';
+import Head from 'next/head';
 
 export default function ExpCalculator() {
   const {
@@ -30,6 +31,14 @@ export default function ExpCalculator() {
 
   return (
     <div className="container d-flex flex-column justify-content-around align-items-center">
+      <Head>
+        <title>Kakele Tools - Exp calculator</title>
+        <meta
+          property="og:title"
+          content="Kakele Tools - Exp calculator"
+          key="title"
+        />
+      </Head>
       <h3>{text.title}</h3>
       <div className={`form-group row ${style.formContainer}`}>
         <form action="" onSubmit={e => calExp(e)}>

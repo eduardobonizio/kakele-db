@@ -8,6 +8,7 @@ import { useAppContext } from '../../context/appContext/useAppState';
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 import { equipments, weapons } from '../../data/kakeleData';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import Head from 'next/head';
 
 export default function ShowItem() {
   const router = useRouter();
@@ -45,6 +46,14 @@ export default function ShowItem() {
 
   return (
     <div className={`container ${styles.itemContainer}`}>
+      <Head>
+        <title>Kakele Tools - Item db</title>
+        <meta
+          property="og:title"
+          content="Kakele Tools - Item db"
+          key="title"
+        />
+      </Head>
       <div className={`${styles.buttonContainer}`}>
         <Link href={previousItemLink} passHref>
           <LinkButton text={text.previous} />

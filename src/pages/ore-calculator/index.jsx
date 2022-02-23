@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useState } from 'react';
 import Alert from '../../componentes/alert/Alert';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
@@ -55,6 +56,14 @@ export default function OreCalculator() {
 
   return (
     <div className="container ore-upgrader-container">
+      <Head>
+        <title>Kakele Tools - Upgrade calculator</title>
+        <meta
+          property="og:title"
+          content="Kakele Tools - Upgrade calculator"
+          key="title"
+        />
+      </Head>
       <div className="d-flex flex-column ore-upgrader-filter-container">
         <UpgradeSelector
           elementId="upgrade-inicial"

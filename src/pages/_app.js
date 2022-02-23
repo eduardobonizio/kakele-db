@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Kakele Tools</title>
+        <meta property="og:title" content="Kakele Tools" key="title" />
       </Head>
 
       <AppProvider>
