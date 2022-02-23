@@ -254,7 +254,7 @@ const showItemJsx = {
   },
 };
 
-const levelCalculatorJsx = {
+const expCalculatorJsx = {
   EN: {
     initialLevel: 'Starting Level',
     desiredLevel: 'Target Level',
@@ -284,5 +284,5 @@ export {
   showItemJsx,
   SLOTS_NAMES,
   ITEM_FILTERS_NAME,
-  levelCalculatorJsx,
+  expCalculatorJsx,
 };

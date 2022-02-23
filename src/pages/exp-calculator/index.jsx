@@ -6,7 +6,7 @@ import { useAppContext } from '../../context/appContext/useAppState';
 import { addDotToKks } from '../../data/kakeleActions';
 import { totalExpToLevel } from '../../data/KakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
-import { levelCalculatorJsx as textOptions } from '../../data/dataLanguages';
+import { expCalculatorJsx as textOptions } from '../../data/dataLanguages';
 
 export default function ExpCalculator() {
   const {
