@@ -3,12 +3,15 @@ import { useSelector } from 'react-redux';
 
 import { showSetStatusJsx as textOptions } from '../data/dataLanguages';
 import { checkSetElement } from '../data/kakeleActions';
+import { useAppContext } from './useAppState';
 
 export default function ShowSetStatus(props) {
   const { itensListToShowStatus } = props;
   const [element, setElement] = useState(false);
   const [itensList, setItensList] = useState(false);
-  const { language } = useSelector(state => state.currentKakeleFilters);
+  const {
+    state: { language },
+  } = useAppContext();
   const text = textOptions[language];
 
   useEffect(() => {
@@ -20,7 +23,7 @@ export default function ShowSetStatus(props) {
     const elementQuantity = checkSetElement(newItensList, language);
 
     setElement(elementQuantity);
-  }, [itensListToShowStatus]);
+  }, [itensListToShowStatus, language]);
 
   return (
     <div className="status-container">

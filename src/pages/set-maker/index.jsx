@@ -1,36 +1,39 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useAppContext } from '../../componentes/useAppState';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import "./set-maker.module.css";
+import './set-maker.module.css';
 
-import ButtonForKakele from "../../componentes/ButtonForKakele";
-import ItemCard from "../../componentes/ItemCard";
-import KakeleItemsFilters from "../../componentes/KakeleItemsFilters";
-import ShowSetStatus from "../../componentes/ShowSetStatus";
-import { setMakerJsx as textOptions } from "../../data/dataLanguages";
+import ButtonForKakele from '../../componentes/ButtonForKakele';
+import ItemCard from '../../componentes/ItemCard';
+import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
+import ShowSetStatus from '../../componentes/ShowSetStatus';
+import { setMakerJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
   genereateLinkToViewSet,
-} from "../../data/kakeleActions";
+} from '../../data/kakeleActions';
 import {
   equipments,
   weapons,
   ALL_ITENS_SLOTS_LIST,
-} from "../../data/kakeleData";
-import Link from "next/link";
+} from '../../data/kakeleData';
+import Link from 'next/link';
 
 export default function SetMaker() {
-  const { level, element, characterClass, mainStat, language } = useSelector(
-    (state) => state.currentKakeleFilters
-  );
+  const {
+    state: { level, element, characterClass, mainStat, language },
+    actions,
+  } = useAppContext();
   const text = textOptions[language];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [linkToSetPage, setLinkToSetPage] = useState();
+
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
-  const generateLinkToShowSetPage = (setToLink) => {
+  const generateLinkToShowSetPage = setToLink => {
     const link = genereateLinkToViewSet(setToLink, false, language);
     if (link) setLinkToSetPage(link);
   };
@@ -39,10 +42,10 @@ export default function SetMaker() {
     const itensList = filterItensByLevelAndClass(
       [...equipments, ...weapons],
       level,
-      characterClass
+      characterClass,
     );
 
-    const bestItens = ALL_ITENS_SLOTS_LIST.map((slot) =>
+    const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
       findBestSet(
         itensList,
         mainStat,
@@ -51,8 +54,8 @@ export default function SetMaker() {
         ignoredItens,
         ignoreThisSlotsElement,
         element,
-        language
-      )
+        language,
+      ),
     );
     generateLinkToShowSetPage(bestItens);
     setRecomendedSet(bestItens);
@@ -65,7 +68,7 @@ export default function SetMaker() {
       return;
     }
     const removeFromIgnoredList = ignoredItens.filter(
-      (item) => item !== itemName
+      item => item !== itemName,
     );
     setIgnoredItens(removeFromIgnoredList);
   };
@@ -77,7 +80,7 @@ export default function SetMaker() {
       return;
     }
     const removeSlotFromIgnoredList = ignoreThisSlotsElement.filter(
-      (item) => item !== slot
+      item => item !== slot,
     );
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };

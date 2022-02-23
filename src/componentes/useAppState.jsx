@@ -9,11 +9,32 @@ const AppContext = React.createContext({});
 // Cria o provedor que será implementado como componente PAI para os componentes que precisam de acesso a esse estado
 const AppProvider = ({ children }) => {
   // Inicializa o estado, mas em alguns casos não é necessário
-  const initialState = { language: 'PTBR' };
+  const initialState = {
+    language: 'PTBR',
+    level: 1,
+    characterClass: 'Alchemist',
+    element: 'All',
+    mainStat: 'armor',
+    itemName: '',
+    slot: 'All',
+    orderBy: 'level',
+    currentSet: {
+      necklace: {},
+      helmet: {},
+      ring: {},
+      weapon: {},
+      armor: {},
+      shield: {},
+      book: {},
+      accessorie: {},
+      leg: {},
+      shoe: {},
+    },
+  };
 
   // Esse componente tem um estado, que será acessado por todos os outros
   const [state, setState] = useState(initialState);
-
+  console.log(state);
   /*
   Aqui construimos as ações, o get actions está ali em baixo e ele será
   responsável por criar todas as ações que alteram o estado deste componente
@@ -41,6 +62,15 @@ ficou parecido com as actions do redux, para adicionar mais ações
 const getActions = setState => ({
   changeLanguage: newLanguage => {
     setState(state => ({ ...state, language: newLanguage }));
+  },
+  updateCurrentSet: newSet => {
+    setState(state => ({ ...state, currentSet: newSet }));
+  },
+  udateOneEquipment: (currentSet, newItem) => {
+    setState(state => ({
+      ...state,
+      currentSet: { ...currentSet, [newItem.slot]: newItem },
+    }));
   },
 });
 

@@ -8,20 +8,22 @@ import {
 } from '../data/dataLanguages';
 import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../data/kakeleData';
 import { updateItensFilter } from '../store/actions/KakeleFilters.actions';
+import { useAppContext } from './useAppState';
 
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;
-  const dispatch = useDispatch();
   const {
-    level,
-    element,
-    characterClass,
-    mainStat,
-    itemName,
-    slot,
-    orderBy,
-    language,
-  } = useSelector(state => state.currentKakeleFilters);
+    state: {
+      level,
+      element,
+      characterClass,
+      mainStat,
+      itemName,
+      slot,
+      orderBy,
+      language,
+    },
+  } = useAppContext();
   const text = textOptions[language];
 
   const updateFilter = (action, newFilterValue) =>

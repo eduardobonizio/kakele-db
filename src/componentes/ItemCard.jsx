@@ -15,9 +15,13 @@ import ButtonForKakele from './ButtonForKakele';
 import './css/ItemCard.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useAppContext } from './useAppState';
 
 export default function ItemCard(props) {
-  const dispatch = useDispatch();
+  const {
+    state: { currentSet, language },
+    actions: { updateCurrentSet, udateOneEquipment },
+  } = useAppContext();
   const router = useRouter();
   const {
     index,
@@ -40,70 +44,65 @@ export default function ItemCard(props) {
   } = props;
 
   const showDetails = router.pathname.includes('/item/');
-  const currentSet = useSelector(state => state.currentSet);
-  const { language } = useSelector(state => state.currentKakeleFilters);
   const text = textOptions[language];
 
   const equipItem = thisItem => {
     if (thisItem.nameEN !== '-----------') {
       if (thisItem.slot === 'weapon') {
         if (thisItem.twoHanded) {
-          dispatch(
-            updateCurrentSet({
-              ...currentSet,
-              weapon: thisItem,
-              book: { ...FAKE_ITEM, sloot: 'book' },
-              shield: { ...FAKE_ITEM, slot: 'shield' },
-            }),
-          );
+          updateCurrentSet({
+            ...currentSet,
+            weapon: thisItem,
+            book: { ...FAKE_ITEM, sloot: 'book' },
+            shield: { ...FAKE_ITEM, slot: 'shield' },
+          });
+
           return;
         }
-        dispatch(udateOneEquipment(thisItem));
+        udateOneEquipment(currentSet, thisItem);
         return;
       }
       if (thisItem.slot === 'shield') {
         if (currentSet.weapon.twoHanded) {
-          dispatch(
-            updateCurrentSet({
-              ...currentSet,
-              shield: thisItem,
-              weapon: { ...FAKE_ITEM, slot: 'weapon' },
-              book: { ...FAKE_ITEM, sloot: 'book' },
-            }),
-          );
-          return;
-        }
-        dispatch(
           updateCurrentSet({
             ...currentSet,
             shield: thisItem,
+            weapon: { ...FAKE_ITEM, slot: 'weapon' },
             book: { ...FAKE_ITEM, sloot: 'book' },
-          }),
-        );
+          });
+
+          return;
+        }
+
+        updateCurrentSet({
+          ...currentSet,
+          shield: thisItem,
+          book: { ...FAKE_ITEM, sloot: 'book' },
+        });
+
         return;
       }
       if (thisItem.slot === 'book') {
         if (currentSet.weapon.twoHanded) {
-          dispatch(
-            updateCurrentSet({
-              ...currentSet,
-              book: thisItem,
-              weapon: { ...FAKE_ITEM, slot: 'weapon' },
-              shield: { ...FAKE_ITEM, sloot: 'shield' },
-            }),
-          );
-          return;
-        }
-        dispatch(
           updateCurrentSet({
             ...currentSet,
             book: thisItem,
+            weapon: { ...FAKE_ITEM, slot: 'weapon' },
             shield: { ...FAKE_ITEM, sloot: 'shield' },
-          }),
-        );
+          });
+
+          return;
+        }
+
+        updateCurrentSet({
+          ...currentSet,
+          book: thisItem,
+          shield: { ...FAKE_ITEM, sloot: 'shield' },
+        });
+
         return;
       }
-      dispatch(udateOneEquipment(thisItem));
+      udateOneEquipment(currentSet, thisItem);
     }
   };
 
