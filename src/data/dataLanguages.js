@@ -149,6 +149,7 @@ const kakeleItemsFiltersJsx = {
 };
 const oreCalculatorJsx = {
   EN: {
+    title: 'Upgrade calculator',
     startUpgrade: 'Current forge',
     finishUpgrade: 'Desired forge',
     buyOres: 'Add ore prices',
@@ -168,6 +169,7 @@ const oreCalculatorJsx = {
     alert: 'Current upgrade must be greater then desired upgrade',
   },
   PTBR: {
+    title: 'Calculadora de upgrade',
     startUpgrade: 'Forja atual',
     finishUpgrade: 'Forja desejada',
     buyOres: 'Adicionar preço dos minérios',

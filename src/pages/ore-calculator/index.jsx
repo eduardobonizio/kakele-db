@@ -64,6 +64,7 @@ export default function OreCalculator() {
           key="title"
         />
       </Head>
+      <h3>{text.title}</h3>
       <div className="d-flex flex-column ore-upgrader-filter-container">
         <UpgradeSelector
           elementId="upgrade-inicial"
