@@ -10,11 +10,12 @@ function NavBar() {
     state: { language },
     actions: { changeLanguage },
   } = useAppContext();
+
   const text = textOptions[language];
 
   useEffect(() => {
     const userLanguage = localStorage.getItem('language');
-    if (userLanguage !== language) {
+    if (userLanguage && userLanguage !== language) {
       changeLanguage(userLanguage);
     }
   }, [changeLanguage, language]);
