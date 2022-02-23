@@ -1,12 +1,12 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import Link from "next/link";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Link from 'next/link';
 
 // import app from '../../api/Firebase';
-import { navBarJsx as textOptions } from "../data/dataLanguages";
+import { navBarJsx as textOptions } from '../data/dataLanguages';
 
 function NavBar() {
-  const { language } = useSelector((state) => state.currentKakeleFilters);
+  const { language } = useSelector(state => state.currentKakeleFilters);
   const text = textOptions[language] || textOptions.PTBR;
 
   return (
@@ -16,7 +16,7 @@ function NavBar() {
     >
       <div className="container">
         <Link href="/" className="navbar-brand">
-          Home
+          <a className="navbar-brand">Home</a>
         </Link>
         <button
           className="navbar-toggler"
@@ -32,23 +32,23 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link href="/set-maker" className="nav-link">
-                {text.generateSet}
+              <Link href="/set-maker">
+                <a className="nav-link">{text.generateSet}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/set" className="nav-link">
-                {text.showSet}
+              <Link href="/set">
+                <a className="nav-link">{text.showSet}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/ore-calculator" className="nav-link">
-                {text.oreCalculator}
+              <Link href="/ore-calculator">
+                <a className="nav-link">{text.oreCalculator}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/search-item" className="nav-link">
-                {text.searchItem}
+              <Link href="/search-item">
+                <a className="nav-link">{text.searchItem}</a>
               </Link>
             </li>
           </ul>
