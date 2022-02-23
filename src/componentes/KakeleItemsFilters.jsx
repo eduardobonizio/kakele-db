@@ -27,8 +27,6 @@ export default function KakeleItemsFilters(props) {
   } = useAppContext();
   const text = textOptions[language];
 
-  console.log(state, actions);
-
   return (
     <>
       <div className="input-group mb-2">
