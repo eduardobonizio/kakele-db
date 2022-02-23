@@ -135,6 +135,13 @@ export default function ShowSet() {
             <ItemCard item={showSet.book} index={showSet.book.nameEN} />
           )}
 
+          {showSet.book &&
+            showSet.book.nameEN === '-----------' &&
+            showSet.shield &&
+            showSet.shield.nameEN === '-----------' && (
+              <ItemCard item={showSet.shield} index={showSet.shield.nameEN} />
+            )}
+
           {showSet.accessorie && (
             <ItemCard
               item={showSet.accessorie}
