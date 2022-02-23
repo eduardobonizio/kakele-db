@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Input from '../../componentes/inputs/Input';
 import { useAppContext } from '../../context/appContext/useAppState';
 import { addDotToKks } from '../../data/kakeleActions';
-import { totalExpToLevel } from '../../data/KakeleLevelCalc';
+import { totalExpToLevel } from '../../data/kakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { expCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import Head from 'next/head';
