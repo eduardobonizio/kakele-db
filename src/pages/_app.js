@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { AppProvider } from '../componentes/useAppState';
-import Layout from '../componentes/Layout';
+import { AppProvider } from '../context/appContext/useAppState';
+import Layout from '../componentes/layout/Layout';
 import Head from 'next/head';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
 

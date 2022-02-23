@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Alert from '../../componentes/Alert';
-import ButtonForKakele from '../../componentes/ButtonForKakele';
-import InputCheckBox from '../../componentes/InputCheckBox';
-import OrePriceUpdater from '../../componentes/OrePriceUpdater';
-import UpgradeSelector from '../../componentes/UpgradeSelector';
-import { useAppContext } from '../../componentes/useAppState';
+import Alert from '../../componentes/alert/Alert';
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import InputCheckBox from '../../componentes/inputs/InputCheckBox';
+import OrePriceUpdater from '../../componentes/others/OrePriceUpdater';
+import UpgradeSelector from '../../componentes/others/UpgradeSelector';
+import { useAppContext } from '../../context/appContext/useAppState';
+
 import { oreCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import {
   activateAlert,

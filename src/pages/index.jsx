@@ -1,5 +1,5 @@
-import ButtonForKakele from '../componentes/ButtonForKakele';
-import { useAppContext } from '../componentes/useAppState';
+import ButtonForKakele from '../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import { useAppContext } from '../context/appContext/useAppState';
 import { homeContentJsx as textOptions } from '../data/dataLanguages';
 
 export default function HomeContent() {

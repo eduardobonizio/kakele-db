@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UPGRADES_STAGES } from '../data/kakeleData';
+import { UPGRADES_STAGES } from '../../data/kakeleData';
 
 export default function UpgradeSelector(props) {
   const { elementId, labelText, onChange } = props;

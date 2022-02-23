@@ -1,8 +1,8 @@
+import './SearchItem.module.css';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
-import ButtonForKakele from '../../componentes/ButtonForKakele';
-import ItemCard from '../../componentes/ItemCard';
-import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
+import { useAppContext } from '../../context/appContext/useAppState';
 import { searchItemJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByElement,
@@ -11,10 +11,10 @@ import {
   findItemsByName,
 } from '../../data/kakeleActions';
 import { equipments, weapons } from '../../data/kakeleData';
-import Link from 'next/link';
-import { useAppContext } from '../../componentes/useAppState';
 
-import './SearchItem.module.css';
+import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import ItemCard from '../../componentes/others/item-card/ItemCard';
 
 export default function SearchItem() {
   const {

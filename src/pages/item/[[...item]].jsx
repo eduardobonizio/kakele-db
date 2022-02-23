@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import ItemCard from '../../componentes/others/item-card/ItemCard';
+import { useAppContext } from '../../context/appContext/useAppState';
 
-import ItemCard from '../../componentes/ItemCard';
-import { useAppContext } from '../../componentes/useAppState';
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 import { equipments, weapons } from '../../data/kakeleData';
 import './ShowItem.module.css';

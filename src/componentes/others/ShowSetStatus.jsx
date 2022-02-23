@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useAppContext } from '../../context/appContext/useAppState';
 
-import { showSetStatusJsx as textOptions } from '../data/dataLanguages';
-import { checkSetElement } from '../data/kakeleActions';
-import { useAppContext } from './useAppState';
+import { showSetStatusJsx as textOptions } from '../../data/dataLanguages';
+import { checkSetElement } from '../../data/kakeleActions';
 
 export default function ShowSetStatus(props) {
   const { itensListToShowStatus } = props;

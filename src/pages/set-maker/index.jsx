@@ -1,12 +1,7 @@
-import { useAppContext } from '../../componentes/useAppState';
-import React, { useState } from 'react';
-
 import './set-maker.module.css';
+import React, { useState } from 'react';
+import { useAppContext } from '../../context/appContext/useAppState';
 
-import ButtonForKakele from '../../componentes/ButtonForKakele';
-import ItemCard from '../../componentes/ItemCard';
-import KakeleItemsFilters from '../../componentes/KakeleItemsFilters';
-import ShowSetStatus from '../../componentes/ShowSetStatus';
 import { setMakerJsx as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
@@ -20,7 +15,12 @@ import {
   ALL_ITENS_SLOTS_LIST,
 } from '../../data/kakeleData';
 import Link from 'next/link';
-import LinkButton from '../../componentes/LinkButton';
+
+import ItemCard from '../../componentes/others/item-card/ItemCard';
+import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
+import ShowSetStatus from '../../componentes/others/ShowSetStatus';
+import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function SetMaker() {
   const {

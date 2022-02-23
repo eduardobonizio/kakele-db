@@ -1,17 +1,17 @@
+import './ItemCard.module.css';
 import React from 'react';
-import { useRouter } from 'next/router';
-
 import copy from 'copy-to-clipboard';
 
-import { itemCardJsx as textOptions } from '../data/dataLanguages';
-import { FAKE_ITEM } from '../data/kakeleData';
-import ButtonForKakele from './ButtonForKakele';
+import { useRouter } from 'next/router';
+import { itemCardJsx as textOptions } from '../../../data/dataLanguages';
+import { FAKE_ITEM } from '../../../data/kakeleData';
+import { saveSetInLocalStorage } from '../../../data/kakeleActions';
+import { useAppContext } from '../../../context/appContext/useAppState';
 
-import './css/ItemCard.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useAppContext } from './useAppState';
-import { saveSetInLocalStorage } from '../data/kakeleActions';
+
+import ButtonForKakele from '../../buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function ItemCard(props) {
   const {

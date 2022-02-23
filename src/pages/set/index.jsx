@@ -5,9 +5,6 @@ import './ShowSet.module.css';
 
 import copy from 'copy-to-clipboard';
 
-import ButtonForKakele from '../../componentes/ButtonForKakele';
-import ItemCard from '../../componentes/ItemCard';
-import ShowSetStatus from '../../componentes/ShowSetStatus';
 import { showSetJsx as textOptions } from '../../data/dataLanguages';
 import {
   findItemByName,
@@ -21,7 +18,11 @@ import {
   FAKE_ITEM,
 } from '../../data/kakeleData';
 import Link from 'next/link';
-import { useAppContext } from '../../componentes/useAppState';
+
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import { useAppContext } from '../../context/appContext/useAppState';
+import ItemCard from '../../componentes/others/item-card/ItemCard';
+import ShowSetStatus from '../../componentes/others/ShowSetStatus';
 
 export default function ShowSet() {
   const {
