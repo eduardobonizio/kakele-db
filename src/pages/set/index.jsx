@@ -61,17 +61,21 @@ export default function ShowSet() {
     );
 
   useEffect(() => {
+    const storedSet = localStorage.getItem('currentSet') || '""';
+    const slecetedSet = storedSet
+      ? storedSet.replace('"', '').replace('"', '')
+      : urlParams;
     const itensOnUrlToItensList = (urlText, allItens) => {
       const itensOnUrl = urlParamsToObject(urlText);
 
       const allSlotItens = addMissingItens(itensOnUrl, allItens);
 
       const normalizedSet = normalizeSet(allSlotItens);
-
+      console.log(itensOnUrl);
       updateCurrentSet(normalizedSet);
     };
 
-    itensOnUrlToItensList(urlParams, [...equipments, ...weapons]);
+    itensOnUrlToItensList(slecetedSet, [...equipments, ...weapons]);
   }, [updateCurrentSet, urlParams]);
 
   const copyLink = () => {

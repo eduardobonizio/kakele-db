@@ -1,15 +1,15 @@
-import { UPGRADES_DATA } from "./kakeleData";
+import { UPGRADES_DATA } from './kakeleData';
 
 const FIVE_SECONDS = 5000;
 
-const urlParamsToObject = (paramsText) => {
+const urlParamsToObject = paramsText => {
   // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
   try {
     const formatedText = `{"${paramsText
-      .replace("_", "")
-      .replaceAll("_", '","')
-      .replaceAll("=", '":"')
-      .replaceAll("-", " ")}"}`;
+      .replace('_', '')
+      .replaceAll('_', '","')
+      .replaceAll('=', '":"')
+      .replaceAll('-', ' ')}"}`;
 
     return JSON.parse(formatedText);
   } catch {
@@ -23,18 +23,18 @@ const genereateLinkToViewSet = (setList, origin, language) => {
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
-        " ",
-        "-"
+        ' ',
+        '-',
       );
       return `${anterior}_${adicionarTexto}`;
     }
     return anterior;
-  }, "");
+  }, '');
   if (origin) return `${origin}/set/${link}`;
   return `/set/${link}`;
 };
 
-const activateAlert = (setShowAlert) => {
+const activateAlert = setShowAlert => {
   setShowAlert(true);
   setTimeout(() => {
     setShowAlert(false);
@@ -63,7 +63,7 @@ const calculateUpgradePriceWithOresPrice = (totalOres, oresPrice) => {
   return { ...totalOres, kks: totalPrice };
 };
 
-const calculateOreQuantityAndPrice = (finishUpgradeLvl) => {
+const calculateOreQuantityAndPrice = finishUpgradeLvl => {
   const upgradeXTimes = finishUpgradeLvl / 5;
 
   const result = UPGRADES_DATA.reduce(
@@ -91,26 +91,26 @@ const calculateOreQuantityAndPrice = (finishUpgradeLvl) => {
       ferro: 0,
       ouro: 0,
       kks: 0,
-    }
+    },
   );
   return result;
 };
 
-const addDotToKks = (number) =>
-  number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const addDotToKks = number =>
+  number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 const filterItensBySlot = (itensList, slot, ignoreItensList, language) => {
   const name = `name${language}`;
 
   return itensList.filter(
-    (item) =>
+    item =>
       (item.slot === slot && !ignoreItensList.includes(item[name])) ||
-      slot === "All"
+      slot === 'All',
   );
 };
 const filterItensByElement = (itensList, element, ignoreElement) =>
   itensList.filter(
-    (item) => item.energy === element || element === "All" || ignoreElement
+    item => item.energy === element || element === 'All' || ignoreElement,
   );
 
 const filterItens = (
@@ -119,18 +119,18 @@ const filterItens = (
   ignoreItensList,
   element,
   ignoreElement,
-  language
+  language,
 ) => {
   const itensFilteredBySlot = filterItensBySlot(
     itensList,
     slot,
     ignoreItensList,
-    language
+    language,
   );
   const itensFilteredBySlotAndElement = filterItensByElement(
     itensFilteredBySlot,
     element,
-    ignoreElement
+    ignoreElement,
   );
 
   return { itensFilteredBySlot, itensFilteredBySlotAndElement };
@@ -139,29 +139,29 @@ const filterItens = (
 const getAlternativeStatus = (characterClass, mainStat) => {
   const priority = {
     Alchemist: {
-      magic: "armor",
-      armor: "magic",
-      attack: "armor",
+      magic: 'armor',
+      armor: 'magic',
+      attack: 'armor',
     },
     Berserker: {
-      attack: "armor",
-      armor: "magic",
-      magic: "attack",
+      attack: 'armor',
+      armor: 'magic',
+      magic: 'attack',
     },
     Hunter: {
-      attack: "armor",
-      armor: "magic",
-      magic: "attack",
+      attack: 'armor',
+      armor: 'magic',
+      magic: 'attack',
     },
     Mage: {
-      magic: "armor",
-      armor: "magic",
-      attack: "armor",
+      magic: 'armor',
+      armor: 'magic',
+      attack: 'armor',
     },
     Warrior: {
-      armor: "attack",
-      attack: "magic",
-      magic: "armor",
+      armor: 'attack',
+      attack: 'magic',
+      magic: 'armor',
     },
   };
 
@@ -181,7 +181,7 @@ const findBestItem = (itensList, status, lastChance = false) => {
 
         return previous;
       },
-      { [status]: 0 }
+      { [status]: 0 },
     );
 
   if (bestItem[status] > 0 || lastChance) return bestItem;
@@ -191,20 +191,20 @@ const findBestItem = (itensList, status, lastChance = false) => {
 
 const skipItemSlot = (characterClass, slot) => {
   if (
-    (characterClass === "Berserker" || characterClass === "Hunter") &&
-    (slot === "shield" || slot === "book")
+    (characterClass === 'Berserker' || characterClass === 'Hunter') &&
+    (slot === 'shield' || slot === 'book')
   ) {
     return true;
   }
 
   if (
-    (characterClass === "Mage" || characterClass === "Alchemist") &&
-    slot === "shield"
+    (characterClass === 'Mage' || characterClass === 'Alchemist') &&
+    slot === 'shield'
   ) {
     return true;
   }
 
-  if (characterClass === "Warrior" && slot === "book") {
+  if (characterClass === 'Warrior' && slot === 'book') {
     return true;
   }
   return false;
@@ -218,7 +218,7 @@ const findBestSet = (
   ignoredItens,
   ignoreSlotElementList,
   element,
-  language
+  language,
 ) => {
   if (skipItemSlot(characterClass, slot)) return false;
 
@@ -230,7 +230,7 @@ const findBestSet = (
     ignoredItens,
     element,
     ignoreElement,
-    language
+    language,
   );
 
   const alternativeStatus = getAlternativeStatus(characterClass, mainStat);
@@ -240,20 +240,20 @@ const findBestSet = (
 
   const bestItemWithAlternativeStatus = findBestItem(
     itensFilteredBySlotAndElement,
-    alternativeStatus
+    alternativeStatus,
   );
 
   if (bestItemWithAlternativeStatus) return bestItemWithAlternativeStatus;
 
   const bestItemWithAlternativeElement = findBestItem(
     itensFilteredBySlot,
-    mainStat
+    mainStat,
   );
   if (bestItemWithAlternativeElement) return bestItemWithAlternativeElement;
 
   const bestItemWithAlternativeStatusAndElement = findBestItem(
     itensFilteredBySlot,
-    alternativeStatus
+    alternativeStatus,
   );
   if (bestItemWithAlternativeStatusAndElement)
     return bestItemWithAlternativeStatusAndElement;
@@ -263,7 +263,7 @@ const findBestSet = (
   const lastChanceToFindItem = findBestItem(
     itensFilteredBySlot,
     mainStat,
-    lastChance
+    lastChance,
   );
   if (lastChanceToFindItem) return lastChanceToFindItem;
 
@@ -272,39 +272,39 @@ const findBestSet = (
 
 const filterItensByLevelAndClass = (listaDeItens, level, classe) =>
   listaDeItens.filter(
-    (item) =>
+    item =>
       level >= Number(item.level) &&
-      (item.vocation === classe || item.vocation === "All")
+      (item.vocation === classe || item.vocation === 'All'),
   );
 
 const elementQuantityInSet = (itensList, element) =>
-  itensList.filter((item) => item.energy === element).length;
+  itensList.filter(item => item.energy === element).length;
 
 const checkSetElement = (itens, language) => {
   const name = `name${language}`;
   const elements = {
     light: {
-      nameEN: "Light",
-      namePTBR: "Luz",
-      quantity: elementQuantityInSet(itens, "Light"),
+      nameEN: 'Light',
+      namePTBR: 'Luz',
+      quantity: elementQuantityInSet(itens, 'Light'),
     },
     nature: {
-      nameEN: "Nature",
-      namePTBR: "Natureza",
-      quantity: elementQuantityInSet(itens, "Nature"),
+      nameEN: 'Nature',
+      namePTBR: 'Natureza',
+      quantity: elementQuantityInSet(itens, 'Nature'),
     },
     dark: {
-      nameEN: "Dark",
-      namePTBR: "Trevas",
-      quantity: elementQuantityInSet(itens, "Dark"),
+      nameEN: 'Dark',
+      namePTBR: 'Trevas',
+      quantity: elementQuantityInSet(itens, 'Dark'),
     },
   };
 
   const elementResult = Object.values(elements).sort(
-    (a, b) => b.quantity - a.quantity
+    (a, b) => b.quantity - a.quantity,
   )[0];
 
-  const element = elementResult.quantity >= 5 ? elementResult.name : "None";
+  const element = elementResult.quantity >= 5 ? elementResult.name : 'None';
 
   const { light, nature, dark } = elements;
 
@@ -316,18 +316,18 @@ const checkSetElement = (itens, language) => {
 const findItemByName = (itemList, itemName) => {
   if (!itemName) return false;
   return itemList.find(
-    (item) =>
+    item =>
       item.nameEN.toLowerCase().includes(itemName.toLowerCase()) ||
-      item.namePTBR.toLowerCase().includes(itemName.toLowerCase())
+      item.namePTBR.toLowerCase().includes(itemName.toLowerCase()),
   );
 };
 
 const findItemsByName = (itemList, itemName) => {
   if (!itemName) return false;
   return itemList.filter(
-    (item) =>
+    item =>
       item.nameEN.toLowerCase().includes(itemName.toLowerCase()) ||
-      item.namePTBR.toLowerCase().includes(itemName.toLowerCase())
+      item.namePTBR.toLowerCase().includes(itemName.toLowerCase()),
   );
 };
 

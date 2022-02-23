@@ -28,14 +28,9 @@ export default function SetMaker() {
   const text = textOptions[language];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
-  const [linkToSetPage, setLinkToSetPage] = useState();
+  const [showEquipButton, setShowEquipButton] = useState(false);
 
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
-
-  const generateLinkToShowSetPage = setToLink => {
-    const link = genereateLinkToViewSet(setToLink, false, language);
-    if (link) setLinkToSetPage(link);
-  };
 
   const generateSet = () => {
     const itensList = filterItensByLevelAndClass(
@@ -56,7 +51,7 @@ export default function SetMaker() {
         language,
       ),
     );
-    generateLinkToShowSetPage(bestItens);
+    setShowEquipButton(true);
     setRecomendedSet(bestItens);
   };
 
@@ -85,7 +80,10 @@ export default function SetMaker() {
   };
 
   const saveToLocalStorage = fullSet =>
-    localStorage.setItem('currentSet', JSON.stringify(fullSet));
+    localStorage.setItem(
+      'currentSet',
+      JSON.stringify(fullSet.replace('/set/', '')),
+    );
 
   return (
     <div className="container status-and-card-container">
@@ -96,10 +94,10 @@ export default function SetMaker() {
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
           {recomendedSet && (
-            <Link href={linkToSetPage} passHref>
+            <Link href="/set" passHref>
               <LinkButton
                 text={text.equipAll}
-                onClick={() => saveToLocalStorage(recomendedSet)}
+                onClick={() => saveToLocalStorage(linkToSetPage)}
               />
             </Link>
           )}
