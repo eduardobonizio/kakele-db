@@ -19,7 +19,7 @@ const urlParamsToObject = paramsText => {
 
 const genereateLinkToViewSet = (setList, origin, language) => {
   if (!setList) return false;
-  const name = `name${language}`;
+  const name = 'nameEN';
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
@@ -315,11 +315,12 @@ const checkSetElement = (itens, language) => {
 
 const findItemByName = (itemList, itemName) => {
   if (!itemName) return false;
-  return itemList.find(
-    item =>
+  return itemList.find(item => {
+    return (
       item.nameEN.toLowerCase().includes(itemName.toLowerCase()) ||
-      item.namePTBR.toLowerCase().includes(itemName.toLowerCase()),
-  );
+      item.namePTBR.toLowerCase().includes(itemName.toLowerCase())
+    );
+  });
 };
 
 const findItemsByName = (itemList, itemName) => {

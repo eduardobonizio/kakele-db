@@ -28,9 +28,14 @@ export default function SetMaker() {
   const text = textOptions[language];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
-  const [showEquipButton, setShowEquipButton] = useState(false);
+  const [linkToSetPage, setLinkToSetPage] = useState();
 
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
+
+  const generateLinkToShowSetPage = setToLink => {
+    const link = genereateLinkToViewSet(setToLink, false, language);
+    if (link) setLinkToSetPage(link);
+  };
 
   const generateSet = () => {
     const itensList = filterItensByLevelAndClass(
@@ -51,7 +56,7 @@ export default function SetMaker() {
         language,
       ),
     );
-    setShowEquipButton(true);
+    generateLinkToShowSetPage(bestItens);
     setRecomendedSet(bestItens);
   };
 

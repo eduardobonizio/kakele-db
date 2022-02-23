@@ -49,8 +49,8 @@ export default function ShowSet() {
     ALL_ITENS_SLOTS_LIST.reduce(
       (current, next, index) => {
         const currentSlot = ALL_ITENS_SLOTS_LIST[index];
-        const item =
-          findItemByName(allItens, selectedItems[currentSlot]) || FAKE_ITEM;
+
+        const item = findItemByName(allItens, selectedItems[currentSlot]);
 
         return {
           ...current,
@@ -71,7 +71,7 @@ export default function ShowSet() {
       const allSlotItens = addMissingItens(itensOnUrl, allItens);
 
       const normalizedSet = normalizeSet(allSlotItens);
-      console.log(itensOnUrl);
+
       updateCurrentSet(normalizedSet);
     };
 
