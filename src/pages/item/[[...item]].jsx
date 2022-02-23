@@ -39,7 +39,8 @@ export default function ShowItem() {
         setItem(currentItem);
       }
     }
-  }, [allItens, router.query]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.query]);
 
   return (
     <div className="container d-flex flex-column align-items-center show-item-container">
