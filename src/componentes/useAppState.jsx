@@ -62,6 +62,9 @@ const getActions = setState => ({
   changeLanguage: newLanguage => {
     setState(state => ({ ...state, language: newLanguage }));
   },
+  updateFilter: (filter, value) => {
+    setState(state => ({ ...state, [filter]: value }));
+  },
   updateCurrentSet: newSet => {
     setState(state => ({ ...state, currentSet: newSet }));
   },

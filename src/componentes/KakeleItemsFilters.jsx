@@ -11,6 +11,7 @@ import { useAppContext } from './useAppState';
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;
   const {
+    state,
     state: {
       level,
       element,
@@ -21,11 +22,12 @@ export default function KakeleItemsFilters(props) {
       orderBy,
       language,
     },
+    actions,
+    actions: { updateFilter },
   } = useAppContext();
   const text = textOptions[language];
 
-  const updateFilter = (action, newFilterValue) =>
-    dispatch(updateItensFilter(action, newFilterValue));
+  console.log(state, actions);
 
   return (
     <>
@@ -42,7 +44,7 @@ export default function KakeleItemsFilters(props) {
               aria-label="Nome do item"
               aria-describedby="nome-do-item"
               value={itemName}
-              onChange={e => updateFilter('UPDATE_NAME_FILTER', e.target.value)}
+              onChange={e => updateFilter('itemName', e.target.value)}
             />
           </div>
         )}
@@ -56,9 +58,7 @@ export default function KakeleItemsFilters(props) {
           aria-label="Nivel do Personagem"
           aria-describedby="nivel-do-personagem"
           value={level}
-          onChange={e =>
-            updateFilter('UPDATE_CHARACTER_LEVEL', Number(e.target.value))
-          }
+          onChange={e => updateFilter('level', Number(e.target.value))}
         />
       </div>
       <div className="input-group mb-2">
@@ -69,7 +69,7 @@ export default function KakeleItemsFilters(props) {
           className="form-select"
           id="classe-do-personagem"
           defaultValue={characterClass}
-          onChange={e => updateFilter('UPDATE_CHARACTER_CLASS', e.target.value)}
+          onChange={e => updateFilter('characterClass', e.target.value)}
         >
           <option value="Alchemist">{text.alchemist}</option>
           <option value="Hunter">{text.hunter}</option>
@@ -88,7 +88,7 @@ export default function KakeleItemsFilters(props) {
             className="form-select"
             id="status-principal"
             defaultValue={mainStat}
-            onChange={e => updateFilter('UPDATE_STAT_FILTER', e.target.value)}
+            onChange={e => updateFilter('mainStat', e.target.value)}
           >
             <option value="armor">{text.armor}</option>
             <option value="magic">{text.magic}</option>
@@ -105,7 +105,7 @@ export default function KakeleItemsFilters(props) {
           className="form-select"
           id="elemento-do-set"
           defaultValue={element}
-          onChange={e => updateFilter('UPDATE_ELEMENT_FILTER', e.target.value)}
+          onChange={e => updateFilter('element', e.target.value)}
         >
           <option value="All">{text.all}</option>
           <option value="Light">{text.light}</option>
@@ -123,7 +123,7 @@ export default function KakeleItemsFilters(props) {
               className="form-select"
               id="slot-do-item"
               defaultValue={slot}
-              onChange={e => updateFilter('UPDATE_SLOT_FILTER', e.target.value)}
+              onChange={e => updateFilter('slot', e.target.value)}
             >
               <option value="All">{text.all}</option>
               {ALL_ITENS_SLOTS_LIST.map(curSlot => (
@@ -141,9 +141,7 @@ export default function KakeleItemsFilters(props) {
               className="form-select"
               id="filtro"
               defaultValue={orderBy}
-              onChange={e =>
-                updateFilter('UPDATE_ORDER_FILTER', e.target.value)
-              }
+              onChange={e => updateFilter('orderBy', e.target.value)}
             >
               {ITEM_FILTERS.map(status => (
                 <option value={status} key={status}>
