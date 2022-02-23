@@ -20,7 +20,6 @@ const urlParamsToObject = paramsText => {
 const genereateLinkToViewSet = (setList, origin) => {
   if (!setList) return false;
   const name = 'nameEN';
-  console.log(setList);
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
