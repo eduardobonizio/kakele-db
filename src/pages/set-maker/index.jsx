@@ -19,11 +19,11 @@ import {
   ALL_ITENS_SLOTS_LIST,
 } from '../../data/kakeleData';
 import Link from 'next/link';
+import LinkButton from '../../componentes/LinkButton';
 
 export default function SetMaker() {
   const {
     state: { level, element, characterClass, mainStat, language },
-    actions,
   } = useAppContext();
   const text = textOptions[language];
   const [recomendedSet, setRecomendedSet] = useState(false);
@@ -84,6 +84,9 @@ export default function SetMaker() {
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
+  const saveToLocalStorage = fullSet =>
+    localStorage.setItem('currentSet', JSON.stringify(fullSet));
+
   return (
     <div className="container status-and-card-container">
       <div className="d-flex flex-column set-maker-filters-container">
@@ -93,8 +96,11 @@ export default function SetMaker() {
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
           {recomendedSet && (
-            <Link href={linkToSetPage}>
-              <a>{text.equipAll}</a>
+            <Link href={linkToSetPage} passHref>
+              <LinkButton
+                text={text.equipAll}
+                onClick={() => saveToLocalStorage(recomendedSet)}
+              />
             </Link>
           )}
         </div>
