@@ -56,7 +56,7 @@ export default function SearchItem() {
       <div className="d-flex d-flex flex-column kakele-search-item-filters">
         <KakeleItemsFilters manualFilters />
         <ButtonForKakele onClick={lookForItens} text={text.search} />
-        <Link href="set">
+        <Link href="/set">
           <a>{text.showSet}</a>
         </Link>
       </div>
