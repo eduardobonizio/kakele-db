@@ -1,3 +1,5 @@
+import styles from './NavBar.module.css';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { useAppContext } from '../../../context/appContext/useAppState';
@@ -26,8 +28,10 @@ function NavBar() {
       id="navbar"
     >
       <div className="container">
-        <Link href="/" className="navbar-brand">
-          <a className="navbar-brand">Home</a>
+        <Link href="/">
+          <a className={`navbar-brand ${styles.logo}`}>
+            <Image src="/logo.png" alt="logo" width="48" height="48" />
+          </a>
         </Link>
         <button
           className="navbar-toggler"
