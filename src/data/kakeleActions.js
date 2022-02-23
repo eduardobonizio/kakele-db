@@ -42,6 +42,18 @@ const saveSetInLocalStorage = newSet => {
   localStorage.setItem('currentSet', JSON.stringify(link.replace('/set/', '')));
 };
 
+const loadSetFromLocalStorage = () => {
+  try {
+    const currentSet = localStorage
+      .getItem('currentSet')
+      .replace('"', '')
+      .replace('"', '');
+    return currentSet;
+  } catch (error) {
+    return '""';
+  }
+};
+
 const activateAlert = setShowAlert => {
   setShowAlert(true);
   setTimeout(() => {
@@ -355,4 +367,5 @@ export {
   filterItensByElement,
   findItemsByName,
   saveSetInLocalStorage,
+  loadSetFromLocalStorage,
 };

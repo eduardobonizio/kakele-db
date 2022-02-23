@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import './ShowSet.module.css';
@@ -9,6 +9,7 @@ import { showSetJsx as textOptions } from '../../data/dataLanguages';
 import {
   findItemByName,
   genereateLinkToViewSet,
+  loadSetFromLocalStorage,
   urlParamsToObject,
 } from '../../data/kakeleActions';
 import {
@@ -21,17 +22,18 @@ import Link from 'next/link';
 
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { useAppContext } from '../../context/appContext/useAppState';
-import ItemCard from '../../componentes/others/item-card/ItemCard';
 import ShowSetStatus from '../../componentes/others/ShowSetStatus';
+import ItemCard from '../../componentes/others/item-card/ItemCard';
 
 export default function ShowSet() {
+  const router = useRouter();
   const {
     state: { currentSet, language },
     actions: { updateCurrentSet },
   } = useAppContext();
-  const router = useRouter();
-  const urlParams = router.query;
+  const { urslSet } = router.query;
   const text = textOptions[language];
+  const [showSet, setShowSet] = useState();
 
   const normalizeSet = setItems => {
     const shield =
@@ -46,15 +48,13 @@ export default function ShowSet() {
     return { ...setItems, shield: { ...shield }, book: { ...book } };
   };
 
-  const addMissingItens = (selectedItems, allItens) => {
-    return ALL_ITENS_SLOTS_LIST.reduce(
+  const addMissingItens = (selectedItems, allItens) =>
+    ALL_ITENS_SLOTS_LIST.reduce(
       (current, next, index) => {
         const currentSlot = ALL_ITENS_SLOTS_LIST[index];
 
-        const useFakeItem = { ...FAKE_ITEM, slot: ALL_ITENS_SLOTS_LIST[index] };
-
         const item =
-          findItemByName(allItens, selectedItems[currentSlot]) || useFakeItem;
+          findItemByName(allItens, selectedItems[currentSlot]) || FAKE_ITEM;
 
         return {
           ...current,
@@ -63,29 +63,29 @@ export default function ShowSet() {
       },
       { ...selectedItems },
     );
-  };
 
   useEffect(() => {
-    const storedSet = localStorage.getItem('currentSet') || '""';
-    const slecetedSet = storedSet
-      ? storedSet.replace('"', '').replace('"', '')
-      : urlParams;
-    const itensOnUrlToItensList = (urlText, allItens) => {
+    const storedSet = loadSetFromLocalStorage();
+    const selectedSet = urslSet ? urslSet[0] : storedSet;
+
+    const itensTextToObject = (urlText, allItens) => {
       const itensOnUrl = urlParamsToObject(urlText);
 
       const allSlotItens = addMissingItens(itensOnUrl, allItens);
 
       const normalizedSet = normalizeSet(allSlotItens);
 
-      updateCurrentSet(normalizedSet);
+      return normalizedSet;
     };
 
-    itensOnUrlToItensList(slecetedSet, [...equipments, ...weapons]);
-  }, [updateCurrentSet, urlParams]);
+    updateCurrentSet(itensTextToObject(storedSet, [...equipments, ...weapons]));
+
+    setShowSet(itensTextToObject(selectedSet, [...equipments, ...weapons]));
+  }, [updateCurrentSet, urslSet]);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
-    const setToArray = Object.values(currentSet).map(item => item);
+    const setToArray = Object.values(showSet).map(item => item);
     const link = genereateLinkToViewSet(setToArray, origin, language);
     if (link) copy(link);
   };
@@ -93,67 +93,58 @@ export default function ShowSet() {
   return (
     <div className="container status-and-card-container">
       <div className="d-flex flex-column">
-        {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
+        {showSet && <ShowSetStatus itensListToShowStatus={showSet} />}
         <Link href="/search-item">
           <a>{text.searchItems}</a>
         </Link>
         <ButtonForKakele onClick={copyLink} text={text.copy} />
       </div>
-      {currentSet && (
+      {showSet && (
         <div className="row row-cols-auto d-flex justify-content-center">
-          {currentSet.necklace && (
+          {showSet.necklace && (
+            <ItemCard item={showSet.necklace} index={showSet.necklace.nameEN} />
+          )}
+
+          {showSet.helmet && (
+            <ItemCard item={showSet.helmet} index={showSet.helmet.nameEN} />
+          )}
+
+          {showSet.ring && (
+            <ItemCard item={showSet.ring} index={showSet.ring.nameEN} />
+          )}
+
+          {showSet.weapon && (
+            <ItemCard item={showSet.weapon} index={showSet.weapon.nameEN} />
+          )}
+
+          {showSet.armor && (
+            <ItemCard item={showSet.armor} index={showSet.armor.nameEN} />
+          )}
+
+          {showSet.shield && showSet.shield.nameEN !== '-----------' && (
             <ItemCard
-              item={currentSet.necklace}
-              index={currentSet.necklace.nameEN}
+              item={showSet.shield || showSet.book}
+              index={showSet.shield.nameEN || showSet.book.nameEN}
             />
           )}
 
-          {currentSet.helmet && (
+          {showSet.book && showSet.book.nameEN !== '-----------' && (
+            <ItemCard item={showSet.book} index={showSet.book.nameEN} />
+          )}
+
+          {showSet.accessorie && (
             <ItemCard
-              item={currentSet.helmet}
-              index={currentSet.helmet.nameEN}
+              item={showSet.accessorie}
+              index={showSet.accessorie.nameEN}
             />
           )}
 
-          {currentSet.ring && (
-            <ItemCard item={currentSet.ring} index={currentSet.ring.nameEN} />
+          {showSet.leg && (
+            <ItemCard item={showSet.leg} index={showSet.leg.nameEN} />
           )}
 
-          {currentSet.weapon && (
-            <ItemCard
-              item={currentSet.weapon}
-              index={currentSet.weapon.nameEN}
-            />
-          )}
-
-          {currentSet.armor && (
-            <ItemCard item={currentSet.armor} index={currentSet.armor.nameEN} />
-          )}
-
-          {currentSet.shield && currentSet.shield.nameEN !== '-----------' && (
-            <ItemCard
-              item={currentSet.shield || currentSet.book}
-              index={currentSet.shield.nameEN || currentSet.book.nameEN}
-            />
-          )}
-
-          {currentSet.book && currentSet.book.nameEN !== '-----------' && (
-            <ItemCard item={currentSet.book} index={currentSet.book.nameEN} />
-          )}
-
-          {currentSet.accessorie && (
-            <ItemCard
-              item={currentSet.accessorie}
-              index={currentSet.accessorie.nameEN}
-            />
-          )}
-
-          {currentSet.leg && (
-            <ItemCard item={currentSet.leg} index={currentSet.leg.nameEN} />
-          )}
-
-          {currentSet.shoe && (
-            <ItemCard item={currentSet.shoe} index={currentSet.shoe.nameEN} />
+          {showSet.shoe && (
+            <ItemCard item={showSet.shoe} index={showSet.shoe.nameEN} />
           )}
         </div>
       )}
