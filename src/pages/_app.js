@@ -9,6 +9,7 @@ import Analytics from '../context/analytics/Analytics';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
+const env = process.env.NODE_ENV;
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -42,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       </AppProvider>
-      <Analytics />
+      {env === 'production' && <Analytics />}
     </>
   );
 }
