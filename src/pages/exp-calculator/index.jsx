@@ -32,11 +32,11 @@ export default function ExpCalculator() {
   return (
     <div className="container d-flex flex-column justify-content-around align-items-center">
       <Head>
-        <title>Kakele Tools - Exp calculator</title>
-        <meta name="description" content="Kakele exp calculator" />
+        <title>Exp Calculator - Kakele MMORPG</title>
+        <meta name="description" content="Exp calculator for Kakele MMORPG" />
         <meta
           property="og:title"
-          content="Kakele Tools - Exp calculator"
+          content="Exp Calculator - Kakele MMORPG"
           key="title"
         />
       </Head>
