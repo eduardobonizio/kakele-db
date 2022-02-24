@@ -22,9 +22,9 @@ export default function ExpCalculator() {
 
   const calExp = event => {
     event.preventDefault();
-    const startingExp = totalExpToLevel(currentLevel);
+    const startingExp = totalExpToLevel(currentLevel - 1);
     const subtract = startingExp > totalExp ? startingExp : totalExp;
-    const result = totalExpToLevel(desiredLevel) - subtract;
+    const result = totalExpToLevel(desiredLevel - 1) - subtract;
     const total = result >= 0 ? result : 0;
     setResult(total);
   };
