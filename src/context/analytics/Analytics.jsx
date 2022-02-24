@@ -1,19 +1,32 @@
-// https://willianjusten.com.br/como-configurar-o-google-analytics-no-nextjs-em-2021
-
 import Script from 'next/script';
-import { GA_TRACKING_ID } from './lib/gtag';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-const Analytics = () => (
-  <>
-    <Script
-      strategy="afterInteractive"
-      src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-    />
-    <Script
-      id="G-TAG"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
+
+export default function Analytics() {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = url => {
+      window.gtag('config', GA_TRACKING_ID, { page_path: url });
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -21,9 +34,8 @@ const Analytics = () => (
               page_path: window.location.pathname,
             });
           `,
-      }}
-    />
-  </>
-);
-
-export default Analytics;
+        }}
+      />
+    </>
+  );
+}
