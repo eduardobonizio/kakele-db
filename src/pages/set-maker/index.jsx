@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styles from './set-maker.module.css';
 import React, { useState } from 'react';
 import { useAppContext } from '../../context/appContext/useAppState';
@@ -20,7 +21,6 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
-import Head from 'next/head';
 
 export default function SetMaker() {
   const {
@@ -82,6 +82,10 @@ export default function SetMaker() {
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
         <title>Kakele Tools - Set generator</title>
+        <meta
+          name="description"
+          content="Auto set generator for Kakele with many filters"
+        />
         <meta
           property="og:title"
           content="Kakele Tools - Set generator"

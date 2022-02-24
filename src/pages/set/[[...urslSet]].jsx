@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -25,7 +26,6 @@ import { useAppContext } from '../../context/appContext/useAppState';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
-import Head from 'next/head';
 
 export default function ShowSet() {
   const router = useRouter();
@@ -96,6 +96,10 @@ export default function ShowSet() {
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
         <title>Kakele Tools - Show set</title>
+        <meta
+          name="description"
+          content="Create and share sets with your friends"
+        />
         <meta
           property="og:title"
           content="Kakele Tools - Show set"

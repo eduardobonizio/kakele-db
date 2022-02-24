@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import style from './ExpCalculator.module.css';
 import { useState } from 'react';
 
@@ -7,7 +8,6 @@ import { addDotToKks } from '../../data/kakeleActions';
 import { totalExpToLevel } from '../../data/kakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { expCalculatorJsx as textOptions } from '../../data/dataLanguages';
-import Head from 'next/head';
 
 export default function ExpCalculator() {
   const {
@@ -33,6 +33,7 @@ export default function ExpCalculator() {
     <div className="container d-flex flex-column justify-content-around align-items-center">
       <Head>
         <title>Kakele Tools - Exp calculator</title>
+        <meta name="description" content="Kakele exp calculator" />
         <meta
           property="og:title"
           content="Kakele Tools - Exp calculator"

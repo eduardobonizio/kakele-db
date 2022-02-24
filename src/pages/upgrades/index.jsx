@@ -58,6 +58,7 @@ export default function OreCalculator() {
     <div className="container ore-upgrader-container">
       <Head>
         <title>Kakele Tools - Upgrade calculator</title>
+        <meta name="description" content="Calculator for upgrades" />
         <meta
           property="og:title"
           content="Kakele Tools - Upgrade calculator"

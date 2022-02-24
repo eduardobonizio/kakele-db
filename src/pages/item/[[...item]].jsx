@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styles from './ShowItem.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -8,7 +9,6 @@ import { useAppContext } from '../../context/appContext/useAppState';
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 import { equipments, weapons } from '../../data/kakeleData';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
-import Head from 'next/head';
 
 export default function ShowItem() {
   const router = useRouter();
@@ -48,6 +48,10 @@ export default function ShowItem() {
     <div className={`container ${styles.itemContainer}`}>
       <Head>
         <title>Kakele Tools - Item db</title>
+        <meta
+          name="description"
+          content="See item description and sources information"
+        />
         <meta
           property="og:title"
           content="Kakele Tools - Item db"

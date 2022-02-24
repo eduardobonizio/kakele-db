@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styles from './SearchItem.module.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -16,7 +17,6 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
-import Head from 'next/head';
 
 export default function SearchItem() {
   const {
@@ -57,6 +57,14 @@ export default function SearchItem() {
     <div className={`container d-flex ${styles.container}`}>
       <Head>
         <title>Kakele Tools - Search items</title>
+        <meta
+          name="description"
+          content="Search items for Kakele with many filters"
+        />
+        <meta
+          name="description"
+          content="Search for any Kakele item with good filters"
+        />
         <meta
           property="og:title"
           content="Kakele Tools - Search items"
