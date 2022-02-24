@@ -81,14 +81,14 @@ export default function SetMaker() {
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
-        <title>Kakele Tools - Set generator</title>
+        <title>Set Generator - Kakele MMORPG</title>
         <meta
           name="description"
-          content="Auto set generator for Kakele with many filters"
+          content="Auto set generator for Kakele MMORPG. See your dream set in a blink of an eye"
         />
         <meta
           property="og:title"
-          content="Kakele Tools - Set generator"
+          content="Set Generator - Kakele MMORPG"
           key="title"
         />
       </Head>

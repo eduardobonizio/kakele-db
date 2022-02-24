@@ -57,11 +57,14 @@ export default function OreCalculator() {
   return (
     <div className="container ore-upgrader-container">
       <Head>
-        <title>Kakele Tools - Upgrade calculator</title>
-        <meta name="description" content="Calculator for upgrades" />
+        <title>Upgrade calculator - Kakele MMORPG</title>
+        <meta
+          name="description"
+          content="Calculate upgrade prices and ore quantity in an really easy to use tool for Kakele MMORPG"
+        />
         <meta
           property="og:title"
-          content="Kakele Tools - Upgrade calculator"
+          content="Upgrade calculator - Kakele MMORPG"
           key="title"
         />
       </Head>

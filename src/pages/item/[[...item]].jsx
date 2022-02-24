@@ -47,14 +47,14 @@ export default function ShowItem() {
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
-        <title>Kakele Tools - Item db</title>
+        <title>Item Database - Kakele MMORPG</title>
         <meta
           name="description"
-          content="See item description and sources information"
+          content="See all items description, sources, and more informations of all items from Kakele MMORPG"
         />
         <meta
           property="og:title"
-          content="Kakele Tools - Item db"
+          content="Item Database - Kakele MMORPG"
           key="title"
         />
       </Head>

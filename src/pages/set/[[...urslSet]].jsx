@@ -30,7 +30,7 @@ import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 export default function ShowSet() {
   const router = useRouter();
   const {
-    state: { currentSet, language },
+    state: { language },
     actions: { updateCurrentSet },
   } = useAppContext();
   const { urslSet } = router.query;
@@ -95,14 +95,14 @@ export default function ShowSet() {
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
-        <title>Kakele Tools - Show set</title>
+        <title>Show Set - Kakele MMORPG</title>
         <meta
           name="description"
-          content="Create and share sets with your friends"
+          content="See your selected equipments and share with your friends or guildmates from Kakele MMORPG"
         />
         <meta
           property="og:title"
-          content="Kakele Tools - Show set"
+          content="Show Set - Kakele MMORPG"
           key="title"
         />
       </Head>

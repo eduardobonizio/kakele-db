@@ -56,18 +56,14 @@ export default function SearchItem() {
   return (
     <div className={`container d-flex ${styles.container}`}>
       <Head>
-        <title>Kakele Tools - Search items</title>
+        <title>Search item - Kakele MMORPG</title>
         <meta
           name="description"
-          content="Search items for Kakele with many filters"
-        />
-        <meta
-          name="description"
-          content="Search for any Kakele item with good filters"
+          content="Search any item with good filters and make your own set to share with friends or guildmates from Kakele MMORPG"
         />
         <meta
           property="og:title"
-          content="Kakele Tools - Search items"
+          content="Search item - Kakele MMORPG"
           key="title"
         />
       </Head>
