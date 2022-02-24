@@ -15,10 +15,10 @@ export default function HomeContent() {
   return (
     <div className="container d-flex flex-column justify-content-center align-content-center">
       <Head>
-        <title>Kakele Tools</title>
+        <title>Kakele Tools: Home</title>
         <meta
           name="description"
-          content="Tools for Kakele including auto set generator, manual set generator, create and share sets with your friends. Also exp calculator, upgrade calculator and items informations"
+          content="Create and share sets with your friends with auto set generator, manual set generator. look out exp calculator, upgrade calculator and items informations"
         />
         <meta property="og:title" content="Kakele Tools" key="title" />
       </Head>
