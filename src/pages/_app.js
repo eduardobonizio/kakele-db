@@ -2,14 +2,30 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { AppProvider } from '../context/appContext/useAppState';
 import Layout from '../componentes/layout/Layout';
+import { useRouter } from 'next/router';
+
+import * as gtag from '../context/analytics/lib/gtag';
+import Analytics from '../context/analytics/Analytics';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   useEffect(() => {
     import('../../node_modules/bootstrap/dist/js/bootstrap.min.js');
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = url => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Head>
@@ -26,6 +42,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       </AppProvider>
+      <Analytics />
     </>
   );
 }

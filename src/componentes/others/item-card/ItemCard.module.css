@@ -1,13 +1,3 @@
-.equiped {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  background-color: green;
-  color: white;
-  border-radius: 10px;
-  padding: 3px;
-}
-
 .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,11 +23,29 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .equiped {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    padding: 3px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .card {
     width: 90%;
+  }
+  .equiped {
+    position: absolute;
+    bottom: 50px;
+    right: 27px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    padding: 3px;
   }
 }
 /*# sourceMappingURL=ItemCard.module.css.map */
