@@ -15,14 +15,14 @@ export default function HomeContent() {
   return (
     <div className="container d-flex flex-column justify-content-center align-content-center">
       <Head>
-        <title>Kakele Tools - Page not found</title>
-        <meta name="description" content="Page not found" />
+        <title>Kakele Tools</title>
         <meta
-          property="og:title"
-          content="Kakele Tools - Page not found"
-          key="title"
+          name="description"
+          content="Tools for Kakele including auto set generator, manual set generator, create and share sets with your friends. Also exp calculator, upgrade calculator and items informations"
         />
+        <meta property="og:title" content="Kakele Tools" key="title" />
       </Head>
+
       <span className="d-flex align-self-center mt-3 mb-3">
         {text.selectLanguage}
       </span>
