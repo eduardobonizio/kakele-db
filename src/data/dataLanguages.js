@@ -17,7 +17,7 @@ const navBarJsx = {
     searchItem: 'Search Item',
     oreCalculator: 'Upgrades',
     expCalculator: 'Exp Calculator',
-    seeItem: 'Items wiki',
+    seeItem: 'Wiki',
   },
   PTBR: {
     showSet: 'Ver Set',
