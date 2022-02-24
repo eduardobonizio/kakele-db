@@ -18,7 +18,7 @@ export default function HomeContent() {
         <title>Kakele Tools: Home</title>
         <meta
           name="description"
-          content="Create and share sets with your friends with auto set generator, manual set generator. look out exp calculator, upgrade calculator and items informations"
+          content="Create and share sets with your friends with auto set generator, manual set generator. Exp calculator, upgrade calculator and items informations"
         />
         <meta property="og:title" content="Kakele Tools" key="title" />
       </Head>
