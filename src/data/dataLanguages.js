@@ -17,6 +17,7 @@ const navBarJsx = {
     searchItem: 'Search Item',
     oreCalculator: 'Upgrades',
     expCalculator: 'Exp Calculator',
+    seeItem: 'Items wiki',
   },
   PTBR: {
     showSet: 'Ver Set',
@@ -24,6 +25,7 @@ const navBarJsx = {
     searchItem: 'Procurar Item',
     oreCalculator: 'Forja',
     expCalculator: 'Calculadora de Exp',
+    seeItem: 'Wiki',
   },
 };
 

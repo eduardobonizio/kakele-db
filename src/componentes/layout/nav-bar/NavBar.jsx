@@ -71,6 +71,11 @@ function NavBar() {
                 <a className="nav-link">{text.expCalculator}</a>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/wiki">
+                <a className="nav-link">{text.seeItem}</a>
+              </Link>
+            </li>
           </ul>
           {/* <ul className="navbar-nav">
             {globalUser && (

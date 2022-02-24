@@ -18,10 +18,10 @@ export default function ShowItem() {
   } = useAppContext();
   const [item, setItem] = useState(allItens[0]);
   const [previousItemLink, setPreviousItemLink] = useState(
-    `/item/${allItens[allItens.length - 1].nameEN}`,
+    `/wiki/${allItens[allItens.length - 1].nameEN}`,
   );
   const [nextItemLink, setNextItemLink] = useState(
-    `/item/${allItens[1].nameEN}`,
+    `/wiki/${allItens[1].nameEN}`,
   );
   const text = textOptions[language];
 
@@ -36,8 +36,8 @@ export default function ShowItem() {
         const previousIndex =
           itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
         const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
-        setPreviousItemLink(`/item/${allItens[previousIndex].nameEN}`);
-        setNextItemLink(`/item/${allItens[nextIndex].nameEN}`);
+        setPreviousItemLink(`/wiki/${allItens[previousIndex].nameEN}`);
+        setNextItemLink(`/wiki/${allItens[nextIndex].nameEN}`);
         setItem(currentItem);
       }
     }

@@ -40,7 +40,7 @@ export default function ItemCard(props) {
     },
   } = props;
 
-  const showDetails = router.pathname.includes('/item/');
+  const showDetails = router.pathname.includes('/wiki/');
   const text = textOptions[language];
 
   const decide = thisItem => {
@@ -190,7 +190,7 @@ export default function ItemCard(props) {
             text={text.copy}
           />
           {!showDetails && (
-            <Link href={`/item/${item[`name${language}`]}`} passHref>
+            <Link href={`/wiki/${item[`name${language}`]}`} passHref>
               <LinkButton text={text.showItem} />
             </Link>
           )}
