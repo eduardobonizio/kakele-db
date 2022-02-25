@@ -1,6 +1,6 @@
 const equipments = [
   {
-    nameEN: 'Green Cap',
+    'en-US': 'Green Cap',
     level: 1,
     vocation: 'All',
     energy: 'Light',
@@ -13,10 +13,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4000.jpg"',
     slot: 'helmet',
-    namePTBR: 'Tampão Verde',
+    'pt-BR': 'Tampão Verde',
   },
   {
-    nameEN: 'Swimming Goggles',
+    'en-US': 'Swimming Goggles',
     level: 1,
     vocation: 'All',
     energy: 'Light',
@@ -29,10 +29,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4025.jpg"',
     slot: 'helmet',
-    namePTBR: 'Óculos de natação',
+    'pt-BR': 'Óculos de natação',
   },
   {
-    nameEN: 'Unknown Helmet',
+    'en-US': 'Unknown Helmet',
     level: 1,
     vocation: 'All',
     energy: 'Nature',
@@ -45,10 +45,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4041.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete desconhecido',
+    'pt-BR': 'Capacete desconhecido',
   },
   {
-    nameEN: 'Purple Bandana',
+    'en-US': 'Purple Bandana',
     level: 5,
     vocation: 'All',
     energy: 'Light',
@@ -61,10 +61,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4017.jpg"',
     slot: 'helmet',
-    namePTBR: 'Bandana Roxa',
+    'pt-BR': 'Bandana Roxa',
   },
   {
-    nameEN: 'Bronze Helmet',
+    'en-US': 'Bronze Helmet',
     level: 10,
     vocation: 'All',
     energy: 'Nature',
@@ -78,10 +78,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4001.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Bronze',
+    'pt-BR': 'Capacete de Bronze',
   },
   {
-    nameEN: 'Black Bandana',
+    'en-US': 'Black Bandana',
     level: 12,
     vocation: 'All',
     energy: 'Light',
@@ -94,10 +94,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4019.jpg"',
     slot: 'helmet',
-    namePTBR: 'Bandana Preta',
+    'pt-BR': 'Bandana Preta',
   },
   {
-    nameEN: 'Steel Helmet',
+    'en-US': 'Steel Helmet',
     level: 15,
     vocation: 'All',
     energy: 'Light',
@@ -110,10 +110,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4002.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Aço',
+    'pt-BR': 'Capacete de Aço',
   },
   {
-    nameEN: 'Witch Hat',
+    'en-US': 'Witch Hat',
     level: 20,
     vocation: 'All',
     energy: 'Dark',
@@ -126,10 +126,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4003.jpg"',
     slot: 'helmet',
-    namePTBR: 'Chapéu de bruxa',
+    'pt-BR': 'Chapéu de bruxa',
   },
   {
-    nameEN: 'Explorer Helmet',
+    'en-US': 'Explorer Helmet',
     level: 25,
     vocation: 'All',
     energy: 'Nature',
@@ -142,10 +142,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4021.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Explorador',
+    'pt-BR': 'Capacete Explorador',
   },
   {
-    nameEN: 'Silver Helmet',
+    'en-US': 'Silver Helmet',
     level: 30,
     vocation: 'All',
     energy: 'Light',
@@ -159,10 +159,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4004.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Prata',
+    'pt-BR': 'Capacete de Prata',
   },
   {
-    nameEN: 'Alamogordo Helmet',
+    'en-US': 'Alamogordo Helmet',
     level: 35,
     vocation: 'All',
     energy: 'Dark',
@@ -175,10 +175,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4027.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Alamogordo',
+    'pt-BR': 'Capacete Alamogordo',
   },
   {
-    nameEN: 'Mastermind Hat',
+    'en-US': 'Mastermind Hat',
     level: 45,
     vocation: 'All',
     energy: 'Dark',
@@ -191,10 +191,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4005.jpg"',
     slot: 'helmet',
-    namePTBR: 'Chapéu Mastermind',
+    'pt-BR': 'Chapéu Mastermind',
   },
   {
-    nameEN: 'Iron Helmet',
+    'en-US': 'Iron Helmet',
     level: 50,
     vocation: 'All',
     energy: 'Light',
@@ -207,10 +207,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4020.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Ferro',
+    'pt-BR': 'Capacete de Ferro',
   },
   {
-    nameEN: "Golin's Helmet",
+    'en-US': "Golin's Helmet",
     level: 55,
     vocation: 'All',
     energy: 'Light',
@@ -223,10 +223,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4015.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Golin',
+    'pt-BR': 'Capacete de Golin',
   },
   {
-    nameEN: 'Humanoid Lioncat Helmet',
+    'en-US': 'Humanoid Lioncat Helmet',
     level: 65,
     vocation: 'All',
     energy: 'Nature',
@@ -239,10 +239,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4038.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Humanóide Lioncat',
+    'pt-BR': 'Capacete Humanóide Lioncat',
   },
   {
-    nameEN: 'Demon Horn Helmet',
+    'en-US': 'Demon Horn Helmet',
     level: 70,
     vocation: 'All',
     energy: 'Dark',
@@ -255,10 +255,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4007.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Chifre Demoníaco',
+    'pt-BR': 'Capacete de Chifre Demoníaco',
   },
   {
-    nameEN: 'Noble Guard Helmet',
+    'en-US': 'Noble Guard Helmet',
     level: 75,
     vocation: 'All',
     energy: 'Light',
@@ -271,10 +271,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4033.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete da Guarda Nobre',
+    'pt-BR': 'Capacete da Guarda Nobre',
   },
   {
-    nameEN: 'Darkness Hat',
+    'en-US': 'Darkness Hat',
     level: 80,
     vocation: 'All',
     energy: 'Dark',
@@ -287,10 +287,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4014.jpg"',
     slot: 'helmet',
-    namePTBR: 'Chapéu da Escuridão',
+    'pt-BR': 'Chapéu da Escuridão',
   },
   {
-    nameEN: 'Skeletons Helmet',
+    'en-US': 'Skeletons Helmet',
     level: 85,
     vocation: 'All',
     energy: 'Dark',
@@ -303,10 +303,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4011.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Esqueletos',
+    'pt-BR': 'Capacete de Esqueletos',
   },
   {
-    nameEN: 'Spider Silk Helmet',
+    'en-US': 'Spider Silk Helmet',
     level: 100,
     vocation: 'All',
     energy: 'Nature',
@@ -319,10 +319,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4008.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Seda de Aranha',
+    'pt-BR': 'Capacete de Seda de Aranha',
   },
   {
-    nameEN: "Clan's Helmet",
+    'en-US': "Clan's Helmet",
     level: 110,
     vocation: 'All',
     energy: 'Light',
@@ -336,10 +336,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4013.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete do clã',
+    'pt-BR': 'Capacete do clã',
   },
   {
-    nameEN: 'Skeleton Warrior Helmet',
+    'en-US': 'Skeleton Warrior Helmet',
     level: 115,
     vocation: 'All',
     energy: 'Dark',
@@ -352,10 +352,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4036.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Guerreiro Esqueleto',
+    'pt-BR': 'Capacete de Guerreiro Esqueleto',
   },
   {
-    nameEN: 'Poison Beetle Helmet',
+    'en-US': 'Poison Beetle Helmet',
     level: 120,
     vocation: 'All',
     energy: 'Nature',
@@ -368,10 +368,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4039.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete do Besouro Venenoso',
+    'pt-BR': 'Capacete do Besouro Venenoso',
   },
   {
-    nameEN: 'Warrior Helmet',
+    'en-US': 'Warrior Helmet',
     level: 130,
     vocation: 'All',
     energy: 'Dark',
@@ -384,10 +384,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4006.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Guerreiro',
+    'pt-BR': 'Capacete de Guerreiro',
   },
   {
-    nameEN: "Hell's Helmet",
+    'en-US': "Hell's Helmet",
     level: 140,
     vocation: 'All',
     energy: 'Dark',
@@ -400,10 +400,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4012.jpg"',
     slot: 'helmet',
-    namePTBR: 'capacete do inferno',
+    'pt-BR': 'capacete do inferno',
   },
   {
-    nameEN: 'Frost Helmet',
+    'en-US': 'Frost Helmet',
     level: 150,
     vocation: 'All',
     energy: 'Nature',
@@ -416,10 +416,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4018.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Gelo',
+    'pt-BR': 'Capacete de Gelo',
   },
   {
-    nameEN: 'Dwarf Miner Helmet',
+    'en-US': 'Dwarf Miner Helmet',
     level: 155,
     vocation: 'All',
     energy: 'Light',
@@ -432,10 +432,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4034.jpg"',
     slot: 'helmet',
-    namePTBR: 'Elmo Mineiro Anão',
+    'pt-BR': 'Elmo Mineiro Anão',
   },
   {
-    nameEN: 'Helmet of the Void',
+    'en-US': 'Helmet of the Void',
     level: 160,
     vocation: 'All',
     energy: 'Dark',
@@ -448,10 +448,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4022.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete do Vazio',
+    'pt-BR': 'Capacete do Vazio',
   },
   {
-    nameEN: 'Lava Helmet',
+    'en-US': 'Lava Helmet',
     level: 175,
     vocation: 'All',
     energy: 'Nature',
@@ -464,10 +464,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4009.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de lava',
+    'pt-BR': 'Capacete de lava',
   },
   {
-    nameEN: 'Noble Topper',
+    'en-US': 'Noble Topper',
     level: 180,
     vocation: 'All',
     energy: 'Light',
@@ -480,10 +480,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4030.jpg"',
     slot: 'helmet',
-    namePTBR: 'Topo Nobre',
+    'pt-BR': 'Topo Nobre',
   },
   {
-    nameEN: 'Cruzader Helmet',
+    'en-US': 'Cruzader Helmet',
     level: 200,
     vocation: 'All',
     energy: 'Light',
@@ -496,10 +496,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4024.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Cruzador',
+    'pt-BR': 'Capacete Cruzador',
   },
   {
-    nameEN: 'Undead Dragon Rider Helmet',
+    'en-US': 'Undead Dragon Rider Helmet',
     level: 210,
     vocation: 'All',
     energy: 'Dark',
@@ -512,10 +512,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4037.jpg"',
     slot: 'helmet',
-    namePTBR: 'Elmo de Cavaleiro de Dragão Morto-vivo',
+    'pt-BR': 'Elmo de Cavaleiro de Dragão Morto-vivo',
   },
   {
-    nameEN: 'Night Elf Lord Helmet',
+    'en-US': 'Night Elf Lord Helmet',
     level: 220,
     vocation: 'All',
     energy: 'Nature',
@@ -528,10 +528,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4040.jpg"',
     slot: 'helmet',
-    namePTBR: 'Elfo da Noite Elfo Elfo',
+    'pt-BR': 'Elfo da Noite Elfo Elfo',
   },
   {
-    nameEN: 'Crown of the Skies',
+    'en-US': 'Crown of the Skies',
     level: 225,
     vocation: 'All',
     energy: 'Light',
@@ -544,10 +544,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4023.jpg"',
     slot: 'helmet',
-    namePTBR: 'Coroa dos Céus',
+    'pt-BR': 'Coroa dos Céus',
   },
   {
-    nameEN: 'Helmet of the Doom',
+    'en-US': 'Helmet of the Doom',
     level: 250,
     vocation: 'All',
     energy: 'Dark',
@@ -560,10 +560,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4026.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete da Perdição',
+    'pt-BR': 'Capacete da Perdição',
   },
   {
-    nameEN: 'Revenant Helmet',
+    'en-US': 'Revenant Helmet',
     level: 270,
     vocation: 'All',
     energy: 'Light',
@@ -576,10 +576,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4035.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Revenant',
+    'pt-BR': 'Capacete Revenant',
   },
   {
-    nameEN: "Elora's Helmet",
+    'en-US': "Elora's Helmet",
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -592,10 +592,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4028.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de Elora',
+    'pt-BR': 'Capacete de Elora',
   },
   {
-    nameEN: 'Devil Hunter Helmet',
+    'en-US': 'Devil Hunter Helmet',
     level: 300,
     vocation: 'All',
     energy: 'Dark',
@@ -608,10 +608,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4010.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Caçador de Diabos',
+    'pt-BR': 'Capacete Caçador de Diabos',
   },
   {
-    nameEN: 'Celestial Helmet',
+    'en-US': 'Celestial Helmet',
     level: 325,
     vocation: 'All',
     energy: 'Light',
@@ -624,10 +624,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4031.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete Celestial',
+    'pt-BR': 'Capacete Celestial',
   },
   {
-    nameEN: 'Golden Dragon Scale Helmet',
+    'en-US': 'Golden Dragon Scale Helmet',
     level: 500,
     vocation: 'All',
     energy: 'Nature',
@@ -640,10 +640,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4016.jpg"',
     slot: 'helmet',
-    namePTBR: 'Elmo de Escama de Dragão Dourado',
+    'pt-BR': 'Elmo de Escama de Dragão Dourado',
   },
   {
-    nameEN: 'Undead Golden Dragon Scale Helmet',
+    'en-US': 'Undead Golden Dragon Scale Helmet',
     level: 500,
     vocation: 'All',
     energy: 'Dark',
@@ -656,10 +656,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4032.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete de escama de dragão dourado morto-vivo',
+    'pt-BR': 'Capacete de escama de dragão dourado morto-vivo',
   },
   {
-    nameEN: 'Crown of Enlightenment',
+    'en-US': 'Crown of Enlightenment',
     level: 500,
     vocation: 'All',
     energy: 'Light',
@@ -672,10 +672,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4029.jpg"',
     slot: 'helmet',
-    namePTBR: 'Coroa do Iluminismo',
+    'pt-BR': 'Coroa do Iluminismo',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Scale Helmet',
+    'en-US': 'Chromatic Golden Dragon Scale Helmet',
     level: 500,
     vocation: 'All',
     energy: 'Light',
@@ -688,10 +688,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4043.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete cromático de escama de dragão dourado',
+    'pt-BR': 'Capacete cromático de escama de dragão dourado',
   },
   {
-    nameEN: 'Rainbow Helmet',
+    'en-US': 'Rainbow Helmet',
     level: 1000,
     vocation: 'All',
     energy: 'Nature',
@@ -704,10 +704,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4042.jpg"',
     slot: 'helmet',
-    namePTBR: 'Capacete arco-íris',
+    'pt-BR': 'Capacete arco-íris',
   },
   {
-    nameEN: 'Wool Shirt',
+    'en-US': 'Wool Shirt',
     level: 2,
     vocation: 'All',
     energy: 'Nature',
@@ -720,10 +720,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4100.jpg"',
     slot: 'armor',
-    namePTBR: 'Camisa de lã',
+    'pt-BR': 'Camisa de lã',
   },
   {
-    nameEN: 'Wool Coat',
+    'en-US': 'Wool Coat',
     level: 5,
     vocation: 'All',
     energy: 'Light',
@@ -736,10 +736,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4101.jpg"',
     slot: 'armor',
-    namePTBR: 'Casaco de lã',
+    'pt-BR': 'Casaco de lã',
   },
   {
-    nameEN: 'Reinforced Shirt',
+    'en-US': 'Reinforced Shirt',
     level: 7,
     vocation: 'All',
     energy: 'Light',
@@ -752,10 +752,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4117.jpg"',
     slot: 'armor',
-    namePTBR: 'Camisa Reforçada',
+    'pt-BR': 'Camisa Reforçada',
   },
   {
-    nameEN: 'Winter Coat',
+    'en-US': 'Winter Coat',
     level: 12,
     vocation: 'All',
     energy: 'Nature',
@@ -768,10 +768,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4119.jpg"',
     slot: 'armor',
-    namePTBR: 'Casaco de inverno',
+    'pt-BR': 'Casaco de inverno',
   },
   {
-    nameEN: 'Leather Armor',
+    'en-US': 'Leather Armor',
     level: 15,
     vocation: 'All',
     energy: 'Light',
@@ -785,10 +785,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4102.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de couro',
+    'pt-BR': 'Armadura de couro',
   },
   {
-    nameEN: 'Ghostly Coat',
+    'en-US': 'Ghostly Coat',
     level: 20,
     vocation: 'All',
     energy: 'Dark',
@@ -801,10 +801,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4121.jpg"',
     slot: 'armor',
-    namePTBR: 'Casaco Fantasmagórico',
+    'pt-BR': 'Casaco Fantasmagórico',
   },
   {
-    nameEN: 'Plate Armor',
+    'en-US': 'Plate Armor',
     level: 25,
     vocation: 'All',
     energy: 'Dark',
@@ -818,10 +818,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4103.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de placas',
+    'pt-BR': 'Armadura de placas',
   },
   {
-    nameEN: 'Bronze Armor',
+    'en-US': 'Bronze Armor',
     level: 35,
     vocation: 'All',
     energy: 'Light',
@@ -834,10 +834,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4115.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Bronze',
+    'pt-BR': 'Armadura de Bronze',
   },
   {
-    nameEN: 'Silver Armor',
+    'en-US': 'Silver Armor',
     level: 40,
     vocation: 'All',
     energy: 'Light',
@@ -850,10 +850,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4104.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Prata',
+    'pt-BR': 'Armadura de Prata',
   },
   {
-    nameEN: 'Humanoid Fox Cape',
+    'en-US': 'Humanoid Fox Cape',
     level: 45,
     vocation: 'All',
     energy: 'Nature',
@@ -866,10 +866,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4137.jpg"',
     slot: 'armor',
-    namePTBR: 'Capa de Raposa Humanóide',
+    'pt-BR': 'Capa de Raposa Humanóide',
   },
   {
-    nameEN: 'War Armor',
+    'en-US': 'War Armor',
     level: 50,
     vocation: 'All',
     energy: 'Light',
@@ -882,10 +882,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4122.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Guerra',
+    'pt-BR': 'Armadura de Guerra',
   },
   {
-    nameEN: 'Vortex Robe',
+    'en-US': 'Vortex Robe',
     level: 55,
     vocation: 'All',
     energy: 'Dark',
@@ -898,10 +898,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4126.jpg"',
     slot: 'armor',
-    namePTBR: 'Vórtice Robe',
+    'pt-BR': 'Vórtice Robe',
   },
   {
-    nameEN: 'Golden Armor',
+    'en-US': 'Golden Armor',
     level: 60,
     vocation: 'All',
     energy: 'Dark',
@@ -914,10 +914,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4105.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Dourada',
+    'pt-BR': 'Armadura Dourada',
   },
   {
-    nameEN: 'Vulcana Armor',
+    'en-US': 'Vulcana Armor',
     level: 70,
     vocation: 'All',
     energy: 'Dark',
@@ -930,10 +930,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4106.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Vulcana',
+    'pt-BR': 'Armadura Vulcana',
   },
   {
-    nameEN: 'Ice Beetle Carapace Armor',
+    'en-US': 'Ice Beetle Carapace Armor',
     level: 75,
     vocation: 'All',
     energy: 'Nature',
@@ -946,10 +946,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4138.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Carapaça de Besouro de Gelo',
+    'pt-BR': 'Armadura de Carapaça de Besouro de Gelo',
   },
   {
-    nameEN: 'Dark Armor',
+    'en-US': 'Dark Armor',
     level: 80,
     vocation: 'All',
     energy: 'Light',
@@ -962,10 +962,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4107.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Negra',
+    'pt-BR': 'Armadura Negra',
   },
   {
-    nameEN: 'Blue Robe',
+    'en-US': 'Blue Robe',
     level: 85,
     vocation: 'All',
     energy: 'Light',
@@ -978,10 +978,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4113.jpg"',
     slot: 'armor',
-    namePTBR: 'Manto Azul',
+    'pt-BR': 'Manto Azul',
   },
   {
-    nameEN: 'Skeleton Warrior Armor',
+    'en-US': 'Skeleton Warrior Armor',
     level: 95,
     vocation: 'All',
     energy: 'Dark',
@@ -994,10 +994,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4134.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura do Guerreiro Esqueleto',
+    'pt-BR': 'Armadura do Guerreiro Esqueleto',
   },
   {
-    nameEN: 'Spider Silk Armor',
+    'en-US': 'Spider Silk Armor',
     level: 100,
     vocation: 'All',
     energy: 'Nature',
@@ -1010,10 +1010,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4108.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Seda de Aranha',
+    'pt-BR': 'Armadura de Seda de Aranha',
   },
   {
-    nameEN: "Heron's Armor",
+    'en-US': "Heron's Armor",
     level: 110,
     vocation: 'All',
     energy: 'Light',
@@ -1026,10 +1026,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4111.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Garça',
+    'pt-BR': 'Armadura de Garça',
   },
   {
-    nameEN: "Hell's Cloak",
+    'en-US': "Hell's Cloak",
     level: 120,
     vocation: 'All',
     energy: 'Dark',
@@ -1042,10 +1042,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4110.jpg"',
     slot: 'armor',
-    namePTBR: 'Manto do Inferno',
+    'pt-BR': 'Manto do Inferno',
   },
   {
-    nameEN: "Clan's Armor",
+    'en-US': "Clan's Armor",
     level: 130,
     vocation: 'All',
     energy: 'Light',
@@ -1059,10 +1059,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4112.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura do Clã',
+    'pt-BR': 'Armadura do Clã',
   },
   {
-    nameEN: 'Abyssal Skeleton Armor',
+    'en-US': 'Abyssal Skeleton Armor',
     level: 135,
     vocation: 'All',
     energy: 'Dark',
@@ -1075,10 +1075,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4135.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Esqueleto Abissal',
+    'pt-BR': 'Armadura de Esqueleto Abissal',
   },
   {
-    nameEN: 'Royal Cloak',
+    'en-US': 'Royal Cloak',
     level: 140,
     vocation: 'All',
     energy: 'Light',
@@ -1091,10 +1091,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4114.jpg"',
     slot: 'armor',
-    namePTBR: 'Manto Real',
+    'pt-BR': 'Manto Real',
   },
   {
-    nameEN: 'Lava Armor',
+    'en-US': 'Lava Armor',
     level: 145,
     vocation: 'All',
     energy: 'Nature',
@@ -1107,10 +1107,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4139.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de lava',
+    'pt-BR': 'Armadura de lava',
   },
   {
-    nameEN: 'Frost Armor',
+    'en-US': 'Frost Armor',
     level: 150,
     vocation: 'All',
     energy: 'Light',
@@ -1123,10 +1123,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4118.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Gelo',
+    'pt-BR': 'Armadura de Gelo',
   },
   {
-    nameEN: 'Mystic Robe',
+    'en-US': 'Mystic Robe',
     level: 160,
     vocation: 'All',
     energy: 'Dark',
@@ -1139,10 +1139,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4120.jpg"',
     slot: 'armor',
-    namePTBR: 'Manto Místico',
+    'pt-BR': 'Manto Místico',
   },
   {
-    nameEN: 'Armor of the Void',
+    'en-US': 'Armor of the Void',
     level: 170,
     vocation: 'All',
     energy: 'Dark',
@@ -1155,10 +1155,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4123.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura do Vazio',
+    'pt-BR': 'Armadura do Vazio',
   },
   {
-    nameEN: 'Paladin Armor',
+    'en-US': 'Paladin Armor',
     level: 185,
     vocation: 'All',
     energy: 'Light',
@@ -1171,10 +1171,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4124.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Paladino',
+    'pt-BR': 'Armadura de Paladino',
   },
   {
-    nameEN: 'Black Dragon Scale Armor',
+    'en-US': 'Black Dragon Scale Armor',
     level: 195,
     vocation: 'All',
     energy: 'Nature',
@@ -1187,10 +1187,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4140.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Escama de Dragão Negro',
+    'pt-BR': 'Armadura de Escama de Dragão Negro',
   },
   {
-    nameEN: 'Devil Hunter Armor',
+    'en-US': 'Devil Hunter Armor',
     level: 200,
     vocation: 'All',
     energy: 'Dark',
@@ -1203,10 +1203,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4109.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura do Caçador de Diabos',
+    'pt-BR': 'Armadura do Caçador de Diabos',
   },
   {
-    nameEN: 'Unstable Vortex Robe',
+    'en-US': 'Unstable Vortex Robe',
     level: 210,
     vocation: 'All',
     energy: 'Dark',
@@ -1219,10 +1219,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4127.jpg"',
     slot: 'armor',
-    namePTBR: 'Manto de Vórtice Instável',
+    'pt-BR': 'Manto de Vórtice Instável',
   },
   {
-    nameEN: 'Dwarf Warrior Armor',
+    'en-US': 'Dwarf Warrior Armor',
     level: 220,
     vocation: 'All',
     energy: 'Light',
@@ -1235,10 +1235,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4132.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Guerreiro Anão',
+    'pt-BR': 'Armadura de Guerreiro Anão',
   },
   {
-    nameEN: 'Elemental Armor',
+    'en-US': 'Elemental Armor',
     level: 230,
     vocation: 'All',
     energy: 'Nature',
@@ -1251,10 +1251,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4141.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Elemental',
+    'pt-BR': 'Armadura Elemental',
   },
   {
-    nameEN: 'Saint Armor',
+    'en-US': 'Saint Armor',
     level: 250,
     vocation: 'All',
     energy: 'Light',
@@ -1267,10 +1267,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4125.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Santo',
+    'pt-BR': 'Armadura de Santo',
   },
   {
-    nameEN: 'Elder Vampire Armor',
+    'en-US': 'Elder Vampire Armor',
     level: 260,
     vocation: 'All',
     energy: 'Dark',
@@ -1284,10 +1284,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4136.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Vampiro Ancião',
+    'pt-BR': 'Armadura de Vampiro Ancião',
   },
   {
-    nameEN: "Elora's Armor",
+    'en-US': "Elora's Armor",
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -1300,10 +1300,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4128.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Elora',
+    'pt-BR': 'Armadura de Elora',
   },
   {
-    nameEN: 'Revenant Armor',
+    'en-US': 'Revenant Armor',
     level: 290,
     vocation: 'All',
     energy: 'Light',
@@ -1316,10 +1316,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4133.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Revenant',
+    'pt-BR': 'Armadura Revenant',
   },
   {
-    nameEN: 'Corrupted Armor',
+    'en-US': 'Corrupted Armor',
     level: 300,
     vocation: 'All',
     energy: 'Dark',
@@ -1332,10 +1332,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4129.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Corrompida',
+    'pt-BR': 'Armadura Corrompida',
   },
   {
-    nameEN: 'Celestial Armor',
+    'en-US': 'Celestial Armor',
     level: 325,
     vocation: 'All',
     energy: 'Light',
@@ -1348,10 +1348,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4130.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Celestial',
+    'pt-BR': 'Armadura Celestial',
   },
   {
-    nameEN: 'Golden Dragon Scale Armor',
+    'en-US': 'Golden Dragon Scale Armor',
     level: 500,
     vocation: 'All',
     energy: 'Nature',
@@ -1364,10 +1364,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4116.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Escama de Dragão Dourado',
+    'pt-BR': 'Armadura de Escama de Dragão Dourado',
   },
   {
-    nameEN: 'Undead Golden Dragon Scale Armor',
+    'en-US': 'Undead Golden Dragon Scale Armor',
     level: 500,
     vocation: 'All',
     energy: 'Dark',
@@ -1380,10 +1380,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4131.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura de Escama de Dragão Dourado Morto-vivo',
+    'pt-BR': 'Armadura de Escama de Dragão Dourado Morto-vivo',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Scale Armor',
+    'en-US': 'Chromatic Golden Dragon Scale Armor',
     level: 500,
     vocation: 'All',
     energy: 'Light',
@@ -1396,10 +1396,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4143.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Cromática de Escama de Dragão Dourado',
+    'pt-BR': 'Armadura Cromática de Escama de Dragão Dourado',
   },
   {
-    nameEN: 'Rainbow Armor',
+    'en-US': 'Rainbow Armor',
     level: 1000,
     vocation: 'All',
     energy: 'Nature',
@@ -1412,10 +1412,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4142.jpg"',
     slot: 'armor',
-    namePTBR: 'Armadura Arco-Íris',
+    'pt-BR': 'Armadura Arco-Íris',
   },
   {
-    nameEN: 'Leather Boot',
+    'en-US': 'Leather Boot',
     level: 1,
     vocation: 'All',
     energy: 'Nature',
@@ -1428,10 +1428,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4200.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Couro',
+    'pt-BR': 'Bota de Couro',
   },
   {
-    nameEN: 'Strange Cloth Shoe',
+    'en-US': 'Strange Cloth Shoe',
     level: 5,
     vocation: 'All',
     energy: 'Light',
@@ -1444,10 +1444,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4213.jpg"',
     slot: 'shoe',
-    namePTBR: 'Sapato de Tecido Estranho',
+    'pt-BR': 'Sapato de Tecido Estranho',
   },
   {
-    nameEN: 'Tin Boot',
+    'en-US': 'Tin Boot',
     level: 10,
     vocation: 'All',
     energy: 'Dark',
@@ -1460,10 +1460,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4215.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Lata',
+    'pt-BR': 'Bota de Lata',
   },
   {
-    nameEN: 'Reinforced Leather Boot',
+    'en-US': 'Reinforced Leather Boot',
     level: 12,
     vocation: 'All',
     energy: 'Light',
@@ -1477,10 +1477,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4201.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Couro Reforçada',
+    'pt-BR': 'Bota de Couro Reforçada',
   },
   {
-    nameEN: 'Light Boot',
+    'en-US': 'Light Boot',
     level: 16,
     vocation: 'All',
     energy: 'Nature',
@@ -1493,10 +1493,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4202.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Leve',
+    'pt-BR': 'Bota Leve',
   },
   {
-    nameEN: 'Steeltoe Boot',
+    'en-US': 'Steeltoe Boot',
     level: 22,
     vocation: 'All',
     energy: 'Light',
@@ -1509,10 +1509,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4212.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Bico de Aço',
+    'pt-BR': 'Bota Bico de Aço',
   },
   {
-    nameEN: 'Steel Boot',
+    'en-US': 'Steel Boot',
     level: 30,
     vocation: 'All',
     energy: 'Light',
@@ -1525,10 +1525,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4203.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Aço',
+    'pt-BR': 'Bota de Aço',
   },
   {
-    nameEN: 'Undead Warrior Boot',
+    'en-US': 'Undead Warrior Boot',
     level: 35,
     vocation: 'All',
     energy: 'Dark',
@@ -1541,10 +1541,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4226.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota do Guerreiro Morto-vivo',
+    'pt-BR': 'Bota do Guerreiro Morto-vivo',
   },
   {
-    nameEN: 'Winged Boot',
+    'en-US': 'Winged Boot',
     level: 40,
     vocation: 'All',
     energy: 'Nature',
@@ -1557,10 +1557,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4204.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Alada',
+    'pt-BR': 'Bota Alada',
   },
   {
-    nameEN: 'Dark Boot',
+    'en-US': 'Dark Boot',
     level: 55,
     vocation: 'All',
     energy: 'Dark',
@@ -1573,10 +1573,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4205.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Escura',
+    'pt-BR': 'Bota Escura',
   },
   {
-    nameEN: 'Golden Boot',
+    'en-US': 'Golden Boot',
     level: 70,
     vocation: 'All',
     energy: 'Light',
@@ -1589,10 +1589,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4207.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota dourada',
+    'pt-BR': 'Bota dourada',
   },
   {
-    nameEN: 'Giant Beetle Carapace Boot',
+    'en-US': 'Giant Beetle Carapace Boot',
     level: 75,
     vocation: 'All',
     energy: 'Nature',
@@ -1605,10 +1605,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4230.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Carapaça de Besouro Gigante',
+    'pt-BR': 'Bota Carapaça de Besouro Gigante',
   },
   {
-    nameEN: 'Demon Boot',
+    'en-US': 'Demon Boot',
     level: 80,
     vocation: 'All',
     energy: 'Dark',
@@ -1621,10 +1621,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4206.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Demoníaca',
+    'pt-BR': 'Bota Demoníaca',
   },
   {
-    nameEN: 'Boots of Haste',
+    'en-US': 'Boots of Haste',
     level: 90,
     vocation: 'All',
     energy: 'Dark',
@@ -1637,10 +1637,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4210.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas da pressa',
+    'pt-BR': 'Botas da pressa',
   },
   {
-    nameEN: 'Spider Silk Boot',
+    'en-US': 'Spider Silk Boot',
     level: 100,
     vocation: 'All',
     energy: 'Nature',
@@ -1653,10 +1653,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4208.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Seda de Aranha',
+    'pt-BR': 'Bota de Seda de Aranha',
   },
   {
-    nameEN: 'Noble Extractor Boot',
+    'en-US': 'Noble Extractor Boot',
     level: 110,
     vocation: 'All',
     energy: 'Light',
@@ -1669,10 +1669,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4223.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Extrator Nobre',
+    'pt-BR': 'Bota Extrator Nobre',
   },
   {
-    nameEN: 'Skeleton Warrior Boot',
+    'en-US': 'Skeleton Warrior Boot',
     level: 115,
     vocation: 'All',
     energy: 'Dark',
@@ -1685,10 +1685,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4227.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Guerreiro Esqueleto',
+    'pt-BR': 'Bota de Guerreiro Esqueleto',
   },
   {
-    nameEN: 'Lava Boot',
+    'en-US': 'Lava Boot',
     level: 125,
     vocation: 'All',
     energy: 'Nature',
@@ -1701,10 +1701,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4209.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Lava',
+    'pt-BR': 'Bota de Lava',
   },
   {
-    nameEN: "Clan's Boots",
+    'en-US': "Clan's Boots",
     level: 140,
     vocation: 'All',
     energy: 'Light',
@@ -1717,10 +1717,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4211.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas do Clã',
+    'pt-BR': 'Botas do Clã',
   },
   {
-    nameEN: 'Mystic Boot',
+    'en-US': 'Mystic Boot',
     level: 145,
     vocation: 'All',
     energy: 'Dark',
@@ -1733,10 +1733,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4216.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Mística',
+    'pt-BR': 'Bota Mística',
   },
   {
-    nameEN: 'Frost Boots',
+    'en-US': 'Frost Boots',
     level: 150,
     vocation: 'All',
     energy: 'Light',
@@ -1749,10 +1749,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4214.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas de Gelo',
+    'pt-BR': 'Botas de Gelo',
   },
   {
-    nameEN: 'Ice Widow Silk Boot',
+    'en-US': 'Ice Widow Silk Boot',
     level: 170,
     vocation: 'All',
     energy: 'Nature',
@@ -1765,10 +1765,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4231.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Seda da Viúva de Gelo',
+    'pt-BR': 'Bota de Seda da Viúva de Gelo',
   },
   {
-    nameEN: 'Noble Boots',
+    'en-US': 'Noble Boots',
     level: 180,
     vocation: 'All',
     energy: 'Light',
@@ -1781,10 +1781,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4221.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas Nobres',
+    'pt-BR': 'Botas Nobres',
   },
   {
-    nameEN: 'Abyssal Cultist Boot',
+    'en-US': 'Abyssal Cultist Boot',
     level: 190,
     vocation: 'All',
     energy: 'Dark',
@@ -1797,10 +1797,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4228.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota do Cultista Abissal',
+    'pt-BR': 'Bota do Cultista Abissal',
   },
   {
-    nameEN: 'Angelical Boots',
+    'en-US': 'Angelical Boots',
     level: 200,
     vocation: 'All',
     energy: 'Light',
@@ -1813,10 +1813,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4218.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas Angélicas',
+    'pt-BR': 'Botas Angélicas',
   },
   {
-    nameEN: 'Giant Worm Boot',
+    'en-US': 'Giant Worm Boot',
     level: 210,
     vocation: 'All',
     energy: 'Nature',
@@ -1829,10 +1829,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4232.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Minhoca Gigante',
+    'pt-BR': 'Bota de Minhoca Gigante',
   },
   {
-    nameEN: 'Undead Dragon Tamer Boot',
+    'en-US': 'Undead Dragon Tamer Boot',
     level: 225,
     vocation: 'All',
     energy: 'Dark',
@@ -1845,10 +1845,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4229.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota do Domador de Dragões Mortos-vivos',
+    'pt-BR': 'Bota do Domador de Dragões Mortos-vivos',
   },
   {
-    nameEN: 'Frost Hunter Boot',
+    'en-US': 'Frost Hunter Boot',
     level: 245,
     vocation: 'All',
     energy: 'Light',
@@ -1861,10 +1861,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4224.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota do Caçador de Gelo',
+    'pt-BR': 'Bota do Caçador de Gelo',
   },
   {
-    nameEN: 'Boots of Dark Magic',
+    'en-US': 'Boots of Dark Magic',
     level: 250,
     vocation: 'All',
     energy: 'Dark',
@@ -1877,10 +1877,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4219.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas da Magia Negra',
+    'pt-BR': 'Botas da Magia Negra',
   },
   {
-    nameEN: 'Crystal Boot',
+    'en-US': 'Crystal Boot',
     level: 255,
     vocation: 'All',
     energy: 'Nature',
@@ -1893,10 +1893,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4233.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota de Cristal',
+    'pt-BR': 'Bota de Cristal',
   },
   {
-    nameEN: "Elora's Boots",
+    'en-US': "Elora's Boots",
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -1909,10 +1909,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4220.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas de Elora',
+    'pt-BR': 'Botas de Elora',
   },
   {
-    nameEN: 'Revenant Boot',
+    'en-US': 'Revenant Boot',
     level: 290,
     vocation: 'All',
     energy: 'Light',
@@ -1925,10 +1925,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4225.jpg"',
     slot: 'shoe',
-    namePTBR: 'Bota Revenant',
+    'pt-BR': 'Bota Revenant',
   },
   {
-    nameEN: 'Interdimensional Boots',
+    'en-US': 'Interdimensional Boots',
     level: 300,
     vocation: 'All',
     energy: 'Dark',
@@ -1941,10 +1941,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4217.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas Interdimensionais',
+    'pt-BR': 'Botas Interdimensionais',
   },
   {
-    nameEN: 'Celestial Boots',
+    'en-US': 'Celestial Boots',
     level: 325,
     vocation: 'All',
     energy: 'Light',
@@ -1957,10 +1957,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4222.jpg"',
     slot: 'shoe',
-    namePTBR: 'Botas Celestiais',
+    'pt-BR': 'Botas Celestiais',
   },
   {
-    nameEN: 'Reinforced Shield',
+    'en-US': 'Reinforced Shield',
     level: 1,
     vocation: 'All',
     energy: 'Light',
@@ -1973,10 +1973,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4317.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Reforçado',
+    'pt-BR': 'Escudo Reforçado',
   },
   {
-    nameEN: 'Round Wooden Shield',
+    'en-US': 'Round Wooden Shield',
     level: 2,
     vocation: 'All',
     energy: 'Nature',
@@ -1989,10 +1989,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4300.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo redondo de madeira',
+    'pt-BR': 'Escudo redondo de madeira',
   },
   {
-    nameEN: 'Copper Shield',
+    'en-US': 'Copper Shield',
     level: 5,
     vocation: 'All',
     energy: 'Nature',
@@ -2005,10 +2005,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4319.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Cobre',
+    'pt-BR': 'Escudo de Cobre',
   },
   {
-    nameEN: 'Squared Wooden Shield',
+    'en-US': 'Squared Wooden Shield',
     level: 8,
     vocation: 'All',
     energy: 'Light',
@@ -2022,10 +2022,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4301.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Madeira Quadrado',
+    'pt-BR': 'Escudo de Madeira Quadrado',
   },
   {
-    nameEN: 'Heritage Shield',
+    'en-US': 'Heritage Shield',
     level: 12,
     vocation: 'All',
     energy: 'Light',
@@ -2038,10 +2038,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4320.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo da herança',
+    'pt-BR': 'Escudo da herança',
   },
   {
-    nameEN: 'Undead Warrior Shield',
+    'en-US': 'Undead Warrior Shield',
     level: 15,
     vocation: 'All',
     energy: 'Dark',
@@ -2054,10 +2054,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4335.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de guerreiro morto-vivo',
+    'pt-BR': 'Escudo de guerreiro morto-vivo',
   },
   {
-    nameEN: 'Steel Shield',
+    'en-US': 'Steel Shield',
     level: 18,
     vocation: 'All',
     energy: 'Light',
@@ -2070,10 +2070,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4302.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Aço',
+    'pt-BR': 'Escudo de Aço',
   },
   {
-    nameEN: 'Dark Shield',
+    'en-US': 'Dark Shield',
     level: 30,
     vocation: 'All',
     energy: 'Dark',
@@ -2087,10 +2087,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4303.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Escuro',
+    'pt-BR': 'Escudo Escuro',
   },
   {
-    nameEN: 'Humanoid Toad Shield',
+    'en-US': 'Humanoid Toad Shield',
     level: 35,
     vocation: 'All',
     energy: 'Nature',
@@ -2103,10 +2103,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4337.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Sapo Humanoide',
+    'pt-BR': 'Escudo de Sapo Humanoide',
   },
   {
-    nameEN: 'Dwarven Shield',
+    'en-US': 'Dwarven Shield',
     level: 40,
     vocation: 'All',
     energy: 'Light',
@@ -2119,10 +2119,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4304.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo dos Anões',
+    'pt-BR': 'Escudo dos Anões',
   },
   {
-    nameEN: 'Bones Shield',
+    'en-US': 'Bones Shield',
     level: 50,
     vocation: 'All',
     energy: 'Dark',
@@ -2135,10 +2135,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4305.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Ossos',
+    'pt-BR': 'Escudo de Ossos',
   },
   {
-    nameEN: 'Ice Shield',
+    'en-US': 'Ice Shield',
     level: 60,
     vocation: 'All',
     energy: 'Nature',
@@ -2151,10 +2151,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4310.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Gelo',
+    'pt-BR': 'Escudo de Gelo',
   },
   {
-    nameEN: 'Troll Shield',
+    'en-US': 'Troll Shield',
     level: 65,
     vocation: 'All',
     energy: 'Light',
@@ -2167,10 +2167,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4332.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Troll',
+    'pt-BR': 'Escudo Troll',
   },
   {
-    nameEN: 'Crown Shield',
+    'en-US': 'Crown Shield',
     level: 70,
     vocation: 'All',
     energy: 'Dark',
@@ -2183,10 +2183,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4306.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo da Coroa',
+    'pt-BR': 'Escudo da Coroa',
   },
   {
-    nameEN: 'Golden Shield',
+    'en-US': 'Golden Shield',
     level: 80,
     vocation: 'All',
     energy: 'Dark',
@@ -2199,10 +2199,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4308.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Dourado',
+    'pt-BR': 'Escudo Dourado',
   },
   {
-    nameEN: 'Evil Shield',
+    'en-US': 'Evil Shield',
     level: 85,
     vocation: 'All',
     energy: 'Dark',
@@ -2215,10 +2215,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4307.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Mal',
+    'pt-BR': 'Escudo do Mal',
   },
   {
-    nameEN: 'Time Shield',
+    'en-US': 'Time Shield',
     level: 90,
     vocation: 'All',
     energy: 'Light',
@@ -2231,10 +2231,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4309.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Tempo',
+    'pt-BR': 'Escudo do Tempo',
   },
   {
-    nameEN: 'Giant Spider Shield',
+    'en-US': 'Giant Spider Shield',
     level: 95,
     vocation: 'All',
     energy: 'Nature',
@@ -2247,10 +2247,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4338.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Aranha Gigante',
+    'pt-BR': 'Escudo de Aranha Gigante',
   },
   {
-    nameEN: 'Tower Shield',
+    'en-US': 'Tower Shield',
     level: 100,
     vocation: 'All',
     energy: 'Dark',
@@ -2263,10 +2263,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4315.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo da Torre',
+    'pt-BR': 'Escudo da Torre',
   },
   {
-    nameEN: 'The Winter Shield',
+    'en-US': 'The Winter Shield',
     level: 110,
     vocation: 'All',
     energy: 'Nature',
@@ -2279,10 +2279,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4314.jpg"',
     slot: 'shield',
-    namePTBR: 'O escudo de inverno',
+    'pt-BR': 'O escudo de inverno',
   },
   {
-    nameEN: 'Skull Shield',
+    'en-US': 'Skull Shield',
     level: 120,
     vocation: 'All',
     energy: 'Dark',
@@ -2295,10 +2295,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4311.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de caveira',
+    'pt-BR': 'Escudo de caveira',
   },
   {
-    nameEN: 'Crystal Shield',
+    'en-US': 'Crystal Shield',
     level: 130,
     vocation: 'All',
     energy: 'Nature',
@@ -2311,10 +2311,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4313.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Cristal',
+    'pt-BR': 'Escudo de Cristal',
   },
   {
-    nameEN: "Clan's Shield",
+    'en-US': "Clan's Shield",
     level: 140,
     vocation: 'All',
     energy: 'Light',
@@ -2328,10 +2328,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4316.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Clã',
+    'pt-BR': 'Escudo do Clã',
   },
   {
-    nameEN: 'Mithril Shield',
+    'en-US': 'Mithril Shield',
     level: 150,
     vocation: 'All',
     energy: 'Light',
@@ -2344,10 +2344,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4321.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Mithril',
+    'pt-BR': 'Escudo de Mithril',
   },
   {
-    nameEN: 'Shield of the Void',
+    'en-US': 'Shield of the Void',
     level: 160,
     vocation: 'All',
     energy: 'Dark',
@@ -2360,10 +2360,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4322.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Vazio',
+    'pt-BR': 'Escudo do Vazio',
   },
   {
-    nameEN: 'Elven Shield',
+    'en-US': 'Elven Shield',
     level: 170,
     vocation: 'All',
     energy: 'Nature',
@@ -2376,10 +2376,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4326.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Élfico',
+    'pt-BR': 'Escudo Élfico',
   },
   {
-    nameEN: 'Gladiator Shield',
+    'en-US': 'Gladiator Shield',
     level: 200,
     vocation: 'All',
     energy: 'Light',
@@ -2392,10 +2392,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4333.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Gladiador',
+    'pt-BR': 'Escudo de Gladiador',
   },
   {
-    nameEN: 'Sacred Shield',
+    'en-US': 'Sacred Shield',
     level: 200,
     vocation: 'All',
     energy: 'Light',
@@ -2408,10 +2408,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4323.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Sagrado',
+    'pt-BR': 'Escudo Sagrado',
   },
   {
-    nameEN: 'Draconia Shield',
+    'en-US': 'Draconia Shield',
     level: 205,
     vocation: 'All',
     energy: 'Nature',
@@ -2424,10 +2424,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4339.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Draconia',
+    'pt-BR': 'Escudo Draconia',
   },
   {
-    nameEN: 'Devil Shield',
+    'en-US': 'Devil Shield',
     level: 210,
     vocation: 'All',
     energy: 'Dark',
@@ -2440,10 +2440,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4336.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Diabo',
+    'pt-BR': 'Escudo do Diabo',
   },
   {
-    nameEN: 'Angaina Shield',
+    'en-US': 'Angaina Shield',
     level: 225,
     vocation: 'All',
     energy: 'Nature',
@@ -2456,10 +2456,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4325.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Angaina',
+    'pt-BR': 'Escudo Angaina',
   },
   {
-    nameEN: 'Righteous Shield',
+    'en-US': 'Righteous Shield',
     level: 250,
     vocation: 'All',
     energy: 'Light',
@@ -2472,10 +2472,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4324.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Justo',
+    'pt-BR': 'Escudo do Justo',
   },
   {
-    nameEN: 'Paladin Shield',
+    'en-US': 'Paladin Shield',
     level: 250,
     vocation: 'All',
     energy: 'Light',
@@ -2488,10 +2488,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4334.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Paladino',
+    'pt-BR': 'Escudo do Paladino',
   },
   {
-    nameEN: 'Elder Vampire Shield',
+    'en-US': 'Elder Vampire Shield',
     level: 260,
     vocation: 'All',
     energy: 'Dark',
@@ -2505,10 +2505,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4330.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Vampiro Ancião',
+    'pt-BR': 'Escudo do Vampiro Ancião',
   },
   {
-    nameEN: 'Dragon Shield',
+    'en-US': 'Dragon Shield',
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -2522,10 +2522,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4312.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo do Dragão',
+    'pt-BR': 'Escudo do Dragão',
   },
   {
-    nameEN: "Elora's Shield",
+    'en-US': "Elora's Shield",
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -2538,10 +2538,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4327.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo de Elora',
+    'pt-BR': 'Escudo de Elora',
   },
   {
-    nameEN: 'Revenant Shield',
+    'en-US': 'Revenant Shield',
     level: 295,
     vocation: 'All',
     energy: 'Light',
@@ -2554,10 +2554,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4331.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo Revenant',
+    'pt-BR': 'Escudo Revenant',
   },
   {
-    nameEN: 'Corrupted Shield',
+    'en-US': 'Corrupted Shield',
     level: 300,
     vocation: 'All',
     energy: 'Dark',
@@ -2570,10 +2570,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4328.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo corrompido',
+    'pt-BR': 'Escudo corrompido',
   },
   {
-    nameEN: 'Dragons Tamer Shield',
+    'en-US': 'Dragons Tamer Shield',
     level: 325,
     vocation: 'All',
     energy: 'Dark',
@@ -2586,10 +2586,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4329.jpg"',
     slot: 'shield',
-    namePTBR: 'Escudo domador de dragões',
+    'pt-BR': 'Escudo domador de dragões',
   },
   {
-    nameEN: "Beginner's Spellbook",
+    'en-US': "Beginner's Spellbook",
     level: 2,
     vocation: 'All',
     energy: 'Nature',
@@ -2602,10 +2602,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12000.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de feitiços para iniciantes',
+    'pt-BR': 'Livro de feitiços para iniciantes',
   },
   {
-    nameEN: 'Fragile Grimoire',
+    'en-US': 'Fragile Grimoire',
     level: 10,
     vocation: 'All',
     energy: 'Dark',
@@ -2618,10 +2618,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12001.jpg"',
     slot: 'book',
-    namePTBR: 'Grimório Frágil',
+    'pt-BR': 'Grimório Frágil',
   },
   {
-    nameEN: 'Faun Book',
+    'en-US': 'Faun Book',
     level: 15,
     vocation: 'All',
     energy: 'Light',
@@ -2634,10 +2634,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12022.jpg"',
     slot: 'book',
-    namePTBR: 'Livro do Fauno',
+    'pt-BR': 'Livro do Fauno',
   },
   {
-    nameEN: 'Incarnated Spellbook',
+    'en-US': 'Incarnated Spellbook',
     level: 20,
     vocation: 'All',
     energy: 'Dark',
@@ -2650,10 +2650,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12002.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de Feitiços Encarnado',
+    'pt-BR': 'Livro de Feitiços Encarnado',
   },
   {
-    nameEN: 'Reincarnated Spellbook',
+    'en-US': 'Reincarnated Spellbook',
     level: 30,
     vocation: 'All',
     energy: 'Dark',
@@ -2666,10 +2666,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12003.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de feitiços reencarnado',
+    'pt-BR': 'Livro de feitiços reencarnado',
   },
   {
-    nameEN: 'Preserved Tome',
+    'en-US': 'Preserved Tome',
     level: 40,
     vocation: 'All',
     energy: 'Light',
@@ -2682,10 +2682,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12004.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Preservado',
+    'pt-BR': 'Tomo Preservado',
   },
   {
-    nameEN: 'Frigid Grimoire',
+    'en-US': 'Frigid Grimoire',
     level: 50,
     vocation: 'All',
     energy: 'Nature',
@@ -2698,10 +2698,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12005.jpg"',
     slot: 'book',
-    namePTBR: 'Grimório Frígido',
+    'pt-BR': 'Grimório Frígido',
   },
   {
-    nameEN: 'Blazefury Tome',
+    'en-US': 'Blazefury Tome',
     level: 60,
     vocation: 'All',
     energy: 'Dark',
@@ -2714,10 +2714,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12006.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Blazefury',
+    'pt-BR': 'Tomo Blazefury',
   },
   {
-    nameEN: "Warlock's Secrets",
+    'en-US': "Warlock's Secrets",
     level: 70,
     vocation: 'All',
     energy: 'Light',
@@ -2730,10 +2730,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12007.jpg"',
     slot: 'book',
-    namePTBR: 'Segredos do Bruxo',
+    'pt-BR': 'Segredos do Bruxo',
   },
   {
-    nameEN: 'Vampiric Spellbook',
+    'en-US': 'Vampiric Spellbook',
     level: 85,
     vocation: 'All',
     energy: 'Dark',
@@ -2746,10 +2746,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12008.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de feitiços vampírico',
+    'pt-BR': 'Livro de feitiços vampírico',
   },
   {
-    nameEN: 'Silk Book',
+    'en-US': 'Silk Book',
     level: 90,
     vocation: 'All',
     energy: 'Nature',
@@ -2762,10 +2762,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12026.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de seda',
+    'pt-BR': 'Livro de seda',
   },
   {
-    nameEN: "Clan's Spellbook",
+    'en-US': "Clan's Spellbook",
     level: 100,
     vocation: 'All',
     energy: 'Light',
@@ -2779,10 +2779,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12009.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de feitiços do clã',
+    'pt-BR': 'Livro de feitiços do clã',
   },
   {
-    nameEN: 'Hellish Tome',
+    'en-US': 'Hellish Tome',
     level: 120,
     vocation: 'All',
     energy: 'Dark',
@@ -2795,10 +2795,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12010.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Infernal',
+    'pt-BR': 'Tomo Infernal',
   },
   {
-    nameEN: 'Earth Tome',
+    'en-US': 'Earth Tome',
     level: 130,
     vocation: 'All',
     energy: 'Nature',
@@ -2811,10 +2811,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12013.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo da Terra',
+    'pt-BR': 'Tomo da Terra',
   },
   {
-    nameEN: 'Demonic Spellbook',
+    'en-US': 'Demonic Spellbook',
     level: 140,
     vocation: 'All',
     energy: 'Dark',
@@ -2827,10 +2827,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12011.jpg"',
     slot: 'book',
-    namePTBR: 'Feitiço Demoníaco',
+    'pt-BR': 'Feitiço Demoníaco',
   },
   {
-    nameEN: 'Prayer Book',
+    'en-US': 'Prayer Book',
     level: 150,
     vocation: 'All',
     energy: 'Light',
@@ -2843,10 +2843,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12023.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de oração',
+    'pt-BR': 'Livro de oração',
   },
   {
-    nameEN: 'Tome of the Void',
+    'en-US': 'Tome of the Void',
     level: 160,
     vocation: 'All',
     energy: 'Dark',
@@ -2859,10 +2859,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12014.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo do Vazio',
+    'pt-BR': 'Tomo do Vazio',
   },
   {
-    nameEN: 'Artificer Tome',
+    'en-US': 'Artificer Tome',
     level: 180,
     vocation: 'All',
     energy: 'Nature',
@@ -2875,10 +2875,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12018.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo do Artífice',
+    'pt-BR': 'Tomo do Artífice',
   },
   {
-    nameEN: 'Draconic Tome',
+    'en-US': 'Draconic Tome',
     level: 200,
     vocation: 'All',
     energy: 'Nature',
@@ -2891,10 +2891,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12012.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Dracônico',
+    'pt-BR': 'Tomo Dracônico',
   },
   {
-    nameEN: 'Book of Good Deeds',
+    'en-US': 'Book of Good Deeds',
     level: 200,
     vocation: 'All',
     energy: 'Light',
@@ -2907,10 +2907,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12024.jpg"',
     slot: 'book',
-    namePTBR: 'Livro de boas ações',
+    'pt-BR': 'Livro de boas ações',
   },
   {
-    nameEN: 'Vortex Book',
+    'en-US': 'Vortex Book',
     level: 205,
     vocation: 'All',
     energy: 'Dark',
@@ -2923,10 +2923,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12025.jpg"',
     slot: 'book',
-    namePTBR: 'Livro Vortex',
+    'pt-BR': 'Livro Vortex',
   },
   {
-    nameEN: 'Sacred Tome',
+    'en-US': 'Sacred Tome',
     level: 225,
     vocation: 'All',
     energy: 'Light',
@@ -2939,10 +2939,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12015.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Sagrado',
+    'pt-BR': 'Tomo Sagrado',
   },
   {
-    nameEN: 'Ancient Tome',
+    'en-US': 'Ancient Tome',
     level: 250,
     vocation: 'All',
     energy: 'Nature',
@@ -2955,10 +2955,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12016.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Antigo',
+    'pt-BR': 'Tomo Antigo',
   },
   {
-    nameEN: 'Elder Vampire Tome',
+    'en-US': 'Elder Vampire Tome',
     level: 255,
     vocation: 'All',
     energy: 'Dark',
@@ -2971,10 +2971,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12021.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Vampiro Ancião',
+    'pt-BR': 'Tomo Vampiro Ancião',
   },
   {
-    nameEN: "Elora's Tome",
+    'en-US': "Elora's Tome",
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -2987,10 +2987,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12017.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo de Elora',
+    'pt-BR': 'Tomo de Elora',
   },
   {
-    nameEN: 'Celestial Tome',
+    'en-US': 'Celestial Tome',
     level: 275,
     vocation: 'All',
     energy: 'Light',
@@ -3003,10 +3003,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12020.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Celestial',
+    'pt-BR': 'Tomo Celestial',
   },
   {
-    nameEN: 'Forgotten Tome',
+    'en-US': 'Forgotten Tome',
     level: 300,
     vocation: 'All',
     energy: 'Dark',
@@ -3019,10 +3019,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12019.jpg"',
     slot: 'book',
-    namePTBR: 'Tomo Esquecido',
+    'pt-BR': 'Tomo Esquecido',
   },
   {
-    nameEN: 'Chromatic Book',
+    'en-US': 'Chromatic Book',
     level: 325,
     vocation: 'All',
     energy: 'Light',
@@ -3035,10 +3035,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12027.jpg"',
     slot: 'book',
-    namePTBR: 'Livro cromático',
+    'pt-BR': 'Livro cromático',
   },
   {
-    nameEN: 'Bow Tie',
+    'en-US': 'Bow Tie',
     level: 1,
     vocation: 'All',
     energy: 'Light',
@@ -3051,10 +3051,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4424.jpg"',
     slot: 'necklace',
-    namePTBR: 'Gravata-borboleta',
+    'pt-BR': 'Gravata-borboleta',
   },
   {
-    nameEN: 'Amulet of Death',
+    'en-US': 'Amulet of Death',
     level: 1,
     vocation: 'All',
     energy: 'Light',
@@ -3067,10 +3067,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4425.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto da Morte',
+    'pt-BR': 'Amuleto da Morte',
   },
   {
-    nameEN: 'Spirit Necklace',
+    'en-US': 'Spirit Necklace',
     level: 10,
     vocation: 'All',
     energy: 'Dark',
@@ -3083,10 +3083,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4400.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar do Espírito',
+    'pt-BR': 'Colar do Espírito',
   },
   {
-    nameEN: 'Bronze Health Charm',
+    'en-US': 'Bronze Health Charm',
     level: 20,
     vocation: 'All',
     energy: 'None',
@@ -3099,10 +3099,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4409.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Saúde de Bronze',
+    'pt-BR': 'Amuleto de Saúde de Bronze',
   },
   {
-    nameEN: 'Bronze Mana Charm',
+    'en-US': 'Bronze Mana Charm',
     level: 20,
     vocation: 'All',
     energy: 'None',
@@ -3115,10 +3115,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4412.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Mana de Bronze',
+    'pt-BR': 'Amuleto de Mana de Bronze',
   },
   {
-    nameEN: 'Bronze Defense Charm',
+    'en-US': 'Bronze Defense Charm',
     level: 20,
     vocation: 'All',
     energy: 'None',
@@ -3131,10 +3131,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4415.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Defesa de Bronze',
+    'pt-BR': 'Amuleto de Defesa de Bronze',
   },
   {
-    nameEN: 'Bronze Anti Spell Charm',
+    'en-US': 'Bronze Anti Spell Charm',
     level: 20,
     vocation: 'All',
     energy: 'None',
@@ -3147,10 +3147,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4418.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Anti Feitiço de Bronze',
+    'pt-BR': 'Amuleto Anti Feitiço de Bronze',
   },
   {
-    nameEN: 'Amulet of Life',
+    'en-US': 'Amulet of Life',
     level: 30,
     vocation: 'All',
     energy: 'Nature',
@@ -3163,10 +3163,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4404.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto da Vida',
+    'pt-BR': 'Amuleto da Vida',
   },
   {
-    nameEN: 'Unbreakable Necklace',
+    'en-US': 'Unbreakable Necklace',
     level: 35,
     vocation: 'All',
     energy: 'Dark',
@@ -3179,10 +3179,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4401.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Inquebrável',
+    'pt-BR': 'Colar Inquebrável',
   },
   {
-    nameEN: 'Medusa Necklace',
+    'en-US': 'Medusa Necklace',
     level: 40,
     vocation: 'All',
     energy: 'Light',
@@ -3195,10 +3195,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4433.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Medusa',
+    'pt-BR': 'Colar Medusa',
   },
   {
-    nameEN: 'Oceanic Necklace',
+    'en-US': 'Oceanic Necklace',
     level: 50,
     vocation: 'All',
     energy: 'Nature',
@@ -3211,10 +3211,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4402.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Oceânico',
+    'pt-BR': 'Colar Oceânico',
   },
   {
-    nameEN: 'Silver Health Charm',
+    'en-US': 'Silver Health Charm',
     level: 60,
     vocation: 'All',
     energy: 'None',
@@ -3227,10 +3227,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4410.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Saúde de Prata',
+    'pt-BR': 'Amuleto de Saúde de Prata',
   },
   {
-    nameEN: 'Silver Anti Spell Charm',
+    'en-US': 'Silver Anti Spell Charm',
     level: 60,
     vocation: 'All',
     energy: 'None',
@@ -3243,10 +3243,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4419.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Anti Feitiço Prata',
+    'pt-BR': 'Amuleto Anti Feitiço Prata',
   },
   {
-    nameEN: 'Silver Mana Charm',
+    'en-US': 'Silver Mana Charm',
     level: 60,
     vocation: 'All',
     energy: 'None',
@@ -3259,10 +3259,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4413.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Mana Prateado',
+    'pt-BR': 'Amuleto de Mana Prateado',
   },
   {
-    nameEN: 'Silver Defense Charm',
+    'en-US': 'Silver Defense Charm',
     level: 60,
     vocation: 'All',
     energy: 'None',
@@ -3275,10 +3275,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4416.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Defesa de Prata',
+    'pt-BR': 'Amuleto de Defesa de Prata',
   },
   {
-    nameEN: 'Blessed Amulet',
+    'en-US': 'Blessed Amulet',
     level: 70,
     vocation: 'All',
     energy: 'Dark',
@@ -3291,10 +3291,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4405.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Abençoado',
+    'pt-BR': 'Amuleto Abençoado',
   },
   {
-    nameEN: 'Troll Necklace',
+    'en-US': 'Troll Necklace',
     level: 75,
     vocation: 'All',
     energy: 'Light',
@@ -3307,10 +3307,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4434.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Troll',
+    'pt-BR': 'Colar Troll',
   },
   {
-    nameEN: 'Vampire Necklace',
+    'en-US': 'Vampire Necklace',
     level: 80,
     vocation: 'All',
     energy: 'Dark',
@@ -3323,10 +3323,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4403.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar de Vampiro',
+    'pt-BR': 'Colar de Vampiro',
   },
   {
-    nameEN: 'Gold Anti Spell Charm',
+    'en-US': 'Gold Anti Spell Charm',
     level: 90,
     vocation: 'All',
     energy: 'None',
@@ -3339,10 +3339,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4420.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Anti Feitiço Dourado',
+    'pt-BR': 'Amuleto Anti Feitiço Dourado',
   },
   {
-    nameEN: 'Gold Health Charm',
+    'en-US': 'Gold Health Charm',
     level: 90,
     vocation: 'All',
     energy: 'None',
@@ -3356,10 +3356,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4411.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Saúde de Ouro',
+    'pt-BR': 'Amuleto de Saúde de Ouro',
   },
   {
-    nameEN: 'Gold Mana Charm',
+    'en-US': 'Gold Mana Charm',
     level: 90,
     vocation: 'All',
     energy: 'None',
@@ -3373,10 +3373,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4414.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Mana Dourado',
+    'pt-BR': 'Amuleto de Mana Dourado',
   },
   {
-    nameEN: 'Gold Defense Charm',
+    'en-US': 'Gold Defense Charm',
     level: 90,
     vocation: 'All',
     energy: 'None',
@@ -3389,10 +3389,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4417.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto de Defesa de Ouro',
+    'pt-BR': 'Amuleto de Defesa de Ouro',
   },
   {
-    nameEN: 'Giant Spider Necklace',
+    'en-US': 'Giant Spider Necklace',
     level: 95,
     vocation: 'All',
     energy: 'Nature',
@@ -3405,10 +3405,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4439.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar de Aranha Gigante',
+    'pt-BR': 'Colar de Aranha Gigante',
   },
   {
-    nameEN: 'Antichrist Amulet',
+    'en-US': 'Antichrist Amulet',
     level: 100,
     vocation: 'All',
     energy: 'Dark',
@@ -3421,10 +3421,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4406.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto do Anticristo',
+    'pt-BR': 'Amuleto do Anticristo',
   },
   {
-    nameEN: "Clan's Amulet",
+    'en-US': "Clan's Amulet",
     level: 110,
     vocation: 'All',
     energy: 'Light',
@@ -3438,10 +3438,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4408.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto do Clã',
+    'pt-BR': 'Amuleto do Clã',
   },
   {
-    nameEN: 'Antidemonic Amulet',
+    'en-US': 'Antidemonic Amulet',
     level: 125,
     vocation: 'All',
     energy: 'Light',
@@ -3454,10 +3454,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4422.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Antidemoníaco',
+    'pt-BR': 'Amuleto Antidemoníaco',
   },
   {
-    nameEN: 'Mystic Amulet',
+    'en-US': 'Mystic Amulet',
     level: 140,
     vocation: 'All',
     energy: 'Dark',
@@ -3470,10 +3470,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4421.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Místico',
+    'pt-BR': 'Amuleto Místico',
   },
   {
-    nameEN: 'Elven Amulet',
+    'en-US': 'Elven Amulet',
     level: 150,
     vocation: 'All',
     energy: 'Nature',
@@ -3486,10 +3486,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4426.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto Élfico',
+    'pt-BR': 'Amuleto Élfico',
   },
   {
-    nameEN: 'Monk Necklace',
+    'en-US': 'Monk Necklace',
     level: 165,
     vocation: 'All',
     energy: 'Light',
@@ -3502,10 +3502,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4435.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Monge',
+    'pt-BR': 'Colar Monge',
   },
   {
-    nameEN: 'Elven Night Amulet',
+    'en-US': 'Elven Night Amulet',
     level: 175,
     vocation: 'All',
     energy: 'Nature',
@@ -3518,10 +3518,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4427.jpg"',
     slot: 'necklace',
-    namePTBR: 'Amuleto da Noite Élfica',
+    'pt-BR': 'Amuleto da Noite Élfica',
   },
   {
-    nameEN: 'Banshee Necklace',
+    'en-US': 'Banshee Necklace',
     level: 180,
     vocation: 'All',
     energy: 'Dark',
@@ -3534,10 +3534,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4437.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Banshee',
+    'pt-BR': 'Colar Banshee',
   },
   {
-    nameEN: 'Noble Necklace',
+    'en-US': 'Noble Necklace',
     level: 200,
     vocation: 'All',
     energy: 'Light',
@@ -3550,10 +3550,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4429.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Nobre',
+    'pt-BR': 'Colar Nobre',
   },
   {
-    nameEN: 'Elemental Necklace',
+    'en-US': 'Elemental Necklace',
     level: 225,
     vocation: 'All',
     energy: 'Nature',
@@ -3566,10 +3566,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4440.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Elemental',
+    'pt-BR': 'Colar Elemental',
   },
   {
-    nameEN: 'Undead Dragon Necklace',
+    'en-US': 'Undead Dragon Necklace',
     level: 225,
     vocation: 'All',
     energy: 'Dark',
@@ -3582,10 +3582,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4438.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar de Dragão Morto-vivo',
+    'pt-BR': 'Colar de Dragão Morto-vivo',
   },
   {
-    nameEN: 'Angel Essence Necklace',
+    'en-US': 'Angel Essence Necklace',
     level: 250,
     vocation: 'All',
     energy: 'Light',
@@ -3598,10 +3598,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4423.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Essência de Anjo',
+    'pt-BR': 'Colar Essência de Anjo',
   },
   {
-    nameEN: 'Elder Vampire Necklace',
+    'en-US': 'Elder Vampire Necklace',
     level: 265,
     vocation: 'All',
     energy: 'Dark',
@@ -3615,10 +3615,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4432.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Vampiro Ancião',
+    'pt-BR': 'Colar Vampiro Ancião',
   },
   {
-    nameEN: "Elora's Necklace",
+    'en-US': "Elora's Necklace",
     level: 275,
     vocation: 'All',
     energy: 'Nature',
@@ -3631,10 +3631,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4428.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar de Elora',
+    'pt-BR': 'Colar de Elora',
   },
   {
-    nameEN: 'Elf Guardian Necklace',
+    'en-US': 'Elf Guardian Necklace',
     level: 295,
     vocation: 'All',
     energy: 'Light',
@@ -3647,10 +3647,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4436.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Elfo Guardião',
+    'pt-BR': 'Colar Elfo Guardião',
   },
   {
-    nameEN: 'Corrupted Necklace',
+    'en-US': 'Corrupted Necklace',
     level: 300,
     vocation: 'All',
     energy: 'Dark',
@@ -3663,10 +3663,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4430.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Corrompido',
+    'pt-BR': 'Colar Corrompido',
   },
   {
-    nameEN: 'Draconic Gems Necklace',
+    'en-US': 'Draconic Gems Necklace',
     level: 320,
     vocation: 'All',
     energy: 'Nature',
@@ -3679,10 +3679,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4407.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar de Gemas Dracônicas',
+    'pt-BR': 'Colar de Gemas Dracônicas',
   },
   {
-    nameEN: 'Celestial Necklace',
+    'en-US': 'Celestial Necklace',
     level: 325,
     vocation: 'All',
     energy: 'Light',
@@ -3695,10 +3695,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4431.jpg"',
     slot: 'necklace',
-    namePTBR: 'Colar Celestial',
+    'pt-BR': 'Colar Celestial',
   },
   {
-    nameEN: 'Plato Ring',
+    'en-US': 'Plato Ring',
     level: 5,
     vocation: 'All',
     energy: 'Nature',
@@ -3711,10 +3711,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4500.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Platão',
+    'pt-BR': 'Anel de Platão',
   },
   {
-    nameEN: 'Goblin Ring',
+    'en-US': 'Goblin Ring',
     level: 15,
     vocation: 'All',
     energy: 'Light',
@@ -3727,10 +3727,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4521.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Goblin',
+    'pt-BR': 'Anel Goblin',
   },
   {
-    nameEN: 'Lost Soul Ring',
+    'en-US': 'Lost Soul Ring',
     level: 20,
     vocation: 'All',
     energy: 'Dark',
@@ -3743,10 +3743,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4525.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel da Alma Perdida',
+    'pt-BR': 'Anel da Alma Perdida',
   },
   {
-    nameEN: 'Mana Shield Ring',
+    'en-US': 'Mana Shield Ring',
     level: 25,
     vocation: 'All',
     energy: 'None',
@@ -3760,10 +3760,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4513.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Escudo de Mana',
+    'pt-BR': 'Anel de Escudo de Mana',
   },
   {
-    nameEN: 'Silver Ring',
+    'en-US': 'Silver Ring',
     level: 35,
     vocation: 'All',
     energy: 'Light',
@@ -3777,10 +3777,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4501.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de prata',
+    'pt-BR': 'Anel de prata',
   },
   {
-    nameEN: 'Humanoid Octopus Ring',
+    'en-US': 'Humanoid Octopus Ring',
     level: 40,
     vocation: 'All',
     energy: 'Nature',
@@ -3793,10 +3793,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4527.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Polvo Humanoide',
+    'pt-BR': 'Anel de Polvo Humanoide',
   },
   {
-    nameEN: 'Stealth Ring',
+    'en-US': 'Stealth Ring',
     level: 45,
     vocation: 'All',
     energy: 'Dark',
@@ -3810,10 +3810,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4509.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel furtivo',
+    'pt-BR': 'Anel furtivo',
   },
   {
-    nameEN: 'Dark Ring',
+    'en-US': 'Dark Ring',
     level: 50,
     vocation: 'All',
     energy: 'Dark',
@@ -3826,10 +3826,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4504.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Escuro',
+    'pt-BR': 'Anel Escuro',
   },
   {
-    nameEN: 'Ice Mermaid Ring',
+    'en-US': 'Ice Mermaid Ring',
     level: 65,
     vocation: 'All',
     energy: 'Light',
@@ -3842,10 +3842,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4522.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de sereia de gelo',
+    'pt-BR': 'Anel de sereia de gelo',
   },
   {
-    nameEN: 'Ice Ring',
+    'en-US': 'Ice Ring',
     level: 70,
     vocation: 'All',
     energy: 'Nature',
@@ -3858,10 +3858,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4518.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de gelo',
+    'pt-BR': 'Anel de gelo',
   },
   {
-    nameEN: 'Golden Ring',
+    'en-US': 'Golden Ring',
     level: 80,
     vocation: 'All',
     energy: 'Dark',
@@ -3874,10 +3874,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4502.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de ouro',
+    'pt-BR': 'Anel de ouro',
   },
   {
-    nameEN: 'Uzara Ring',
+    'en-US': 'Uzara Ring',
     level: 90,
     vocation: 'All',
     energy: 'Dark',
@@ -3890,10 +3890,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4510.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Uzara',
+    'pt-BR': 'Anel Uzara',
   },
   {
-    nameEN: 'Carapace Ring',
+    'en-US': 'Carapace Ring',
     level: 95,
     vocation: 'All',
     energy: 'Nature',
@@ -3906,10 +3906,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4507.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Carapaça',
+    'pt-BR': 'Anel Carapaça',
   },
   {
-    nameEN: "Hell's Ring",
+    'en-US': "Hell's Ring",
     level: 100,
     vocation: 'All',
     energy: 'Dark',
@@ -3922,10 +3922,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4506.jpg"',
     slot: 'ring',
-    namePTBR: 'anel do inferno',
+    'pt-BR': 'anel do inferno',
   },
   {
-    nameEN: 'Gladiator Ring',
+    'en-US': 'Gladiator Ring',
     level: 105,
     vocation: 'All',
     energy: 'Light',
@@ -3938,10 +3938,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4523.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Gladiador',
+    'pt-BR': 'Anel Gladiador',
   },
   {
-    nameEN: 'Bone Ring',
+    'en-US': 'Bone Ring',
     level: 110,
     vocation: 'All',
     energy: 'Dark',
@@ -3954,10 +3954,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4505.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Osso',
+    'pt-BR': 'Anel de Osso',
   },
   {
-    nameEN: 'Power Ring',
+    'en-US': 'Power Ring',
     level: 125,
     vocation: 'All',
     energy: 'Dark',
@@ -3970,10 +3970,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4503.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de energia',
+    'pt-BR': 'Anel de energia',
   },
   {
-    nameEN: 'Lava Ring',
+    'en-US': 'Lava Ring',
     level: 135,
     vocation: 'All',
     energy: 'Nature',
@@ -3986,10 +3986,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4528.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Lava',
+    'pt-BR': 'Anel de Lava',
   },
   {
-    nameEN: 'Mystic Ring',
+    'en-US': 'Mystic Ring',
     level: 140,
     vocation: 'All',
     energy: 'Dark',
@@ -4002,10 +4002,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4512.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Místico',
+    'pt-BR': 'Anel Místico',
   },
   {
-    nameEN: "Clan's Ring",
+    'en-US': "Clan's Ring",
     level: 150,
     vocation: 'All',
     energy: 'Light',
@@ -4019,10 +4019,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4511.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel do Clã',
+    'pt-BR': 'Anel do Clã',
   },
   {
-    nameEN: 'Ring of the Skies',
+    'en-US': 'Ring of the Skies',
     level: 165,
     vocation: 'All',
     energy: 'Light',
@@ -4035,10 +4035,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4514.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel dos Céus',
+    'pt-BR': 'Anel dos Céus',
   },
   {
-    nameEN: 'Abyssal Cultist Ring',
+    'en-US': 'Abyssal Cultist Ring',
     level: 170,
     vocation: 'All',
     energy: 'Dark',
@@ -4051,10 +4051,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4526.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel do Cultista Abissal',
+    'pt-BR': 'Anel do Cultista Abissal',
   },
   {
-    nameEN: 'Elven Nobility Night Ring',
+    'en-US': 'Elven Nobility Night Ring',
     level: 180,
     vocation: 'All',
     energy: 'Nature',
@@ -4067,10 +4067,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4517.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Noturno da Nobreza Élfica',
+    'pt-BR': 'Anel Noturno da Nobreza Élfica',
   },
   {
-    nameEN: 'Elven Nobility Ring',
+    'en-US': 'Elven Nobility Ring',
     level: 190,
     vocation: 'All',
     energy: 'Nature',
@@ -4083,10 +4083,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4516.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel da Nobreza Élfica',
+    'pt-BR': 'Anel da Nobreza Élfica',
   },
   {
-    nameEN: 'Aristocrat Ring',
+    'en-US': 'Aristocrat Ring',
     level: 195,
     vocation: 'All',
     energy: 'Light',
@@ -4099,10 +4099,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4524.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Aristocrata',
+    'pt-BR': 'Anel Aristocrata',
   },
   {
-    nameEN: 'Galaxy Ring',
+    'en-US': 'Galaxy Ring',
     level: 200,
     vocation: 'All',
     energy: 'Dark',
@@ -4115,10 +4115,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4515.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel da Galáxia',
+    'pt-BR': 'Anel da Galáxia',
   },
   {
-    nameEN: 'Crystal Ring',
+    'en-US': 'Crystal Ring',
     level: 210,
     vocation: 'All',
     energy: 'Nature',
@@ -4131,10 +4131,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4519.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Cristal',
+    'pt-BR': 'Anel de Cristal',
   },
   {
-    nameEN: 'Celestial Ring',
+    'en-US': 'Celestial Ring',
     level: 225,
     vocation: 'All',
     energy: 'Light',
@@ -4147,10 +4147,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4520.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel Celestial',
+    'pt-BR': 'Anel Celestial',
   },
   {
-    nameEN: 'Draconic Gem Ring',
+    'en-US': 'Draconic Gem Ring',
     level: 245,
     vocation: 'All',
     energy: 'Nature',
@@ -4163,10 +4163,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4508.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel de Gema Dracônico',
+    'pt-BR': 'Anel de Gema Dracônico',
   },
   {
-    nameEN: 'Chromatic Ring',
+    'en-US': 'Chromatic Ring',
     level: 275,
     vocation: 'All',
     energy: 'Light',
@@ -4180,10 +4180,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4529.jpg"',
     slot: 'ring',
-    namePTBR: 'Anel cromático',
+    'pt-BR': 'Anel cromático',
   },
   {
-    nameEN: 'Comfortable Thong',
+    'en-US': 'Comfortable Thong',
     level: 1,
     vocation: 'All',
     energy: 'Nature',
@@ -4196,10 +4196,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16019.jpg"',
     slot: 'leg',
-    namePTBR: 'Tanga Confortável',
+    'pt-BR': 'Tanga Confortável',
   },
   {
-    nameEN: 'Wool Legs',
+    'en-US': 'Wool Legs',
     level: 5,
     vocation: 'All',
     energy: 'Light',
@@ -4212,10 +4212,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16000.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Lã',
+    'pt-BR': 'Calças de Lã',
   },
   {
-    nameEN: 'Leather Legs',
+    'en-US': 'Leather Legs',
     level: 15,
     vocation: 'All',
     energy: 'Light',
@@ -4229,10 +4229,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16001.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de couro',
+    'pt-BR': 'Calças de couro',
   },
   {
-    nameEN: 'Wizard Legs',
+    'en-US': 'Wizard Legs',
     level: 25,
     vocation: 'All',
     energy: 'Dark',
@@ -4246,10 +4246,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16002.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de mago',
+    'pt-BR': 'Calças de mago',
   },
   {
-    nameEN: 'Humanoid Toad Legs',
+    'en-US': 'Humanoid Toad Legs',
     level: 30,
     vocation: 'All',
     energy: 'Nature',
@@ -4262,10 +4262,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16027.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Sapo Humanoide',
+    'pt-BR': 'Calças de Sapo Humanoide',
   },
   {
-    nameEN: 'Chain Legs',
+    'en-US': 'Chain Legs',
     level: 35,
     vocation: 'All',
     energy: 'Light',
@@ -4279,10 +4279,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16003.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Corrente',
+    'pt-BR': 'Calças de Corrente',
   },
   {
-    nameEN: 'Ninja Legs',
+    'en-US': 'Ninja Legs',
     level: 45,
     vocation: 'All',
     energy: 'Light',
@@ -4295,10 +4295,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16004.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Ninja',
+    'pt-BR': 'Calças Ninja',
   },
   {
-    nameEN: 'Heirloom Legs',
+    'en-US': 'Heirloom Legs',
     level: 55,
     vocation: 'All',
     energy: 'Nature',
@@ -4311,10 +4311,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16005.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de herança',
+    'pt-BR': 'Calças de herança',
   },
   {
-    nameEN: 'Vampire Legs',
+    'en-US': 'Vampire Legs',
     level: 60,
     vocation: 'All',
     energy: 'Dark',
@@ -4327,10 +4327,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16024.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Vampiro',
+    'pt-BR': 'Calças de Vampiro',
   },
   {
-    nameEN: 'Reinforced Legs',
+    'en-US': 'Reinforced Legs',
     level: 65,
     vocation: 'All',
     energy: 'Light',
@@ -4344,10 +4344,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16006.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Reforçadas',
+    'pt-BR': 'Calças Reforçadas',
   },
   {
-    nameEN: 'Prismatic Legs',
+    'en-US': 'Prismatic Legs',
     level: 75,
     vocation: 'All',
     energy: 'Light',
@@ -4360,10 +4360,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16007.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Prismáticas',
+    'pt-BR': 'Calças Prismáticas',
   },
   {
-    nameEN: 'Fairy Legs',
+    'en-US': 'Fairy Legs',
     level: 80,
     vocation: 'All',
     energy: 'Nature',
@@ -4376,10 +4376,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16028.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Fada',
+    'pt-BR': 'Calças de Fada',
   },
   {
-    nameEN: 'Golden Legs',
+    'en-US': 'Golden Legs',
     level: 85,
     vocation: 'All',
     energy: 'Dark',
@@ -4392,10 +4392,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16008.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Douradas',
+    'pt-BR': 'Calças Douradas',
   },
   {
-    nameEN: 'Plate Legs',
+    'en-US': 'Plate Legs',
     level: 100,
     vocation: 'All',
     energy: 'Nature',
@@ -4408,10 +4408,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16009.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças da Placa',
+    'pt-BR': 'Calças da Placa',
   },
   {
-    nameEN: 'Gladiator Legs',
+    'en-US': 'Gladiator Legs',
     level: 110,
     vocation: 'All',
     energy: 'Light',
@@ -4424,10 +4424,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16022.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Gladiador',
+    'pt-BR': 'Calças de Gladiador',
   },
   {
-    nameEN: 'Crystal Legs',
+    'en-US': 'Crystal Legs',
     level: 120,
     vocation: 'All',
     energy: 'Nature',
@@ -4441,10 +4441,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16010.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Cristal',
+    'pt-BR': 'Calças de Cristal',
   },
   {
-    nameEN: 'Abyssal Cultist Legs',
+    'en-US': 'Abyssal Cultist Legs',
     level: 125,
     vocation: 'All',
     energy: 'Dark',
@@ -4457,10 +4457,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16025.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Abissais do Cultista',
+    'pt-BR': 'Calças Abissais do Cultista',
   },
   {
-    nameEN: 'Clan Legs',
+    'en-US': 'Clan Legs',
     level: 140,
     vocation: 'All',
     energy: 'Light',
@@ -4474,10 +4474,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16011.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças do clã',
+    'pt-BR': 'Calças do clã',
   },
   {
-    nameEN: 'Elven Legs',
+    'en-US': 'Elven Legs',
     level: 160,
     vocation: 'All',
     energy: 'Nature',
@@ -4490,10 +4490,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16012.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças élficas',
+    'pt-BR': 'Calças élficas',
   },
   {
-    nameEN: 'Void Legs',
+    'en-US': 'Void Legs',
     level: 175,
     vocation: 'All',
     energy: 'Dark',
@@ -4506,10 +4506,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16026.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Vazias',
+    'pt-BR': 'Calças Vazias',
   },
   {
-    nameEN: 'Noble Legs',
+    'en-US': 'Noble Legs',
     level: 180,
     vocation: 'All',
     energy: 'Light',
@@ -4522,10 +4522,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16013.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Nobres',
+    'pt-BR': 'Calças Nobres',
   },
   {
-    nameEN: 'Volcano Legs',
+    'en-US': 'Volcano Legs',
     level: 200,
     vocation: 'All',
     energy: 'Nature',
@@ -4538,10 +4538,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16014.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças do Vulcão',
+    'pt-BR': 'Calças do Vulcão',
   },
   {
-    nameEN: 'Frost Hunter Legs',
+    'en-US': 'Frost Hunter Legs',
     level: 220,
     vocation: 'All',
     energy: 'Light',
@@ -4554,10 +4554,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16023.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças do Caçador de Gelo',
+    'pt-BR': 'Calças do Caçador de Gelo',
   },
   {
-    nameEN: 'Demon Legs',
+    'en-US': 'Demon Legs',
     level: 225,
     vocation: 'All',
     energy: 'Dark',
@@ -4570,10 +4570,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16015.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Demônio',
+    'pt-BR': 'Calças de Demônio',
   },
   {
-    nameEN: 'Elemental Legs',
+    'en-US': 'Elemental Legs',
     level: 245,
     vocation: 'All',
     energy: 'Nature',
@@ -4586,10 +4586,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16029.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Elementais',
+    'pt-BR': 'Calças Elementais',
   },
   {
-    nameEN: 'Angelic Legs',
+    'en-US': 'Angelic Legs',
     level: 250,
     vocation: 'All',
     energy: 'Light',
@@ -4602,10 +4602,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16016.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Angélicas',
+    'pt-BR': 'Calças Angélicas',
   },
   {
-    nameEN: 'Dragons Tamer Legs',
+    'en-US': 'Dragons Tamer Legs',
     level: 275,
     vocation: 'All',
     energy: 'Dark',
@@ -4618,10 +4618,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16020.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças do Domador de Dragões',
+    'pt-BR': 'Calças do Domador de Dragões',
   },
   {
-    nameEN: 'Chromatic Legs',
+    'en-US': 'Chromatic Legs',
     level: 295,
     vocation: 'All',
     energy: 'Light',
@@ -4634,10 +4634,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16031.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças cromáticas',
+    'pt-BR': 'Calças cromáticas',
   },
   {
-    nameEN: 'Ethereal Legs',
+    'en-US': 'Ethereal Legs',
     level: 300,
     vocation: 'All',
     energy: 'Nature',
@@ -4650,10 +4650,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16017.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças Etéreas',
+    'pt-BR': 'Calças Etéreas',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Scale Legs',
+    'en-US': 'Chromatic Golden Dragon Scale Legs',
     level: 500,
     vocation: 'All',
     energy: 'Light',
@@ -4666,10 +4666,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16030.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças cromáticas de escama de dragão dourado',
+    'pt-BR': 'Calças cromáticas de escama de dragão dourado',
   },
   {
-    nameEN: 'Golden Dragon Scale Legs',
+    'en-US': 'Golden Dragon Scale Legs',
     level: 500,
     vocation: 'All',
     energy: 'Nature',
@@ -4682,10 +4682,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16018.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Escama de Dragão Dourado',
+    'pt-BR': 'Calças de Escama de Dragão Dourado',
   },
   {
-    nameEN: 'Undead Golden Dragon Scale Legs',
+    'en-US': 'Undead Golden Dragon Scale Legs',
     level: 500,
     vocation: 'All',
     energy: 'Dark',
@@ -4698,10 +4698,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16021.jpg"',
     slot: 'leg',
-    namePTBR: 'Calças de Escama de Dragão Dourado Morto-vivo',
+    'pt-BR': 'Calças de Escama de Dragão Dourado Morto-vivo',
   },
   {
-    nameEN: 'Axe',
+    'en-US': 'Axe',
     level: 0,
     vocation: 'All',
     energy: 'None',
@@ -4714,10 +4714,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17002.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Machado',
+    'pt-BR': 'Machado',
   },
   {
-    nameEN: 'Hammer',
+    'en-US': 'Hammer',
     level: 0,
     vocation: 'All',
     energy: 'None',
@@ -4730,10 +4730,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17001.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Martelo',
+    'pt-BR': 'Martelo',
   },
   {
-    nameEN: 'Crest of Fire',
+    'en-US': 'Crest of Fire',
     level: 1,
     vocation: 'Berserker',
     energy: 'None',
@@ -4746,10 +4746,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17003.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Crista de Fogo',
+    'pt-BR': 'Crista de Fogo',
   },
   {
-    nameEN: 'Crest of Air',
+    'en-US': 'Crest of Air',
     level: 1,
     vocation: 'Mage',
     energy: 'None',
@@ -4762,10 +4762,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17004.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Crista do Ar',
+    'pt-BR': 'Crista do Ar',
   },
   {
-    nameEN: 'Crest of Time',
+    'en-US': 'Crest of Time',
     level: 1,
     vocation: 'Alchemist',
     energy: 'None',
@@ -4778,10 +4778,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17005.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Crista do Tempo',
+    'pt-BR': 'Crista do Tempo',
   },
   {
-    nameEN: 'Crest of Water',
+    'en-US': 'Crest of Water',
     level: 1,
     vocation: 'Hunter',
     energy: 'None',
@@ -4794,10 +4794,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17006.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Crista da Água',
+    'pt-BR': 'Crista da Água',
   },
   {
-    nameEN: 'Crest of Earth',
+    'en-US': 'Crest of Earth',
     level: 1,
     vocation: 'Warrior',
     energy: 'None',
@@ -4810,10 +4810,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17007.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Crista da Terra',
+    'pt-BR': 'Crista da Terra',
   },
   {
-    nameEN: 'Energy Totem',
+    'en-US': 'Energy Totem',
     level: 1,
     vocation: 'All',
     energy: 'None',
@@ -4826,10 +4826,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17010.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Totem de Energia',
+    'pt-BR': 'Totem de Energia',
   },
   {
-    nameEN: 'Fishing Rod',
+    'en-US': 'Fishing Rod',
     level: 1,
     vocation: 'All',
     energy: 'None',
@@ -4842,10 +4842,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4318.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Cana de pesca',
+    'pt-BR': 'Cana de pesca',
   },
   {
-    nameEN: 'Pickaxe',
+    'en-US': 'Pickaxe',
     level: 1,
     vocation: 'All',
     energy: 'None',
@@ -4858,10 +4858,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3061.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Picareta',
+    'pt-BR': 'Picareta',
   },
   {
-    nameEN: 'Crystal Pickaxe',
+    'en-US': 'Crystal Pickaxe',
     level: 400,
     vocation: 'All',
     energy: 'Nature',
@@ -4874,10 +4874,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17000.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Picareta de Cristal',
+    'pt-BR': 'Picareta de Cristal',
   },
   {
-    nameEN: 'Rainbow Gauntlet',
+    'en-US': 'Rainbow Gauntlet',
     level: 1000,
     vocation: 'All',
     energy: 'Nature',
@@ -4890,10 +4890,10 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17008.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Manopla do arco-íris',
+    'pt-BR': 'Manopla do arco-íris',
   },
   {
-    nameEN: 'Complete Rainbow Gauntlet',
+    'en-US': 'Complete Rainbow Gauntlet',
     level: 1000,
     vocation: 'All',
     energy: 'Nature',
@@ -4906,13 +4906,13 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17009.jpg"',
     slot: 'accessorie',
-    namePTBR: 'Manopla Arco-Íris Completo',
+    'pt-BR': 'Manopla Arco-Íris Completo',
   },
 ];
 
 const weapons = [
   {
-    nameEN: 'Earth Glove',
+    'en-US': 'Earth Glove',
     level: 1,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -4927,10 +4927,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3037.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Terra',
+    'pt-BR': 'Luva de Terra',
   },
   {
-    nameEN: 'Copper Glove',
+    'en-US': 'Copper Glove',
     level: 4,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -4945,10 +4945,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7002.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de cobre',
+    'pt-BR': 'Luva de cobre',
   },
   {
-    nameEN: 'Static Glove',
+    'en-US': 'Static Glove',
     level: 5,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -4963,10 +4963,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3046.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Estática',
+    'pt-BR': 'Luva Estática',
   },
   {
-    nameEN: 'Worn Glove',
+    'en-US': 'Worn Glove',
     level: 8,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -4981,10 +4981,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7003.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Usada',
+    'pt-BR': 'Luva Usada',
   },
   {
-    nameEN: 'Electrical Glove',
+    'en-US': 'Electrical Glove',
     level: 10,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -4999,10 +4999,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3038.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Elétrica',
+    'pt-BR': 'Luva Elétrica',
   },
   {
-    nameEN: 'Iron Glove',
+    'en-US': 'Iron Glove',
     level: 15,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5017,10 +5017,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7005.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Ferro',
+    'pt-BR': 'Luva de Ferro',
   },
   {
-    nameEN: 'Forest Glove',
+    'en-US': 'Forest Glove',
     level: 20,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5036,10 +5036,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3039.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Florestal',
+    'pt-BR': 'Luva Florestal',
   },
   {
-    nameEN: 'Heat Glove',
+    'en-US': 'Heat Glove',
     level: 30,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5054,10 +5054,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3040.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Calor',
+    'pt-BR': 'Luva de Calor',
   },
   {
-    nameEN: 'Dark Glove',
+    'en-US': 'Dark Glove',
     level: 40,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5072,10 +5072,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3041.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Escura',
+    'pt-BR': 'Luva Escura',
   },
   {
-    nameEN: 'Novice Gladiator Glove',
+    'en-US': 'Novice Gladiator Glove',
     level: 50,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5090,10 +5090,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7006.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Gladiador Iniciante',
+    'pt-BR': 'Luva de Gladiador Iniciante',
   },
   {
-    nameEN: 'Arctic Glove',
+    'en-US': 'Arctic Glove',
     level: 55,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5108,10 +5108,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3042.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Ártica',
+    'pt-BR': 'Luva Ártica',
   },
   {
-    nameEN: 'Humanoid Octopus Glove',
+    'en-US': 'Humanoid Octopus Glove',
     level: 60,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5126,10 +5126,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7025.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Polvo Humanoide',
+    'pt-BR': 'Luva de Polvo Humanoide',
   },
   {
-    nameEN: 'Demon Glove',
+    'en-US': 'Demon Glove',
     level: 70,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5144,10 +5144,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3043.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Demoníaca',
+    'pt-BR': 'Luva Demoníaca',
   },
   {
-    nameEN: 'Cursed Glove',
+    'en-US': 'Cursed Glove',
     level: 80,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5162,10 +5162,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3047.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Amaldiçoada',
+    'pt-BR': 'Luva Amaldiçoada',
   },
   {
-    nameEN: 'Nobles Glove',
+    'en-US': 'Nobles Glove',
     level: 90,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5180,10 +5180,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3055.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Nobre',
+    'pt-BR': 'Luva Nobre',
   },
   {
-    nameEN: 'Intermediate Gladiator Glove',
+    'en-US': 'Intermediate Gladiator Glove',
     level: 100,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5198,10 +5198,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7007.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Gladiador Intermediário',
+    'pt-BR': 'Luva Gladiador Intermediário',
   },
   {
-    nameEN: 'Hell Mage Glove',
+    'en-US': 'Hell Mage Glove',
     level: 105,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5216,10 +5216,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7022.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Mago do Inferno',
+    'pt-BR': 'Luva de Mago do Inferno',
   },
   {
-    nameEN: 'Poison Beetle Glove',
+    'en-US': 'Poison Beetle Glove',
     level: 105,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5234,10 +5234,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7026.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Besouro Venenoso',
+    'pt-BR': 'Luva de Besouro Venenoso',
   },
   {
-    nameEN: "Clan's Glove",
+    'en-US': "Clan's Glove",
     level: 110,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5253,10 +5253,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7000.jpg"',
     twoHanded: false,
-    namePTBR: 'luva do clã',
+    'pt-BR': 'luva do clã',
   },
   {
-    nameEN: 'Chaos Glove',
+    'en-US': 'Chaos Glove',
     level: 125,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5271,10 +5271,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3056.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva do Caos',
+    'pt-BR': 'Luva do Caos',
   },
   {
-    nameEN: "Hell's Glove",
+    'en-US': "Hell's Glove",
     level: 140,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5289,10 +5289,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3068.jpg"',
     twoHanded: false,
-    namePTBR: 'luva do inferno',
+    'pt-BR': 'luva do inferno',
   },
   {
-    nameEN: 'Justice Glove',
+    'en-US': 'Justice Glove',
     level: 140,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5307,10 +5307,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7010.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva da Justiça',
+    'pt-BR': 'Luva da Justiça',
   },
   {
-    nameEN: 'Lava Glove',
+    'en-US': 'Lava Glove',
     level: 150,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5325,10 +5325,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7004.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de lava',
+    'pt-BR': 'Luva de lava',
   },
   {
-    nameEN: 'Advanced Gladiator Glove',
+    'en-US': 'Advanced Gladiator Glove',
     level: 160,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5343,10 +5343,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7008.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Gladiadora Avançada',
+    'pt-BR': 'Luva Gladiadora Avançada',
   },
   {
-    nameEN: 'Fire Manipulator Glove',
+    'en-US': 'Fire Manipulator Glove',
     level: 180,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5361,10 +5361,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7014.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Manipuladora de Fogo',
+    'pt-BR': 'Luva Manipuladora de Fogo',
   },
   {
-    nameEN: 'Abyssal Cultist Glove',
+    'en-US': 'Abyssal Cultist Glove',
     level: 190,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5379,10 +5379,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7023.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Cultista Abissal',
+    'pt-BR': 'Luva de Cultista Abissal',
   },
   {
-    nameEN: 'Righteous Glove',
+    'en-US': 'Righteous Glove',
     level: 200,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5397,10 +5397,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7009.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Justa',
+    'pt-BR': 'Luva Justa',
   },
   {
-    nameEN: 'Elven Glove',
+    'en-US': 'Elven Glove',
     level: 225,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5415,10 +5415,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7015.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Élfica',
+    'pt-BR': 'Luva Élfica',
   },
   {
-    nameEN: 'Diabolus Glove',
+    'en-US': 'Diabolus Glove',
     level: 245,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5433,10 +5433,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7024.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Diabolus',
+    'pt-BR': 'Luva Diabolus',
   },
   {
-    nameEN: 'Fireblaze Glove',
+    'en-US': 'Fireblaze Glove',
     level: 250,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5451,10 +5451,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7011.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Flamejante',
+    'pt-BR': 'Luva Flamejante',
   },
   {
-    nameEN: "Elora's Glove",
+    'en-US': "Elora's Glove",
     level: 275,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5469,10 +5469,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7016.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Elora',
+    'pt-BR': 'Luva de Elora',
   },
   {
-    nameEN: 'Elder Vampire Glove',
+    'en-US': 'Elder Vampire Glove',
     level: 295,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5488,10 +5488,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7020.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Vampiro Ancião',
+    'pt-BR': 'Luva de Vampiro Ancião',
   },
   {
-    nameEN: "Dragon Hunters' Glove",
+    'en-US': "Dragon Hunters' Glove",
     level: 300,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5506,10 +5506,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7013.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva dos Caçadores de Dragões',
+    'pt-BR': 'Luva dos Caçadores de Dragões',
   },
   {
-    nameEN: 'Eternal Ice Glove',
+    'en-US': 'Eternal Ice Glove',
     level: 325,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5524,10 +5524,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7017.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Gelo Eterno',
+    'pt-BR': 'Luva de Gelo Eterno',
   },
   {
-    nameEN: 'Revenant Glove',
+    'en-US': 'Revenant Glove',
     level: 345,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5542,10 +5542,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7021.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Revenant',
+    'pt-BR': 'Luva Revenant',
   },
   {
-    nameEN: "Reaper's Glove",
+    'en-US': "Reaper's Glove",
     level: 350,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5560,10 +5560,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7012.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva do Ceifador',
+    'pt-BR': 'Luva do Ceifador',
   },
   {
-    nameEN: 'Celestial Glove',
+    'en-US': 'Celestial Glove',
     level: 375,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5578,10 +5578,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7018.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Celestial',
+    'pt-BR': 'Luva Celestial',
   },
   {
-    nameEN: 'Golden Dragon Scale Glove',
+    'en-US': 'Golden Dragon Scale Glove',
     level: 500,
     vocation: 'Alchemist',
     energy: 'Nature',
@@ -5596,10 +5596,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7001.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de Escama de Dragão Dourado',
+    'pt-BR': 'Luva de Escama de Dragão Dourado',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Scale Glove',
+    'en-US': 'Chromatic Golden Dragon Scale Glove',
     level: 500,
     vocation: 'Alchemist',
     energy: 'Light',
@@ -5614,10 +5614,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7027.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva Cromática de Escama de Dragão Dourado',
+    'pt-BR': 'Luva Cromática de Escama de Dragão Dourado',
   },
   {
-    nameEN: 'Undead Golden Dragon Scale Glove',
+    'en-US': 'Undead Golden Dragon Scale Glove',
     level: 500,
     vocation: 'Alchemist',
     energy: 'Dark',
@@ -5632,10 +5632,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7019.jpg"',
     twoHanded: false,
-    namePTBR: 'Luva de escama de dragão dourado morto-vivo',
+    'pt-BR': 'Luva de escama de dragão dourado morto-vivo',
   },
   {
-    nameEN: 'Slingshot',
+    'en-US': 'Slingshot',
     level: 1,
     vocation: 'All',
     energy: 'None',
@@ -5650,10 +5650,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3063.jpg"',
     twoHanded: false,
-    namePTBR: 'Estilingue',
+    'pt-BR': 'Estilingue',
   },
   {
-    nameEN: 'Wooden Sword',
+    'en-US': 'Wooden Sword',
     level: 1,
     vocation: 'All',
     energy: 'None',
@@ -5668,10 +5668,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3069.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de madeira',
+    'pt-BR': 'Espada de madeira',
   },
   {
-    nameEN: 'Sharp Axe',
+    'en-US': 'Sharp Axe',
     level: 1,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -5686,10 +5686,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3027.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Afiado',
+    'pt-BR': 'Machado Afiado',
   },
   {
-    nameEN: 'Club',
+    'en-US': 'Club',
     level: 4,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -5704,10 +5704,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8004.jpg"',
     twoHanded: true,
-    namePTBR: 'Clube',
+    'pt-BR': 'Clube',
   },
   {
-    nameEN: 'Double Axe',
+    'en-US': 'Double Axe',
     level: 5,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5722,10 +5722,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3028.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Duplo',
+    'pt-BR': 'Machado Duplo',
   },
   {
-    nameEN: 'Halberd',
+    'en-US': 'Halberd',
     level: 10,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -5741,10 +5741,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3029.jpg"',
     twoHanded: true,
-    namePTBR: 'Alabarda',
+    'pt-BR': 'Alabarda',
   },
   {
-    nameEN: 'Morning Star',
+    'en-US': 'Morning Star',
     level: 12,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -5759,10 +5759,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8005.jpg"',
     twoHanded: false,
-    namePTBR: 'Estrela da Manhã',
+    'pt-BR': 'Estrela da Manhã',
   },
   {
-    nameEN: 'Hatchet',
+    'en-US': 'Hatchet',
     level: 15,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5777,10 +5777,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3030.jpg"',
     twoHanded: false,
-    namePTBR: 'Machadinha',
+    'pt-BR': 'Machadinha',
   },
   {
-    nameEN: 'Silver Axe',
+    'en-US': 'Silver Axe',
     level: 20,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5795,10 +5795,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3031.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado de Prata',
+    'pt-BR': 'Machado de Prata',
   },
   {
-    nameEN: 'Specialist Axe',
+    'en-US': 'Specialist Axe',
     level: 25,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5813,10 +5813,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8007.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Especialista',
+    'pt-BR': 'Machado Especialista',
   },
   {
-    nameEN: "Bielze's Mace",
+    'en-US': "Bielze's Mace",
     level: 27,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5831,10 +5831,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3062.jpg"',
     twoHanded: true,
-    namePTBR: 'Maça de Bielze',
+    'pt-BR': 'Maça de Bielze',
   },
   {
-    nameEN: 'Tribal Axe',
+    'en-US': 'Tribal Axe',
     level: 30,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -5849,10 +5849,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3032.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Tribal',
+    'pt-BR': 'Machado Tribal',
   },
   {
-    nameEN: 'Ritual Spear',
+    'en-US': 'Ritual Spear',
     level: 35,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5867,10 +5867,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8002.jpg"',
     twoHanded: true,
-    namePTBR: 'Lança Ritual',
+    'pt-BR': 'Lança Ritual',
   },
   {
-    nameEN: 'Dwarven Axe',
+    'en-US': 'Dwarven Axe',
     level: 40,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5885,10 +5885,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3033.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Anão',
+    'pt-BR': 'Machado Anão',
   },
   {
-    nameEN: 'Golden Axe',
+    'en-US': 'Golden Axe',
     level: 50,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -5903,10 +5903,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3034.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado dourado',
+    'pt-BR': 'Machado dourado',
   },
   {
-    nameEN: 'Novice Gladiator Hammer',
+    'en-US': 'Novice Gladiator Hammer',
     level: 55,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5921,10 +5921,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8008.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo de Gladiador Iniciante',
+    'pt-BR': 'Martelo de Gladiador Iniciante',
   },
   {
-    nameEN: 'Demon Axe',
+    'en-US': 'Demon Axe',
     level: 60,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -5939,10 +5939,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3035.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Demoníaco',
+    'pt-BR': 'Machado Demoníaco',
   },
   {
-    nameEN: 'Crown Axe',
+    'en-US': 'Crown Axe',
     level: 70,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -5957,10 +5957,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3036.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado da Coroa',
+    'pt-BR': 'Machado da Coroa',
   },
   {
-    nameEN: 'Ice Beetle Axe',
+    'en-US': 'Ice Beetle Axe',
     level: 75,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -5975,10 +5975,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8026.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado de Besouro de Gelo',
+    'pt-BR': 'Machado de Besouro de Gelo',
   },
   {
-    nameEN: 'War Spear',
+    'en-US': 'War Spear',
     level: 80,
     vocation: 'Berserker',
     energy: 'Light',
@@ -5993,10 +5993,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3048.jpg"',
     twoHanded: true,
-    namePTBR: 'Lança de Guerra',
+    'pt-BR': 'Lança de Guerra',
   },
   {
-    nameEN: 'Giants Club',
+    'en-US': 'Giants Club',
     level: 90,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6011,10 +6011,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3054.jpg"',
     twoHanded: true,
-    namePTBR: 'Clube dos Gigantes',
+    'pt-BR': 'Clube dos Gigantes',
   },
   {
-    nameEN: 'The Winter Spear',
+    'en-US': 'The Winter Spear',
     level: 100,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6029,10 +6029,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3064.jpg"',
     twoHanded: true,
-    namePTBR: 'A Lança de Inverno',
+    'pt-BR': 'A Lança de Inverno',
   },
   {
-    nameEN: 'Justice Axe',
+    'en-US': 'Justice Axe',
     level: 100,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6047,10 +6047,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8012.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado da Justiça',
+    'pt-BR': 'Machado da Justiça',
   },
   {
-    nameEN: 'Intermediate Gladiator Hammer',
+    'en-US': 'Intermediate Gladiator Hammer',
     level: 105,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6065,10 +6065,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8009.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo Gladiador Intermediário',
+    'pt-BR': 'Martelo Gladiador Intermediário',
   },
   {
-    nameEN: "Clan's Axe",
+    'en-US': "Clan's Axe",
     level: 110,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6084,10 +6084,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8000.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado do clã',
+    'pt-BR': 'Machado do clã',
   },
   {
-    nameEN: 'Frost Axe',
+    'en-US': 'Frost Axe',
     level: 125,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6102,10 +6102,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8006.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado de Gelo',
+    'pt-BR': 'Machado de Gelo',
   },
   {
-    nameEN: "Devil's Fork",
+    'en-US': "Devil's Fork",
     level: 145,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6120,10 +6120,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3057.jpg"',
     twoHanded: true,
-    namePTBR: 'Garfo do Diabo',
+    'pt-BR': 'Garfo do Diabo',
   },
   {
-    nameEN: "Clan's Club",
+    'en-US': "Clan's Club",
     level: 150,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6139,10 +6139,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8001.jpg"',
     twoHanded: true,
-    namePTBR: 'Clube do clã',
+    'pt-BR': 'Clube do clã',
   },
   {
-    nameEN: 'Advanced Gladiator Hammer',
+    'en-US': 'Advanced Gladiator Hammer',
     level: 160,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6157,10 +6157,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8010.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo Gladiador Avançado',
+    'pt-BR': 'Martelo Gladiador Avançado',
   },
   {
-    nameEN: 'Tidal Bringer',
+    'en-US': 'Tidal Bringer',
     level: 180,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6175,10 +6175,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8016.jpg"',
     twoHanded: true,
-    namePTBR: 'Portador de maré',
+    'pt-BR': 'Portador de maré',
   },
   {
-    nameEN: 'Inferno Fork',
+    'en-US': 'Inferno Fork',
     level: 195,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6193,10 +6193,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8025.jpg"',
     twoHanded: true,
-    namePTBR: 'Garfo Inferno',
+    'pt-BR': 'Garfo Inferno',
   },
   {
-    nameEN: 'Thunder Hammer',
+    'en-US': 'Thunder Hammer',
     level: 200,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6211,10 +6211,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8011.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo do Trovão',
+    'pt-BR': 'Martelo do Trovão',
   },
   {
-    nameEN: 'Elven Axe',
+    'en-US': 'Elven Axe',
     level: 225,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6229,10 +6229,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8017.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Élfico',
+    'pt-BR': 'Machado Élfico',
   },
   {
-    nameEN: 'Archangel Axe',
+    'en-US': 'Archangel Axe',
     level: 245,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6247,10 +6247,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8024.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado do Arcanjo',
+    'pt-BR': 'Machado do Arcanjo',
   },
   {
-    nameEN: "Devil's Scythe",
+    'en-US': "Devil's Scythe",
     level: 250,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6265,10 +6265,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8013.jpg"',
     twoHanded: true,
-    namePTBR: 'Foice do Diabo',
+    'pt-BR': 'Foice do Diabo',
   },
   {
-    nameEN: "Elora's Axe",
+    'en-US': "Elora's Axe",
     level: 275,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6283,10 +6283,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8018.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado de Elora',
+    'pt-BR': 'Machado de Elora',
   },
   {
-    nameEN: "Dragon Hunters' Hammer",
+    'en-US': "Dragon Hunters' Hammer",
     level: 300,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6301,10 +6301,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8015.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo dos Caçadores de Dragões',
+    'pt-BR': 'Martelo dos Caçadores de Dragões',
   },
   {
-    nameEN: 'Elder Vampire Axe',
+    'en-US': 'Elder Vampire Axe',
     level: 300,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6320,10 +6320,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8022.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Vampiro Ancião',
+    'pt-BR': 'Machado Vampiro Ancião',
   },
   {
-    nameEN: 'Eternal Ice Axe',
+    'en-US': 'Eternal Ice Axe',
     level: 325,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6338,10 +6338,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8019.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado de Gelo Eterno',
+    'pt-BR': 'Machado de Gelo Eterno',
   },
   {
-    nameEN: "Reaper's Axe",
+    'en-US': "Reaper's Axe",
     level: 350,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6356,10 +6356,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8014.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado do Ceifador',
+    'pt-BR': 'Machado do Ceifador',
   },
   {
-    nameEN: 'Revenant Axe',
+    'en-US': 'Revenant Axe',
     level: 355,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6374,10 +6374,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8023.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Revenant',
+    'pt-BR': 'Machado Revenant',
   },
   {
-    nameEN: 'Celestial Axe',
+    'en-US': 'Celestial Axe',
     level: 375,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6392,10 +6392,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8020.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Celestial',
+    'pt-BR': 'Machado Celestial',
   },
   {
-    nameEN: 'Golden Dragon Hammer',
+    'en-US': 'Golden Dragon Hammer',
     level: 500,
     vocation: 'Berserker',
     energy: 'Nature',
@@ -6410,10 +6410,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8003.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo de Dragão Dourado',
+    'pt-BR': 'Martelo de Dragão Dourado',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Axe',
+    'en-US': 'Chromatic Golden Dragon Axe',
     level: 500,
     vocation: 'Berserker',
     energy: 'Light',
@@ -6428,10 +6428,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8028.jpg"',
     twoHanded: true,
-    namePTBR: 'Machado Cromático do Dragão Dourado',
+    'pt-BR': 'Machado Cromático do Dragão Dourado',
   },
   {
-    nameEN: 'Undead Golden Dragon Hammer',
+    'en-US': 'Undead Golden Dragon Hammer',
     level: 500,
     vocation: 'Berserker',
     energy: 'Dark',
@@ -6446,10 +6446,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8021.jpg"',
     twoHanded: true,
-    namePTBR: 'Martelo de Dragão Dourado Morto-vivo',
+    'pt-BR': 'Martelo de Dragão Dourado Morto-vivo',
   },
   {
-    nameEN: 'Wooden Bow',
+    'en-US': 'Wooden Bow',
     level: 1,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6464,10 +6464,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3017.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de madeira',
+    'pt-BR': 'Arco de madeira',
   },
   {
-    nameEN: 'Tin Bow',
+    'en-US': 'Tin Bow',
     level: 4,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6482,10 +6482,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9004.jpg"',
     twoHanded: true,
-    namePTBR: 'Laço de Lata',
+    'pt-BR': 'Laço de Lata',
   },
   {
-    nameEN: 'Reinforced Bow',
+    'en-US': 'Reinforced Bow',
     level: 5,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6500,10 +6500,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3018.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Reforçado',
+    'pt-BR': 'Arco Reforçado',
   },
   {
-    nameEN: 'Copper Bow',
+    'en-US': 'Copper Bow',
     level: 9,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6518,10 +6518,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9005.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de cobre',
+    'pt-BR': 'Arco de cobre',
   },
   {
-    nameEN: 'Dark Bow',
+    'en-US': 'Dark Bow',
     level: 10,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6537,10 +6537,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3019.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Negro',
+    'pt-BR': 'Arco Negro',
   },
   {
-    nameEN: 'Shuriken',
+    'en-US': 'Shuriken',
     level: 15,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6555,10 +6555,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3044.jpg"',
     twoHanded: false,
-    namePTBR: 'Shuriken',
+    'pt-BR': 'Shuriken',
   },
   {
-    nameEN: 'Arctic Bow',
+    'en-US': 'Arctic Bow',
     level: 20,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6573,10 +6573,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3020.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Ártico',
+    'pt-BR': 'Arco Ártico',
   },
   {
-    nameEN: 'Light Bow',
+    'en-US': 'Light Bow',
     level: 25,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6591,10 +6591,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9007.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Luz',
+    'pt-BR': 'Arco de Luz',
   },
   {
-    nameEN: 'Bronze Bow',
+    'en-US': 'Bronze Bow',
     level: 30,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6609,10 +6609,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3021.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Bronze',
+    'pt-BR': 'Arco de Bronze',
   },
   {
-    nameEN: 'Bones Bow',
+    'en-US': 'Bones Bow',
     level: 40,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6628,10 +6628,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3022.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Ossos',
+    'pt-BR': 'Arco de Ossos',
   },
   {
-    nameEN: 'Ornamented Bow',
+    'en-US': 'Ornamented Bow',
     level: 50,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6646,10 +6646,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3023.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Ornamentado',
+    'pt-BR': 'Arco Ornamentado',
   },
   {
-    nameEN: 'Novice Gladiator Spear',
+    'en-US': 'Novice Gladiator Spear',
     level: 55,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6664,10 +6664,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9008.jpg"',
     twoHanded: false,
-    namePTBR: 'Lança de Gladiador Iniciante',
+    'pt-BR': 'Lança de Gladiador Iniciante',
   },
   {
-    nameEN: 'Cursed Bow',
+    'en-US': 'Cursed Bow',
     level: 60,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6682,10 +6682,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3024.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Amaldiçoado',
+    'pt-BR': 'Arco Amaldiçoado',
   },
   {
-    nameEN: 'Fairy Bow',
+    'en-US': 'Fairy Bow',
     level: 65,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6700,10 +6700,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9027.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Fada',
+    'pt-BR': 'Arco de Fada',
   },
   {
-    nameEN: 'Vulcana Bow',
+    'en-US': 'Vulcana Bow',
     level: 70,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6718,10 +6718,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3025.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Vulcana',
+    'pt-BR': 'Arco Vulcana',
   },
   {
-    nameEN: 'Hardrock Bow',
+    'en-US': 'Hardrock Bow',
     level: 80,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6736,10 +6736,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9002.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Hardrock',
+    'pt-BR': 'Arco Hardrock',
   },
   {
-    nameEN: 'Stardust Bow',
+    'en-US': 'Stardust Bow',
     level: 90,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6754,10 +6754,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3053.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Poeira Estelar',
+    'pt-BR': 'Arco Poeira Estelar',
   },
   {
-    nameEN: 'Hellhound Bow',
+    'en-US': 'Hellhound Bow',
     level: 95,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6772,10 +6772,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9023.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Hellhound',
+    'pt-BR': 'Arco Hellhound',
   },
   {
-    nameEN: "Clan's Bow",
+    'en-US': "Clan's Bow",
     level: 100,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6791,10 +6791,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9000.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco do Clã',
+    'pt-BR': 'Arco do Clã',
   },
   {
-    nameEN: 'Intermediate Gladiator Spear',
+    'en-US': 'Intermediate Gladiator Spear',
     level: 105,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6809,10 +6809,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9009.jpg"',
     twoHanded: false,
-    namePTBR: 'Lança de Gladiador Intermediário',
+    'pt-BR': 'Lança de Gladiador Intermediário',
   },
   {
-    nameEN: 'Dragon Bow',
+    'en-US': 'Dragon Bow',
     level: 110,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6827,10 +6827,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3067.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco do Dragão',
+    'pt-BR': 'Arco do Dragão',
   },
   {
-    nameEN: 'Champion Bow',
+    'en-US': 'Champion Bow',
     level: 120,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6845,10 +6845,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3026.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Campeão',
+    'pt-BR': 'Arco Campeão',
   },
   {
-    nameEN: 'Justice Bow',
+    'en-US': 'Justice Bow',
     level: 120,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6863,10 +6863,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9012.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco da Justiça',
+    'pt-BR': 'Arco da Justiça',
   },
   {
-    nameEN: 'Lava Bow',
+    'en-US': 'Lava Bow',
     level: 130,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6881,10 +6881,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3060.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de lava',
+    'pt-BR': 'Arco de lava',
   },
   {
-    nameEN: 'Frost Bow',
+    'en-US': 'Frost Bow',
     level: 140,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6899,10 +6899,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9006.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Gelo',
+    'pt-BR': 'Arco de Gelo',
   },
   {
-    nameEN: 'Poison Beetle Bow',
+    'en-US': 'Poison Beetle Bow',
     level: 145,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6917,10 +6917,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9028.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Besouro Venenoso',
+    'pt-BR': 'Arco de Besouro Venenoso',
   },
   {
-    nameEN: "Clan's Expertise Bow",
+    'en-US': "Clan's Expertise Bow",
     level: 150,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6936,10 +6936,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9001.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Perícia do Clã',
+    'pt-BR': 'Arco de Perícia do Clã',
   },
   {
-    nameEN: 'Advanced Gladiator Spear',
+    'en-US': 'Advanced Gladiator Spear',
     level: 160,
     vocation: 'Hunter',
     energy: 'Light',
@@ -6954,10 +6954,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9010.jpg"',
     twoHanded: false,
-    namePTBR: 'Lança de Gladiador Avançada',
+    'pt-BR': 'Lança de Gladiador Avançada',
   },
   {
-    nameEN: 'Grue Bow',
+    'en-US': 'Grue Bow',
     level: 175,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -6972,10 +6972,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9024.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Grue',
+    'pt-BR': 'Arco Grue',
   },
   {
-    nameEN: "Nature's Bow",
+    'en-US': "Nature's Bow",
     level: 180,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -6990,10 +6990,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9016.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco da Natureza',
+    'pt-BR': 'Arco da Natureza',
   },
   {
-    nameEN: 'Bow of the Skies',
+    'en-US': 'Bow of the Skies',
     level: 200,
     vocation: 'Hunter',
     energy: 'Light',
@@ -7008,10 +7008,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9011.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco dos Céus',
+    'pt-BR': 'Arco dos Céus',
   },
   {
-    nameEN: 'Elven Bow',
+    'en-US': 'Elven Bow',
     level: 225,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -7026,10 +7026,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9017.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Élfico',
+    'pt-BR': 'Arco Élfico',
   },
   {
-    nameEN: 'Devil Bow',
+    'en-US': 'Devil Bow',
     level: 230,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -7044,10 +7044,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9025.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco do Diabo',
+    'pt-BR': 'Arco do Diabo',
   },
   {
-    nameEN: 'Soul Brander',
+    'en-US': 'Soul Brander',
     level: 250,
     vocation: 'Hunter',
     energy: 'Light',
@@ -7062,10 +7062,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9014.jpg"',
     twoHanded: false,
-    namePTBR: 'Marcador de alma',
+    'pt-BR': 'Marcador de alma',
   },
   {
-    nameEN: "Elora's Bow",
+    'en-US': "Elora's Bow",
     level: 275,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -7080,10 +7080,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9018.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Elora',
+    'pt-BR': 'Arco de Elora',
   },
   {
-    nameEN: 'Void Bow',
+    'en-US': 'Void Bow',
     level: 280,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -7098,10 +7098,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9026.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Vazio',
+    'pt-BR': 'Arco Vazio',
   },
   {
-    nameEN: "Dragon Hunters' Bow",
+    'en-US': "Dragon Hunters' Bow",
     level: 300,
     vocation: 'Hunter',
     energy: 'Light',
@@ -7116,10 +7116,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9015.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco dos Caçadores de Dragões',
+    'pt-BR': 'Arco dos Caçadores de Dragões',
   },
   {
-    nameEN: 'Eternal Ice Bow',
+    'en-US': 'Eternal Ice Bow',
     level: 325,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -7134,10 +7134,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9019.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Gelo Eterno',
+    'pt-BR': 'Arco de Gelo Eterno',
   },
   {
-    nameEN: 'Elder Vampire Bow',
+    'en-US': 'Elder Vampire Bow',
     level: 330,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -7152,10 +7152,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9022.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco Vampiro Ancião',
+    'pt-BR': 'Arco Vampiro Ancião',
   },
   {
-    nameEN: 'Soul Piercer',
+    'en-US': 'Soul Piercer',
     level: 350,
     vocation: 'Hunter',
     energy: 'Light',
@@ -7170,10 +7170,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9013.jpg"',
     twoHanded: true,
-    namePTBR: 'Perfurador de Almas',
+    'pt-BR': 'Perfurador de Almas',
   },
   {
-    nameEN: 'Dragons Tamer Bow',
+    'en-US': 'Dragons Tamer Bow',
     level: 375,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -7188,10 +7188,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9020.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco domador de dragões',
+    'pt-BR': 'Arco domador de dragões',
   },
   {
-    nameEN: 'Golden Dragon Bow',
+    'en-US': 'Golden Dragon Bow',
     level: 500,
     vocation: 'Hunter',
     energy: 'Nature',
@@ -7206,10 +7206,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9003.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco do Dragão Dourado',
+    'pt-BR': 'Arco do Dragão Dourado',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Bow',
+    'en-US': 'Chromatic Golden Dragon Bow',
     level: 500,
     vocation: 'Hunter',
     energy: 'Light',
@@ -7224,10 +7224,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9029.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco de Dragão Dourado Cromático',
+    'pt-BR': 'Arco de Dragão Dourado Cromático',
   },
   {
-    nameEN: 'Undead Golden Dragon Bow',
+    'en-US': 'Undead Golden Dragon Bow',
     level: 500,
     vocation: 'Hunter',
     energy: 'Dark',
@@ -7242,10 +7242,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9021.jpg"',
     twoHanded: true,
-    namePTBR: 'Arco do Dragão Dourado Morto-vivo',
+    'pt-BR': 'Arco do Dragão Dourado Morto-vivo',
   },
   {
-    nameEN: 'Candy Staff',
+    'en-US': 'Candy Staff',
     level: 1,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7260,10 +7260,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3010.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Doces',
+    'pt-BR': 'Cajado de Doces',
   },
   {
-    nameEN: 'Natural Staff',
+    'en-US': 'Natural Staff',
     level: 4,
     vocation: 'Mage',
     energy: 'Light',
@@ -7278,10 +7278,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10002.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Natural',
+    'pt-BR': 'Cajado Natural',
   },
   {
-    nameEN: 'Iron Staff',
+    'en-US': 'Iron Staff',
     level: 5,
     vocation: 'Mage',
     energy: 'Light',
@@ -7296,10 +7296,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3045.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Ferro',
+    'pt-BR': 'Cajado de Ferro',
   },
   {
-    nameEN: 'Voodoo Staff',
+    'en-US': 'Voodoo Staff',
     level: 8,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7314,10 +7314,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10003.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Vodu',
+    'pt-BR': 'Cajado Vodu',
   },
   {
-    nameEN: 'Ruby Staff',
+    'en-US': 'Ruby Staff',
     level: 10,
     vocation: 'Mage',
     energy: 'Light',
@@ -7332,10 +7332,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3011.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Rubi',
+    'pt-BR': 'Cajado de Rubi',
   },
   {
-    nameEN: 'Sapphire Staff',
+    'en-US': 'Sapphire Staff',
     level: 15,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7350,10 +7350,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3012.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Safira',
+    'pt-BR': 'Cajado de Safira',
   },
   {
-    nameEN: 'Amethyst Staff',
+    'en-US': 'Amethyst Staff',
     level: 20,
     vocation: 'Mage',
     energy: 'Light',
@@ -7368,10 +7368,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10005.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Ametista',
+    'pt-BR': 'Cajado de Ametista',
   },
   {
-    nameEN: 'Skull Staff',
+    'en-US': 'Skull Staff',
     level: 25,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7387,10 +7387,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3013.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Crânio',
+    'pt-BR': 'Cajado Crânio',
   },
   {
-    nameEN: 'Humanoid Fox Wand',
+    'en-US': 'Humanoid Fox Wand',
     level: 30,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7405,10 +7405,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10023.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha Humanóide Raposa',
+    'pt-BR': 'Varinha Humanóide Raposa',
   },
   {
-    nameEN: 'Holy Staff',
+    'en-US': 'Holy Staff',
     level: 35,
     vocation: 'Mage',
     energy: 'Light',
@@ -7423,10 +7423,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3014.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Sagrado',
+    'pt-BR': 'Cajado Sagrado',
   },
   {
-    nameEN: 'Silver Staff',
+    'en-US': 'Silver Staff',
     level: 50,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7441,10 +7441,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3015.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Prata',
+    'pt-BR': 'Cajado de Prata',
   },
   {
-    nameEN: 'Novice Gladiator Staff',
+    'en-US': 'Novice Gladiator Staff',
     level: 60,
     vocation: 'Mage',
     energy: 'Light',
@@ -7459,10 +7459,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10006.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Gladiadores Iniciantes',
+    'pt-BR': 'Cajado de Gladiadores Iniciantes',
   },
   {
-    nameEN: 'Crown Staff',
+    'en-US': 'Crown Staff',
     level: 70,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7477,10 +7477,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3016.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado da Coroa',
+    'pt-BR': 'Cajado da Coroa',
   },
   {
-    nameEN: 'Warlock Staff',
+    'en-US': 'Warlock Staff',
     level: 80,
     vocation: 'Mage',
     energy: 'Light',
@@ -7495,10 +7495,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3049.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Bruxo',
+    'pt-BR': 'Cajado de Bruxo',
   },
   {
-    nameEN: 'Spider Wand',
+    'en-US': 'Spider Wand',
     level: 85,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7513,10 +7513,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10024.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha de Aranha',
+    'pt-BR': 'Varinha de Aranha',
   },
   {
-    nameEN: 'Golden Sceptre',
+    'en-US': 'Golden Sceptre',
     level: 90,
     vocation: 'Mage',
     energy: 'Light',
@@ -7531,10 +7531,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3052.jpg"',
     twoHanded: false,
-    namePTBR: 'Cetro Dourado',
+    'pt-BR': 'Cetro Dourado',
   },
   {
-    nameEN: "Clan's Staff",
+    'en-US': "Clan's Staff",
     level: 100,
     vocation: 'Mage',
     energy: 'Light',
@@ -7549,10 +7549,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10000.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado do Clã',
+    'pt-BR': 'Cajado do Clã',
   },
   {
-    nameEN: 'Hell Mage Wand',
+    'en-US': 'Hell Mage Wand',
     level: 105,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7567,10 +7567,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10027.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha do Mago do Inferno',
+    'pt-BR': 'Varinha do Mago do Inferno',
   },
   {
-    nameEN: 'Intermediate Gladiator Staff',
+    'en-US': 'Intermediate Gladiator Staff',
     level: 110,
     vocation: 'Mage',
     energy: 'Light',
@@ -7585,10 +7585,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10007.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Gladiador Intermediário',
+    'pt-BR': 'Cajado de Gladiador Intermediário',
   },
   {
-    nameEN: 'Lava Staff',
+    'en-US': 'Lava Staff',
     level: 130,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7603,10 +7603,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3059.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Lava',
+    'pt-BR': 'Cajado de Lava',
   },
   {
-    nameEN: 'Poison Beetle Wand',
+    'en-US': 'Poison Beetle Wand',
     level: 135,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7621,10 +7621,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10025.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha do Besouro Venenoso',
+    'pt-BR': 'Varinha do Besouro Venenoso',
   },
   {
-    nameEN: 'Staff of Justice',
+    'en-US': 'Staff of Justice',
     level: 140,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7639,10 +7639,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10010.jpg"',
     twoHanded: false,
-    namePTBR: 'Pessoal da Justiça',
+    'pt-BR': 'Pessoal da Justiça',
   },
   {
-    nameEN: "Hell's Staff",
+    'en-US': "Hell's Staff",
     level: 140,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7657,10 +7657,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3066.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado do Inferno',
+    'pt-BR': 'Cajado do Inferno',
   },
   {
-    nameEN: 'Mystic Staff',
+    'en-US': 'Mystic Staff',
     level: 150,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7675,10 +7675,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10004.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Místico',
+    'pt-BR': 'Cajado Místico',
   },
   {
-    nameEN: 'Advanced Gladiator Staff',
+    'en-US': 'Advanced Gladiator Staff',
     level: 160,
     vocation: 'Mage',
     energy: 'Light',
@@ -7693,10 +7693,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10008.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Gladiador Avançado',
+    'pt-BR': 'Cajado de Gladiador Avançado',
   },
   {
-    nameEN: 'The Earthquaker',
+    'en-US': 'The Earthquaker',
     level: 180,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7711,10 +7711,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10014.jpg"',
     twoHanded: false,
-    namePTBR: 'O terremoto',
+    'pt-BR': 'O terremoto',
   },
   {
-    nameEN: 'Abyssal Cultist Wand',
+    'en-US': 'Abyssal Cultist Wand',
     level: 195,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7729,10 +7729,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10021.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha do Cultista Abissal',
+    'pt-BR': 'Varinha do Cultista Abissal',
   },
   {
-    nameEN: 'Righteous Staff',
+    'en-US': 'Righteous Staff',
     level: 200,
     vocation: 'Mage',
     energy: 'Light',
@@ -7747,10 +7747,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10009.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Justo',
+    'pt-BR': 'Cajado Justo',
   },
   {
-    nameEN: 'Elven Staff',
+    'en-US': 'Elven Staff',
     level: 225,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7765,10 +7765,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10015.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado Élfico',
+    'pt-BR': 'Cajado Élfico',
   },
   {
-    nameEN: 'Sky Elf Wand',
+    'en-US': 'Sky Elf Wand',
     level: 245,
     vocation: 'Mage',
     energy: 'Light',
@@ -7783,10 +7783,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10026.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha dos Elfos do Céu',
+    'pt-BR': 'Varinha dos Elfos do Céu',
   },
   {
-    nameEN: 'Wand of Doom',
+    'en-US': 'Wand of Doom',
     level: 250,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7801,10 +7801,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10011.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha da Perdição',
+    'pt-BR': 'Varinha da Perdição',
   },
   {
-    nameEN: "Elora's Staff",
+    'en-US': "Elora's Staff",
     level: 275,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7819,10 +7819,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10016.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Elora',
+    'pt-BR': 'Cajado de Elora',
   },
   {
-    nameEN: "Dragon Hunters' Staff",
+    'en-US': "Dragon Hunters' Staff",
     level: 300,
     vocation: 'Mage',
     energy: 'Light',
@@ -7837,10 +7837,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10013.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado dos Caçadores de Dragões',
+    'pt-BR': 'Cajado dos Caçadores de Dragões',
   },
   {
-    nameEN: 'Undead Dragon Wand',
+    'en-US': 'Undead Dragon Wand',
     level: 305,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7855,10 +7855,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10022.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha do Dragão Morto-vivo',
+    'pt-BR': 'Varinha do Dragão Morto-vivo',
   },
   {
-    nameEN: 'Eternal Ice Staff',
+    'en-US': 'Eternal Ice Staff',
     level: 325,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7873,10 +7873,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10017.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado de Gelo Eterno',
+    'pt-BR': 'Cajado de Gelo Eterno',
   },
   {
-    nameEN: 'Elder Vampire Staff',
+    'en-US': 'Elder Vampire Staff',
     level: 345,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7891,10 +7891,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10020.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado do Vampiro Ancião',
+    'pt-BR': 'Cajado do Vampiro Ancião',
   },
   {
-    nameEN: 'Wand of Salvation',
+    'en-US': 'Wand of Salvation',
     level: 350,
     vocation: 'Mage',
     energy: 'Light',
@@ -7909,10 +7909,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10012.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha da Salvação',
+    'pt-BR': 'Varinha da Salvação',
   },
   {
-    nameEN: 'Dragons Tamer Staff',
+    'en-US': 'Dragons Tamer Staff',
     level: 375,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7927,10 +7927,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10018.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado do Domador de Dragões',
+    'pt-BR': 'Cajado do Domador de Dragões',
   },
   {
-    nameEN: 'Undead Golden Dragon Staff',
+    'en-US': 'Undead Golden Dragon Staff',
     level: 500,
     vocation: 'Mage',
     energy: 'Dark',
@@ -7945,10 +7945,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10019.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado do Dragão Dourado Morto-vivo',
+    'pt-BR': 'Cajado do Dragão Dourado Morto-vivo',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Wand',
+    'en-US': 'Chromatic Golden Dragon Wand',
     level: 500,
     vocation: 'Mage',
     energy: 'Light',
@@ -7963,10 +7963,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10028.jpg"',
     twoHanded: false,
-    namePTBR: 'Varinha Cromática do Dragão Dourado',
+    'pt-BR': 'Varinha Cromática do Dragão Dourado',
   },
   {
-    nameEN: 'Golden Dragon Staff',
+    'en-US': 'Golden Dragon Staff',
     level: 500,
     vocation: 'Mage',
     energy: 'Nature',
@@ -7981,10 +7981,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10001.jpg"',
     twoHanded: false,
-    namePTBR: 'Cajado do Dragão Dourado',
+    'pt-BR': 'Cajado do Dragão Dourado',
   },
   {
-    nameEN: 'Dagger',
+    'en-US': 'Dagger',
     level: 1,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -7999,10 +7999,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3000.jpg"',
     twoHanded: false,
-    namePTBR: 'Punhal',
+    'pt-BR': 'Punhal',
   },
   {
-    nameEN: 'Rapier',
+    'en-US': 'Rapier',
     level: 4,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8017,10 +8017,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11005.jpg"',
     twoHanded: false,
-    namePTBR: 'Rapier',
+    'pt-BR': 'Rapier',
   },
   {
-    nameEN: 'Long Dagger',
+    'en-US': 'Long Dagger',
     level: 5,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8035,10 +8035,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3001.jpg"',
     twoHanded: false,
-    namePTBR: 'Adaga Longa',
+    'pt-BR': 'Adaga Longa',
   },
   {
-    nameEN: 'Katana',
+    'en-US': 'Katana',
     level: 10,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8053,10 +8053,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3002.jpg"',
     twoHanded: false,
-    namePTBR: 'Katana',
+    'pt-BR': 'Katana',
   },
   {
-    nameEN: 'Sword',
+    'en-US': 'Sword',
     level: 12,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8071,10 +8071,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11006.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada',
+    'pt-BR': 'Espada',
   },
   {
-    nameEN: 'Long Sword',
+    'en-US': 'Long Sword',
     level: 15,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8089,10 +8089,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3003.jpg"',
     twoHanded: true,
-    namePTBR: 'Espada Longa',
+    'pt-BR': 'Espada Longa',
   },
   {
-    nameEN: 'Spike Sword',
+    'en-US': 'Spike Sword',
     level: 20,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8107,10 +8107,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11008.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Espinhosa',
+    'pt-BR': 'Espada Espinhosa',
   },
   {
-    nameEN: 'Silver Sword',
+    'en-US': 'Silver Sword',
     level: 25,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8126,10 +8126,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3004.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de Prata',
+    'pt-BR': 'Espada de Prata',
   },
   {
-    nameEN: 'Humanoid Lizard Sword',
+    'en-US': 'Humanoid Lizard Sword',
     level: 30,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8144,10 +8144,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11027.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de lagarto humanóide',
+    'pt-BR': 'Espada de lagarto humanóide',
   },
   {
-    nameEN: 'Bright Sword',
+    'en-US': 'Bright Sword',
     level: 35,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8162,10 +8162,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3005.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Brilhante',
+    'pt-BR': 'Espada Brilhante',
   },
   {
-    nameEN: 'Curved Sword',
+    'en-US': 'Curved Sword',
     level: 40,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8180,10 +8180,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3006.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Curva',
+    'pt-BR': 'Espada Curva',
   },
   {
-    nameEN: 'Giant Sword',
+    'en-US': 'Giant Sword',
     level: 50,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8198,10 +8198,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3007.jpg"',
     twoHanded: true,
-    namePTBR: 'Espada Gigante',
+    'pt-BR': 'Espada Gigante',
   },
   {
-    nameEN: 'Novice Gladiator Sword',
+    'en-US': 'Novice Gladiator Sword',
     level: 55,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8216,10 +8216,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11009.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de Gladiador Iniciante',
+    'pt-BR': 'Espada de Gladiador Iniciante',
   },
   {
-    nameEN: 'Fire Sword',
+    'en-US': 'Fire Sword',
     level: 60,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8234,10 +8234,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3008.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de fogo',
+    'pt-BR': 'Espada de fogo',
   },
   {
-    nameEN: 'Black Sword',
+    'en-US': 'Black Sword',
     level: 70,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8252,10 +8252,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3050.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Negra',
+    'pt-BR': 'Espada Negra',
   },
   {
-    nameEN: 'Forgotten Sword',
+    'en-US': 'Forgotten Sword',
     level: 80,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8270,10 +8270,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11002.jpg"',
     twoHanded: true,
-    namePTBR: 'Espada Esquecida',
+    'pt-BR': 'Espada Esquecida',
   },
   {
-    nameEN: 'Ice Beetle Sword',
+    'en-US': 'Ice Beetle Sword',
     level: 85,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8288,10 +8288,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11028.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de Besouro de Gelo',
+    'pt-BR': 'Espada de Besouro de Gelo',
   },
   {
-    nameEN: 'Nobles Sword',
+    'en-US': 'Nobles Sword',
     level: 90,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8306,10 +8306,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3051.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada dos Nobres',
+    'pt-BR': 'Espada dos Nobres',
   },
   {
-    nameEN: "Clan's Sword",
+    'en-US': "Clan's Sword",
     level: 100,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8325,10 +8325,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11000.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Clã',
+    'pt-BR': 'Espada do Clã',
   },
   {
-    nameEN: 'Intermediate Gladiator Sword',
+    'en-US': 'Intermediate Gladiator Sword',
     level: 105,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8343,10 +8343,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11010.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Gladiadora Intermediária',
+    'pt-BR': 'Espada Gladiadora Intermediária',
   },
   {
-    nameEN: 'Dragon Sword',
+    'en-US': 'Dragon Sword',
     level: 110,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8361,10 +8361,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3065.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Dragão',
+    'pt-BR': 'Espada do Dragão',
   },
   {
-    nameEN: 'Winter Rapier',
+    'en-US': 'Winter Rapier',
     level: 120,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8379,12 +8379,12 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11003.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de Inverno',
+    'pt-BR': 'Espada de Inverno',
     obs: 'Expire in 10 seconds',
     obsPtBr: 'Expira em 10 segundos',
   },
   {
-    nameEN: 'Mystic Sword',
+    'en-US': 'Mystic Sword',
     level: 130,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8399,10 +8399,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11007.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Mística',
+    'pt-BR': 'Espada Mística',
   },
   {
-    nameEN: 'Champion Sword',
+    'en-US': 'Champion Sword',
     level: 140,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8417,10 +8417,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3009.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Campeã',
+    'pt-BR': 'Espada Campeã',
   },
   {
-    nameEN: 'Sword of Justice',
+    'en-US': 'Sword of Justice',
     level: 140,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8435,10 +8435,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11013.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada da Justiça',
+    'pt-BR': 'Espada da Justiça',
   },
   {
-    nameEN: 'Lava Sword',
+    'en-US': 'Lava Sword',
     level: 145,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8453,10 +8453,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3058.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de lava',
+    'pt-BR': 'Espada de lava',
   },
   {
-    nameEN: 'Poison Beetle Sword',
+    'en-US': 'Poison Beetle Sword',
     level: 150,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8471,10 +8471,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11029.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Besouro Venenoso',
+    'pt-BR': 'Espada do Besouro Venenoso',
   },
   {
-    nameEN: 'Advanced Gladiator Sword',
+    'en-US': 'Advanced Gladiator Sword',
     level: 160,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8489,10 +8489,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11011.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Gladiadora Avançada',
+    'pt-BR': 'Espada Gladiadora Avançada',
   },
   {
-    nameEN: 'The Decapitator',
+    'en-US': 'The Decapitator',
     level: 180,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8507,10 +8507,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11017.jpg"',
     twoHanded: false,
-    namePTBR: 'O Decapitador',
+    'pt-BR': 'O Decapitador',
   },
   {
-    nameEN: 'Void Sword',
+    'en-US': 'Void Sword',
     level: 195,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8525,10 +8525,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11025.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Vazio',
+    'pt-BR': 'Espada do Vazio',
   },
   {
-    nameEN: 'Sacred Sword',
+    'en-US': 'Sacred Sword',
     level: 200,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8543,10 +8543,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11012.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Sagrada',
+    'pt-BR': 'Espada Sagrada',
   },
   {
-    nameEN: 'Elven Sword',
+    'en-US': 'Elven Sword',
     level: 225,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8561,10 +8561,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11018.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Élfica',
+    'pt-BR': 'Espada Élfica',
   },
   {
-    nameEN: "Reaper's Sword",
+    'en-US': "Reaper's Sword",
     level: 250,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8579,10 +8579,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11014.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Ceifador',
+    'pt-BR': 'Espada do Ceifador',
   },
   {
-    nameEN: 'Sky Elf Blade',
+    'en-US': 'Sky Elf Blade',
     level: 255,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8597,10 +8597,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11024.jpg"',
     twoHanded: false,
-    namePTBR: 'Lâmina do Elfo Celeste',
+    'pt-BR': 'Lâmina do Elfo Celeste',
   },
   {
-    nameEN: "Elora's Sword",
+    'en-US': "Elora's Sword",
     level: 275,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8615,10 +8615,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11019.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de Elora',
+    'pt-BR': 'Espada de Elora',
   },
   {
-    nameEN: 'Undead Dragon Sword',
+    'en-US': 'Undead Dragon Sword',
     level: 290,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8633,10 +8633,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11026.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Dragão Morto-vivo',
+    'pt-BR': 'Espada do Dragão Morto-vivo',
   },
   {
-    nameEN: "Dragon Hunters' Sword",
+    'en-US': "Dragon Hunters' Sword",
     level: 300,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8651,10 +8651,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11016.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada dos Caçadores de Dragões',
+    'pt-BR': 'Espada dos Caçadores de Dragões',
   },
   {
-    nameEN: 'Eternal Ice Sword',
+    'en-US': 'Eternal Ice Sword',
     level: 325,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8669,10 +8669,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11020.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada de Gelo Eterna',
+    'pt-BR': 'Espada de Gelo Eterna',
   },
   {
-    nameEN: 'Elder Vampire Sword',
+    'en-US': 'Elder Vampire Sword',
     level: 345,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8687,10 +8687,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11023.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Vampiro Ancião',
+    'pt-BR': 'Espada do Vampiro Ancião',
   },
   {
-    nameEN: 'Sword of Glory',
+    'en-US': 'Sword of Glory',
     level: 350,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8705,10 +8705,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11015.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada da Glória',
+    'pt-BR': 'Espada da Glória',
   },
   {
-    nameEN: 'Dragons Tamer Sword',
+    'en-US': 'Dragons Tamer Sword',
     level: 375,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8723,10 +8723,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11021.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Domadora de Dragões',
+    'pt-BR': 'Espada Domadora de Dragões',
   },
   {
-    nameEN: 'Undead Golden Dragon Sword',
+    'en-US': 'Undead Golden Dragon Sword',
     level: 500,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8741,10 +8741,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11022.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Dragão Dourado Morto-vivo',
+    'pt-BR': 'Espada do Dragão Dourado Morto-vivo',
   },
   {
-    nameEN: 'Chromatic Golden Dragon Sword',
+    'en-US': 'Chromatic Golden Dragon Sword',
     level: 500,
     vocation: 'Warrior',
     energy: 'Light',
@@ -8759,10 +8759,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11030.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Cromática do Dragão Dourado',
+    'pt-BR': 'Espada Cromática do Dragão Dourado',
   },
   {
-    nameEN: 'Golden Dragon Sword',
+    'en-US': 'Golden Dragon Sword',
     level: 500,
     vocation: 'Warrior',
     energy: 'Nature',
@@ -8777,10 +8777,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11004.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada Dourada Do Dragão',
+    'pt-BR': 'Espada Dourada Do Dragão',
   },
   {
-    nameEN: 'Warlord Sword',
+    'en-US': 'Warlord Sword',
     level: 1000,
     vocation: 'Warrior',
     energy: 'Dark',
@@ -8795,7 +8795,7 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11001.jpg"',
     twoHanded: false,
-    namePTBR: 'Espada do Senhor da Guerra',
+    'pt-BR': 'Espada do Senhor da Guerra',
   },
 ];
 
@@ -8916,8 +8916,8 @@ const CHARACTER_CLASS_PT_BR = {
 };
 
 const FAKE_ITEM = {
-  nameEN: '-----------',
-  namePTBR: '-----------',
+  'en-US': '-----------',
+  'pt-BR': '-----------',
   level: 0,
   vocation: 'All',
   energy: 'None',

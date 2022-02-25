@@ -1,17 +1,17 @@
 /* eslint-disable no-unused-vars */
 const homeContentJsx = {
-  EN: {
+  'en-US': {
     selectLanguage: 'Select language / Selecione o idioma',
     underConstruction: 'Home under construction',
   },
-  PTBR: {
+  'pt-BR': {
     selectLanguage: 'Selecione o idioma / Select language ',
     underConstruction: 'Página inical em construção',
   },
 };
 
 const navBarJsx = {
-  EN: {
+  'en-US': {
     showSet: 'Show Set',
     generateSet: 'Set Generator',
     searchItem: 'Search Item',
@@ -19,7 +19,7 @@ const navBarJsx = {
     expCalculator: 'Exp Calculator',
     seeItem: 'Wiki',
   },
-  PTBR: {
+  'pt-BR': {
     showSet: 'Ver Set',
     generateSet: 'Gerador de set',
     searchItem: 'Procurar Item',
@@ -30,7 +30,7 @@ const navBarJsx = {
 };
 
 const itemCardJsx = {
-  EN: {
+  'en-US': {
     armor: 'Armor',
     magic: 'Magic',
     attack: 'Attack',
@@ -46,7 +46,7 @@ const itemCardJsx = {
     showItem: 'Show Item',
     copy: 'Copy',
   },
-  PTBR: {
+  'pt-BR': {
     armor: 'Armadura',
     magic: 'Magia',
     attack: 'Ataque',
@@ -64,13 +64,13 @@ const itemCardJsx = {
   },
 };
 const setMakerJsx = {
-  EN: {
+  'en-US': {
     title: 'Set generator',
     generateSet: 'Generate set',
     equipAll: 'Equip all',
     searchItens: 'Search itens',
   },
-  PTBR: {
+  'pt-BR': {
     title: 'Gerador de set',
     generateSet: 'Gerar set',
     equipAll: 'Equipar tudo',
@@ -78,14 +78,14 @@ const setMakerJsx = {
   },
 };
 const showSetStatusJsx = {
-  EN: {
+  'en-US': {
     attributes: 'Set attributes',
     armor: 'Armor',
     magic: 'Magic',
     attack: 'Attack',
     element: 'Element',
   },
-  PTBR: {
+  'pt-BR': {
     attributes: 'Atributos do set',
     armor: 'Armadura',
     magic: 'Magia',
@@ -94,19 +94,19 @@ const showSetStatusJsx = {
   },
 };
 const searchItemJsx = {
-  EN: {
+  'en-US': {
     search: 'Search',
     showSet: 'Show set',
     notFound: 'No item found',
   },
-  PTBR: {
+  'pt-BR': {
     search: 'Procurar',
     showSet: 'Ver set',
     notFound: 'Nem um item encontrado',
   },
 };
 const kakeleItemsFiltersJsx = {
-  EN: {
+  'en-US': {
     itemName: 'Item name',
     characterLevel: 'Level',
     characterClass: 'Class',
@@ -127,7 +127,7 @@ const kakeleItemsFiltersJsx = {
     itemSlot: 'Item slot',
     orderBy: 'Order by',
   },
-  PTBR: {
+  'pt-BR': {
     itemName: 'Nome do item',
     characterLevel: 'Nivel',
     characterClass: 'Classe',
@@ -150,7 +150,7 @@ const kakeleItemsFiltersJsx = {
   },
 };
 const oreCalculatorJsx = {
-  EN: {
+  'en-US': {
     title: 'Upgrade calculator',
     startUpgrade: 'Current forge',
     finishUpgrade: 'Desired forge',
@@ -170,7 +170,7 @@ const oreCalculatorJsx = {
     goldPrice: 'Gold ore price',
     alert: 'Current upgrade must be greater then desired upgrade',
   },
-  PTBR: {
+  'pt-BR': {
     title: 'Calculadora de upgrade',
     startUpgrade: 'Forja atual',
     finishUpgrade: 'Forja desejada',
@@ -193,7 +193,7 @@ const oreCalculatorJsx = {
 };
 
 const SLOTS_NAMES = {
-  EN: {
+  'en-US': {
     accessorie: 'Accessory',
     ring: 'Ring',
     weapon: 'Weapon',
@@ -205,7 +205,7 @@ const SLOTS_NAMES = {
     book: 'Book',
     shoe: 'Shoes',
   },
-  PTBR: {
+  'pt-BR': {
     accessorie: 'Acessório',
     ring: 'Anel',
     weapon: 'Arma',
@@ -220,13 +220,13 @@ const SLOTS_NAMES = {
 };
 
 const ITEM_FILTERS_NAME = {
-  EN: {
+  'en-US': {
     attack: 'Attack',
     armor: 'Armor',
     level: 'Level',
     magic: 'Magic',
   },
-  PTBR: {
+  'pt-BR': {
     attack: 'Ataque',
     armor: 'Armadura',
     level: 'Level',
@@ -235,23 +235,23 @@ const ITEM_FILTERS_NAME = {
 };
 
 const showSetJsx = {
-  EN: {
+  'en-US': {
     searchItems: 'Search items',
     copy: 'Copy link',
   },
-  PTBR: {
+  'pt-BR': {
     searchItems: 'Procurar itens',
     copy: 'Copiar link',
   },
 };
 
 const showItemJsx = {
-  EN: {
+  'en-US': {
     previous: 'Previous',
     next: 'Next',
     showSet: 'Show set',
   },
-  PTBR: {
+  'pt-BR': {
     previous: 'Anterior',
     next: 'Próximo',
     showSet: 'Ver set',
@@ -259,7 +259,7 @@ const showItemJsx = {
 };
 
 const expCalculatorJsx = {
-  EN: {
+  'en-US': {
     title: 'Kakele exp calculator',
     initialLevel: 'Starting Level',
     desiredLevel: 'Target Level',
@@ -267,7 +267,7 @@ const expCalculatorJsx = {
     calculate: 'calculate',
     result: 'Total exp needed',
   },
-  PTBR: {
+  'pt-BR': {
     title: 'Kakele calculadora de exp',
     initialLevel: 'Level inicial',
     desiredLevel: 'Level desejado',

@@ -30,20 +30,20 @@ import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 export default function ShowSet() {
   const router = useRouter();
   const {
-    state: { language },
     actions: { updateCurrentSet },
   } = useAppContext();
+  const { locale } = useRouter();
   const { urslSet } = router.query;
-  const text = textOptions[language];
+  const text = textOptions[locale];
   const [showSet, setShowSet] = useState();
 
   const normalizeSet = setItems => {
     const shield =
-      setItems.weapon.twoHanded || setItems.book.nameEN !== '-----------'
+      setItems.weapon.twoHanded || setItems.book['en-US'] !== '-----------'
         ? { ...FAKE_ITEM, slot: 'shield' }
         : { ...setItems.shield };
     const book =
-      setItems.weapon.twoHanded || setItems.shield.nameEN !== '-----------'
+      setItems.weapon.twoHanded || setItems.shield['en-US'] !== '-----------'
         ? { ...FAKE_ITEM, slot: 'book' }
         : { ...setItems.book };
 
@@ -56,7 +56,8 @@ export default function ShowSet() {
         const currentSlot = ALL_ITENS_SLOTS_LIST[index];
 
         const item =
-          findItemByName(allItens, selectedItems[currentSlot]) || FAKE_ITEM;
+          findItemByName(allItens, selectedItems[currentSlot], locale) ||
+          FAKE_ITEM;
 
         return {
           ...current,
@@ -88,7 +89,7 @@ export default function ShowSet() {
   const copyLink = () => {
     const origin = window.location.origin.toString();
     const setToArray = Object.values(showSet).map(item => item);
-    const link = genereateLinkToViewSet(setToArray, origin, language);
+    const link = genereateLinkToViewSet(setToArray, origin, locale);
     if (link) copy(link);
   };
 
@@ -108,7 +109,9 @@ export default function ShowSet() {
       </Head>
       <div className="d-flex flex-column">
         <div className={styles.statusContainer}>
-          {showSet && <ShowSetStatus itensListToShowStatus={showSet} />}
+          {showSet && (
+            <ShowSetStatus itensListToShowStatus={showSet} locale={locale} />
+          )}
         </div>
         <Link href="/search-item" passHref>
           <LinkButton text={text.searchItems} />
@@ -118,56 +121,94 @@ export default function ShowSet() {
       {showSet && (
         <div className={`row row-cols-auto ${styles.row}`}>
           {showSet.necklace && (
-            <ItemCard item={showSet.necklace} index={showSet.necklace.nameEN} />
-          )}
-
-          {showSet.helmet && (
-            <ItemCard item={showSet.helmet} index={showSet.helmet.nameEN} />
-          )}
-
-          {showSet.ring && (
-            <ItemCard item={showSet.ring} index={showSet.ring.nameEN} />
-          )}
-
-          {showSet.weapon && (
-            <ItemCard item={showSet.weapon} index={showSet.weapon.nameEN} />
-          )}
-
-          {showSet.armor && (
-            <ItemCard item={showSet.armor} index={showSet.armor.nameEN} />
-          )}
-
-          {showSet.shield && showSet.shield.nameEN !== '-----------' && (
             <ItemCard
-              item={showSet.shield || showSet.book}
-              index={showSet.shield.nameEN || showSet.book.nameEN}
+              item={showSet.necklace}
+              index={showSet.necklace['en-US']}
+              locale={locale}
             />
           )}
 
-          {showSet.book && showSet.book.nameEN !== '-----------' && (
-            <ItemCard item={showSet.book} index={showSet.book.nameEN} />
+          {showSet.helmet && (
+            <ItemCard
+              item={showSet.helmet}
+              index={showSet.helmet['en-US']}
+              locale={locale}
+            />
+          )}
+
+          {showSet.ring && (
+            <ItemCard
+              item={showSet.ring}
+              index={showSet.ring['en-US']}
+              locale={locale}
+            />
+          )}
+
+          {showSet.weapon && (
+            <ItemCard
+              item={showSet.weapon}
+              index={showSet.weapon['en-US']}
+              locale={locale}
+            />
+          )}
+
+          {showSet.armor && (
+            <ItemCard
+              item={showSet.armor}
+              index={showSet.armor['en-US']}
+              locale={locale}
+            />
+          )}
+
+          {showSet.shield && showSet.shield['en-US'] !== '-----------' && (
+            <ItemCard
+              item={showSet.shield || showSet.book}
+              index={showSet.shield['en-US'] || showSet.book['en-US']}
+              locale={locale}
+            />
+          )}
+
+          {showSet.book && showSet.book['en-US'] !== '-----------' && (
+            <ItemCard
+              item={showSet.book}
+              index={showSet.book['en-US']}
+              locale={locale}
+            />
           )}
 
           {showSet.book &&
-            showSet.book.nameEN === '-----------' &&
+            showSet.book['en-US'] === '-----------' &&
             showSet.shield &&
-            showSet.shield.nameEN === '-----------' && (
-              <ItemCard item={showSet.shield} index={showSet.shield.nameEN} />
+            showSet.shield['en-US'] === '-----------' && (
+              <ItemCard
+                item={showSet.shield}
+                index={showSet.shield['en-US']}
+                locale={locale}
+              />
             )}
 
           {showSet.accessorie && (
             <ItemCard
               item={showSet.accessorie}
-              index={showSet.accessorie.nameEN}
+              index={showSet.accessorie['en-US']}
+              locale={locale}
             />
           )}
 
           {showSet.leg && (
-            <ItemCard item={showSet.leg} index={showSet.leg.nameEN} />
+            <ItemCard
+              item={showSet.leg}
+              index={showSet.leg['en-US']}
+              locale={locale}
+            />
           )}
 
           {showSet.shoe && (
-            <ItemCard item={showSet.shoe} index={showSet.shoe.nameEN} />
+            <ItemCard
+              item={showSet.shoe}
+              index={showSet.shoe['en-US']}
+              locale={locale}
+            />
           )}
         </div>
       )}

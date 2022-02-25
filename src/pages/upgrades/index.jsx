@@ -1,12 +1,11 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Alert from '../../componentes/alert/Alert';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import InputCheckBox from '../../componentes/inputs/InputCheckBox';
 import OrePriceUpdater from '../../componentes/others/OrePriceUpdater';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
-import { useAppContext } from '../../context/appContext/useAppState';
-
 import { oreCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import {
   activateAlert,
@@ -16,10 +15,8 @@ import {
 } from '../../data/kakeleActions';
 
 export default function OreCalculator() {
-  const {
-    state: { language },
-  } = useAppContext();
-  const text = textOptions[language];
+  const { locale } = useRouter();
+  const text = textOptions[locale];
 
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [desiredUpgradeLvl, setDesiredUpgradeLvl] = useState(0);

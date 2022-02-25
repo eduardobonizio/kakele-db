@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ['raw.githubusercontent.com'],
   },
+  i18n: {
+    locales: ['en-US', 'pt-BR'],
+    defaultLocale: 'en-US',
+  },
 };
 
 module.exports = nextConfig;

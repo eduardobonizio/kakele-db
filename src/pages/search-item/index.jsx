@@ -17,20 +17,14 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import { useRouter } from 'next/router';
 
 export default function SearchItem() {
   const {
-    state: {
-      level,
-      itemName,
-      element,
-      slot,
-      characterClass,
-      orderBy,
-      language,
-    },
+    state: { level, itemName, element, slot, characterClass, orderBy },
   } = useAppContext();
-  const text = textOptions[language];
+  const { locale } = useRouter();
+  const text = textOptions[locale];
   const [foundItens, setFoundItens] = useState(false);
 
   const lookForItens = () => {
@@ -68,7 +62,7 @@ export default function SearchItem() {
         />
       </Head>
       <div className={`d-flex d-flex flex-column ${styles.filters}`}>
-        <KakeleItemsFilters manualFilters />
+        <KakeleItemsFilters manualFilters locale={locale} />
         <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={lookForItens} text={text.search} />
           <Link href="/set" passHref>
@@ -82,7 +76,7 @@ export default function SearchItem() {
             if (item) {
               return (
                 <div className={`col ${styles.col}`} key={item.nameEN}>
-                  <ItemCard index={i} item={item} />
+                  <ItemCard index={i} item={item} locale={locale} />
                 </div>
               );
             }

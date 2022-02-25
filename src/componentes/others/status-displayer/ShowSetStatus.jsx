@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useAppContext } from '../../../context/appContext/useAppState';
 
 import { showSetStatusJsx as textOptions } from '../../../data/dataLanguages';
 import { checkSetElement } from '../../../data/kakeleActions';
 
 export default function ShowSetStatus(props) {
-  const { itensListToShowStatus } = props;
+  const { itensListToShowStatus, locale } = props;
   const [element, setElement] = useState(false);
   const [itensList, setItensList] = useState(false);
-  const {
-    state: { language },
-  } = useAppContext();
-  const text = textOptions[language];
+  const text = textOptions[locale];
 
   useEffect(() => {
     const newItensList = [
@@ -19,10 +15,10 @@ export default function ShowSetStatus(props) {
     ];
     setItensList(newItensList);
 
-    const elementQuantity = checkSetElement(newItensList, language);
+    const elementQuantity = checkSetElement(newItensList, locale);
 
     setElement(elementQuantity);
-  }, [itensListToShowStatus, language]);
+  }, [itensListToShowStatus, locale]);
 
   return (
     <div className="status-container">

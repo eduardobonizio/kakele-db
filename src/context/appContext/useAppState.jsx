@@ -1,3 +1,4 @@
+// import { useRouter } from 'next/router';
 import React, { useContext, useMemo, useState } from 'react';
 
 // https://ricostacruz.com/til/state-management-with-react-hooks
@@ -8,6 +9,8 @@ const AppContext = React.createContext({});
 
 // Cria o provedor que será implementado como componente PAI para os componentes que precisam de acesso a esse estado
 const AppProvider = ({ children }) => {
+  // const router = useRouter();
+  // console.log(router.route);
   // Inicializa o estado, mas em alguns casos não é necessário
   const initialState = {
     language: 'PTBR',

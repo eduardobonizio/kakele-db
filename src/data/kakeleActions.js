@@ -17,9 +17,9 @@ const urlParamsToObject = paramsText => {
   }
 };
 
-const genereateLinkToViewSet = (setList, origin) => {
+const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
-  const name = 'nameEN';
+  const name = 'en-US';
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
@@ -30,8 +30,8 @@ const genereateLinkToViewSet = (setList, origin) => {
     }
     return anterior;
   }, '');
-  if (origin) return `${origin}/set/${link}`;
-  return `/set/${link}`;
+  if (origin) return `${origin}/${locale}/set/${link}`;
+  return `${locale}/set/${link}`;
 };
 
 const saveSetInLocalStorage = newSet => {
@@ -334,12 +334,12 @@ const checkSetElement = (itens, language) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName) => {
+const findItemByName = (itemList, itemName, locale) => {
   if (!itemName) return false;
   return itemList.find(item => {
     return (
-      item.nameEN.toLowerCase().includes(itemName.toLowerCase()) ||
-      item.namePTBR.toLowerCase().includes(itemName.toLowerCase())
+      item['en-US'].toLowerCase().includes(itemName.toLowerCase()) ||
+      item['en-US'].toLowerCase().includes(itemName.toLowerCase())
     );
   });
 };

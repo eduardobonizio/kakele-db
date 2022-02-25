@@ -21,12 +21,14 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import { useRouter } from 'next/router';
 
 export default function SetMaker() {
   const {
-    state: { level, element, characterClass, mainStat, language },
+    state: { level, element, characterClass, mainStat },
   } = useAppContext();
-  const text = textOptions[language];
+  const { locale } = useRouter();
+  const text = textOptions[locale];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
 
@@ -48,7 +50,7 @@ export default function SetMaker() {
         ignoredItens,
         ignoreThisSlotsElement,
         element,
-        language,
+        locale,
       ),
     );
     setRecomendedSet(bestItens);
@@ -95,7 +97,7 @@ export default function SetMaker() {
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h3 className="">{text.title}</h3>
 
-        <KakeleItemsFilters statusPrincipal />
+        <KakeleItemsFilters statusPrincipal locale={locale} />
         <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
           <Link href="/search-item" passHref>
@@ -111,14 +113,14 @@ export default function SetMaker() {
           )}
         </div>
 
-        <ShowSetStatus itensListToShowStatus={recomendedSet} />
+        <ShowSetStatus itensListToShowStatus={recomendedSet} locale={locale} />
       </div>
       <div className={`row row-cols-auto ${styles.row}`}>
         {recomendedSet &&
           recomendedSet.map((item, i) => {
             if (item) {
               return (
-                <div className={`col ${styles.col}`} key={item.nameEN}>
+                <div className={`col ${styles.col}`} key={item[locale]}>
                   <ItemCard
                     index={i}
                     ignoredItens={ignoredItens}
@@ -127,6 +129,7 @@ export default function SetMaker() {
                     ignoreElementForThisSlot={ignoreElementForThisSlot}
                     item={item}
                     stleFromParent={styles}
+                    locale={locale}
                   />
                 </div>
               );

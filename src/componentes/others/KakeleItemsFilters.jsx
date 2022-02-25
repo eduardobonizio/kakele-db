@@ -9,9 +9,8 @@ import {
 import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../../data/kakeleData';
 
 export default function KakeleItemsFilters(props) {
-  const { statusPrincipal, manualFilters } = props;
+  const { statusPrincipal, manualFilters, locale } = props;
   const {
-    state,
     state: {
       level,
       element,
@@ -20,12 +19,10 @@ export default function KakeleItemsFilters(props) {
       itemName,
       slot,
       orderBy,
-      language,
     },
-    actions,
     actions: { updateFilter },
   } = useAppContext();
-  const text = textOptions[language];
+  const text = textOptions[locale];
 
   return (
     <>
@@ -126,7 +123,7 @@ export default function KakeleItemsFilters(props) {
               <option value="All">{text.all}</option>
               {ALL_ITENS_SLOTS_LIST.map(curSlot => (
                 <option value={curSlot} key={curSlot}>
-                  {SLOTS_NAMES[language][curSlot]}
+                  {SLOTS_NAMES[locale][curSlot]}
                 </option>
               ))}
             </select>
@@ -143,7 +140,7 @@ export default function KakeleItemsFilters(props) {
             >
               {ITEM_FILTERS.map(status => (
                 <option value={status} key={status}>
-                  {ITEM_FILTERS_NAME[language][status]}
+                  {ITEM_FILTERS_NAME[locale][status]}
                 </option>
               ))}
             </select>

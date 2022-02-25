@@ -8,17 +8,16 @@ import { addDotToKks } from '../../data/kakeleActions';
 import { totalExpToLevel } from '../../data/kakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { expCalculatorJsx as textOptions } from '../../data/dataLanguages';
+import { useRouter } from 'next/router';
 
 export default function ExpCalculator() {
-  const {
-    state: { language },
-  } = useAppContext();
+  const { locale } = useRouter();
   const [currentLevel, setCurrentLevel] = useState(1);
   const [desiredLevel, setDesiredLevel] = useState(2);
   const [totalExp, setTotalExp] = useState(0);
   const [result, setResult] = useState(0);
 
-  const text = textOptions[language];
+  const text = textOptions[locale];
 
   const calExp = event => {
     event.preventDefault();

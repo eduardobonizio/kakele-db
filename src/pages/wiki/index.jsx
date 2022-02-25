@@ -4,45 +4,41 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
-import { useAppContext } from '../../context/appContext/useAppState';
 
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 import { equipments, weapons } from '../../data/kakeleData';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowItem() {
-  const router = useRouter();
+  const { query, locale } = useRouter();
   const allItens = [...equipments, ...weapons];
-  const {
-    state: { language },
-  } = useAppContext();
   const [item, setItem] = useState(allItens[0]);
   const [previousItemLink, setPreviousItemLink] = useState(
-    `/wiki/${allItens[allItens.length - 1].nameEN}`,
+    `/wiki/${allItens[allItens.length - 1][locale]}`,
   );
   const [nextItemLink, setNextItemLink] = useState(
-    `/wiki/${allItens[1].nameEN}`,
+    `/wiki/${allItens[1][locale]}`,
   );
-  const text = textOptions[language];
+  const text = textOptions[locale];
 
   useEffect(() => {
-    if (Object.keys(router.query).length > 0) {
-      const [itemName] = router.query.item;
+    if (Object.keys(query).length > 0) {
+      const [itemName] = query.item;
       const currentItem = allItens.find(
-        e => e.nameEN === itemName || e.namePTBR === itemName,
+        e => e[locale] === itemName || e.namePTBR === itemName,
       );
       if (currentItem) {
         const itemIndex = allItens.indexOf(currentItem);
         const previousIndex =
           itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
         const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
-        setPreviousItemLink(`/wiki/${allItens[previousIndex].nameEN}`);
-        setNextItemLink(`/wiki/${allItens[nextIndex].nameEN}`);
+        setPreviousItemLink(`/wiki/${allItens[previousIndex][locale]}`);
+        setNextItemLink(`/wiki/${allItens[nextIndex][locale]}`);
         setItem(currentItem);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.query]);
+  }, [query]);
 
   return (
     <div className={`container ${styles.itemContainer}`}>
@@ -71,7 +67,7 @@ export default function ShowItem() {
       </div>
       {item ? (
         <div className="row">
-          <ItemCard item={item} />
+          <ItemCard item={item} locale={locale} />
         </div>
       ) : (
         <div>Item não encontrado</div>

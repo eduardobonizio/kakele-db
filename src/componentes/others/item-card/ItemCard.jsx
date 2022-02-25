@@ -16,11 +16,12 @@ import LinkButton from '../../buttons/link-as-button/LinkButton';
 
 export default function ItemCard(props) {
   const {
-    state: { currentSet, language },
+    state: { currentSet },
     actions: { updateCurrentSet },
   } = useAppContext();
   const router = useRouter();
   const {
+    locale,
     index,
     ignoredItens,
     ignoreItens,
@@ -41,7 +42,7 @@ export default function ItemCard(props) {
   } = props;
 
   const showDetails = router.pathname.includes('/wiki/');
-  const text = textOptions[language];
+  const text = textOptions[locale];
 
   const decide = thisItem => {
     if (thisItem.slot === 'weapon') {
@@ -78,7 +79,7 @@ export default function ItemCard(props) {
   };
 
   const equipItem = thisItem => {
-    if (thisItem.nameEN !== '-----------') {
+    if (thisItem['en-US'] !== '-----------') {
       const whatToDo = decide(thisItem);
 
       updateCurrentSet({ ...currentSet, ...whatToDo });
@@ -95,48 +96,36 @@ export default function ItemCard(props) {
   return (
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
-        <h6 className="card-title">{item[`name${language}`]}</h6>
+        <h6 className="card-title">{item[locale]}</h6>
         <div className="d-flex flex-column">
           <span className="card-text">
             {imgUrl && (
               <Image
-                alt={item[`name${language}`]}
+                alt={item[locale]}
                 src={imgUrl.replace('"', '').replace('"', '')}
                 width={32}
                 height={32}
               />
             )}
-            {text.element}: <span className={energy}>{energy}</span>
+            {text.element}:<span className={energy}>{energy}</span>
           </span>
-          <span className="card-text">
-            {text.armor}: {armor}
-          </span>
-          <span className="card-text">
-            {text.magic}: {magic}
-          </span>
-          <span className="card-text">
-            {text.attack}: {attack}
-          </span>
-          <span className="card-text">
-            {text.level}: {level}
-          </span>
-          <span className="card-text">
-            {text.slot}: {slot}
-          </span>
+          <span className="card-text">{`${text.armor}: ${armor}`}</span>
+          <span className="card-text">{`${text.magic}: ${magic}`}</span>
+          <span className="card-text">{`${text.attack}: ${attack}`}</span>
+          <span className="card-text">{`${text.level}: ${level}`}</span>
+          <span className="card-text">{`${text.slot}: ${slot}`}</span>
           {showDetails && (
             <>
-              <span className="card-text">
-                {text.sources}: {sources}
-              </span>
+              <span className="card-text">{`${text.sources}: ${sources}`}</span>
               <span className="card-text card-info">
-                {text.info}: {obsPtBr}
+                {`${text.info}: ${obsPtBr}`}
               </span>
             </>
           )}
 
           {currentSet[slot] &&
-            currentSet[slot][`name${language}`] === item[`name${language}`] &&
-            currentSet[slot].nameEN !== '-----------' && (
+            currentSet[slot][locale] === item[locale] &&
+            currentSet[slot]['en-US'] !== '-----------' && (
               <span className={styles.equiped}>{text.equiped}</span>
             )}
         </div>
@@ -147,9 +136,9 @@ export default function ItemCard(props) {
                 <input
                   className="form-check-input"
                   type="checkbox"
-                  name={item[`name${language}`]}
+                  name={item[locale]}
                   id={`exclude-item-${index}`}
-                  checked={ignoredItens.includes(item[`name${language}`])}
+                  checked={ignoredItens.includes(item[locale])}
                   aria-label="Checkbox for following text input"
                   onChange={e => ignoreItens(e.target.name, e.target.checked)}
                 />
@@ -186,11 +175,11 @@ export default function ItemCard(props) {
         )}
         <div className={styles.buttonContainer}>
           <ButtonForKakele
-            onClick={() => copy(item[`name${language}`])}
+            onClick={() => copy(item[locale])}
             text={text.copy}
           />
           {!showDetails && (
-            <Link href={`/wiki/${item[`name${language}`]}`} passHref>
+            <Link href={`/wiki/${item['en-US']}`} passHref>
               <LinkButton text={text.showItem} />
             </Link>
           )}
