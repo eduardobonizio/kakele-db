@@ -113,7 +113,7 @@ export default function ShowSet() {
             <ShowSetStatus itensListToShowStatus={showSet} locale={locale} />
           )}
         </div>
-        <Link href="/search-item" passHref>
+        <Link href="/search-item" passHref locale={locale}>
           <LinkButton text={text.searchItems} />
         </Link>
         <ButtonForKakele onClick={copyLink} text={text.copy} />

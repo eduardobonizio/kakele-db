@@ -12,13 +12,13 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
     <div className={`container ${styles.itemContainer}`}>
       <Head>
         <title>{`${item[locale]} - Kakele MMORPG`}</title>
-        {locales.map(localee => {
+        {locales.map(loc => {
           return (
             <link
               rel="alternate"
-              hrefLang={localee}
-              href={`https://www.kakeletools.com/${localee}/wiki/${item[localee]}`}
-              key={item[localee]}
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/wiki/${item[loc]}`}
+              key={loc}
             />
           );
         })}
@@ -33,13 +33,13 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
         />
       </Head>
       <div className={`${styles.buttonContainer}`}>
-        <Link href={previousItemLink} passHref>
+        <Link href={previousItemLink} passHref locale={locale}>
           <LinkButton text={text.previous} />
         </Link>
-        <Link href="/set" passHref>
+        <Link href="/set" passHref locale={locale}>
           <LinkButton text={text.showSet} />
         </Link>
-        <Link href={nextItemLink} passHref>
+        <Link href={nextItemLink} passHref locale={locale}>
           <LinkButton text={text.next} />
         </Link>
       </div>

@@ -55,13 +55,13 @@ export default function ShowItem() {
         />
       </Head>
       <div className={`${styles.buttonContainer}`}>
-        <Link href={previousItemLink} passHref>
+        <Link href={previousItemLink} passHref locale={locale}>
           <LinkButton text={text.previous} />
         </Link>
-        <Link href="/set" passHref>
+        <Link href="/set" passHref locale={locale}>
           <LinkButton text={text.showSet} />
         </Link>
-        <Link href={nextItemLink} passHref>
+        <Link href={nextItemLink} passHref locale={locale}>
           <LinkButton text={text.next} />
         </Link>
       </div>

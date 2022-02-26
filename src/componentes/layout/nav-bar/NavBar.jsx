@@ -36,32 +36,32 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link href="/set-maker">
+              <Link href="/set-maker" locale={locale}>
                 <a className="nav-link">{text.generateSet}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/set">
+              <Link href="/set locale={locale}">
                 <a className="nav-link">{text.showSet}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/upgrades">
+              <Link href="/upgrades" locale={locale}>
                 <a className="nav-link">{text.oreCalculator}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/search-item">
+              <Link href="/search-item" locale={locale}>
                 <a className="nav-link">{text.searchItem}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/calculadora-de-experiencia">
+              <Link href="/calculadora-de-experiencia" locale={locale}>
                 <a className="nav-link">{text.expCalculator}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/wiki">
+              <Link href="/wiki" locale={locale}>
                 <a className="nav-link">{text.seeItem}</a>
               </Link>
             </li>

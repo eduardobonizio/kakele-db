@@ -100,11 +100,11 @@ export default function SetMaker() {
         <KakeleItemsFilters statusPrincipal locale={locale} />
         <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
-          <Link href="/search-item" passHref>
+          <Link href="/search-item" passHref locale={locale}>
             <LinkButton text={text.searchItens} />
           </Link>
           {recomendedSet && (
-            <Link href="/set" passHref>
+            <Link href="/set" passHref locale={locale}>
               <LinkButton
                 text={text.equipAll}
                 onClick={() => saveSetInLocalStorage(recomendedSet)}
@@ -121,7 +121,6 @@ export default function SetMaker() {
             if (item) {
               return (
                 <div className={`col ${styles.col}`} key={item[locale]}>
-                  {console.log(locale, item)}
                   <ItemCard
                     index={i}
                     ignoredItens={ignoredItens}

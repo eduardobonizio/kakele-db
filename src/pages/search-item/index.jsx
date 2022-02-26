@@ -65,7 +65,7 @@ export default function SearchItem() {
         <KakeleItemsFilters manualFilters locale={locale} />
         <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={lookForItens} text={text.search} />
-          <Link href="/set" passHref>
+          <Link href="/set" passHref locale={locale}>
             <LinkButton text={text.showSet} />
           </Link>
         </div>
