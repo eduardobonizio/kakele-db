@@ -1,3 +1,4 @@
+import { elements } from './dataLanguages';
 import { UPGRADES_DATA } from './kakeleData';
 
 const FIVE_SECONDS = 5000;
@@ -302,34 +303,37 @@ const elementQuantityInSet = (itensList, element) =>
   itensList.filter(item => item.energy === element).length;
 
 const checkSetElement = (itens, locale) => {
-  const name = locale;
-  const elements = {
+  const elementsQuantity = {
     light: {
-      'en-US': 'Light',
-      'pt-BR': 'Luz',
+      ...elements.light,
       quantity: elementQuantityInSet(itens, 'Light'),
     },
     nature: {
-      'en-US': 'Nature',
-      'pt-BR': 'Natureza',
+      ...elements.nature,
       quantity: elementQuantityInSet(itens, 'Nature'),
     },
     dark: {
-      'en-US': 'Dark',
-      'pt-BR': 'Trevas',
+      ...elements.dark,
       quantity: elementQuantityInSet(itens, 'Dark'),
+    },
+    none: {
+      ...elements.none,
+      quantity: 0,
     },
   };
 
-  const elementResult = Object.values(elements).sort(
+  const elementResult = Object.values(elementsQuantity).sort(
     (a, b) => b.quantity - a.quantity,
   )[0];
 
-  const element = elementResult.quantity >= 5 ? elementResult.name : 'None';
+  const element =
+    elementResult.quantity >= 5
+      ? elementResult[locale]
+      : elementsQuantity.none[locale];
 
-  const { light, nature, dark } = elements;
+  const { light, nature, dark } = elementsQuantity;
 
-  const text = `${light[name]}: ${light.quantity}, ${nature[name]}: ${nature.quantity}, ${dark[name]}: ${dark.quantity}`;
+  const text = `${light[locale]}: ${light.quantity}, ${nature[locale]}: ${nature.quantity}, ${dark[locale]}: ${dark.quantity}`;
 
   return { text, element };
 };

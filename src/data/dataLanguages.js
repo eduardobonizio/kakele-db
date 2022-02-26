@@ -277,6 +277,25 @@ const expCalculatorJsx = {
   },
 };
 
+const elements = {
+  light: {
+    'en-US': 'Light',
+    'pt-BR': 'Luz',
+  },
+  nature: {
+    'en-US': 'Nature',
+    'pt-BR': 'Natureza',
+  },
+  dark: {
+    'en-US': 'Dark',
+    'pt-BR': 'Trevas',
+  },
+  none: {
+    'en-US': 'None',
+    'pt-BR': 'Nenhum',
+  },
+};
+
 export {
   homeContentJsx,
   navBarJsx,
@@ -291,4 +310,5 @@ export {
   SLOTS_NAMES,
   ITEM_FILTERS_NAME,
   expCalculatorJsx,
+  elements,
 };
