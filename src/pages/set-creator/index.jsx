@@ -104,7 +104,7 @@ export default function SetMaker() {
             <LinkButton text={text.searchItens} />
           </Link>
           {recomendedSet && (
-            <Link href="/set" passHref locale={locale}>
+            <Link href="/view-set" passHref locale={locale}>
               <LinkButton
                 text={text.equipAll}
                 onClick={() => saveSetInLocalStorage(recomendedSet)}

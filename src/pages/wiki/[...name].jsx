@@ -36,7 +36,7 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
         <Link href={previousItemLink} passHref locale={locale}>
           <LinkButton text={text.previous} />
         </Link>
-        <Link href="/set" passHref locale={locale}>
+        <Link href="/view-set" passHref locale={locale}>
           <LinkButton text={text.showSet} />
         </Link>
         <Link href={nextItemLink} passHref locale={locale}>
