@@ -260,7 +260,8 @@ const showItemJsx = {
 
 const expCalculatorJsx = {
   en: {
-    title: 'Kakele exp calculator',
+    title: 'Kakele experience calculator',
+    description: 'Exp calculator for Kakele MMORPG',
     initialLevel: 'Starting Level',
     desiredLevel: 'Target Level',
     totalExp: 'Your total exp',
@@ -268,7 +269,8 @@ const expCalculatorJsx = {
     result: 'Total exp needed',
   },
   pt: {
-    title: 'Kakele calculadora de exp',
+    title: 'Kakele calculadora de experiência',
+    description: 'Exp calculator for Kakele MMORPG',
     initialLevel: 'Level inicial',
     desiredLevel: 'Level desejado',
     totalExp: 'Sua exp total',
