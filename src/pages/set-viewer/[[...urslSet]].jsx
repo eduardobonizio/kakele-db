@@ -28,12 +28,14 @@ import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowSet() {
-  const router = useRouter();
+  const {
+    locale,
+    locales,
+    query: { urslSet },
+  } = useRouter();
   const {
     actions: { updateCurrentSet },
   } = useAppContext();
-  const { locale } = useRouter();
-  const { urslSet } = router.query;
   const text = textOptions[locale];
   const [showSet, setShowSet] = useState();
 
@@ -96,17 +98,22 @@ export default function ShowSet() {
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
-        <title>Show Set - Kakele MMORPG</title>
-        <meta
-          name="description"
-          content="See your selected equipments and share with your friends or guildmates from Kakele MMORPG"
-        />
-        <meta
-          property="og:title"
-          content="Show Set - Kakele MMORPG"
-          key="title"
-        />
+        <title>{text.title}</title>
+
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/set-viewer`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
       </Head>
+
       <div className="d-flex flex-column">
         <div className={styles.statusContainer}>
           {showSet && (

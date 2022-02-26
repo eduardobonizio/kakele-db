@@ -7,8 +7,10 @@ import { addDotToKks } from '../../data/kakeleActions';
 import { totalExpToLevel } from '../../data/kakeleLevelCalc';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import { expCalculatorJsx as textOptions } from '../../data/dataLanguages';
+import { useRouter } from 'next/router';
 
-export default function ExpCalculator({ locale, locales }) {
+export default function ExpCalculator() {
+  const { locale, locales } = useRouter();
   const [currentLevel, setCurrentLevel] = useState(1);
   const [desiredLevel, setDesiredLevel] = useState(2);
   const [totalExp, setTotalExp] = useState(0);
@@ -28,23 +30,19 @@ export default function ExpCalculator({ locale, locales }) {
   return (
     <div className="container d-flex flex-column justify-content-around align-items-center">
       <Head>
-        <title>{`${text.title} - Kakele MMORPG`}</title>
+        <title>{text.title}</title>
         {locales.map(loc => {
           return (
             <link
               rel="alternate"
               hrefLang={loc}
-              href={`https://www.kakeletools.com/${loc}/calculadora-de-experiencia`}
+              href={`https://www.kakeletools.com/${loc}/experience calculator`}
               key={loc}
             />
           );
         })}
         <meta name="description" content={text.description} />
-        <meta
-          property="og:title"
-          content="Exp Calculator - Kakele MMORPG"
-          key="title"
-        />
+        <meta property="og:title" content={text.title} key="title" />
       </Head>
       <h3>{text.title}</h3>
       <div className={`form-group row ${style.formContainer}`}>
@@ -77,13 +75,4 @@ export default function ExpCalculator({ locale, locales }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps({ locale, locales }) {
-  return {
-    props: {
-      locale,
-      locales,
-    },
-  };
 }

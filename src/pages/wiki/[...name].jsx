@@ -11,7 +11,7 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
-        <title>{`${item[locale]} - Kakele MMORPG`}</title>
+        <title>{`${item[locale]} Kakele MMORPG`}</title>
         {locales.map(loc => {
           return (
             <link
@@ -24,11 +24,11 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
         })}
         <meta
           name="description"
-          content="See all items description, sources, and more informations of all items from Kakele MMORPG"
+          content={`${item[locale]} ${text.oneItemDescription}`}
         />
         <meta
           property="og:title"
-          content="Equipment Wiki - Kakele MMORPG"
+          content={`${item[locale]} Kakele MMORPG`}
           key="title"
         />
       </Head>
@@ -36,7 +36,7 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
         <Link href={previousItemLink} passHref locale={locale}>
           <LinkButton text={text.previous} />
         </Link>
-        <Link href="/view-set" passHref locale={locale}>
+        <Link href="/set-viewer" passHref locale={locale}>
           <LinkButton text={text.showSet} />
         </Link>
         <Link href={nextItemLink} passHref locale={locale}>

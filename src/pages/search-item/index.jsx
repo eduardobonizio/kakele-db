@@ -23,7 +23,7 @@ export default function SearchItem() {
   const {
     state: { level, itemName, element, slot, characterClass, orderBy },
   } = useAppContext();
-  const { locale } = useRouter();
+  const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [foundItens, setFoundItens] = useState(false);
 
@@ -50,22 +50,26 @@ export default function SearchItem() {
   return (
     <div className={`container d-flex ${styles.container}`}>
       <Head>
-        <title>Search item - Kakele MMORPG</title>
-        <meta
-          name="description"
-          content="Search any item with good filters and make your own set to share with friends or guildmates from Kakele MMORPG"
-        />
-        <meta
-          property="og:title"
-          content="Search item - Kakele MMORPG"
-          key="title"
-        />
+        <title>{text.title}</title>
+
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/search-item`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
       </Head>
       <div className={`d-flex d-flex flex-column ${styles.filters}`}>
         <KakeleItemsFilters manualFilters locale={locale} />
         <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={lookForItens} text={text.search} />
-          <Link href="/view-set" passHref locale={locale}>
+          <Link href="/set-viewer" passHref locale={locale}>
             <LinkButton text={text.showSet} />
           </Link>
         </div>

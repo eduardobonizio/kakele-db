@@ -63,15 +63,19 @@ const itemCardJsx = {
     copy: 'Copiar',
   },
 };
-const setMakerJsx = {
+const setCreatorPageText = {
   en: {
-    title: 'Set generator',
+    title: 'Set Creator - Kakele MMORPG',
+    description:
+      'Auto set generator for Kakele MMORPG. Generate set with best items for your level and class',
     generateSet: 'Generate set',
     equipAll: 'Equip all',
     searchItens: 'Search itens',
   },
   pt: {
-    title: 'Gerador de set',
+    title: 'Criador de set - Kakele MMORPG',
+    description:
+      'Criador de set para Kakele MMORPG. Criador de set que escolhe os melhores itens de acordo com seu level e classe',
     generateSet: 'Gerar set',
     equipAll: 'Equipar tudo',
     searchItens: 'Procurar itens',
@@ -95,11 +99,17 @@ const showSetStatusJsx = {
 };
 const searchItemJsx = {
   en: {
+    title: 'Kakele Search Item',
+    description:
+      'Look for any item that exist on Kakele, weapons, equipments, accessories, shields, books, and you can do that with filters!',
     search: 'Search',
     showSet: 'Show set',
     notFound: 'No item found',
   },
   pt: {
+    title: 'Kakele Procurar Item',
+    description:
+      'Procure qualquer item que existe no Kakele, armas, equipamentos, acessórios, escudos, livros, e o melhor é que você pode usar filtros!',
     search: 'Procurar',
     showSet: 'Ver set',
     notFound: 'Nem um item encontrado',
@@ -151,7 +161,9 @@ const kakeleItemsFiltersJsx = {
 };
 const oreCalculatorJsx = {
   en: {
-    title: 'Upgrade calculator',
+    title: 'Upgrade calculator - Kakele MMORPG',
+    description:
+      'Calculate upgrades price and ore quantity in an really easy to use tool for Kakele MMORPG.',
     startUpgrade: 'Current forge',
     finishUpgrade: 'Desired forge',
     buyOres: 'Add ore prices',
@@ -171,7 +183,9 @@ const oreCalculatorJsx = {
     alert: 'Current upgrade must be greater then desired upgrade',
   },
   pt: {
-    title: 'Calculadora de upgrade',
+    title: 'Calculadora de upgrade - Kakele MMORPG',
+    description:
+      'Calculadora de minérios que mostra o preço das forjas e a quantidade de minérios necessários',
     startUpgrade: 'Forja atual',
     finishUpgrade: 'Forja desejada',
     buyOres: 'Adicionar preço dos minérios',
@@ -236,10 +250,16 @@ const ITEM_FILTERS_NAME = {
 
 const showSetJsx = {
   en: {
+    title: 'Set Viewer - Kakele MMORPG',
+    description:
+      'See your selected equipments and share with your friends or guildmates from Kakele MMORPG',
     searchItems: 'Search items',
     copy: 'Copy link',
   },
   pt: {
+    title: 'Visualizador de Set - Kakele MMORPG',
+    description:
+      'Veja seus itens equipados e crie links para compartilhar com seus amigos e membros da guild',
     searchItems: 'Procurar itens',
     copy: 'Copiar link',
   },
@@ -247,11 +267,19 @@ const showSetJsx = {
 
 const showItemJsx = {
   en: {
+    title: 'Kakele Wiki',
+    description: 'See and search for any item existent in Kakele MMORPG',
+    oneItemDescription:
+      'status, element, sources, and more informations about the item',
     previous: 'Previous',
     next: 'Next',
     showSet: 'Show set',
   },
   pt: {
+    title: 'Kakele Wiki',
+    description: 'Veja e procure por qualquer item que existe no Kakele MMORPG',
+    oneItemDescription:
+      'status, elemento, onde conseguir, e muitas outras informações sobre o item',
     previous: 'Anterior',
     next: 'Próximo',
     showSet: 'Ver set',
@@ -260,8 +288,9 @@ const showItemJsx = {
 
 const expCalculatorJsx = {
   en: {
-    title: 'Kakele experience calculator',
-    description: 'Exp calculator for Kakele MMORPG',
+    title: 'Kakele Experience Calculator',
+    description:
+      'Experience calculator with tasks and quests suggestions for level up, exp calc for Kakele MMORPG',
     initialLevel: 'Starting Level',
     desiredLevel: 'Target Level',
     totalExp: 'Your total exp',
@@ -269,8 +298,9 @@ const expCalculatorJsx = {
     result: 'Total exp needed',
   },
   pt: {
-    title: 'Kakele calculadora de experiência',
-    description: 'Exp calculator for Kakele MMORPG',
+    title: 'Kakele Calculadora de Experiência',
+    description:
+      'Calculadora de experiência com sugestões de tasks e missões para upar, exp calc for Kakele MMORPG',
     initialLevel: 'Level inicial',
     desiredLevel: 'Level desejado',
     totalExp: 'Sua exp total',
@@ -302,7 +332,7 @@ export {
   homeContentJsx,
   navBarJsx,
   itemCardJsx,
-  setMakerJsx,
+  setCreatorPageText,
   showSetStatusJsx,
   searchItemJsx,
   kakeleItemsFiltersJsx,

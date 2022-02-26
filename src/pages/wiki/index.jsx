@@ -10,7 +10,7 @@ import { equipments, weapons } from '../../data/kakeleData';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowItem() {
-  const { query, locale } = useRouter();
+  const { query, locale, locales } = useRouter();
   const allItens = [...equipments, ...weapons];
   const [item, setItem] = useState(allItens[0]);
   const [previousItemLink, setPreviousItemLink] = useState(
@@ -43,22 +43,27 @@ export default function ShowItem() {
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
-        <title>Equipment Wiki - Kakele MMORPG</title>
-        <meta
-          name="description"
-          content="See all items description, sources, and more informations of all items from Kakele MMORPG"
-        />
-        <meta
-          property="og:title"
-          content="Equipment Wiki - Kakele MMORPG"
-          key="title"
-        />
+        <title>{text.title}</title>
+
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/wiki`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
       </Head>
+
       <div className={`${styles.buttonContainer}`}>
         <Link href={previousItemLink} passHref locale={locale}>
           <LinkButton text={text.previous} />
         </Link>
-        <Link href="/view-set" passHref locale={locale}>
+        <Link href="/set-viewer" passHref locale={locale}>
           <LinkButton text={text.showSet} />
         </Link>
         <Link href={nextItemLink} passHref locale={locale}>

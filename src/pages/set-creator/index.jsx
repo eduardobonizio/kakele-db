@@ -3,7 +3,7 @@ import styles from './set-maker.module.css';
 import React, { useState } from 'react';
 import { useAppContext } from '../../context/appContext/useAppState';
 
-import { setMakerJsx as textOptions } from '../../data/dataLanguages';
+import { setCreatorPageText as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
@@ -27,7 +27,7 @@ export default function SetMaker() {
   const {
     state: { level, element, characterClass, mainStat },
   } = useAppContext();
-  const { locale } = useRouter();
+  const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
@@ -83,17 +83,22 @@ export default function SetMaker() {
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
-        <title>Set Generator - Kakele MMORPG</title>
-        <meta
-          name="description"
-          content="Auto set generator for Kakele MMORPG. See your dream set in a blink of an eye"
-        />
-        <meta
-          property="og:title"
-          content="Set Generator - Kakele MMORPG"
-          key="title"
-        />
+        <title>{text.title}</title>
+
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/set-creator`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
       </Head>
+
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h3 className="">{text.title}</h3>
 
@@ -104,7 +109,7 @@ export default function SetMaker() {
             <LinkButton text={text.searchItens} />
           </Link>
           {recomendedSet && (
-            <Link href="/view-set" passHref locale={locale}>
+            <Link href="/set-viewer" passHref locale={locale}>
               <LinkButton
                 text={text.equipAll}
                 onClick={() => saveSetInLocalStorage(recomendedSet)}

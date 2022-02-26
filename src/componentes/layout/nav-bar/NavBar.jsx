@@ -41,7 +41,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/view-set" locale={locale}>
+              <Link href="/set-viewer" locale={locale}>
                 <a className="nav-link">{text.showSet}</a>
               </Link>
             </li>
