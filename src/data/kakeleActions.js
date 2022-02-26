@@ -301,22 +301,22 @@ const filterItensByLevelAndClass = (listaDeItens, level, classe) => {
 const elementQuantityInSet = (itensList, element) =>
   itensList.filter(item => item.energy === element).length;
 
-const checkSetElement = (itens, language) => {
-  const name = `name${language}`;
+const checkSetElement = (itens, locale) => {
+  const name = locale;
   const elements = {
     light: {
-      nameEN: 'Light',
-      namePTBR: 'Luz',
+      'en-US': 'Light',
+      'pt-BR': 'Luz',
       quantity: elementQuantityInSet(itens, 'Light'),
     },
     nature: {
-      nameEN: 'Nature',
-      namePTBR: 'Natureza',
+      'en-US': 'Nature',
+      'pt-BR': 'Natureza',
       quantity: elementQuantityInSet(itens, 'Nature'),
     },
     dark: {
-      nameEN: 'Dark',
-      namePTBR: 'Trevas',
+      'en-US': 'Dark',
+      'pt-BR': 'Trevas',
       quantity: elementQuantityInSet(itens, 'Dark'),
     },
   };
