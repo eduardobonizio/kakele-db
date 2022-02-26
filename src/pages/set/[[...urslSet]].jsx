@@ -37,37 +37,37 @@ export default function ShowSet() {
   const text = textOptions[locale];
   const [showSet, setShowSet] = useState();
 
-  const normalizeSet = setItems => {
-    const shield =
-      setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
-        ? { ...FAKE_ITEM, slot: 'shield' }
-        : { ...setItems.shield };
-    const book =
-      setItems.weapon.twoHanded || setItems.shield[locale] !== '-----------'
-        ? { ...FAKE_ITEM, slot: 'book' }
-        : { ...setItems.book };
-
-    return { ...setItems, shield: { ...shield }, book: { ...book } };
-  };
-
-  const addMissingItens = (selectedItems, allItens) =>
-    ALL_ITENS_SLOTS_LIST.reduce(
-      (current, next, index) => {
-        const currentSlot = ALL_ITENS_SLOTS_LIST[index];
-
-        const item =
-          findItemByName(allItens, selectedItems[currentSlot], locale) ||
-          FAKE_ITEM;
-
-        return {
-          ...current,
-          [currentSlot]: { ...item },
-        };
-      },
-      { ...selectedItems },
-    );
-
   useEffect(() => {
+    const normalizeSet = setItems => {
+      const shield =
+        setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
+          ? { ...FAKE_ITEM, slot: 'shield' }
+          : { ...setItems.shield };
+      const book =
+        setItems.weapon.twoHanded || setItems.shield[locale] !== '-----------'
+          ? { ...FAKE_ITEM, slot: 'book' }
+          : { ...setItems.book };
+
+      return { ...setItems, shield: { ...shield }, book: { ...book } };
+    };
+
+    const addMissingItens = (selectedItems, allItens) =>
+      ALL_ITENS_SLOTS_LIST.reduce(
+        (current, next, index) => {
+          const currentSlot = ALL_ITENS_SLOTS_LIST[index];
+
+          const item =
+            findItemByName(allItens, selectedItems[currentSlot], locale) ||
+            FAKE_ITEM;
+
+          return {
+            ...current,
+            [currentSlot]: { ...item },
+          };
+        },
+        { ...selectedItems },
+      );
+
     const storedSet = loadSetFromLocalStorage();
     const selectedSet = urslSet ? urslSet[0] : storedSet;
 
@@ -84,7 +84,7 @@ export default function ShowSet() {
     updateCurrentSet(itensTextToObject(storedSet, [...equipments, ...weapons]));
 
     setShowSet(itensTextToObject(selectedSet, [...equipments, ...weapons]));
-  }, [updateCurrentSet, urslSet]);
+  }, [locale, updateCurrentSet, urslSet]);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
