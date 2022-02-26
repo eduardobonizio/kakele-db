@@ -82,7 +82,7 @@ export default function ItemCard(props) {
   };
 
   const equipItem = thisItem => {
-    if (thisItem['en-US'] !== '-----------') {
+    if (thisItem[locale] !== '-----------') {
       const whatToDo = decide(thisItem);
 
       updateCurrentSet({ ...currentSet, ...whatToDo });
@@ -133,7 +133,7 @@ export default function ItemCard(props) {
 
           {currentSet[slot] &&
             currentSet[slot][locale] === item[locale] &&
-            currentSet[slot]['en-US'] !== '-----------' && (
+            currentSet[slot][locale] !== '-----------' && (
               <span className={styles.equiped}>{text.equiped}</span>
             )}
         </div>
@@ -187,7 +187,7 @@ export default function ItemCard(props) {
             text={text.copy}
           />
           {!showDetails && (
-            <Link href={`/wiki/${item['en-US']}`} passHref>
+            <Link href={`/wiki/${item[locale]}`} passHref>
               <LinkButton text={text.showItem} />
             </Link>
           )}

@@ -39,11 +39,11 @@ export default function ShowSet() {
 
   const normalizeSet = setItems => {
     const shield =
-      setItems.weapon.twoHanded || setItems.book['en-US'] !== '-----------'
+      setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
         ? { ...FAKE_ITEM, slot: 'shield' }
         : { ...setItems.shield };
     const book =
-      setItems.weapon.twoHanded || setItems.shield['en-US'] !== '-----------'
+      setItems.weapon.twoHanded || setItems.shield[locale] !== '-----------'
         ? { ...FAKE_ITEM, slot: 'book' }
         : { ...setItems.book };
 
@@ -123,7 +123,7 @@ export default function ShowSet() {
           {showSet.necklace && (
             <ItemCard
               item={showSet.necklace}
-              index={showSet.necklace['en-US']}
+              index={showSet.necklace[locale]}
               locale={locale}
             />
           )}
@@ -131,7 +131,7 @@ export default function ShowSet() {
           {showSet.helmet && (
             <ItemCard
               item={showSet.helmet}
-              index={showSet.helmet['en-US']}
+              index={showSet.helmet[locale]}
               locale={locale}
             />
           )}
@@ -139,7 +139,7 @@ export default function ShowSet() {
           {showSet.ring && (
             <ItemCard
               item={showSet.ring}
-              index={showSet.ring['en-US']}
+              index={showSet.ring[locale]}
               locale={locale}
             />
           )}
@@ -147,7 +147,7 @@ export default function ShowSet() {
           {showSet.weapon && (
             <ItemCard
               item={showSet.weapon}
-              index={showSet.weapon['en-US']}
+              index={showSet.weapon[locale]}
               locale={locale}
             />
           )}
@@ -155,34 +155,34 @@ export default function ShowSet() {
           {showSet.armor && (
             <ItemCard
               item={showSet.armor}
-              index={showSet.armor['en-US']}
+              index={showSet.armor[locale]}
               locale={locale}
             />
           )}
 
-          {showSet.shield && showSet.shield['en-US'] !== '-----------' && (
+          {showSet.shield && showSet.shield[locale] !== '-----------' && (
             <ItemCard
               item={showSet.shield || showSet.book}
-              index={showSet.shield['en-US'] || showSet.book['en-US']}
+              index={showSet.shield[locale] || showSet.book[locale]}
               locale={locale}
             />
           )}
 
-          {showSet.book && showSet.book['en-US'] !== '-----------' && (
+          {showSet.book && showSet.book[locale] !== '-----------' && (
             <ItemCard
               item={showSet.book}
-              index={showSet.book['en-US']}
+              index={showSet.book[locale]}
               locale={locale}
             />
           )}
 
           {showSet.book &&
-            showSet.book['en-US'] === '-----------' &&
+            showSet.book[locale] === '-----------' &&
             showSet.shield &&
-            showSet.shield['en-US'] === '-----------' && (
+            showSet.shield[locale] === '-----------' && (
               <ItemCard
                 item={showSet.shield}
-                index={showSet.shield['en-US']}
+                index={showSet.shield[locale]}
                 locale={locale}
               />
             )}
@@ -190,7 +190,7 @@ export default function ShowSet() {
           {showSet.accessorie && (
             <ItemCard
               item={showSet.accessorie}
-              index={showSet.accessorie['en-US']}
+              index={showSet.accessorie[locale]}
               locale={locale}
             />
           )}
@@ -198,7 +198,7 @@ export default function ShowSet() {
           {showSet.leg && (
             <ItemCard
               item={showSet.leg}
-              index={showSet.leg['en-US']}
+              index={showSet.leg[locale]}
               locale={locale}
             />
           )}
@@ -206,7 +206,7 @@ export default function ShowSet() {
           {showSet.shoe && (
             <ItemCard
               item={showSet.shoe}
-              index={showSet.shoe['en-US']}
+              index={showSet.shoe[locale]}
               locale={locale}
             />
           )}

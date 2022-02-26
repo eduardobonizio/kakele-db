@@ -65,11 +65,49 @@ export default function ExpCalculator() {
           </div>
         </form>
         <div className="d-flex justify-content-around">
-          <span>
-            {text.result} {addDotToKks(result)}
-          </span>
+          <span>{`${text.result} ${addDotToKks(result)}`}</span>
         </div>
       </div>
     </div>
   );
 }
+
+// export async function getStaticProps({ params, locale }) {
+//   const allItems = [...equipments, ...weapons];
+//   const currentItem = allItems.find(item => item[locale] === params.name[0]);
+//   const index = allItems.indexOf(currentItem);
+
+//   const previousItem =
+//     index <= 0 ? allItems[allItems.length - 1] : allItems[index - 1];
+//   const nextItem =
+//     index >= allItems.length - 1 ? allItems[0] : allItems[index + 1];
+//   return {
+//     props: {
+//       item: currentItem,
+//       previousItemLink: `/wiki/${previousItem[locale]}`,
+//       nextItemLink: `/wiki/${nextItem[locale]}`,
+//       locale,
+//     },
+//   };
+// }
+
+// export async function getStaticPaths({ locales }) {
+//   const allPaths = locales
+//     .map(locale => {
+//       return [...equipments, ...weapons].map(item => {
+//         if (!item[locale]) return;
+//         return {
+//           params: { name: [item[locale]] },
+//           locale: locale,
+//         };
+//       });
+//     })
+//     .reduce((curr, next) => {
+//       return [...curr, ...next];
+//     }, []);
+
+//   return {
+//     paths: allPaths,
+//     fallback: false,
+//   };
+// }

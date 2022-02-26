@@ -6,9 +6,10 @@ import { equipments, weapons } from '../../data/kakeleData';
 import styles from './ShowItem.module.css';
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 
-function Item({ item, locale, previousItemLink, nextItemLink }) {
+function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
   const text = textOptions[locale];
-  console.log(locale, previousItemLink, nextItemLink);
+  const hreflang = locale;
+  console.log(hreflang);
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
@@ -21,6 +22,11 @@ function Item({ item, locale, previousItemLink, nextItemLink }) {
           property="og:title"
           content="Equipment Wiki - Kakele MMORPG"
           key="title"
+        />
+        <link
+          rel="alternate"
+          hrefLang={hreflang}
+          href={`https://www.kakeletools.com/pt-BR/wiki/${hreflang}`}
         />
       </Head>
       <div className={`${styles.buttonContainer}`}>
@@ -42,7 +48,7 @@ function Item({ item, locale, previousItemLink, nextItemLink }) {
   );
 }
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps({ params, locale, locales }) {
   const allItems = [...equipments, ...weapons];
   const currentItem = allItems.find(item => item[locale] === params.name[0]);
   const index = allItems.indexOf(currentItem);
@@ -57,6 +63,7 @@ export async function getStaticProps({ params, locale }) {
       previousItemLink: `/wiki/${previousItem[locale]}`,
       nextItemLink: `/wiki/${nextItem[locale]}`,
       locale,
+      locales,
     },
   };
 }

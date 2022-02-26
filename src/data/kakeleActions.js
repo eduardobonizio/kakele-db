@@ -20,7 +20,8 @@ const urlParamsToObject = paramsText => {
 
 const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
-  const name = 'en-US';
+  //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
+  const name = 'en';
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
@@ -340,10 +341,12 @@ const checkSetElement = (itens, locale) => {
 
 const findItemByName = (itemList, itemName, locale) => {
   if (!itemName) return false;
+  //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
+  const nameKey = 'en';
   return itemList.find(item => {
     return (
-      item['en-US'].toLowerCase().includes(itemName.toLowerCase()) ||
-      item['en-US'].toLowerCase().includes(itemName.toLowerCase())
+      item[nameKey].toLowerCase().includes(itemName.toLowerCase()) ||
+      item[nameKey].toLowerCase().includes(itemName.toLowerCase())
     );
   });
 };

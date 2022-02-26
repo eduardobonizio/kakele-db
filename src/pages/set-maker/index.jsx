@@ -121,6 +121,7 @@ export default function SetMaker() {
             if (item) {
               return (
                 <div className={`col ${styles.col}`} key={item[locale]}>
+                  {console.log(locale, item)}
                   <ItemCard
                     index={i}
                     ignoredItens={ignoredItens}

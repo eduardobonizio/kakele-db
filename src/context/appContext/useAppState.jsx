@@ -12,7 +12,7 @@ const AppProvider = ({ children }) => {
   // const router = useRouter();
   // console.log(router.route);
 
-  // console.log(['pt-BR', 'en-US'].includes(router));
+  // console.log(['pt-BR', 'en'].includes(router));
   // Inicializa o estado, mas em alguns casos não é necessário
   const initialState = {
     language: 'PTBR',
