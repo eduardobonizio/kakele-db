@@ -11,7 +11,7 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
-        <title>{`${item[locale]} Kakele MMORPG`}</title>
+        <title>{`${item[locale]} Kakele MMORPG Wiki`}</title>
         {locales.map(loc => {
           return (
             <link
@@ -28,7 +28,7 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
         />
         <meta
           property="og:title"
-          content={`${item[locale]} Kakele MMORPG`}
+          content={`${item[locale]} Kakele MMORPG Wiki`}
           key="title"
         />
       </Head>

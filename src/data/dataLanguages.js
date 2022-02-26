@@ -1,12 +1,15 @@
-/* eslint-disable no-unused-vars */
-const homeContentJsx = {
+const homeText = {
   en: {
-    selectLanguage: 'Select language / Selecione o idioma',
-    underConstruction: 'Home under construction',
+    title: 'Kakele Tools for Kakele MMROGP',
+    description:
+      'Create and share sets with your friends with auto set generator, manual set generator. Also Exp calculator, upgrade calculator and items informations',
+    h1: 'Welcome to Kakele Tools, we have the best tools for Kakele!',
   },
   pt: {
-    selectLanguage: 'Selecione o idioma / Select language ',
-    underConstruction: 'Página inical em construção',
+    title: 'Kakele Tools para Kakele MMROGP',
+    description:
+      'Crie e compartilhe set com seu amigos, use nosso gerador de set automático ou crie seu set manualmente e compartilhe com seu amigos e membros de guild. Também temos a calculadora de exp, calculadora de forja e uma wiki com todos os items',
+    h1: 'Bem vindo ao Kakele Tools, temos o melhor conteúdo para Kakele!',
   },
 };
 
@@ -329,7 +332,6 @@ const elements = {
 };
 
 export {
-  homeContentJsx,
   navBarJsx,
   itemCardJsx,
   setCreatorPageText,
@@ -343,4 +345,5 @@ export {
   ITEM_FILTERS_NAME,
   expCalculatorJsx,
   elements,
+  homeText,
 };
