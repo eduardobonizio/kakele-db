@@ -75,7 +75,7 @@ export default function SearchItem() {
           foundItens.map((item, i) => {
             if (item) {
               return (
-                <div className={`col ${styles.col}`} key={item.nameEN}>
+                <div className={`col ${styles.col}`} key={item[locale]}>
                   <ItemCard index={i} item={item} locale={locale} />
                 </div>
               );
