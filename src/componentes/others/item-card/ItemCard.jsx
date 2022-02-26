@@ -3,7 +3,10 @@ import React from 'react';
 import copy from 'copy-to-clipboard';
 
 import { useRouter } from 'next/router';
-import { itemCardJsx as textOptions } from '../../../data/dataLanguages';
+import {
+  elements,
+  itemCardJsx as textOptions,
+} from '../../../data/dataLanguages';
 import { FAKE_ITEM } from '../../../data/kakeleData';
 import { saveSetInLocalStorage } from '../../../data/kakeleActions';
 import { useAppContext } from '../../../context/appContext/useAppState';
@@ -109,7 +112,9 @@ export default function ItemCard(props) {
             )}
             <span>
               {`${text.element}: `}
-              <span className={energy}>{energy}</span>
+              <span className={energy}>
+                {elements[energy.toLowerCase()][locale]}
+              </span>
             </span>
           </span>
           <span className="card-text">{`${text.armor}: ${armor}`}</span>
