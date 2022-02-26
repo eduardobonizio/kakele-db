@@ -119,8 +119,8 @@ const calculateOreQuantityAndPrice = finishUpgradeLvl => {
 const addDotToKks = number =>
   number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
-const filterItensBySlot = (itensList, slot, ignoreItensList, language) => {
-  const name = `name${language}`;
+const filterItensBySlot = (itensList, slot, ignoreItensList, locale) => {
+  const name = locale;
 
   return itensList.filter(
     item =>
