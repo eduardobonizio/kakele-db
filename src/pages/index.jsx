@@ -20,6 +20,12 @@ export default function HomeContent() {
             />
           );
         })}
+        <link
+          rel="alternate"
+          hrefLang="pt"
+          href={`https://www.kakeletools.com/`}
+          key="defaulthome"
+        />
         <meta name="description" content={text.description} />
         <meta property="og:title" content={text.title} key="title" />
       </Head>
