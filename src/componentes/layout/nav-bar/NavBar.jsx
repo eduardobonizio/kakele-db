@@ -56,7 +56,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/exp-calculator">
+              <Link href="/calculadora-de-experiencia">
                 <a className="nav-link">{text.expCalculator}</a>
               </Link>
             </li>
