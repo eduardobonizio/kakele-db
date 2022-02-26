@@ -1,12 +1,11 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Alert from '../../componentes/alert/Alert';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import InputCheckBox from '../../componentes/inputs/InputCheckBox';
 import OrePriceUpdater from '../../componentes/others/OrePriceUpdater';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
-import { useAppContext } from '../../context/appContext/useAppState';
-
 import { oreCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import {
   activateAlert,
@@ -16,10 +15,8 @@ import {
 } from '../../data/kakeleActions';
 
 export default function OreCalculator() {
-  const {
-    state: { language },
-  } = useAppContext();
-  const text = textOptions[language];
+  const { locale, locales } = useRouter();
+  const text = textOptions[locale];
 
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [desiredUpgradeLvl, setDesiredUpgradeLvl] = useState(0);
@@ -57,17 +54,22 @@ export default function OreCalculator() {
   return (
     <div className="container ore-upgrader-container">
       <Head>
-        <title>Upgrade calculator - Kakele MMORPG</title>
-        <meta
-          name="description"
-          content="Calculate upgrade prices and ore quantity in an really easy to use tool for Kakele MMORPG"
-        />
-        <meta
-          property="og:title"
-          content="Upgrade calculator - Kakele MMORPG"
-          key="title"
-        />
+        <title>{text.title}</title>
+
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/upgrades`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
       </Head>
+
       <h3>{text.title}</h3>
       <div className="d-flex flex-column ore-upgrader-filter-container">
         <UpgradeSelector

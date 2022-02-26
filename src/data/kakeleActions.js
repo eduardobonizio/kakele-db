@@ -1,3 +1,4 @@
+import { elements } from './dataLanguages';
 import { UPGRADES_DATA } from './kakeleData';
 
 const FIVE_SECONDS = 5000;
@@ -17,9 +18,10 @@ const urlParamsToObject = paramsText => {
   }
 };
 
-const genereateLinkToViewSet = (setList, origin) => {
+const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
-  const name = 'nameEN';
+  //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
+  const name = 'en';
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
@@ -30,8 +32,8 @@ const genereateLinkToViewSet = (setList, origin) => {
     }
     return anterior;
   }, '');
-  if (origin) return `${origin}/set/${link}`;
-  return `/set/${link}`;
+  if (origin) return `${origin}/${locale}/set/${link}`;
+  return `${locale}/set/${link}`;
 };
 
 const saveSetInLocalStorage = newSet => {
@@ -119,8 +121,8 @@ const calculateOreQuantityAndPrice = finishUpgradeLvl => {
 const addDotToKks = number =>
   number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
-const filterItensBySlot = (itensList, slot, ignoreItensList, language) => {
-  const name = `name${language}`;
+const filterItensBySlot = (itensList, slot, ignoreItensList, locale) => {
+  const name = locale;
 
   return itensList.filter(
     item =>
@@ -301,45 +303,50 @@ const filterItensByLevelAndClass = (listaDeItens, level, classe) => {
 const elementQuantityInSet = (itensList, element) =>
   itensList.filter(item => item.energy === element).length;
 
-const checkSetElement = (itens, language) => {
-  const name = `name${language}`;
-  const elements = {
+const checkSetElement = (itens, locale) => {
+  const elementsQuantity = {
     light: {
-      nameEN: 'Light',
-      namePTBR: 'Luz',
+      ...elements.light,
       quantity: elementQuantityInSet(itens, 'Light'),
     },
     nature: {
-      nameEN: 'Nature',
-      namePTBR: 'Natureza',
+      ...elements.nature,
       quantity: elementQuantityInSet(itens, 'Nature'),
     },
     dark: {
-      nameEN: 'Dark',
-      namePTBR: 'Trevas',
+      ...elements.dark,
       quantity: elementQuantityInSet(itens, 'Dark'),
+    },
+    none: {
+      ...elements.none,
+      quantity: 0,
     },
   };
 
-  const elementResult = Object.values(elements).sort(
+  const elementResult = Object.values(elementsQuantity).sort(
     (a, b) => b.quantity - a.quantity,
   )[0];
 
-  const element = elementResult.quantity >= 5 ? elementResult.name : 'None';
+  const element =
+    elementResult.quantity >= 5
+      ? elementResult[locale]
+      : elementsQuantity.none[locale];
 
-  const { light, nature, dark } = elements;
+  const { light, nature, dark } = elementsQuantity;
 
-  const text = `${light[name]}: ${light.quantity}, ${nature[name]}: ${nature.quantity}, ${dark[name]}: ${dark.quantity}`;
+  const text = `${light[locale]}: ${light.quantity}, ${nature[locale]}: ${nature.quantity}, ${dark[locale]}: ${dark.quantity}`;
 
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName) => {
+const findItemByName = (itemList, itemName, locale) => {
   if (!itemName) return false;
+  //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
+  const nameKey = 'en';
   return itemList.find(item => {
     return (
-      item.nameEN.toLowerCase().includes(itemName.toLowerCase()) ||
-      item.namePTBR.toLowerCase().includes(itemName.toLowerCase())
+      item[nameKey].toLowerCase().includes(itemName.toLowerCase()) ||
+      item[nameKey].toLowerCase().includes(itemName.toLowerCase())
     );
   });
 };

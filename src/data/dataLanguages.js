@@ -1,17 +1,31 @@
-/* eslint-disable no-unused-vars */
-const homeContentJsx = {
-  EN: {
-    selectLanguage: 'Select language / Selecione o idioma',
-    underConstruction: 'Home under construction',
+const homeText = {
+  en: {
+    title: 'Kakele Tools for Kakele MMROGP',
+    description:
+      'Create and share sets with your friends with auto set generator, manual set generator. Also Exp calculator, upgrade calculator and items informations',
+    h1: 'Welcome to Kakele Tools, we have the best tools for Kakele!',
   },
-  PTBR: {
-    selectLanguage: 'Selecione o idioma / Select language ',
-    underConstruction: 'Página inical em construção',
+  pt: {
+    title: 'Kakele Tools para Kakele MMROGP',
+    description:
+      'Crie e compartilhe set com seu amigos, use nosso gerador de set automático ou crie seu set manualmente e compartilhe com seu amigos e membros de guild. Também temos a calculadora de exp, calculadora de forja e uma wiki com todos os items',
+    h1: 'Bem vindo ao Kakele Tools, temos o melhor conteúdo para Kakele!',
+  },
+};
+
+const pageNotFound = {
+  en: {
+    title: 'Page not found',
+    description: 'Não foi possível encontrar essa página',
+  },
+  pt: {
+    title: 'Página não encontrada',
+    description: 'Não foi possível encontrar essa página',
   },
 };
 
 const navBarJsx = {
-  EN: {
+  en: {
     showSet: 'Show Set',
     generateSet: 'Set Generator',
     searchItem: 'Search Item',
@@ -19,7 +33,7 @@ const navBarJsx = {
     expCalculator: 'Exp Calculator',
     seeItem: 'Wiki',
   },
-  PTBR: {
+  pt: {
     showSet: 'Ver Set',
     generateSet: 'Gerador de set',
     searchItem: 'Procurar Item',
@@ -30,7 +44,7 @@ const navBarJsx = {
 };
 
 const itemCardJsx = {
-  EN: {
+  en: {
     armor: 'Armor',
     magic: 'Magic',
     attack: 'Attack',
@@ -46,7 +60,7 @@ const itemCardJsx = {
     showItem: 'Show Item',
     copy: 'Copy',
   },
-  PTBR: {
+  pt: {
     armor: 'Armadura',
     magic: 'Magia',
     attack: 'Ataque',
@@ -63,29 +77,35 @@ const itemCardJsx = {
     copy: 'Copiar',
   },
 };
-const setMakerJsx = {
-  EN: {
-    title: 'Set generator',
+const setCreatorPageText = {
+  en: {
+    title: 'Set Creator - Kakele MMORPG',
+    description:
+      'Auto set generator for Kakele MMORPG. Generate set with best items for your level and class',
     generateSet: 'Generate set',
     equipAll: 'Equip all',
     searchItens: 'Search itens',
+    h1: 'Set Creator',
   },
-  PTBR: {
-    title: 'Gerador de set',
+  pt: {
+    title: 'Criador de set - Kakele MMORPG',
+    description:
+      'Criador de set para Kakele MMORPG. Criador de set que escolhe os melhores itens de acordo com seu level e classe',
     generateSet: 'Gerar set',
     equipAll: 'Equipar tudo',
     searchItens: 'Procurar itens',
+    h1: 'Criador de set',
   },
 };
 const showSetStatusJsx = {
-  EN: {
+  en: {
     attributes: 'Set attributes',
     armor: 'Armor',
     magic: 'Magic',
     attack: 'Attack',
     element: 'Element',
   },
-  PTBR: {
+  pt: {
     attributes: 'Atributos do set',
     armor: 'Armadura',
     magic: 'Magia',
@@ -94,19 +114,25 @@ const showSetStatusJsx = {
   },
 };
 const searchItemJsx = {
-  EN: {
+  en: {
+    title: 'Kakele Search Item',
+    description:
+      'Look for any item that exist on Kakele, weapons, equipments, accessories, shields, books, and you can do that with filters!',
     search: 'Search',
     showSet: 'Show set',
     notFound: 'No item found',
   },
-  PTBR: {
+  pt: {
+    title: 'Kakele Procurar Item',
+    description:
+      'Procure qualquer item que existe no Kakele, armas, equipamentos, acessórios, escudos, livros, e o melhor é que você pode usar filtros!',
     search: 'Procurar',
     showSet: 'Ver set',
     notFound: 'Nem um item encontrado',
   },
 };
 const kakeleItemsFiltersJsx = {
-  EN: {
+  en: {
     itemName: 'Item name',
     characterLevel: 'Level',
     characterClass: 'Class',
@@ -127,7 +153,7 @@ const kakeleItemsFiltersJsx = {
     itemSlot: 'Item slot',
     orderBy: 'Order by',
   },
-  PTBR: {
+  pt: {
     itemName: 'Nome do item',
     characterLevel: 'Nivel',
     characterClass: 'Classe',
@@ -150,8 +176,10 @@ const kakeleItemsFiltersJsx = {
   },
 };
 const oreCalculatorJsx = {
-  EN: {
-    title: 'Upgrade calculator',
+  en: {
+    title: 'Upgrade calculator - Kakele MMORPG',
+    description:
+      'Calculate upgrades price and ore quantity in an really easy to use tool for Kakele MMORPG.',
     startUpgrade: 'Current forge',
     finishUpgrade: 'Desired forge',
     buyOres: 'Add ore prices',
@@ -170,8 +198,10 @@ const oreCalculatorJsx = {
     goldPrice: 'Gold ore price',
     alert: 'Current upgrade must be greater then desired upgrade',
   },
-  PTBR: {
-    title: 'Calculadora de upgrade',
+  pt: {
+    title: 'Calculadora de upgrade - Kakele MMORPG',
+    description:
+      'Calculadora de minérios que mostra o preço das forjas e a quantidade de minérios necessários',
     startUpgrade: 'Forja atual',
     finishUpgrade: 'Forja desejada',
     buyOres: 'Adicionar preço dos minérios',
@@ -193,7 +223,7 @@ const oreCalculatorJsx = {
 };
 
 const SLOTS_NAMES = {
-  EN: {
+  en: {
     accessorie: 'Accessory',
     ring: 'Ring',
     weapon: 'Weapon',
@@ -205,7 +235,7 @@ const SLOTS_NAMES = {
     book: 'Book',
     shoe: 'Shoes',
   },
-  PTBR: {
+  pt: {
     accessorie: 'Acessório',
     ring: 'Anel',
     weapon: 'Arma',
@@ -220,13 +250,13 @@ const SLOTS_NAMES = {
 };
 
 const ITEM_FILTERS_NAME = {
-  EN: {
+  en: {
     attack: 'Attack',
     armor: 'Armor',
     level: 'Level',
     magic: 'Magic',
   },
-  PTBR: {
+  pt: {
     attack: 'Ataque',
     armor: 'Armadura',
     level: 'Level',
@@ -235,23 +265,37 @@ const ITEM_FILTERS_NAME = {
 };
 
 const showSetJsx = {
-  EN: {
+  en: {
+    title: 'Set Viewer - Kakele MMORPG',
+    description:
+      'See your selected equipments and share with your friends or guildmates from Kakele MMORPG',
     searchItems: 'Search items',
     copy: 'Copy link',
   },
-  PTBR: {
+  pt: {
+    title: 'Visualizador de Set - Kakele MMORPG',
+    description:
+      'Veja seus itens equipados e crie links para compartilhar com seus amigos e membros da guild',
     searchItems: 'Procurar itens',
     copy: 'Copiar link',
   },
 };
 
 const showItemJsx = {
-  EN: {
+  en: {
+    title: 'Kakele Wiki',
+    description: 'See and search for any item existent in Kakele MMORPG',
+    oneItemDescription:
+      'status, element, sources, and more informations about the item',
     previous: 'Previous',
     next: 'Next',
     showSet: 'Show set',
   },
-  PTBR: {
+  pt: {
+    title: 'Kakele Wiki',
+    description: 'Veja e procure por qualquer item que existe no Kakele MMORPG',
+    oneItemDescription:
+      'status, elemento, onde conseguir, e muitas outras informações sobre o item',
     previous: 'Anterior',
     next: 'Próximo',
     showSet: 'Ver set',
@@ -259,16 +303,20 @@ const showItemJsx = {
 };
 
 const expCalculatorJsx = {
-  EN: {
-    title: 'Kakele exp calculator',
+  en: {
+    title: 'Kakele Experience Calculator',
+    description:
+      'Experience calculator with tasks and quests suggestions for level up, exp calc for Kakele MMORPG',
     initialLevel: 'Starting Level',
     desiredLevel: 'Target Level',
     totalExp: 'Your total exp',
     calculate: 'calculate',
     result: 'Total exp needed',
   },
-  PTBR: {
-    title: 'Kakele calculadora de exp',
+  pt: {
+    title: 'Kakele Calculadora de Experiência',
+    description:
+      'Calculadora de experiência com sugestões de tasks e missões para upar, exp calc for Kakele MMORPG',
     initialLevel: 'Level inicial',
     desiredLevel: 'Level desejado',
     totalExp: 'Sua exp total',
@@ -277,11 +325,29 @@ const expCalculatorJsx = {
   },
 };
 
+const elements = {
+  light: {
+    en: 'Light',
+    pt: 'Luz',
+  },
+  nature: {
+    en: 'Nature',
+    pt: 'Natureza',
+  },
+  dark: {
+    en: 'Dark',
+    pt: 'Trevas',
+  },
+  none: {
+    en: 'None',
+    pt: 'Nenhum',
+  },
+};
+
 export {
-  homeContentJsx,
   navBarJsx,
   itemCardJsx,
-  setMakerJsx,
+  setCreatorPageText,
   showSetStatusJsx,
   searchItemJsx,
   kakeleItemsFiltersJsx,
@@ -291,4 +357,7 @@ export {
   SLOTS_NAMES,
   ITEM_FILTERS_NAME,
   expCalculatorJsx,
+  elements,
+  homeText,
+  pageNotFound,
 };

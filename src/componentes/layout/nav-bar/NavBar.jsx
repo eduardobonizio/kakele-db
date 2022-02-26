@@ -1,26 +1,15 @@
 import styles from './NavBar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { useAppContext } from '../../../context/appContext/useAppState';
 import { navBarJsx as textOptions } from '../../../data/dataLanguages';
+import { useRouter } from 'next/router';
 
 // import app from '../../api/Firebase';
 
 function NavBar() {
-  const {
-    state: { language },
-    actions: { changeLanguage },
-  } = useAppContext();
+  const { locale } = useRouter();
 
-  const text = textOptions[language];
-
-  useEffect(() => {
-    const userLanguage = localStorage.getItem('language');
-    if (userLanguage && userLanguage !== language) {
-      changeLanguage(userLanguage);
-    }
-  }, [changeLanguage, language]);
+  const text = textOptions[locale];
 
   return (
     <div
@@ -28,7 +17,7 @@ function NavBar() {
       id="navbar"
     >
       <div className="container">
-        <Link href="/">
+        <Link href="/" locale={locale}>
           <a className={`navbar-brand ${styles.logo}`}>
             <Image src="/logo.png" alt="logo" width="48" height="48" />
           </a>
@@ -47,32 +36,32 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link href="/set-maker">
+              <Link href="/set-creator" locale={locale}>
                 <a className="nav-link">{text.generateSet}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/set">
+              <Link href="/set-viewer" locale={locale}>
                 <a className="nav-link">{text.showSet}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/upgrades">
+              <Link href="/upgrades" locale={locale}>
                 <a className="nav-link">{text.oreCalculator}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/search-item">
+              <Link href="/search-item" locale={locale}>
                 <a className="nav-link">{text.searchItem}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/exp-calculator">
+              <Link href="/experience-calculator" locale={locale}>
                 <a className="nav-link">{text.expCalculator}</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/wiki">
+              <Link href="/wiki" locale={locale}>
                 <a className="nav-link">{text.seeItem}</a>
               </Link>
             </li>

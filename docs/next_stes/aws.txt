@@ -1,0 +1,11 @@
+Instanciando uma EC2:
+https://www.youtube.com/watch?v=AebTx7zPkAQ
+
+Instanciando um RDS:
+https://www.youtube.com/watch?v=-5HyrZD7Wys
+
+S3 - Criando um Bucket:
+https://www.youtube.com/watch?v=SpqhlWUid0I
+
+S3 - Hospedagem de Websites:
+https://www.youtube.com/watch?v=x3IFUJWUKbw

@@ -3,7 +3,7 @@ import styles from './set-maker.module.css';
 import React, { useState } from 'react';
 import { useAppContext } from '../../context/appContext/useAppState';
 
-import { setMakerJsx as textOptions } from '../../data/dataLanguages';
+import { setCreatorPageText as textOptions } from '../../data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
@@ -21,12 +21,14 @@ import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
+import { useRouter } from 'next/router';
 
 export default function SetMaker() {
   const {
-    state: { level, element, characterClass, mainStat, language },
+    state: { level, element, characterClass, mainStat },
   } = useAppContext();
-  const text = textOptions[language];
+  const { locale, locales } = useRouter();
+  const text = textOptions[locale];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
 
@@ -48,7 +50,7 @@ export default function SetMaker() {
         ignoredItens,
         ignoreThisSlotsElement,
         element,
-        language,
+        locale,
       ),
     );
     setRecomendedSet(bestItens);
@@ -81,28 +83,33 @@ export default function SetMaker() {
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
       <Head>
-        <title>Set Generator - Kakele MMORPG</title>
-        <meta
-          name="description"
-          content="Auto set generator for Kakele MMORPG. See your dream set in a blink of an eye"
-        />
-        <meta
-          property="og:title"
-          content="Set Generator - Kakele MMORPG"
-          key="title"
-        />
-      </Head>
-      <div className={`d-flex flex-column ${styles.filtersContainer}`}>
-        <h3 className="">{text.title}</h3>
+        <title>{text.title}</title>
 
-        <KakeleItemsFilters statusPrincipal />
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/set-creator`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
+      </Head>
+
+      <div className={`d-flex flex-column ${styles.filtersContainer}`}>
+        <h3 className="">{text.h1}</h3>
+
+        <KakeleItemsFilters statusPrincipal locale={locale} />
         <div className="container-fluid d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
-          <Link href="/search-item" passHref>
+          <Link href="/search-item" passHref locale={locale}>
             <LinkButton text={text.searchItens} />
           </Link>
           {recomendedSet && (
-            <Link href="/set" passHref>
+            <Link href="/set-viewer" passHref locale={locale}>
               <LinkButton
                 text={text.equipAll}
                 onClick={() => saveSetInLocalStorage(recomendedSet)}
@@ -111,14 +118,14 @@ export default function SetMaker() {
           )}
         </div>
 
-        <ShowSetStatus itensListToShowStatus={recomendedSet} />
+        <ShowSetStatus itensListToShowStatus={recomendedSet} locale={locale} />
       </div>
       <div className={`row row-cols-auto ${styles.row}`}>
         {recomendedSet &&
           recomendedSet.map((item, i) => {
             if (item) {
               return (
-                <div className={`col ${styles.col}`} key={item.nameEN}>
+                <div className={`col ${styles.col}`} key={item[locale]}>
                   <ItemCard
                     index={i}
                     ignoredItens={ignoredItens}
@@ -127,6 +134,7 @@ export default function SetMaker() {
                     ignoreElementForThisSlot={ignoreElementForThisSlot}
                     item={item}
                     stleFromParent={styles}
+                    locale={locale}
                   />
                 </div>
               );
