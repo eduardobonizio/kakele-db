@@ -8,6 +8,7 @@ import { showItemJsx as textOptions } from '../../data/dataLanguages';
 
 function Item({ item, locale, previousItemLink, nextItemLink }) {
   const text = textOptions[locale];
+  console.log(locale, previousItemLink, nextItemLink);
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
@@ -45,16 +46,16 @@ export async function getStaticProps({ params, locale }) {
   const allItems = [...equipments, ...weapons];
   const currentItem = allItems.find(item => item[locale] === params.name[0]);
   const index = allItems.indexOf(currentItem);
+
   const previousItem =
     index <= 0 ? allItems[allItems.length - 1] : allItems[index - 1];
   const nextItem =
     index >= allItems.length - 1 ? allItems[0] : allItems[index + 1];
-
   return {
     props: {
       item: currentItem,
-      previousItemLink: `/${previousItem[locale]}`,
-      nextItemLink: `/${nextItem[locale]}`,
+      previousItemLink: `/wiki/${previousItem[locale]}`,
+      nextItemLink: `/wiki/${nextItem[locale]}`,
       locale,
     },
   };

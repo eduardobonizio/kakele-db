@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config localsitemap.js",
-    "build:dev": "next build && next export"
+    "postbuild": "next-sitemap",
+    "dev:build": "next build && next export"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

@@ -1,5 +1,5 @@
-// import { useRouter } from 'next/router';
 import React, { useContext, useMemo, useState } from 'react';
+// import { useRouter } from 'next/router';
 
 // https://ricostacruz.com/til/state-management-with-react-hooks
 // https://www.youtube.com/watch?v=5LrDIWkK_Bc
@@ -11,6 +11,8 @@ const AppContext = React.createContext({});
 const AppProvider = ({ children }) => {
   // const router = useRouter();
   // console.log(router.route);
+
+  // console.log(['pt-BR', 'en-US'].includes(router));
   // Inicializa o estado, mas em alguns casos não é necessário
   const initialState = {
     language: 'PTBR',
