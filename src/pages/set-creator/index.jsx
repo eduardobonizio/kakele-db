@@ -100,7 +100,7 @@ export default function SetMaker() {
       </Head>
 
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>
-        <h3 className="">{text.title}</h3>
+        <h3 className="">{text.h1}</h3>
 
         <KakeleItemsFilters statusPrincipal locale={locale} />
         <div className="container-fluid d-flex justify-content-around">

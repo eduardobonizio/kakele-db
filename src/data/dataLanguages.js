@@ -13,6 +13,17 @@ const homeText = {
   },
 };
 
+const pageNotFound = {
+  en: {
+    title: 'Page not found',
+    description: 'Não foi possível encontrar essa página',
+  },
+  pt: {
+    title: 'Página não encontrada',
+    description: 'Não foi possível encontrar essa página',
+  },
+};
+
 const navBarJsx = {
   en: {
     showSet: 'Show Set',
@@ -74,6 +85,7 @@ const setCreatorPageText = {
     generateSet: 'Generate set',
     equipAll: 'Equip all',
     searchItens: 'Search itens',
+    h1: 'Set Creator',
   },
   pt: {
     title: 'Criador de set - Kakele MMORPG',
@@ -82,6 +94,7 @@ const setCreatorPageText = {
     generateSet: 'Gerar set',
     equipAll: 'Equipar tudo',
     searchItens: 'Procurar itens',
+    h1: 'Criador de set',
   },
 };
 const showSetStatusJsx = {
@@ -346,4 +359,5 @@ export {
   expCalculatorJsx,
   elements,
   homeText,
+  pageNotFound,
 };
