@@ -8,12 +8,20 @@ import { showItemJsx as textOptions } from '../../data/dataLanguages';
 
 function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
   const text = textOptions[locale];
-  const hreflang = locale;
-  console.log(hreflang);
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
         <title>{`${item[locale]} - Kakele MMORPG`}</title>
+        {locales.map(localee => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={localee}
+              href={`https://www.kakeletools.com/${localee}/wiki/${item[localee]}`}
+              key={item[localee]}
+            />
+          );
+        })}
         <meta
           name="description"
           content="See all items description, sources, and more informations of all items from Kakele MMORPG"
@@ -22,11 +30,6 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
           property="og:title"
           content="Equipment Wiki - Kakele MMORPG"
           key="title"
-        />
-        <link
-          rel="alternate"
-          hrefLang={hreflang}
-          href={`https://www.kakeletools.com/pt-BR/wiki/${hreflang}`}
         />
       </Head>
       <div className={`${styles.buttonContainer}`}>
