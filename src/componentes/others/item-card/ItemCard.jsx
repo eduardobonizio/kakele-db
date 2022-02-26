@@ -107,7 +107,10 @@ export default function ItemCard(props) {
                 height={32}
               />
             )}
-            {text.element}:<span className={energy}>{energy}</span>
+            <span>
+              {`${text.element}: `}
+              <span className={energy}>{energy}</span>
+            </span>
           </span>
           <span className="card-text">{`${text.armor}: ${armor}`}</span>
           <span className="card-text">{`${text.magic}: ${magic}`}</span>
