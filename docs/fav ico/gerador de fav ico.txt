@@ -1,0 +1,4 @@
+https://redketchup.io/favicon-generator
+
+background Transparent
+text color #FF00FF
