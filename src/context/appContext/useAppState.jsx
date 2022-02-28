@@ -32,7 +32,7 @@ const AppProvider = ({ children }) => {
       shield: {},
       book: {},
       accessorie: {},
-      leg: {},
+      pants: {},
       shoe: {},
     },
   };

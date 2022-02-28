@@ -4195,7 +4195,7 @@ const equipments = [
     sources: '?',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16019.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Tanga Confortável',
   },
   {
@@ -4211,7 +4211,7 @@ const equipments = [
     sources: 'Monsters: Monk, Smuggler Npcs: Lucy',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16000.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Lã',
   },
   {
@@ -4228,7 +4228,7 @@ const equipments = [
       'Monsters: Banned Noble, Bielze, Forest Bandit, Minotaur, Minotaur Guard Npcs: Joana',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16001.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de couro',
   },
   {
@@ -4245,7 +4245,7 @@ const equipments = [
       'Monsters: Abyssal Cultist, Black Mage, Hell Mage, Transmuted Witch',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16002.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de mago',
   },
   {
@@ -4261,7 +4261,7 @@ const equipments = [
     sources: 'Monsters: Humanoid Toad',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16027.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Sapo Humanoide',
   },
   {
@@ -4278,7 +4278,7 @@ const equipments = [
       "Monsters: Cyborg, Dwarf, Golin, Troll Guard Quests: Norde's Treasure",
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16003.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Corrente',
   },
   {
@@ -4294,7 +4294,7 @@ const equipments = [
     sources: 'Monsters: Flash Ah-ah, Great Ninja, Novice Samurai',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16004.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Ninja',
   },
   {
@@ -4310,7 +4310,7 @@ const equipments = [
     sources: 'Quests: Heirloom Treasure',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16005.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de herança',
   },
   {
@@ -4326,7 +4326,7 @@ const equipments = [
     sources: 'Monsters: Vampire',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16024.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Vampiro',
   },
   {
@@ -4343,7 +4343,7 @@ const equipments = [
       'Monsters: Black Knight, Egipdy Warrior, Mondol Warrior, Noble Guard, Smark Warrior, Targen Warrior',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16006.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Reforçadas',
   },
   {
@@ -4359,7 +4359,7 @@ const equipments = [
     sources: 'Monsters: Mr. Roboto',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16007.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Prismáticas',
   },
   {
@@ -4375,7 +4375,7 @@ const equipments = [
     sources: 'Monsters: Fairy',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16028.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Fada',
   },
   {
@@ -4391,7 +4391,7 @@ const equipments = [
     sources: 'Monsters: Fandamir, Orzabal',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16008.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Douradas',
   },
   {
@@ -4407,7 +4407,7 @@ const equipments = [
     sources: 'Monsters: Giant Spider, Red Widow',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16009.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças da Placa',
   },
   {
@@ -4423,7 +4423,7 @@ const equipments = [
     sources: 'Monsters: Advanced Gladiator, Maximus',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16022.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Gladiador',
   },
   {
@@ -4440,7 +4440,7 @@ const equipments = [
       'Monsters: Crystal Dragon, Enraged Crystal Dragon, Frost General, Glacies',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16010.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Cristal',
   },
   {
@@ -4456,7 +4456,7 @@ const equipments = [
     sources: 'Monsters: Abyssal Cultist',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16025.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Abissais do Cultista',
   },
   {
@@ -4473,7 +4473,7 @@ const equipments = [
       'Monsters: Egipdy Archer, Egipdy Master, Mondol Archer, Mondol Master, Smark Archer, Smark Master, Targen Archer, Targen Master',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16011.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças do clã',
   },
   {
@@ -4489,7 +4489,7 @@ const equipments = [
     sources: 'Monsters: Elf, Night Elf',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16012.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças élficas',
   },
   {
@@ -4505,7 +4505,7 @@ const equipments = [
     sources: 'Monsters: Keeper of the Void, Void, Void Feeder',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16026.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Vazias',
   },
   {
@@ -4521,7 +4521,7 @@ const equipments = [
     sources: 'Monsters: Aristocrat',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16013.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Nobres',
   },
   {
@@ -4537,7 +4537,7 @@ const equipments = [
     sources: 'Monsters: Fire Beetle, Lava Golem, Lava Slime',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16014.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças do Vulcão',
   },
   {
@@ -4553,7 +4553,7 @@ const equipments = [
     sources: 'Monsters: Frost Hunter',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16023.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças do Caçador de Gelo',
   },
   {
@@ -4569,7 +4569,7 @@ const equipments = [
     sources: 'Monsters: Devil, Diabolus, Elite Devil, Nightmare',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16015.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Demônio',
   },
   {
@@ -4585,7 +4585,7 @@ const equipments = [
     sources: 'Monsters: Elementalist',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16029.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Elementais',
   },
   {
@@ -4601,7 +4601,7 @@ const equipments = [
     sources: 'Monsters: Angel, Archangel, Crusader, Paladin, Superior Angel',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16016.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Angélicas',
   },
   {
@@ -4617,7 +4617,7 @@ const equipments = [
     sources: 'Monsters: Undead Dragon Rider',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16020.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças do Domador de Dragões',
   },
   {
@@ -4633,7 +4633,7 @@ const equipments = [
     sources: 'Monsters: Chromatic Dragon, The Chromatic Golden Dragon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16031.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças cromáticas',
   },
   {
@@ -4649,7 +4649,7 @@ const equipments = [
     sources: 'Quests: Ethereal Treasure',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16017.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças Etéreas',
   },
   {
@@ -4665,7 +4665,7 @@ const equipments = [
     sources: 'Monsters: Xeru',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16030.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças cromáticas de escama de dragão dourado',
   },
   {
@@ -4681,7 +4681,7 @@ const equipments = [
     sources: 'Monsters: Xeru',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16018.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Escama de Dragão Dourado',
   },
   {
@@ -4697,7 +4697,7 @@ const equipments = [
     sources: 'Monsters: Xeru',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16021.jpg"',
-    slot: 'leg',
+    slot: 'pants',
     pt: 'Calças de Escama de Dragão Dourado Morto-vivo',
   },
   {
@@ -8899,7 +8899,7 @@ const ALL_ITENS_SLOTS_LIST = [
   'shield',
   'book',
   'accessorie',
-  'leg',
+  'pants',
   'shoe',
 ];
 

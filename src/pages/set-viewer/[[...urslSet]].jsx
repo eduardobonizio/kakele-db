@@ -202,10 +202,10 @@ export default function ShowSet() {
             />
           )}
 
-          {showSet.leg && (
+          {showSet.pants && (
             <ItemCard
-              item={showSet.leg}
-              index={showSet.leg[locale]}
+              item={showSet.pants}
+              index={showSet.pants[locale]}
               locale={locale}
             />
           )}

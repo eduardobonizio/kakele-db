@@ -10,7 +10,7 @@ export default function WikiDataBaseToJson() {
 
   // const allItems = [...equipments, ...weapons];
 
-  // const items = JSON.stringify(allItems.filter(item => item.slot === 'leg'));
+  // const items = JSON.stringify(allItems.filter(item => item.slot === 'pants'));
 
   // console.log(items);
 
@@ -97,7 +97,7 @@ export default function WikiDataBaseToJson() {
       'book',
       'necklace',
       'ring',
-      'leg',
+      'pants',
       'accessorie',
       'weapon',
     ];
