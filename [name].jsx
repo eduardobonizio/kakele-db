@@ -5,8 +5,12 @@ import ItemCard from '../../componentes/others/item-card/ItemCard';
 import { equipments, weapons } from '../../data/kakeleData';
 import styles from './ShowItem.module.css';
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
+import { useRouter } from 'next/router';
 
-function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
+function Item({ item, previousItemLink, nextItemLink }) {
+  const router = useRouter();
+  const { locales } = router;
+  const locale = router.locale === 'en' ? 'en' : 'pt';
   const text = textOptions[locale];
   return (
     <div className={`container ${styles.itemContainer}`}>
@@ -51,9 +55,9 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
   );
 }
 
-export async function getStaticProps({ params, locale, locales }) {
+export async function getStaticProps({ params, locale }) {
   const allItems = [...equipments, ...weapons];
-  const currentItem = allItems.find(item => item['en'] === params.name);
+  const currentItem = allItems.find(item => item[locale] === params.name);
   const index = allItems.indexOf(currentItem);
 
   const previousItem =
@@ -63,25 +67,26 @@ export async function getStaticProps({ params, locale, locales }) {
   return {
     props: {
       item: currentItem,
-      previousItemLink: `/wiki/${previousItem['en']}`,
-      nextItemLink: `/wiki/${nextItem['en']}`,
-      locale,
-      locales,
+      previousItemLink: `/wiki/${previousItem[locale]}`,
+      nextItemLink: `/wiki/${nextItem[locale]}`,
     },
   };
 }
 
-export async function getStaticPaths() {
-  const allPaths = [...equipments, ...weapons].map(item => {
-    if (!item['en']) return;
-    return {
-      params: { name: item['en'] },
-    };
-  });
-  // .reduce((curr, next) => {
-  //   return [...curr, ...next];
-  // }, []);
-
+export async function getStaticPaths({ locales }) {
+  const allPaths = locales
+    .map(locale => {
+      return [...equipments, ...weapons].map(item => {
+        if (!item[locale]) return;
+        return {
+          params: { name: item[locale] },
+          locale: locale,
+        };
+      });
+    })
+    .reduce((curr, next) => {
+      return [...curr, ...next];
+    }, []);
   return {
     paths: allPaths,
     fallback: false,
