@@ -1,12 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import LinkButton from '../../../componentes/buttons/link-as-button/LinkButton';
-import ItemCard from '../../../componentes/others/item-card/ItemCard';
-import styles from '../ShowItem.module.css';
-import { showItemJsx as textOptions } from '../../../data/dataLanguages';
-import weapons from '../../../data/items/weapons.json';
+import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import ItemCard from '../../componentes/others/item-card/ItemCard';
+import weapons from '../../data/items/weapons.json';
+import styles from './ShowItem.module.css';
+import { showItemJsx as textOptions } from '../../data/dataLanguages';
+import { useRouter } from 'next/router';
 
-function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
+function Item({ item, previousItemLink, nextItemLink }) {
+  const router = useRouter();
+  const { locales } = router;
+  const locale = router.locale === 'en' ? 'en' : 'pt';
   const text = textOptions[locale];
   return (
     <div className={`container ${styles.itemContainer}`}>
@@ -51,11 +55,11 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
   );
 }
 
-export async function getStaticProps({ params, locale, locales }) {
+export async function getStaticProps({ params, locale }) {
   const allItems = [...weapons];
-  const currentItem = allItems.find(item => item['en'] === params.weapon);
+  const currentItem = allItems.find(item => item[locale] === params.name);
   const index = allItems.indexOf(currentItem);
-  console.log(params);
+
   const previousItem =
     index <= 0 ? allItems[allItems.length - 1] : allItems[index - 1];
   const nextItem =
@@ -63,22 +67,26 @@ export async function getStaticProps({ params, locale, locales }) {
   return {
     props: {
       item: currentItem,
-      previousItemLink: `/wiki/weapons/${previousItem['en']}`,
-      nextItemLink: `/wiki/weapons/${nextItem['en']}`,
-      locale,
-      locales,
+      previousItemLink: `/wiki/${previousItem[locale]}`,
+      nextItemLink: `/wiki/${nextItem[locale]}`,
     },
   };
 }
 
-export async function getStaticPaths() {
-  const allPaths = [...weapons].map(item => {
-    if (!item['en']) return;
-    return {
-      params: { weapon: item['en'] },
-    };
-  });
-
+export async function getStaticPaths({ locales }) {
+  const allPaths = locales
+    .map(locale => {
+      return [...weapons].map(item => {
+        if (!item[locale]) return;
+        return {
+          params: { name: item[locale] },
+          locale: locale,
+        };
+      });
+    })
+    .reduce((curr, next) => {
+      return [...curr, ...next];
+    }, []);
   return {
     paths: allPaths,
     fallback: false,
