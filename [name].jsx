@@ -53,7 +53,7 @@ function Item({ item, locale, previousItemLink, nextItemLink, locales }) {
 
 export async function getStaticProps({ params, locale, locales }) {
   const allItems = [...equipments, ...weapons];
-  const currentItem = allItems.find(item => item[locale] === params.name[0]);
+  const currentItem = allItems.find(item => item['en'] === params.name);
   const index = allItems.indexOf(currentItem);
 
   const previousItem =
@@ -63,28 +63,24 @@ export async function getStaticProps({ params, locale, locales }) {
   return {
     props: {
       item: currentItem,
-      previousItemLink: `/wiki/${previousItem[locale]}`,
-      nextItemLink: `/wiki/${nextItem[locale]}`,
+      previousItemLink: `/wiki/${previousItem['en']}`,
+      nextItemLink: `/wiki/${nextItem['en']}`,
       locale,
       locales,
     },
   };
 }
 
-export async function getStaticPaths({ locales }) {
-  const allPaths = locales
-    .map(locale => {
-      return [...equipments, ...weapons].map(item => {
-        if (!item[locale]) return;
-        return {
-          params: { name: [item[locale]] },
-          locale: locale,
-        };
-      });
-    })
-    .reduce((curr, next) => {
-      return [...curr, ...next];
-    }, []);
+export async function getStaticPaths() {
+  const allPaths = [...equipments, ...weapons].map(item => {
+    if (!item['en']) return;
+    return {
+      params: { name: item['en'] },
+    };
+  });
+  // .reduce((curr, next) => {
+  //   return [...curr, ...next];
+  // }, []);
 
   return {
     paths: allPaths,
