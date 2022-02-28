@@ -1,7 +1,7 @@
 {
   "name": "KakeleTools",
   "short_name": "KakeleTools",
-  "start_url": ".",
+  "start_url": "https://www.kakeletools.com",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
