@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
-import weapons from '../../data/items/weapons.json';
+import accesories from '../../data/items/accesories.json';
 import styles from './ShowItem.module.css';
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
 import { useRouter } from 'next/router';
@@ -56,7 +56,7 @@ function Item({ item, previousItemLink, nextItemLink }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const allItems = [...weapons];
+  const allItems = [...accesories];
   const currentItem = allItems.find(item => item[locale] === params.name);
   const index = allItems.indexOf(currentItem);
 
@@ -76,7 +76,7 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths({ locales }) {
   const allPaths = locales
     .map(locale => {
-      return [...weapons].map(item => {
+      return [...accesories].map(item => {
         if (!item[locale]) return;
         return {
           params: { name: item[locale] },
