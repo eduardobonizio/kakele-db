@@ -8,6 +8,12 @@ import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/Button
 export default function WikiDataBaseToJson() {
   const [wikiType, setWikiType] = useState('equipments');
 
+  // const allItems = [...equipments, ...weapons];
+
+  // const items = JSON.stringify(allItems.filter(item => item.slot === 'leg'));
+
+  // console.log(items);
+
   const addPtBrToItens = () => {
     // Para funcionar tem que traduzir a página com o google tradutor e rolar até o final da página, depois volta para o inicio e clica no botão
     let newEquipmentData = [];
