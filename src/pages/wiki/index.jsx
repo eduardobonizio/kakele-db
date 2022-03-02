@@ -25,7 +25,7 @@ export default function ShowItem() {
     if (Object.keys(query).length > 0) {
       const [itemName] = query.item;
       const currentItem = allItens.find(
-        e => e[locale] === itemName || e.namePTBR === itemName,
+        e => e[locale] === itemName || e['en'] === itemName,
       );
       if (currentItem) {
         const itemIndex = allItens.indexOf(currentItem);

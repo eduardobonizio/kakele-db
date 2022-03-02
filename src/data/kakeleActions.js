@@ -355,8 +355,8 @@ const findItemsByName = (itemList, itemName) => {
   if (!itemName) return false;
   return itemList.filter(
     item =>
-      item.nameEN.toLowerCase().includes(itemName.toLowerCase()) ||
-      item.namePTBR.toLowerCase().includes(itemName.toLowerCase()),
+      item['en'].toLowerCase().includes(itemName.toLowerCase()) ||
+      item['pt'].toLowerCase().includes(itemName.toLowerCase()),
   );
 };
 
