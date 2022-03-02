@@ -15,7 +15,6 @@ module.exports = {
   robotsTxtOptions: {
     policies: [
       { userAgent: '*', disallow: '/wiki-to-json' },
-      { userAgent: '*', disallow: '/*?*' },
       { userAgent: '*', allow: '/' },
     ],
   },
