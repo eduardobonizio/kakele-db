@@ -44,7 +44,7 @@ export default function ItemCard(props) {
     },
   } = props;
 
-  const showDetails = router.pathname.includes('/wiki/');
+  const showDetails = router.pathname.includes('wiki');
   const text = textOptions[locale];
 
   const decide = thisItem => {
