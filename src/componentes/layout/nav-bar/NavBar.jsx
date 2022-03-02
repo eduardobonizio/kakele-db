@@ -3,11 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { navBarJsx as textOptions } from '../../../data/dataLanguages';
 import { useRouter } from 'next/router';
+import LanguageSwitcher from '../../buttons/language-switcher/LanguageSwitcher';
 
 // import app from '../../api/Firebase';
 
 function NavBar() {
-  const { locale } = useRouter();
+  const { locale, locales } = useRouter();
 
   const text = textOptions[locale];
 
@@ -64,6 +65,9 @@ function NavBar() {
               <Link href="/wiki" locale={locale}>
                 <a className="nav-link">{text.seeItem}</a>
               </Link>
+            </li>
+            <li>
+              <LanguageSwitcher locale={locale} locales={locales} />
             </li>
           </ul>
           {/* <ul className="navbar-nav">
