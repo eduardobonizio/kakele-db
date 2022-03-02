@@ -1,0 +1,43 @@
+.lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  .dropdown {
+    position: relative;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.lang:hover {
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      margin: 0;
+      display: block;
+      padding: 5px 0;
+      div:hover {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+.languageSwitcher {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, #dfffdb 50%, white 50%);
+  background-position-y: -390px;
+  margin: auto 0;
+  background-size: 100% 800px;
+  background-repeat: no-repeat;
+}
