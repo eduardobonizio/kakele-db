@@ -46,7 +46,7 @@ export default function ShowItem() {
             <link
               rel="alternate"
               hrefLang={loc}
-              href={`https://www.kakeletools.com/${loc}/wiki`}
+              href={`https://www.kakeletools.com/${loc}/wiki?item=${itemName}`}
               key={loc}
             />
           );
