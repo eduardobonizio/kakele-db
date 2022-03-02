@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './ShowItem.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
@@ -39,7 +39,7 @@ export default function ShowItem() {
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
-        <title>{text.title}</title>
+        <title>{`${item[locale]} ${text.title}`}</title>
 
         {locales.map(loc => {
           return (
@@ -51,8 +51,15 @@ export default function ShowItem() {
             />
           );
         })}
-        <meta name="description" content={text.description} />
-        <meta property="og:title" content={text.title} key="title" />
+        <meta
+          name="description"
+          content={`${item[locale]} ${text.oneItemDescription}`}
+        />
+        <meta
+          property="og:title"
+          content={`${item[locale]} ${text.title}`}
+          key="title"
+        />
       </Head>
 
       <div className={`${styles.buttonContainer}`}>
