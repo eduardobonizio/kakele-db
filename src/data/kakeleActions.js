@@ -32,8 +32,8 @@ const genereateLinkToViewSet = (setList, origin, locale) => {
     }
     return anterior;
   }, '');
-  if (origin) return `${origin}/${locale}/set/${link}`;
-  return `${locale}/set/${link}`;
+  if (origin) return `${origin}/${locale}/set-viewer/${link}`;
+  return `/set-viewer/${link}`;
 };
 
 const saveSetInLocalStorage = newSet => {
@@ -41,7 +41,10 @@ const saveSetInLocalStorage = newSet => {
   const link = genereateLinkToViewSet(newSet, false);
   if (!link) return;
 
-  localStorage.setItem('currentSet', JSON.stringify(link.replace('/set/', '')));
+  localStorage.setItem(
+    'currentSet',
+    JSON.stringify(link.replace('/set-viewer/', '')),
+  );
 };
 
 const loadSetFromLocalStorage = () => {
@@ -345,8 +348,8 @@ const findItemByName = (itemList, itemName, locale) => {
   const nameKey = 'en';
   return itemList.find(item => {
     return (
-      item[nameKey].toLowerCase().includes(itemName.toLowerCase()) ||
-      item[nameKey].toLowerCase().includes(itemName.toLowerCase())
+      item[nameKey].toLowerCase() === itemName.toLowerCase() ||
+      item[nameKey].toLowerCase() === itemName.toLowerCase()
     );
   });
 };

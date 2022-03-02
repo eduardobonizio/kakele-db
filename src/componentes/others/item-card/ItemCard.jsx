@@ -92,7 +92,7 @@ export default function ItemCard(props) {
         ...whatToDo,
       }).map(item => item);
 
-      saveSetInLocalStorage(newSet);
+      saveSetInLocalStorage(newSet, locale);
     }
   };
 
