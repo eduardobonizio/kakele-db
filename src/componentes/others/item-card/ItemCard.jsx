@@ -187,7 +187,7 @@ export default function ItemCard(props) {
             text={text.copy}
           />
           {!showDetails && (
-            <Link href={`/wiki/${item[locale]}`} passHref locale={locale}>
+            <Link href={`/wiki?item=${item['en']}`} passHref locale={locale}>
               <LinkButton text={text.showItem} />
             </Link>
           )}

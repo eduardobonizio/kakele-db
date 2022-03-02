@@ -11,6 +11,7 @@ import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowItem() {
   const { query, locale, locales } = useRouter();
+
   const text = textOptions[locale];
   const allItens = [...equipments, ...weapons];
   const itemName = query.item || allItens[0]['en'];
