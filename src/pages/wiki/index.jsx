@@ -11,34 +11,29 @@ import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowItem() {
   const { query, locale, locales } = useRouter();
+  const text = textOptions[locale];
   const allItens = [...equipments, ...weapons];
-  const [item, setItem] = useState(allItens[0]);
+  const itemName = query.item || allItens[0]['en'];
+  const currentItem = allItens.find(
+    e => e[locale] === itemName || e['en'] === itemName,
+  );
+  const itemIndex = allItens.indexOf(currentItem);
+  const previousIndex = itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
+  const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
+
+  const [item, setItem] = useState(false);
   const [previousItemLink, setPreviousItemLink] = useState(
-    `/wiki/${allItens[allItens.length - 1][locale]}`,
+    `/wiki?item=${allItens[previousIndex]['en']}`,
   );
   const [nextItemLink, setNextItemLink] = useState(
-    `/wiki/${allItens[1][locale]}`,
+    `/wiki?item=${allItens[nextIndex]['en']}`,
   );
-  const text = textOptions[locale];
 
-  useEffect(() => {
-    if (Object.keys(query).length > 0) {
-      const [itemName] = query.item;
-      const currentItem = allItens.find(
-        e => e[locale] === itemName || e['en'] === itemName,
-      );
-      if (currentItem) {
-        const itemIndex = allItens.indexOf(currentItem);
-        const previousIndex =
-          itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
-        const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
-        setPreviousItemLink(`/wiki/${allItens[previousIndex][locale]}`);
-        setNextItemLink(`/wiki/${allItens[nextIndex][locale]}`);
-        setItem(currentItem);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  if (item['en'] !== itemName) {
+    setItem(currentItem);
+    setPreviousItemLink(`/wiki?item=${allItens[previousIndex]['en']}`);
+    setNextItemLink(`/wiki?item=${allItens[nextIndex]['en']}`);
+  }
 
   return (
     <div className={`container ${styles.itemContainer}`}>
