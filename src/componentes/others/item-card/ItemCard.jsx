@@ -44,7 +44,7 @@ export default function ItemCard(props) {
     },
   } = props;
 
-  const showDetails = router.pathname.includes('/wiki/');
+  const showDetails = router.pathname.includes('wiki');
   const text = textOptions[locale];
 
   const decide = thisItem => {
@@ -187,7 +187,7 @@ export default function ItemCard(props) {
             text={text.copy}
           />
           {!showDetails && (
-            <Link href={`/wiki/${item[locale]}`} passHref locale={locale}>
+            <Link href={`/wiki?item=${item['en']}`} passHref locale={locale}>
               <LinkButton text={text.showItem} />
             </Link>
           )}
