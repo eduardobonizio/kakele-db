@@ -122,7 +122,7 @@ export default function ItemCard(props) {
           <span className="card-text">{`${text.attack}: ${attack}`}</span>
           <span className="card-text">{`${text.level}: ${level}`}</span>
           <span className="card-text">{`${text.slot}: ${slot}`}</span>
-          {console.log(item)}
+
           <span className="card-text">
             {`${text.rarity}: `}
             <span className={item.rarity['en'].toLowerCase()}>
@@ -138,12 +138,6 @@ export default function ItemCard(props) {
               </span>
             </>
           )}
-
-          {currentSet[slot] &&
-            currentSet[slot][locale] === item[locale] &&
-            currentSet[slot][locale] !== '-----------' && (
-              <span className={styles.equiped}>{text.equiped}</span>
-            )}
         </div>
         {ignoredItens && (
           <>
@@ -202,7 +196,12 @@ export default function ItemCard(props) {
 
           <ButtonForKakele
             onClick={() => equipItem(item)}
-            text={text.equipItem}
+            text={
+              currentSet[slot][locale] === item[locale]
+                ? text.equiped
+                : text.equipItem
+            }
+            disabled={currentSet[slot][locale] === item[locale]}
           />
         </div>
       </div>
