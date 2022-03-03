@@ -22,7 +22,7 @@ export default function HomeContent() {
         })}
         <link
           rel="alternate"
-          hrefLang="pt"
+          hrefLang="en"
           href={`https://www.kakeletools.com/`}
           key="defaulthome"
         />
