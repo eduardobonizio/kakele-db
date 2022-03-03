@@ -331,6 +331,19 @@ const expCalculatorJsx = {
   },
 };
 
+const blessJsx = {
+  en: {
+    h1: 'Kakele Bless System',
+    searchLabel: 'Item',
+    searchPlaceHolder: 'Item Name',
+  },
+  pt: {
+    h1: 'Kakele Sistema de Bless',
+    searchLabel: 'Item',
+    searchPlaceHolder: 'Nome do item',
+  },
+};
+
 const elements = {
   light: {
     en: 'Light',
@@ -366,4 +379,5 @@ export {
   elements,
   homeText,
   pageNotFound,
+  blessJsx,
 };

@@ -354,6 +354,28 @@ const findItemByName = (itemList, itemName, locale) => {
   });
 };
 
+const filterItemsByName = (itemList, itemName, locale) => {
+  if (!itemName) return [];
+  return itemList
+    .filter(item => item[locale].toLowerCase().includes(itemName.toLowerCase()))
+    .map(item => {
+      return {
+        en: item['en'],
+        pt: item['pt'],
+      };
+    })
+    .sort((a, b) => {
+      if (a[locale] < b[locale]) {
+        return -1;
+      }
+      if (a[locale] > b[locale]) {
+        return 1;
+      }
+      return 0;
+    })
+    .slice(0, 10);
+};
+
 const findItemsByName = (itemList, itemName) => {
   if (!itemName) return false;
   return itemList.filter(
@@ -390,4 +412,5 @@ export {
   saveSetInLocalStorage,
   loadSetFromLocalStorage,
   findItemsByRarity,
+  filterItemsByName,
 };
