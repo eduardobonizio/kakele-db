@@ -50,6 +50,7 @@ const itemCardJsx = {
     attack: 'Attack',
     level: 'Level',
     slot: 'Slot',
+    rarity: 'Rarity',
     sources: 'Source',
     info: 'Info',
     equiped: 'Equipped',
@@ -66,6 +67,7 @@ const itemCardJsx = {
     attack: 'Ataque',
     level: 'Nivel',
     slot: 'Slot',
+    rarity: 'Raridade',
     sources: 'Fonte',
     info: 'Info',
     equiped: 'Equipado',
@@ -152,6 +154,7 @@ const kakeleItemsFiltersJsx = {
     nature: 'Nature',
     itemSlot: 'Item slot',
     orderBy: 'Order by',
+    itemRarity: 'Rarity',
   },
   pt: {
     itemName: 'Nome do item',
@@ -173,6 +176,7 @@ const kakeleItemsFiltersJsx = {
     nature: 'Natureza',
     itemSlot: 'Slot do item',
     orderBy: 'Ordenar por',
+    itemRarity: 'Raridade',
   },
 };
 const oreCalculatorJsx = {

@@ -10,6 +10,7 @@ import {
   filterItensByLevelAndClass,
   filterItensBySlot,
   findItemsByName,
+  findItemsByRarity,
 } from '../../data/kakeleActions';
 import { equipments, weapons } from '../../data/kakeleData';
 
@@ -21,7 +22,7 @@ import { useRouter } from 'next/router';
 
 export default function SearchItem() {
   const {
-    state: { level, itemName, element, slot, characterClass, orderBy },
+    state: { level, itemName, element, slot, characterClass, orderBy, rarity },
   } = useAppContext();
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
@@ -40,9 +41,11 @@ export default function SearchItem() {
 
     const itensListByElement = filterItensByElement(itensListBySlot, element);
 
-    const itensListByName = findItemsByName(itensListByElement, itemName);
+    const itensListByRarity = findItemsByRarity(itensListByElement, rarity);
 
-    const result = itensListByName || itensListByElement;
+    const itensListByName = findItemsByName(itensListByRarity, itemName);
+
+    const result = itensListByName || itensListByRarity;
 
     setFoundItens(result);
   };

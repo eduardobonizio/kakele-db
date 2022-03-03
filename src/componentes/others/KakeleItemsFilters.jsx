@@ -6,7 +6,11 @@ import {
   kakeleItemsFiltersJsx as textOptions,
   SLOTS_NAMES,
 } from '../../data/dataLanguages';
-import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from '../../data/kakeleData';
+import {
+  ALL_ITENS_SLOTS_LIST,
+  ITEM_FILTERS,
+  ITEM_RARITY,
+} from '../../data/kakeleData';
 
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters, locale } = props;
@@ -19,6 +23,7 @@ export default function KakeleItemsFilters(props) {
       itemName,
       slot,
       orderBy,
+      rarity,
     },
     actions: { updateFilter },
   } = useAppContext();
@@ -128,6 +133,25 @@ export default function KakeleItemsFilters(props) {
               ))}
             </select>
           </div>
+
+          <div className="input-group mb-2">
+            <label className="input-group-text" htmlFor="raridade">
+              {text.itemRarity}
+            </label>
+            <select
+              className="form-select"
+              id="raridade"
+              defaultValue={rarity}
+              onChange={e => updateFilter('rarity', e.target.value)}
+            >
+              {Object.keys(ITEM_RARITY).map(rar => (
+                <option value={rar} key={rar}>
+                  {ITEM_RARITY[rar][locale]}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="input-group mb-2">
             <label className="input-group-text" htmlFor="filtro">
               {text.orderBy}

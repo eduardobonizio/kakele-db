@@ -19,6 +19,7 @@
   min-height: 73vh;
 }
 
+// Element Color
 .Nature {
   color: green;
 }
@@ -31,6 +32,23 @@
 
 .footer-container a {
   color: inherit;
+}
+
+// Item Rarity Color
+.commom {
+  color: silver;
+}
+
+.uncommon {
+  color: dodgerblue;
+}
+
+.rare {
+  color: gold;
+}
+
+.legendary {
+  color: red;
 }
 
 @media screen and (min-width: 768px) {

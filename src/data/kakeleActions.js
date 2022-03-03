@@ -363,6 +363,16 @@ const findItemsByName = (itemList, itemName) => {
   );
 };
 
+const findItemsByRarity = (itemList, itemRarity) => {
+  if (!itemRarity) return false;
+  return itemList.filter(
+    item =>
+      itemRarity === 'any' ||
+      item.rarity['en'].toLowerCase().includes(itemRarity.toLowerCase()) ||
+      item.rarity['pt'].toLowerCase().includes(itemRarity.toLowerCase()),
+  );
+};
+
 export {
   urlParamsToObject,
   activateAlert,
@@ -379,4 +389,5 @@ export {
   findItemsByName,
   saveSetInLocalStorage,
   loadSetFromLocalStorage,
+  findItemsByRarity,
 };

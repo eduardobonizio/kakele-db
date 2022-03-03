@@ -9449,12 +9449,40 @@ const FAKE_ITEM = {
   value: 0,
   sources: '',
   imgUrl: '',
+  rarity: {
+    en: '',
+    pt: '',
+  },
   twoHanded: false,
+};
+
+const ITEM_RARITY = {
+  any: {
+    en: 'Any',
+    pt: 'Qualquer',
+  },
+  commom: {
+    en: 'Commom',
+    pt: 'Comum',
+  },
+  uncommom: {
+    en: 'Uncommom',
+    pt: 'Incomum',
+  },
+  rare: {
+    en: 'Rare',
+    pt: 'Raro',
+  },
+  legendary: {
+    en: 'Legendary',
+    pt: 'Legendário',
+  },
 };
 
 export {
   equipments,
   weapons,
+  ITEM_RARITY,
   UPGRADES_DATA,
   UPGRADES_STAGES,
   ALL_ITENS_SLOTS_LIST,

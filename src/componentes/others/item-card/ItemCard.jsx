@@ -122,6 +122,14 @@ export default function ItemCard(props) {
           <span className="card-text">{`${text.attack}: ${attack}`}</span>
           <span className="card-text">{`${text.level}: ${level}`}</span>
           <span className="card-text">{`${text.slot}: ${slot}`}</span>
+          {console.log(item)}
+          <span className="card-text">
+            {`${text.rarity}: `}
+            <span className={item.rarity['en'].toLowerCase()}>
+              {item.rarity[locale]}
+            </span>
+          </span>
+
           {showDetails && (
             <>
               <span className="card-text">{`${text.sources}: ${sources}`}</span>

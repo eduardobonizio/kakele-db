@@ -27,6 +27,22 @@
   color: inherit;
 }
 
+.commom {
+  color: silver;
+}
+
+.uncommon {
+  color: dodgerblue;
+}
+
+.rare {
+  color: gold;
+}
+
+.legendary {
+  color: red;
+}
+
 @media screen and (min-width: 768px) {
   .body-container {
     min-height: 80vh;

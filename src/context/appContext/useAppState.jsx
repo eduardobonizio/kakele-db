@@ -23,6 +23,7 @@ const AppProvider = ({ children }) => {
     itemName: '',
     slot: 'All',
     orderBy: 'level',
+    rarity: 'any',
     currentSet: {
       necklace: {},
       helmet: {},
