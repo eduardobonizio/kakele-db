@@ -8,11 +8,24 @@ import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/Button
 export default function WikiDataBaseToJson() {
   const [wikiType, setWikiType] = useState('equipments');
 
-  // const allItems = [...equipments, ...weapons];
-
-  // const items = JSON.stringify(allItems.filter(item => item.slot === 'pants'));
-
-  // console.log(items);
+  const raridade = {
+    silver: {
+      en: 'Commom',
+      pt: 'Comum',
+    },
+    dodgerblue: {
+      en: 'Uncommom',
+      pt: 'Incomum',
+    },
+    gold: {
+      en: 'Rare',
+      pt: 'Raro',
+    },
+    red: {
+      en: 'Legendary',
+      pt: 'Legendário',
+    },
+  };
 
   const addPtBrToItens = () => {
     // Para funcionar tem que traduzir a página com o google tradutor e rolar até o final da página, depois volta para o inicio e clica no botão
@@ -58,6 +71,8 @@ export default function WikiDataBaseToJson() {
         if (itemStatus.includes('two-handed')) twoHanded = true;
       });
 
+      const rarity = item.getElementsByTagName('td')[0].style.color;
+
       const imgLink = item
         .querySelector('.item')
         .style.backgroundImage.replace('url(', '')
@@ -75,6 +90,7 @@ export default function WikiDataBaseToJson() {
         value: Number(
           item.getElementsByTagName('td')[6].innerText.replaceAll(',', ''),
         ),
+        rarity: raridade[rarity],
         sources: item.getElementsByTagName('td')[7].innerText,
         slot: 'weapon',
         imgUrl: imgLink,
@@ -123,6 +139,8 @@ export default function WikiDataBaseToJson() {
         if (itemStatus.includes('attack')) attack = value;
       });
 
+      const rarity = item.getElementsByTagName('td')[0].style.color;
+
       const imgLink = item
         .querySelector('.item')
         .style.backgroundImage.replace('url(', '')
@@ -139,6 +157,7 @@ export default function WikiDataBaseToJson() {
         magic,
         haste,
         attack,
+        rarity: raridade[rarity],
         sources: item.getElementsByTagName('td')[6].innerText,
         imgUrl: imgLink,
       };
