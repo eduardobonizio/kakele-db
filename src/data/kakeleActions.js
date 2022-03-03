@@ -342,14 +342,14 @@ const checkSetElement = (itens, locale) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName, locale) => {
+const findItemByName = (itemList, itemName, locale = 'en') => {
   if (!itemName) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const nameKey = 'en';
   return itemList.find(item => {
     return (
       item[nameKey].toLowerCase() === itemName.toLowerCase() ||
-      item[nameKey].toLowerCase() === itemName.toLowerCase()
+      item[locale].toLowerCase() === itemName.toLowerCase()
     );
   });
 };
