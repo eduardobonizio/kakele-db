@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './SearchItem.module.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import { useAppContext } from '../../context/appContext/useAppState';
@@ -49,6 +49,10 @@ export default function SearchItem() {
 
     setFoundItens(result);
   };
+
+  useEffect(() => {
+    lookForItens();
+  }, []);
 
   return (
     <div className={`container d-flex ${styles.container}`}>
