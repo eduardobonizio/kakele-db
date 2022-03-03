@@ -14,6 +14,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4000.jpg"',
     slot: 'helmet',
     pt: 'Boina Verde',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Swimming Goggles',
@@ -30,6 +31,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4025.jpg"',
     slot: 'helmet',
     pt: 'Óculos de natação',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Unknown Helmet',
@@ -46,6 +48,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4041.jpg"',
     slot: 'helmet',
     pt: 'Elmo desconhecido',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Purple Bandana',
@@ -62,6 +65,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4017.jpg"',
     slot: 'helmet',
     pt: 'Bandana Roxa',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Bronze Helmet',
@@ -79,6 +83,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4001.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Bronze',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Black Bandana',
@@ -95,6 +100,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4019.jpg"',
     slot: 'helmet',
     pt: 'Bandana Preta',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Steel Helmet',
@@ -111,6 +117,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4002.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Aço',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Witch Hat',
@@ -127,6 +134,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4003.jpg"',
     slot: 'helmet',
     pt: 'Chapéu de bruxo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Explorer Helmet',
@@ -143,6 +151,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4021.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Explorador',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Silver Helmet',
@@ -160,6 +169,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4004.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Prata',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Alamogordo Helmet',
@@ -176,6 +186,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4027.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Alamogordo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Mastermind Hat',
@@ -192,6 +203,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4005.jpg"',
     slot: 'helmet',
     pt: 'Chapéu de Mentor',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Iron Helmet',
@@ -208,6 +220,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4020.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Ferro',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: "Golin's Helmet",
@@ -224,6 +237,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4015.jpg"',
     slot: 'helmet',
     pt: 'Capacete do Golin',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Humanoid Lioncat Helmet',
@@ -240,6 +254,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4038.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Leão Gato Humanóide',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Demon Horn Helmet',
@@ -256,6 +271,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4007.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Chifre Demoníaco',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Noble Guard Helmet',
@@ -272,6 +288,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4033.jpg"',
     slot: 'helmet',
     pt: 'Elmo da Guarda Nobre',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Darkness Hat',
@@ -288,6 +305,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4014.jpg"',
     slot: 'helmet',
     pt: 'Chapéu das Trevas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Skeletons Helmet',
@@ -304,6 +322,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4011.jpg"',
     slot: 'helmet',
     pt: 'Capacete dos Esqueletos',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Spider Silk Helmet',
@@ -320,6 +339,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4008.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Seda de Aranha',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: "Clan's Helmet",
@@ -337,6 +357,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4013.jpg"',
     slot: 'helmet',
     pt: 'Capacete dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Skeleton Warrior Helmet',
@@ -353,6 +374,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4036.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Esqueleto Guerreiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Poison Beetle Helmet',
@@ -369,6 +391,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4039.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Besouro Venenoso',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Warrior Helmet',
@@ -385,6 +408,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4006.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Guerreiro',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: "Hell's Helmet",
@@ -401,6 +425,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4012.jpg"',
     slot: 'helmet',
     pt: 'Elmo do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Frost Helmet',
@@ -417,6 +442,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4018.jpg"',
     slot: 'helmet',
     pt: 'Capacete Congelado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Dwarf Miner Helmet',
@@ -433,6 +459,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4034.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Anão Mineiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Helmet of the Void',
@@ -449,6 +476,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4022.jpg"',
     slot: 'helmet',
     pt: 'Capacete do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Lava Helmet',
@@ -465,6 +493,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4009.jpg"',
     slot: 'helmet',
     pt: 'Capacete de lava',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Noble Topper',
@@ -481,6 +510,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4030.jpg"',
     slot: 'helmet',
     pt: 'Cartola Nobre',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Cruzader Helmet',
@@ -497,6 +527,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4024.jpg"',
     slot: 'helmet',
     pt: 'Elmo das Cruzadas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Undead Dragon Rider Helmet',
@@ -513,6 +544,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4037.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Cavaleiro de Dragão Morto Vivo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Night Elf Lord Helmet',
@@ -529,6 +561,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4040.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Lorde Elfo da Noite',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Crown of the Skies',
@@ -545,6 +578,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4023.jpg"',
     slot: 'helmet',
     pt: 'Coroa dos Céus',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Helmet of the Doom',
@@ -561,6 +595,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4026.jpg"',
     slot: 'helmet',
     pt: 'Capacete da Perdição',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Revenant Helmet',
@@ -577,6 +612,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4035.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Revenant',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Helmet",
@@ -593,6 +629,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4028.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Devil Hunter Helmet',
@@ -609,6 +646,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4010.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Caçador de Diabo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Celestial Helmet',
@@ -625,6 +663,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4031.jpg"',
     slot: 'helmet',
     pt: 'Capacete Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Dragon Scale Helmet',
@@ -641,6 +680,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4016.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Escama de Dragão Dourada',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Golden Dragon Scale Helmet',
@@ -657,6 +697,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4032.jpg"',
     slot: 'helmet',
     pt: 'Elmo de Escamas de Dragão Dourado Morto-Vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Crown of Enlightenment',
@@ -673,6 +714,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4029.jpg"',
     slot: 'helmet',
     pt: 'Coroa da Iluminação',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Chromatic Golden Dragon Scale Helmet',
@@ -689,6 +731,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4043.jpg"',
     slot: 'helmet',
     pt: 'Capacete de Escamas de Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Rainbow Helmet',
@@ -705,6 +748,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4042.jpg"',
     slot: 'helmet',
     pt: 'Elmo Arco-íris',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Wool Shirt',
@@ -721,6 +765,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4100.jpg"',
     slot: 'armor',
     pt: 'Camisa de lã',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Wool Coat',
@@ -737,6 +782,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4101.jpg"',
     slot: 'armor',
     pt: 'Casaco de lã',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Reinforced Shirt',
@@ -753,6 +799,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4117.jpg"',
     slot: 'armor',
     pt: 'Camisa Reforçada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Winter Coat',
@@ -769,6 +816,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4119.jpg"',
     slot: 'armor',
     pt: 'Casaco de inverno',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Leather Armor',
@@ -786,6 +834,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4102.jpg"',
     slot: 'armor',
     pt: 'Armadura de couro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ghostly Coat',
@@ -802,6 +851,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4121.jpg"',
     slot: 'armor',
     pt: 'Casaco Espectral',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Plate Armor',
@@ -819,6 +869,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4103.jpg"',
     slot: 'armor',
     pt: 'Armadura de Placa',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Bronze Armor',
@@ -835,6 +886,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4115.jpg"',
     slot: 'armor',
     pt: 'Armadura de Bronze',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Armor',
@@ -851,6 +903,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4104.jpg"',
     slot: 'armor',
     pt: 'Armadura de Prata',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Humanoid Fox Cape',
@@ -867,6 +920,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4137.jpg"',
     slot: 'armor',
     pt: 'Capa de Raposa Humanóide',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'War Armor',
@@ -883,6 +937,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4122.jpg"',
     slot: 'armor',
     pt: 'Armadura de Guerra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Vortex Robe',
@@ -899,6 +954,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4126.jpg"',
     slot: 'armor',
     pt: 'Manto do Vórtice',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Golden Armor',
@@ -915,6 +971,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4105.jpg"',
     slot: 'armor',
     pt: 'Armadura Dourada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Vulcana Armor',
@@ -931,6 +988,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4106.jpg"',
     slot: 'armor',
     pt: 'Armadura de Vulcana',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Ice Beetle Carapace Armor',
@@ -947,6 +1005,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4138.jpg"',
     slot: 'armor',
     pt: 'Armadura de Carapaça de Besouro de Gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dark Armor',
@@ -963,6 +1022,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4107.jpg"',
     slot: 'armor',
     pt: 'Armadura Negra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Blue Robe',
@@ -979,6 +1039,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4113.jpg"',
     slot: 'armor',
     pt: 'Túnica Azul',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Skeleton Warrior Armor',
@@ -995,6 +1056,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4134.jpg"',
     slot: 'armor',
     pt: 'Armadura de Esqueleto Guerreiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Spider Silk Armor',
@@ -1011,6 +1073,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4108.jpg"',
     slot: 'armor',
     pt: 'Armadura de Seda de Aranha',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Heron's Armor",
@@ -1027,6 +1090,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4111.jpg"',
     slot: 'armor',
     pt: 'Armadura do Heron',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: "Hell's Cloak",
@@ -1043,6 +1107,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4110.jpg"',
     slot: 'armor',
     pt: 'Manto do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Armor",
@@ -1060,6 +1125,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4112.jpg"',
     slot: 'armor',
     pt: 'Armadura dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Abyssal Skeleton Armor',
@@ -1076,6 +1142,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4135.jpg"',
     slot: 'armor',
     pt: 'Armadura de Esqueleto Abissal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Royal Cloak',
@@ -1092,6 +1159,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4114.jpg"',
     slot: 'armor',
     pt: 'Manto Real',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Lava Armor',
@@ -1108,6 +1176,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4139.jpg"',
     slot: 'armor',
     pt: 'Armadura de lava',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Frost Armor',
@@ -1124,6 +1193,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4118.jpg"',
     slot: 'armor',
     pt: 'Armadura Congelada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Mystic Robe',
@@ -1140,6 +1210,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4120.jpg"',
     slot: 'armor',
     pt: 'Túnica Mística',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Armor of the Void',
@@ -1156,6 +1227,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4123.jpg"',
     slot: 'armor',
     pt: 'Armadura do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Paladin Armor',
@@ -1172,6 +1244,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4124.jpg"',
     slot: 'armor',
     pt: 'Armadura de Paladino',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Black Dragon Scale Armor',
@@ -1188,6 +1261,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4140.jpg"',
     slot: 'armor',
     pt: 'Armadura de Escamas de Dragão Preto',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Devil Hunter Armor',
@@ -1204,6 +1278,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4109.jpg"',
     slot: 'armor',
     pt: 'Armadura de Caçador de Diabo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Unstable Vortex Robe',
@@ -1220,6 +1295,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4127.jpg"',
     slot: 'armor',
     pt: 'Manto do Vórtice Instável',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Dwarf Warrior Armor',
@@ -1236,6 +1312,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4132.jpg"',
     slot: 'armor',
     pt: 'Armadura de Anão Guerreiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elemental Armor',
@@ -1252,6 +1329,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4141.jpg"',
     slot: 'armor',
     pt: 'Armadura Elemental',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Saint Armor',
@@ -1268,6 +1346,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4125.jpg"',
     slot: 'armor',
     pt: 'Armadura Santa',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Elder Vampire Armor',
@@ -1285,6 +1364,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4136.jpg"',
     slot: 'armor',
     pt: 'Armadura de Vampiro Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Armor",
@@ -1301,6 +1381,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4128.jpg"',
     slot: 'armor',
     pt: 'Armadura de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Revenant Armor',
@@ -1317,6 +1398,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4133.jpg"',
     slot: 'armor',
     pt: 'Armadura de Revenante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Corrupted Armor',
@@ -1333,6 +1415,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4129.jpg"',
     slot: 'armor',
     pt: 'Armadura Corrompida',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Celestial Armor',
@@ -1349,6 +1432,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4130.jpg"',
     slot: 'armor',
     pt: 'Armadura Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Dragon Scale Armor',
@@ -1365,6 +1449,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4116.jpg"',
     slot: 'armor',
     pt: 'Armadura de Escama de Dragão Dourada',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Golden Dragon Scale Armor',
@@ -1381,6 +1466,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4131.jpg"',
     slot: 'armor',
     pt: 'Armadura de Escama de Dragão Dourado Morto-vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Scale Armor',
@@ -1397,6 +1483,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4143.jpg"',
     slot: 'armor',
     pt: 'Armadura de Escamas de Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Rainbow Armor',
@@ -1413,6 +1500,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4142.jpg"',
     slot: 'armor',
     pt: 'Armadura Arco-Íris',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Leather Boot',
@@ -1429,6 +1517,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4200.jpg"',
     slot: 'shoe',
     pt: 'Bota de Couro',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Strange Cloth Shoe',
@@ -1445,6 +1534,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4213.jpg"',
     slot: 'shoe',
     pt: 'Sapato de Tecido Estranho',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Tin Boot',
@@ -1461,6 +1551,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4215.jpg"',
     slot: 'shoe',
     pt: 'Bota de Lata',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Reinforced Leather Boot',
@@ -1478,6 +1569,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4201.jpg"',
     slot: 'shoe',
     pt: 'Bota de Couro Reforçada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Light Boot',
@@ -1494,6 +1586,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4202.jpg"',
     slot: 'shoe',
     pt: 'Bota Leve',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Steeltoe Boot',
@@ -1510,6 +1603,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4212.jpg"',
     slot: 'shoe',
     pt: 'Bota com Biqueira de Aço',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Steel Boot',
@@ -1526,6 +1620,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4203.jpg"',
     slot: 'shoe',
     pt: 'Bota de Aço',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Undead Warrior Boot',
@@ -1542,6 +1637,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4226.jpg"',
     slot: 'shoe',
     pt: 'Bota de Guerreiro Morto-vivo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Winged Boot',
@@ -1558,6 +1654,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4204.jpg"',
     slot: 'shoe',
     pt: 'Bota Alada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dark Boot',
@@ -1574,6 +1671,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4205.jpg"',
     slot: 'shoe',
     pt: 'Bota Negra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Golden Boot',
@@ -1590,6 +1688,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4207.jpg"',
     slot: 'shoe',
     pt: 'Bota dourada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Giant Beetle Carapace Boot',
@@ -1606,6 +1705,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4230.jpg"',
     slot: 'shoe',
     pt: 'Bota de Carapaça de Besouro Gigante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Demon Boot',
@@ -1622,6 +1722,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4206.jpg"',
     slot: 'shoe',
     pt: 'Bota Demoníaca',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Boots of Haste',
@@ -1638,6 +1739,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4210.jpg"',
     slot: 'shoe',
     pt: 'Botas da Velocidade',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Spider Silk Boot',
@@ -1654,6 +1756,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4208.jpg"',
     slot: 'shoe',
     pt: 'Bota de Seda de Aranha',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Noble Extractor Boot',
@@ -1670,6 +1773,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4223.jpg"',
     slot: 'shoe',
     pt: 'Botas de Extrator Nobre',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Skeleton Warrior Boot',
@@ -1686,6 +1790,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4227.jpg"',
     slot: 'shoe',
     pt: 'Bota de Esqueleto Guerreiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Lava Boot',
@@ -1702,6 +1807,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4209.jpg"',
     slot: 'shoe',
     pt: 'Bota de Lava',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Boots",
@@ -1718,6 +1824,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4211.jpg"',
     slot: 'shoe',
     pt: 'Botas dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Mystic Boot',
@@ -1734,6 +1841,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4216.jpg"',
     slot: 'shoe',
     pt: 'Bota Mística',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Frost Boots',
@@ -1750,6 +1858,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4214.jpg"',
     slot: 'shoe',
     pt: 'Botas Congeladas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ice Widow Silk Boot',
@@ -1766,6 +1875,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4231.jpg"',
     slot: 'shoe',
     pt: 'Bota de Seda da Viúva de Gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Noble Boots',
@@ -1782,6 +1892,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4221.jpg"',
     slot: 'shoe',
     pt: 'Botas Nobres',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Abyssal Cultist Boot',
@@ -1798,6 +1909,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4228.jpg"',
     slot: 'shoe',
     pt: 'Bota de Cultista Abissal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Angelical Boots',
@@ -1814,6 +1926,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4218.jpg"',
     slot: 'shoe',
     pt: 'Botas Angelicais',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Giant Worm Boot',
@@ -1830,6 +1943,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4232.jpg"',
     slot: 'shoe',
     pt: 'Bota de Verme Gigante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Undead Dragon Tamer Boot',
@@ -1846,6 +1960,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4229.jpg"',
     slot: 'shoe',
     pt: 'Bota de Domador de Dragões Morto-Vivo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Frost Hunter Boot',
@@ -1862,6 +1977,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4224.jpg"',
     slot: 'shoe',
     pt: 'Bota de Caçador do Gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Boots of Dark Magic',
@@ -1878,6 +1994,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4219.jpg"',
     slot: 'shoe',
     pt: 'Botas de Magia Negra',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Crystal Boot',
@@ -1894,6 +2011,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4233.jpg"',
     slot: 'shoe',
     pt: 'Bota de Cristal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Boots",
@@ -1910,6 +2028,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4220.jpg"',
     slot: 'shoe',
     pt: 'Botas de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Revenant Boot',
@@ -1926,6 +2045,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4225.jpg"',
     slot: 'shoe',
     pt: 'Bota de Revenante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Interdimensional Boots',
@@ -1942,6 +2062,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4217.jpg"',
     slot: 'shoe',
     pt: 'Botas Interdimensionais',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Celestial Boots',
@@ -1958,6 +2079,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4222.jpg"',
     slot: 'shoe',
     pt: 'Botas Celestiais',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Reinforced Shield',
@@ -1974,6 +2096,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4317.jpg"',
     slot: 'shield',
     pt: 'Escudo Reforçado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Round Wooden Shield',
@@ -1990,6 +2113,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4300.jpg"',
     slot: 'shield',
     pt: 'Escudo de Madeira Redondo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Copper Shield',
@@ -2006,6 +2130,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4319.jpg"',
     slot: 'shield',
     pt: 'Escudo de Cobre',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Squared Wooden Shield',
@@ -2023,6 +2148,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4301.jpg"',
     slot: 'shield',
     pt: 'Escudo de Madeira Quadrado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Heritage Shield',
@@ -2039,6 +2165,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4320.jpg"',
     slot: 'shield',
     pt: 'Escudo de Herança',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Undead Warrior Shield',
@@ -2055,6 +2182,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4335.jpg"',
     slot: 'shield',
     pt: 'Escudo de guerreiro morto-vivo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Steel Shield',
@@ -2071,6 +2199,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4302.jpg"',
     slot: 'shield',
     pt: 'Escudo de Aço',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Dark Shield',
@@ -2088,6 +2217,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4303.jpg"',
     slot: 'shield',
     pt: 'Escudo Negro',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Humanoid Toad Shield',
@@ -2104,6 +2234,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4337.jpg"',
     slot: 'shield',
     pt: 'Escudo de Sapo Humanoide',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dwarven Shield',
@@ -2120,6 +2251,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4304.jpg"',
     slot: 'shield',
     pt: 'Escudo dos Anões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bones Shield',
@@ -2136,6 +2268,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4305.jpg"',
     slot: 'shield',
     pt: 'Escudo de Ossos',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Ice Shield',
@@ -2152,6 +2285,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4310.jpg"',
     slot: 'shield',
     pt: 'Escudo Gelado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Troll Shield',
@@ -2168,6 +2302,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4332.jpg"',
     slot: 'shield',
     pt: 'Escudo de Troll',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Crown Shield',
@@ -2184,6 +2319,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4306.jpg"',
     slot: 'shield',
     pt: 'Escudo Real',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Golden Shield',
@@ -2200,6 +2336,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4308.jpg"',
     slot: 'shield',
     pt: 'Escudo Dourado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Evil Shield',
@@ -2216,6 +2353,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4307.jpg"',
     slot: 'shield',
     pt: 'Escudo Maléfico',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Time Shield',
@@ -2232,6 +2370,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4309.jpg"',
     slot: 'shield',
     pt: 'Escudo Temporal',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Giant Spider Shield',
@@ -2248,6 +2387,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4338.jpg"',
     slot: 'shield',
     pt: 'Escudo de Aranha Gigante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Tower Shield',
@@ -2264,6 +2404,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4315.jpg"',
     slot: 'shield',
     pt: 'Escudo das Torres',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'The Winter Shield',
@@ -2280,6 +2421,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4314.jpg"',
     slot: 'shield',
     pt: 'Escudo do Inverno',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Skull Shield',
@@ -2296,6 +2438,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4311.jpg"',
     slot: 'shield',
     pt: 'Escudo de Crânio',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Crystal Shield',
@@ -2312,6 +2455,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4313.jpg"',
     slot: 'shield',
     pt: 'Escudo de Cristal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Shield",
@@ -2329,6 +2473,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4316.jpg"',
     slot: 'shield',
     pt: 'Escudo dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Mithril Shield',
@@ -2345,6 +2490,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4321.jpg"',
     slot: 'shield',
     pt: 'Escudo de Mithril',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Shield of the Void',
@@ -2361,6 +2507,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4322.jpg"',
     slot: 'shield',
     pt: 'Escudo do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Shield',
@@ -2377,6 +2524,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4326.jpg"',
     slot: 'shield',
     pt: 'Escudo de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Gladiator Shield',
@@ -2393,6 +2541,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4333.jpg"',
     slot: 'shield',
     pt: 'Escudo de Gladiador',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Sacred Shield',
@@ -2409,6 +2558,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4323.jpg"',
     slot: 'shield',
     pt: 'Escudo Sagrado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Draconia Shield',
@@ -2425,6 +2575,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4339.jpg"',
     slot: 'shield',
     pt: 'Escudo de Draconia',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Devil Shield',
@@ -2441,6 +2592,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4336.jpg"',
     slot: 'shield',
     pt: 'Escudo de Diabo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Angaina Shield',
@@ -2457,6 +2609,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4325.jpg"',
     slot: 'shield',
     pt: 'Escudo Angaina',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Righteous Shield',
@@ -2473,6 +2626,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4324.jpg"',
     slot: 'shield',
     pt: 'Escudo dos Justos',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Paladin Shield',
@@ -2489,6 +2643,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4334.jpg"',
     slot: 'shield',
     pt: 'Escudo de Paladino',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elder Vampire Shield',
@@ -2506,6 +2661,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4330.jpg"',
     slot: 'shield',
     pt: 'Escudo de Vampiro Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragon Shield',
@@ -2523,6 +2679,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4312.jpg"',
     slot: 'shield',
     pt: 'Escudo de Dragão',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Shield",
@@ -2539,6 +2696,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4327.jpg"',
     slot: 'shield',
     pt: 'Escudo de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Revenant Shield',
@@ -2555,6 +2713,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4331.jpg"',
     slot: 'shield',
     pt: 'Escudo de Revenante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Corrupted Shield',
@@ -2571,6 +2730,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4328.jpg"',
     slot: 'shield',
     pt: 'Escudo corrompido',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragons Tamer Shield',
@@ -2587,6 +2747,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4329.jpg"',
     slot: 'shield',
     pt: 'Escudo de Domador de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Beginner's Spellbook",
@@ -2603,6 +2764,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12000.jpg"',
     slot: 'book',
     pt: 'Livro de feitiços para iniciantes',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Fragile Grimoire',
@@ -2619,6 +2781,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12001.jpg"',
     slot: 'book',
     pt: 'Grimório Frágil',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Faun Book',
@@ -2635,6 +2798,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12022.jpg"',
     slot: 'book',
     pt: 'Livro de Fauno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Incarnated Spellbook',
@@ -2651,6 +2815,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12002.jpg"',
     slot: 'book',
     pt: 'Livro de Feitiços Encarnado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Reincarnated Spellbook',
@@ -2667,6 +2832,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12003.jpg"',
     slot: 'book',
     pt: 'Livro de feitiços reencarnado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Preserved Tome',
@@ -2683,6 +2849,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12004.jpg"',
     slot: 'book',
     pt: 'Tomo Preservado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Frigid Grimoire',
@@ -2699,6 +2866,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12005.jpg"',
     slot: 'book',
     pt: 'Grimório Frígido',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Blazefury Tome',
@@ -2715,6 +2883,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12006.jpg"',
     slot: 'book',
     pt: 'Tomo da Fúria de Fogo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: "Warlock's Secrets",
@@ -2731,6 +2900,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12007.jpg"',
     slot: 'book',
     pt: 'Segredos de Magos',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Vampiric Spellbook',
@@ -2747,6 +2917,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12008.jpg"',
     slot: 'book',
     pt: 'Livro de feitiços vampírico',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Silk Book',
@@ -2763,6 +2934,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12026.jpg"',
     slot: 'book',
     pt: 'Livro de seda',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Spellbook",
@@ -2780,6 +2952,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12009.jpg"',
     slot: 'book',
     pt: 'Livro de feitiços do Clã',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Hellish Tome',
@@ -2796,6 +2969,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12010.jpg"',
     slot: 'book',
     pt: 'Tomo Infernal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Earth Tome',
@@ -2812,6 +2986,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12013.jpg"',
     slot: 'book',
     pt: 'Tomo da Natureza',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Demonic Spellbook',
@@ -2828,6 +3003,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12011.jpg"',
     slot: 'book',
     pt: 'Livro de Feitiços Demoníaco',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Prayer Book',
@@ -2844,6 +3020,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12023.jpg"',
     slot: 'book',
     pt: 'Livro de Orações',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Tome of the Void',
@@ -2860,6 +3037,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12014.jpg"',
     slot: 'book',
     pt: 'Tomo do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Artificer Tome',
@@ -2876,6 +3054,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12018.jpg"',
     slot: 'book',
     pt: 'Tomo Artífice',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Draconic Tome',
@@ -2892,6 +3071,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12012.jpg"',
     slot: 'book',
     pt: 'Tomo Dracônico',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Book of Good Deeds',
@@ -2908,6 +3088,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12024.jpg"',
     slot: 'book',
     pt: 'Livro de boas ações',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Vortex Book',
@@ -2924,6 +3105,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12025.jpg"',
     slot: 'book',
     pt: 'Livro do Vórtice',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Sacred Tome',
@@ -2940,6 +3122,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12015.jpg"',
     slot: 'book',
     pt: 'Tomo Sagrado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ancient Tome',
@@ -2956,6 +3139,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12016.jpg"',
     slot: 'book',
     pt: 'Tomo Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elder Vampire Tome',
@@ -2972,6 +3156,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12021.jpg"',
     slot: 'book',
     pt: 'Tomo de Vampiro Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Tome",
@@ -2988,6 +3173,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12017.jpg"',
     slot: 'book',
     pt: 'Tomo de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Celestial Tome',
@@ -3004,6 +3190,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12020.jpg"',
     slot: 'book',
     pt: 'Tomo Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Forgotten Tome',
@@ -3020,6 +3207,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12019.jpg"',
     slot: 'book',
     pt: 'Tomo Esquecido',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Chromatic Book',
@@ -3036,6 +3224,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12027.jpg"',
     slot: 'book',
     pt: 'Livro cromático',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bow Tie',
@@ -3052,6 +3241,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4424.jpg"',
     slot: 'necklace',
     pt: 'Gravata-borboleta',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Amulet of Death',
@@ -3068,6 +3258,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4425.jpg"',
     slot: 'necklace',
     pt: 'Amuleto da Morte',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Spirit Necklace',
@@ -3084,6 +3275,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4400.jpg"',
     slot: 'necklace',
     pt: 'Colar Espiritual',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Bronze Health Charm',
@@ -3100,6 +3292,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4409.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Bronze da Saúde',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bronze Mana Charm',
@@ -3116,6 +3309,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4412.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Bronze de Mana',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bronze Defense Charm',
@@ -3132,6 +3326,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4415.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Bronze de Defesa',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bronze Anti Spell Charm',
@@ -3148,6 +3343,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4418.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Bronze Anti Magia',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Amulet of Life',
@@ -3164,6 +3360,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4404.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Vida',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Unbreakable Necklace',
@@ -3180,6 +3377,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4401.jpg"',
     slot: 'necklace',
     pt: 'Colar Inquebrável',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Medusa Necklace',
@@ -3196,6 +3394,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4433.jpg"',
     slot: 'necklace',
     pt: 'Colar de Medusa',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Oceanic Necklace',
@@ -3212,6 +3411,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4402.jpg"',
     slot: 'necklace',
     pt: 'Colar Oceânico',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Health Charm',
@@ -3228,6 +3428,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4410.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Prata da Saúde',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Anti Spell Charm',
@@ -3244,6 +3445,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4419.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Prata Anti Magia',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Mana Charm',
@@ -3260,6 +3462,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4413.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Prata de Mana',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Defense Charm',
@@ -3276,6 +3479,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4416.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Prata de Defesa',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Blessed Amulet',
@@ -3292,6 +3496,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4405.jpg"',
     slot: 'necklace',
     pt: 'Amuleto Abençoado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Troll Necklace',
@@ -3308,6 +3513,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4434.jpg"',
     slot: 'necklace',
     pt: 'Colar de Troll',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Vampire Necklace',
@@ -3324,6 +3530,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4403.jpg"',
     slot: 'necklace',
     pt: 'Colar de Vampiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Gold Anti Spell Charm',
@@ -3340,6 +3547,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4420.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Ouro Anti Magia',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Gold Health Charm',
@@ -3357,6 +3565,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4411.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Ouro de Saúde',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Gold Mana Charm',
@@ -3374,6 +3583,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4414.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Ouro de Mana',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Gold Defense Charm',
@@ -3390,6 +3600,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4417.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Ouro de Defesa',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Giant Spider Necklace',
@@ -3406,6 +3617,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4439.jpg"',
     slot: 'necklace',
     pt: 'Colar de Aranha Gigante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Antichrist Amulet',
@@ -3422,6 +3634,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4406.jpg"',
     slot: 'necklace',
     pt: 'Amuleto do Anticristo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Amulet",
@@ -3439,6 +3652,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4408.jpg"',
     slot: 'necklace',
     pt: 'Amuleto dos Clãs',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Antidemonic Amulet',
@@ -3455,6 +3669,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4422.jpg"',
     slot: 'necklace',
     pt: 'Amuleto Antidemônico',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Mystic Amulet',
@@ -3471,6 +3686,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4421.jpg"',
     slot: 'necklace',
     pt: 'Amuleto Místico',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Amulet',
@@ -3487,6 +3703,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4426.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Monk Necklace',
@@ -3503,6 +3720,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4435.jpg"',
     slot: 'necklace',
     pt: 'Colar de Monge',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Night Amulet',
@@ -3519,6 +3737,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4427.jpg"',
     slot: 'necklace',
     pt: 'Amuleto de Elfo da Noite',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Banshee Necklace',
@@ -3535,6 +3754,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4437.jpg"',
     slot: 'necklace',
     pt: 'Colar de Banshee',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Noble Necklace',
@@ -3551,6 +3771,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4429.jpg"',
     slot: 'necklace',
     pt: 'Colar Nobre',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elemental Necklace',
@@ -3567,6 +3788,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4440.jpg"',
     slot: 'necklace',
     pt: 'Colar Elemental',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Undead Dragon Necklace',
@@ -3583,6 +3805,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4438.jpg"',
     slot: 'necklace',
     pt: 'Colar de Dragão Morto-vivo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Angel Essence Necklace',
@@ -3599,6 +3822,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4423.jpg"',
     slot: 'necklace',
     pt: 'Colar de Essência de Anjo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Elder Vampire Necklace',
@@ -3616,6 +3840,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4432.jpg"',
     slot: 'necklace',
     pt: 'Colar de Vampiro Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Necklace",
@@ -3632,6 +3857,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4428.jpg"',
     slot: 'necklace',
     pt: 'Colar de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Elf Guardian Necklace',
@@ -3648,6 +3874,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4436.jpg"',
     slot: 'necklace',
     pt: 'Colar de Elfo Guardião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Corrupted Necklace',
@@ -3664,6 +3891,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4430.jpg"',
     slot: 'necklace',
     pt: 'Colar Corrompido',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Draconic Gems Necklace',
@@ -3680,6 +3908,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4407.jpg"',
     slot: 'necklace',
     pt: 'Colar de Gemas Dracônicas',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Celestial Necklace',
@@ -3696,6 +3925,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4431.jpg"',
     slot: 'necklace',
     pt: 'Colar Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Plato Ring',
@@ -3712,6 +3942,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4500.jpg"',
     slot: 'ring',
     pt: 'Anel de Platão',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Goblin Ring',
@@ -3728,6 +3959,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4521.jpg"',
     slot: 'ring',
     pt: 'Anel de Duende',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Lost Soul Ring',
@@ -3744,6 +3976,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4525.jpg"',
     slot: 'ring',
     pt: 'Anel de Alma Perdida',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Mana Shield Ring',
@@ -3761,6 +3994,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4513.jpg"',
     slot: 'ring',
     pt: 'Anel de Escudo de Mana',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Ring',
@@ -3778,6 +4012,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4501.jpg"',
     slot: 'ring',
     pt: 'Anel Prateado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Humanoid Octopus Ring',
@@ -3794,6 +4029,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4527.jpg"',
     slot: 'ring',
     pt: 'Anel de Polvo Humanoide',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Stealth Ring',
@@ -3811,6 +4047,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4509.jpg"',
     slot: 'ring',
     pt: 'Anel de Invisibilidade',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dark Ring',
@@ -3827,6 +4064,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4504.jpg"',
     slot: 'ring',
     pt: 'Anel Negro',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Ice Mermaid Ring',
@@ -3843,6 +4081,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4522.jpg"',
     slot: 'ring',
     pt: 'Anel de sereia de gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ice Ring',
@@ -3859,6 +4098,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4518.jpg"',
     slot: 'ring',
     pt: 'Anel de gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Ring',
@@ -3875,6 +4115,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4502.jpg"',
     slot: 'ring',
     pt: 'Anel Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Uzara Ring',
@@ -3891,6 +4132,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4510.jpg"',
     slot: 'ring',
     pt: 'Anel de Uzara',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Carapace Ring',
@@ -3907,6 +4149,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4507.jpg"',
     slot: 'ring',
     pt: 'Anel de Carapaça',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Hell's Ring",
@@ -3923,6 +4166,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4506.jpg"',
     slot: 'ring',
     pt: 'anel do inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Gladiator Ring',
@@ -3939,6 +4183,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4523.jpg"',
     slot: 'ring',
     pt: 'Anel de Gladiador',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bone Ring',
@@ -3955,6 +4200,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4505.jpg"',
     slot: 'ring',
     pt: 'Anel de Osso',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Power Ring',
@@ -3971,6 +4217,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4503.jpg"',
     slot: 'ring',
     pt: 'Anel do Poder',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Lava Ring',
@@ -3987,6 +4234,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4528.jpg"',
     slot: 'ring',
     pt: 'Anel de Lava',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Mystic Ring',
@@ -4003,6 +4251,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4512.jpg"',
     slot: 'ring',
     pt: 'Anel Místico',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Ring",
@@ -4020,6 +4269,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4511.jpg"',
     slot: 'ring',
     pt: 'Anel dos Clãs',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ring of the Skies',
@@ -4036,6 +4286,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4514.jpg"',
     slot: 'ring',
     pt: 'Anel dos Céus',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Abyssal Cultist Ring',
@@ -4052,6 +4303,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4526.jpg"',
     slot: 'ring',
     pt: 'Anel de Cultista Abissal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Nobility Night Ring',
@@ -4068,6 +4320,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4517.jpg"',
     slot: 'ring',
     pt: 'Anel de Nobreza de Elfo da Noite',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Nobility Ring',
@@ -4084,6 +4337,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4516.jpg"',
     slot: 'ring',
     pt: 'Anel de Nobreza de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Aristocrat Ring',
@@ -4100,6 +4354,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4524.jpg"',
     slot: 'ring',
     pt: 'Anel de Aristocrata',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Galaxy Ring',
@@ -4116,6 +4371,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4515.jpg"',
     slot: 'ring',
     pt: 'Anel Galáctico',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Crystal Ring',
@@ -4132,6 +4388,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4519.jpg"',
     slot: 'ring',
     pt: 'Anel de Cristal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Celestial Ring',
@@ -4148,6 +4405,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4520.jpg"',
     slot: 'ring',
     pt: 'Anel Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Draconic Gem Ring',
@@ -4164,6 +4422,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4508.jpg"',
     slot: 'ring',
     pt: 'Anel de Gema Dracônica',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Chromatic Ring',
@@ -4181,6 +4440,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4529.jpg"',
     slot: 'ring',
     pt: 'Anel cromático',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Comfortable Thong',
@@ -4197,6 +4457,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16019.jpg"',
     slot: 'pants',
     pt: 'Tanga Confortável',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Wool Legs',
@@ -4213,6 +4474,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16000.jpg"',
     slot: 'pants',
     pt: 'Calças de Lã',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Leather Legs',
@@ -4230,6 +4492,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16001.jpg"',
     slot: 'pants',
     pt: 'Calças de couro',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Wizard Legs',
@@ -4247,6 +4510,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16002.jpg"',
     slot: 'pants',
     pt: 'Calças de mago',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Humanoid Toad Legs',
@@ -4263,6 +4527,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16027.jpg"',
     slot: 'pants',
     pt: 'Calças de Sapo Humanóide',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Chain Legs',
@@ -4280,6 +4545,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16003.jpg"',
     slot: 'pants',
     pt: 'Calças de Corrente',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Ninja Legs',
@@ -4296,6 +4562,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16004.jpg"',
     slot: 'pants',
     pt: 'Calças de Ninja',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Heirloom Legs',
@@ -4312,6 +4579,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16005.jpg"',
     slot: 'pants',
     pt: 'Calças de herança',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Vampire Legs',
@@ -4328,6 +4596,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16024.jpg"',
     slot: 'pants',
     pt: 'Calças de Vampiro',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Reinforced Legs',
@@ -4345,6 +4614,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16006.jpg"',
     slot: 'pants',
     pt: 'Calças Reforçadas',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Prismatic Legs',
@@ -4361,6 +4631,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16007.jpg"',
     slot: 'pants',
     pt: 'Calças Prismáticas',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Fairy Legs',
@@ -4377,6 +4648,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16028.jpg"',
     slot: 'pants',
     pt: 'Calças de Fada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Legs',
@@ -4393,6 +4665,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16008.jpg"',
     slot: 'pants',
     pt: 'Calças Douradas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Plate Legs',
@@ -4409,6 +4682,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16009.jpg"',
     slot: 'pants',
     pt: 'Calças de Placa',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Gladiator Legs',
@@ -4425,6 +4699,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16022.jpg"',
     slot: 'pants',
     pt: 'Calças de Gladiador',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Crystal Legs',
@@ -4442,6 +4717,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16010.jpg"',
     slot: 'pants',
     pt: 'Calças de Cristal',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Abyssal Cultist Legs',
@@ -4458,6 +4734,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16025.jpg"',
     slot: 'pants',
     pt: 'Calças de Cultista Abissal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Clan Legs',
@@ -4475,6 +4752,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16011.jpg"',
     slot: 'pants',
     pt: 'Calças de Clã',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Elven Legs',
@@ -4491,6 +4769,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16012.jpg"',
     slot: 'pants',
     pt: 'Calças élficas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Void Legs',
@@ -4507,6 +4786,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16026.jpg"',
     slot: 'pants',
     pt: 'Calças do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Noble Legs',
@@ -4523,6 +4803,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16013.jpg"',
     slot: 'pants',
     pt: 'Calças de Nobre',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Volcano Legs',
@@ -4539,6 +4820,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16014.jpg"',
     slot: 'pants',
     pt: 'Calças Vulcânicas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Frost Hunter Legs',
@@ -4555,6 +4837,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16023.jpg"',
     slot: 'pants',
     pt: 'Calças de Caçador da Geada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Demon Legs',
@@ -4571,6 +4854,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16015.jpg"',
     slot: 'pants',
     pt: 'Calças de Demônio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elemental Legs',
@@ -4587,6 +4871,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16029.jpg"',
     slot: 'pants',
     pt: 'Calças Elementais',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Angelic Legs',
@@ -4603,6 +4888,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16016.jpg"',
     slot: 'pants',
     pt: 'Calças Angelicais',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragons Tamer Legs',
@@ -4619,6 +4905,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16020.jpg"',
     slot: 'pants',
     pt: 'Calças de Domador de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Chromatic Legs',
@@ -4635,6 +4922,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16031.jpg"',
     slot: 'pants',
     pt: 'Calças cromáticas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ethereal Legs',
@@ -4651,6 +4939,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16017.jpg"',
     slot: 'pants',
     pt: 'Calças Etéreas',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Scale Legs',
@@ -4667,6 +4956,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16030.jpg"',
     slot: 'pants',
     pt: 'Calças de Escama de Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Golden Dragon Scale Legs',
@@ -4683,6 +4973,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16018.jpg"',
     slot: 'pants',
     pt: 'Calças de Escamas de Dragão Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Golden Dragon Scale Legs',
@@ -4699,6 +4990,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16021.jpg"',
     slot: 'pants',
     pt: 'Calças de Escamas de Dragão Dourado Morto-Vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Axe',
@@ -4715,6 +5007,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17002.jpg"',
     slot: 'accessorie',
     pt: 'Machado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Hammer',
@@ -4731,6 +5024,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17001.jpg"',
     slot: 'accessorie',
     pt: 'Martelo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Crest of Fire',
@@ -4747,6 +5041,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17003.jpg"',
     slot: 'accessorie',
     pt: 'Brasão de Fogo',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Crest of Air',
@@ -4763,6 +5058,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17004.jpg"',
     slot: 'accessorie',
     pt: 'Brasão de Ar',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Crest of Time',
@@ -4779,6 +5075,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17005.jpg"',
     slot: 'accessorie',
     pt: 'Brasão de Tempo',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Crest of Water',
@@ -4795,6 +5092,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17006.jpg"',
     slot: 'accessorie',
     pt: 'Brasão de Água',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Crest of Earth',
@@ -4811,6 +5109,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17007.jpg"',
     slot: 'accessorie',
     pt: 'Brasão da Terra',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Energy Totem',
@@ -4827,6 +5126,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17010.jpg"',
     slot: 'accessorie',
     pt: 'Totem de Energia',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Fishing Rod',
@@ -4843,6 +5143,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4318.jpg"',
     slot: 'accessorie',
     pt: 'Vara de Pescar',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Pickaxe',
@@ -4859,6 +5160,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3061.jpg"',
     slot: 'accessorie',
     pt: 'Picareta',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Crystal Pickaxe',
@@ -4875,6 +5177,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17000.jpg"',
     slot: 'accessorie',
     pt: 'Picareta de Cristal',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Rainbow Gauntlet',
@@ -4891,6 +5194,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17008.jpg"',
     slot: 'accessorie',
     pt: 'Manopla Arco-íris',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Complete Rainbow Gauntlet',
@@ -4907,6 +5211,7 @@ const equipments = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17009.jpg"',
     slot: 'accessorie',
     pt: 'Manopla Arco-Íris Completa',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
 ];
 
@@ -4928,6 +5233,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3037.jpg"',
     twoHanded: false,
     pt: 'Luva da Terra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Copper Glove',
@@ -4946,6 +5252,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7002.jpg"',
     twoHanded: false,
     pt: 'Luva de cobre',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Static Glove',
@@ -4964,6 +5271,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3046.jpg"',
     twoHanded: false,
     pt: 'Luva Estática',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Worn Glove',
@@ -4982,6 +5290,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7003.jpg"',
     twoHanded: false,
     pt: 'Luva Usada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Electrical Glove',
@@ -5000,6 +5309,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3038.jpg"',
     twoHanded: false,
     pt: 'Luva Elétrica',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Iron Glove',
@@ -5018,6 +5328,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7005.jpg"',
     twoHanded: false,
     pt: 'Luva de Ferro',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Forest Glove',
@@ -5037,6 +5348,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3039.jpg"',
     twoHanded: false,
     pt: 'Luva da Floresta',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Heat Glove',
@@ -5055,6 +5367,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3040.jpg"',
     twoHanded: false,
     pt: 'Luva de Calor',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Dark Glove',
@@ -5073,6 +5386,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3041.jpg"',
     twoHanded: false,
     pt: 'Luva Negra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Novice Gladiator Glove',
@@ -5091,6 +5405,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7006.jpg"',
     twoHanded: false,
     pt: 'Luva do Gladiador Novato',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Arctic Glove',
@@ -5109,6 +5424,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3042.jpg"',
     twoHanded: false,
     pt: 'Luva do Ártico',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Humanoid Octopus Glove',
@@ -5127,6 +5443,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7025.jpg"',
     twoHanded: false,
     pt: 'Luva de Polvo Humanoide',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Demon Glove',
@@ -5145,6 +5462,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3043.jpg"',
     twoHanded: false,
     pt: 'Luva Demoníaca',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Cursed Glove',
@@ -5163,6 +5481,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3047.jpg"',
     twoHanded: false,
     pt: 'Luva Amaldiçoada',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Nobles Glove',
@@ -5181,6 +5500,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3055.jpg"',
     twoHanded: false,
     pt: 'Luva dos Nobres',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Intermediate Gladiator Glove',
@@ -5199,6 +5519,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7007.jpg"',
     twoHanded: false,
     pt: 'Luva do Gladiador Intermediário',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Hell Mage Glove',
@@ -5217,6 +5538,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7022.jpg"',
     twoHanded: false,
     pt: 'Luva de Mago do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Poison Beetle Glove',
@@ -5235,6 +5557,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7026.jpg"',
     twoHanded: false,
     pt: 'Luva de Besouro Venenoso',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Glove",
@@ -5254,6 +5577,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7000.jpg"',
     twoHanded: false,
     pt: 'Luva dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Chaos Glove',
@@ -5272,6 +5596,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3056.jpg"',
     twoHanded: false,
     pt: 'Luva do Caos',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: "Hell's Glove",
@@ -5290,6 +5615,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3068.jpg"',
     twoHanded: false,
     pt: 'luva do inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Justice Glove',
@@ -5308,6 +5634,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7010.jpg"',
     twoHanded: false,
     pt: 'Luva da Justiça',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Lava Glove',
@@ -5326,6 +5653,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7004.jpg"',
     twoHanded: false,
     pt: 'Luva de lava',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Advanced Gladiator Glove',
@@ -5344,6 +5672,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7008.jpg"',
     twoHanded: false,
     pt: 'Luva do Gladiador Avançado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Fire Manipulator Glove',
@@ -5362,6 +5691,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7014.jpg"',
     twoHanded: false,
     pt: 'Luva de Manipulador de Fogo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Abyssal Cultist Glove',
@@ -5380,6 +5710,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7023.jpg"',
     twoHanded: false,
     pt: 'Luva de Cultista Abissal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Righteous Glove',
@@ -5398,6 +5729,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7009.jpg"',
     twoHanded: false,
     pt: 'Luva dos Justos',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Glove',
@@ -5416,6 +5748,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7015.jpg"',
     twoHanded: false,
     pt: 'Luva de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Diabolus Glove',
@@ -5434,6 +5767,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7024.jpg"',
     twoHanded: false,
     pt: 'Luva de Diabolus',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Fireblaze Glove',
@@ -5452,6 +5786,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7011.jpg"',
     twoHanded: false,
     pt: 'Luva das Chamas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Glove",
@@ -5470,6 +5805,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7016.jpg"',
     twoHanded: false,
     pt: 'Luva de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Elder Vampire Glove',
@@ -5489,6 +5825,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7020.jpg"',
     twoHanded: false,
     pt: 'Luva de Vampiro Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Dragon Hunters' Glove",
@@ -5507,6 +5844,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7013.jpg"',
     twoHanded: false,
     pt: 'Luva dos Caçadores de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Eternal Ice Glove',
@@ -5525,6 +5863,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7017.jpg"',
     twoHanded: false,
     pt: 'Luva de Gelo Eterno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Revenant Glove',
@@ -5543,6 +5882,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7021.jpg"',
     twoHanded: false,
     pt: 'Luva de Revenante',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: "Reaper's Glove",
@@ -5561,6 +5901,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7012.jpg"',
     twoHanded: false,
     pt: 'Luva da Morte',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Celestial Glove',
@@ -5579,6 +5920,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7018.jpg"',
     twoHanded: false,
     pt: 'Luva Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Dragon Scale Glove',
@@ -5597,6 +5939,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7001.jpg"',
     twoHanded: false,
     pt: 'Luva de Escama de Dragão Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Scale Glove',
@@ -5615,6 +5958,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7027.jpg"',
     twoHanded: false,
     pt: 'Luva de Escama de Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Golden Dragon Scale Glove',
@@ -5633,6 +5977,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7019.jpg"',
     twoHanded: false,
     pt: 'Luva de escama de dragão dourado morto-vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Slingshot',
@@ -5651,6 +5996,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3063.jpg"',
     twoHanded: false,
     pt: 'Estilingue',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Wooden Sword',
@@ -5669,6 +6015,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3069.jpg"',
     twoHanded: false,
     pt: 'Espada de madeira',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Sharp Axe',
@@ -5687,6 +6034,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3027.jpg"',
     twoHanded: true,
     pt: 'Machado Afiado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Club',
@@ -5705,6 +6053,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8004.jpg"',
     twoHanded: true,
     pt: 'Porrete',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Double Axe',
@@ -5723,6 +6072,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3028.jpg"',
     twoHanded: true,
     pt: 'Machado Duplo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Halberd',
@@ -5742,6 +6092,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3029.jpg"',
     twoHanded: true,
     pt: 'Alabarda',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Morning Star',
@@ -5760,6 +6111,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8005.jpg"',
     twoHanded: false,
     pt: 'Maça Cravada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Hatchet',
@@ -5778,6 +6130,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3030.jpg"',
     twoHanded: false,
     pt: 'Machadinha',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Silver Axe',
@@ -5796,6 +6149,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3031.jpg"',
     twoHanded: true,
     pt: 'Machado de Prata',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Specialist Axe',
@@ -5814,6 +6168,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8007.jpg"',
     twoHanded: true,
     pt: 'Machado de Especialista',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: "Bielze's Mace",
@@ -5832,6 +6187,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3062.jpg"',
     twoHanded: true,
     pt: 'Clava do Bielze',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Tribal Axe',
@@ -5850,6 +6206,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3032.jpg"',
     twoHanded: true,
     pt: 'Machado Tribal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ritual Spear',
@@ -5868,6 +6225,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8002.jpg"',
     twoHanded: true,
     pt: 'Lança de Ritual',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Dwarven Axe',
@@ -5886,6 +6244,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3033.jpg"',
     twoHanded: true,
     pt: 'Machado de Anão',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Golden Axe',
@@ -5904,6 +6263,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3034.jpg"',
     twoHanded: true,
     pt: 'Machado dourado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Novice Gladiator Hammer',
@@ -5922,6 +6282,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8008.jpg"',
     twoHanded: true,
     pt: 'Martelo do Gladiador Novato',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Demon Axe',
@@ -5940,6 +6301,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3035.jpg"',
     twoHanded: true,
     pt: 'Machado Demoníaco',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Crown Axe',
@@ -5958,6 +6320,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3036.jpg"',
     twoHanded: true,
     pt: 'Machado Real',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Ice Beetle Axe',
@@ -5976,6 +6339,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8026.jpg"',
     twoHanded: true,
     pt: 'Machado de Besouro de Gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'War Spear',
@@ -5994,6 +6358,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3048.jpg"',
     twoHanded: true,
     pt: 'Lança da Guerra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Giants Club',
@@ -6012,6 +6377,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3054.jpg"',
     twoHanded: true,
     pt: 'Maça de Gigantes',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'The Winter Spear',
@@ -6030,6 +6396,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3064.jpg"',
     twoHanded: true,
     pt: 'Lança do Inverno',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Justice Axe',
@@ -6048,6 +6415,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8012.jpg"',
     twoHanded: true,
     pt: 'Machado da Justiça',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Intermediate Gladiator Hammer',
@@ -6066,6 +6434,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8009.jpg"',
     twoHanded: true,
     pt: 'Martelo do Gladiador Intermediário',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Axe",
@@ -6085,6 +6454,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8000.jpg"',
     twoHanded: true,
     pt: 'Machado dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Frost Axe',
@@ -6103,6 +6473,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8006.jpg"',
     twoHanded: true,
     pt: 'Machado de Congelado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Devil's Fork",
@@ -6121,6 +6492,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3057.jpg"',
     twoHanded: true,
     pt: 'Garfo do Diabo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Club",
@@ -6140,6 +6512,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8001.jpg"',
     twoHanded: true,
     pt: 'Maça dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Advanced Gladiator Hammer',
@@ -6158,6 +6531,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8010.jpg"',
     twoHanded: true,
     pt: 'Martelo do Gladiador Avançado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Tidal Bringer',
@@ -6176,6 +6550,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8016.jpg"',
     twoHanded: true,
     pt: 'Causador de Marés',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Inferno Fork',
@@ -6194,6 +6569,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8025.jpg"',
     twoHanded: true,
     pt: 'Garfo do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Thunder Hammer',
@@ -6212,6 +6588,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8011.jpg"',
     twoHanded: true,
     pt: 'Martelo do Trovão',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Axe',
@@ -6230,6 +6607,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8017.jpg"',
     twoHanded: true,
     pt: 'Machado de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Archangel Axe',
@@ -6248,6 +6626,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8024.jpg"',
     twoHanded: true,
     pt: 'Machado de Arcanjo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Devil's Scythe",
@@ -6266,6 +6645,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8013.jpg"',
     twoHanded: true,
     pt: 'Foice do Diabo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Axe",
@@ -6284,6 +6664,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8018.jpg"',
     twoHanded: true,
     pt: 'Machado de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: "Dragon Hunters' Hammer",
@@ -6302,6 +6683,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8015.jpg"',
     twoHanded: true,
     pt: 'Martelo dos Caçadores de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elder Vampire Axe',
@@ -6321,6 +6703,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8022.jpg"',
     twoHanded: true,
     pt: 'Machado de Vampiro Ancião',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Eternal Ice Axe',
@@ -6339,6 +6722,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8019.jpg"',
     twoHanded: true,
     pt: 'Machado de Gelo Eterno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Reaper's Axe",
@@ -6357,6 +6741,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8014.jpg"',
     twoHanded: true,
     pt: 'Machado da Morte',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Revenant Axe',
@@ -6375,6 +6760,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8023.jpg"',
     twoHanded: true,
     pt: 'Machado de Revenante',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Celestial Axe',
@@ -6393,6 +6779,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8020.jpg"',
     twoHanded: true,
     pt: 'Machado Celestial',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Dragon Hammer',
@@ -6411,6 +6798,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8003.jpg"',
     twoHanded: true,
     pt: 'Martelo de Dragão Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Axe',
@@ -6429,6 +6817,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8028.jpg"',
     twoHanded: true,
     pt: 'Machado de Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Golden Dragon Hammer',
@@ -6447,6 +6836,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8021.jpg"',
     twoHanded: true,
     pt: 'Martelo de Dragão Dourado Morto-vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Wooden Bow',
@@ -6465,6 +6855,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3017.jpg"',
     twoHanded: true,
     pt: 'Arco de madeira',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Tin Bow',
@@ -6483,6 +6874,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9004.jpg"',
     twoHanded: true,
     pt: 'Arco de Estanho',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Reinforced Bow',
@@ -6501,6 +6893,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3018.jpg"',
     twoHanded: true,
     pt: 'Arco Reforçado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Copper Bow',
@@ -6519,6 +6912,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9005.jpg"',
     twoHanded: true,
     pt: 'Arco de cobre',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Dark Bow',
@@ -6538,6 +6932,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3019.jpg"',
     twoHanded: true,
     pt: 'Arco Negro',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Shuriken',
@@ -6556,6 +6951,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3044.jpg"',
     twoHanded: false,
     pt: 'Shuriken',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Arctic Bow',
@@ -6574,6 +6970,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3020.jpg"',
     twoHanded: true,
     pt: 'Arco do Ártico',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Light Bow',
@@ -6592,6 +6989,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9007.jpg"',
     twoHanded: true,
     pt: 'Arco Leve',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Bronze Bow',
@@ -6610,6 +7008,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3021.jpg"',
     twoHanded: true,
     pt: 'Arco de Bronze',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Bones Bow',
@@ -6629,6 +7028,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3022.jpg"',
     twoHanded: true,
     pt: 'Arco de Ossos',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Ornamented Bow',
@@ -6647,6 +7047,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3023.jpg"',
     twoHanded: true,
     pt: 'Arco Ornamentado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Novice Gladiator Spear',
@@ -6665,6 +7066,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9008.jpg"',
     twoHanded: false,
     pt: 'Lança do Gladiador Novato',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Cursed Bow',
@@ -6683,6 +7085,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3024.jpg"',
     twoHanded: true,
     pt: 'Arco Amaldiçoado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Fairy Bow',
@@ -6701,6 +7104,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9027.jpg"',
     twoHanded: true,
     pt: 'Arco de Fada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Vulcana Bow',
@@ -6719,6 +7123,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3025.jpg"',
     twoHanded: true,
     pt: 'Arco de Vulcana',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Hardrock Bow',
@@ -6737,6 +7142,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9002.jpg"',
     twoHanded: true,
     pt: 'Arco de Rochedo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Stardust Bow',
@@ -6755,6 +7161,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3053.jpg"',
     twoHanded: true,
     pt: 'Arco de Poeira Estelar',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Hellhound Bow',
@@ -6773,6 +7180,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9023.jpg"',
     twoHanded: true,
     pt: 'Arco de Cão do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Bow",
@@ -6792,6 +7200,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9000.jpg"',
     twoHanded: true,
     pt: 'Arco dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Intermediate Gladiator Spear',
@@ -6810,6 +7219,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9009.jpg"',
     twoHanded: false,
     pt: 'Lança do Gladiador Intermediário',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragon Bow',
@@ -6828,6 +7238,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3067.jpg"',
     twoHanded: true,
     pt: 'Arco do Dragão',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Champion Bow',
@@ -6846,6 +7257,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3026.jpg"',
     twoHanded: true,
     pt: 'Arco de Campeão',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Justice Bow',
@@ -6864,6 +7276,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9012.jpg"',
     twoHanded: true,
     pt: 'Arco da Justiça',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Lava Bow',
@@ -6882,6 +7295,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3060.jpg"',
     twoHanded: true,
     pt: 'Arco de lava',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Frost Bow',
@@ -6900,6 +7314,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9006.jpg"',
     twoHanded: true,
     pt: 'Arco Congelado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Poison Beetle Bow',
@@ -6918,6 +7333,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9028.jpg"',
     twoHanded: true,
     pt: 'Arco de Besouro Venenoso',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Expertise Bow",
@@ -6937,6 +7353,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9001.jpg"',
     twoHanded: true,
     pt: 'Arco de Perícia dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Advanced Gladiator Spear',
@@ -6955,6 +7372,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9010.jpg"',
     twoHanded: false,
     pt: 'Lança do Gladiador Avançado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Grue Bow',
@@ -6973,6 +7391,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9024.jpg"',
     twoHanded: true,
     pt: 'Arco de Grue',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Nature's Bow",
@@ -6991,6 +7410,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9016.jpg"',
     twoHanded: true,
     pt: 'Arco da Natureza',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Bow of the Skies',
@@ -7009,6 +7429,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9011.jpg"',
     twoHanded: true,
     pt: 'Arco dos Céus',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Bow',
@@ -7027,6 +7448,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9017.jpg"',
     twoHanded: true,
     pt: 'Arco de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Devil Bow',
@@ -7045,6 +7467,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9025.jpg"',
     twoHanded: true,
     pt: 'Arco de Diabo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Soul Brander',
@@ -7063,6 +7486,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9014.jpg"',
     twoHanded: false,
     pt: 'Marcadora de Almas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Bow",
@@ -7081,6 +7505,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9018.jpg"',
     twoHanded: true,
     pt: 'Arco de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Void Bow',
@@ -7099,6 +7524,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9026.jpg"',
     twoHanded: true,
     pt: 'Arco do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Dragon Hunters' Bow",
@@ -7117,6 +7543,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9015.jpg"',
     twoHanded: true,
     pt: 'Arco dos Caçadores de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Eternal Ice Bow',
@@ -7135,6 +7562,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9019.jpg"',
     twoHanded: true,
     pt: 'Arco de Gelo Eterno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elder Vampire Bow',
@@ -7153,6 +7581,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9022.jpg"',
     twoHanded: true,
     pt: 'Arco de Vampiro Ancião',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Soul Piercer',
@@ -7171,6 +7600,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9013.jpg"',
     twoHanded: true,
     pt: 'Perfuradora de Almas',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragons Tamer Bow',
@@ -7189,6 +7619,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9020.jpg"',
     twoHanded: true,
     pt: 'Arco de Domador de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Dragon Bow',
@@ -7207,6 +7638,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9003.jpg"',
     twoHanded: true,
     pt: 'Arco de Dragão Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Bow',
@@ -7225,6 +7657,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9029.jpg"',
     twoHanded: true,
     pt: 'Arco de Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Golden Dragon Bow',
@@ -7243,6 +7676,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9021.jpg"',
     twoHanded: true,
     pt: 'Arco de Dragão Dourado Morto-vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Candy Staff',
@@ -7261,6 +7695,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3010.jpg"',
     twoHanded: false,
     pt: 'Bastão Doce',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Natural Staff',
@@ -7279,6 +7714,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10002.jpg"',
     twoHanded: false,
     pt: 'Cajado Natural',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Iron Staff',
@@ -7297,6 +7733,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3045.jpg"',
     twoHanded: false,
     pt: 'Bastão de Metal',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Voodoo Staff',
@@ -7315,6 +7752,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10003.jpg"',
     twoHanded: false,
     pt: 'Cajado de Vodu',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Ruby Staff',
@@ -7333,6 +7771,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3011.jpg"',
     twoHanded: false,
     pt: 'Bastão de Rubi',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Sapphire Staff',
@@ -7351,6 +7790,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3012.jpg"',
     twoHanded: false,
     pt: 'Bastão de Safira',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Amethyst Staff',
@@ -7369,6 +7809,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10005.jpg"',
     twoHanded: false,
     pt: 'Bastão de Ametista',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Skull Staff',
@@ -7388,6 +7829,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3013.jpg"',
     twoHanded: false,
     pt: 'Bastão de Crânio',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Humanoid Fox Wand',
@@ -7406,6 +7848,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10023.jpg"',
     twoHanded: false,
     pt: 'Varinha de Raposa Humanóide',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Holy Staff',
@@ -7424,6 +7867,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3014.jpg"',
     twoHanded: false,
     pt: 'Bastão Sagrado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Silver Staff',
@@ -7442,6 +7886,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3015.jpg"',
     twoHanded: false,
     pt: 'Bastão Prateado',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Novice Gladiator Staff',
@@ -7460,6 +7905,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10006.jpg"',
     twoHanded: false,
     pt: 'Bastão do Gladiador Novato',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Crown Staff',
@@ -7478,6 +7924,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3016.jpg"',
     twoHanded: false,
     pt: 'Bastão Real',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Warlock Staff',
@@ -7496,6 +7943,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3049.jpg"',
     twoHanded: false,
     pt: 'Cajado de Mago',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Spider Wand',
@@ -7514,6 +7962,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10024.jpg"',
     twoHanded: false,
     pt: 'Varinha de Aranha',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Golden Sceptre',
@@ -7532,6 +7981,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3052.jpg"',
     twoHanded: false,
     pt: 'Cetro Dourado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Staff",
@@ -7550,6 +8000,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10000.jpg"',
     twoHanded: false,
     pt: 'Cajado dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Hell Mage Wand',
@@ -7568,6 +8019,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10027.jpg"',
     twoHanded: false,
     pt: 'Varinha de Mago do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Intermediate Gladiator Staff',
@@ -7586,6 +8038,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10007.jpg"',
     twoHanded: false,
     pt: 'Bastão do Gladiador Intermediário',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Lava Staff',
@@ -7604,6 +8057,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3059.jpg"',
     twoHanded: false,
     pt: 'Cajado de Lava',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Poison Beetle Wand',
@@ -7622,6 +8076,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10025.jpg"',
     twoHanded: false,
     pt: 'Varinha de Besouro Venenoso',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Staff of Justice',
@@ -7640,6 +8095,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10010.jpg"',
     twoHanded: false,
     pt: 'Cajado da Justiça',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: "Hell's Staff",
@@ -7658,6 +8114,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3066.jpg"',
     twoHanded: false,
     pt: 'Cajado do Inferno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Mystic Staff',
@@ -7676,6 +8133,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10004.jpg"',
     twoHanded: false,
     pt: 'Cajado Místico',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Advanced Gladiator Staff',
@@ -7694,6 +8152,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10008.jpg"',
     twoHanded: false,
     pt: 'Bastão do Gladiador Avançado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'The Earthquaker',
@@ -7712,6 +8171,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10014.jpg"',
     twoHanded: false,
     pt: 'Criador de Terremotos',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Abyssal Cultist Wand',
@@ -7730,6 +8190,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10021.jpg"',
     twoHanded: false,
     pt: 'Varinha de Cultista Abissal',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Righteous Staff',
@@ -7748,6 +8209,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10009.jpg"',
     twoHanded: false,
     pt: 'Cajado Justo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Staff',
@@ -7766,6 +8228,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10015.jpg"',
     twoHanded: false,
     pt: 'Cajado de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Sky Elf Wand',
@@ -7784,6 +8247,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10026.jpg"',
     twoHanded: false,
     pt: 'Varinha de Elfo do Céu',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Wand of Doom',
@@ -7802,6 +8266,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10011.jpg"',
     twoHanded: false,
     pt: 'Varinha da Fatalidade',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Staff",
@@ -7820,6 +8285,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10016.jpg"',
     twoHanded: false,
     pt: 'Cajado de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: "Dragon Hunters' Staff",
@@ -7838,6 +8304,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10013.jpg"',
     twoHanded: false,
     pt: 'Cajado dos Caçadores de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Undead Dragon Wand',
@@ -7856,6 +8323,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10022.jpg"',
     twoHanded: false,
     pt: 'Varinha de Dragão Morto-vivo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Eternal Ice Staff',
@@ -7874,6 +8342,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10017.jpg"',
     twoHanded: false,
     pt: 'Cajado de Gelo Eterno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elder Vampire Staff',
@@ -7892,6 +8361,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10020.jpg"',
     twoHanded: false,
     pt: 'Cajado de Vampiro Ancião',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Wand of Salvation',
@@ -7910,6 +8380,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10012.jpg"',
     twoHanded: false,
     pt: 'Cajado da Salvação',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragons Tamer Staff',
@@ -7928,6 +8399,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10018.jpg"',
     twoHanded: false,
     pt: 'Cajado de Domador de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Undead Golden Dragon Staff',
@@ -7946,6 +8418,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10019.jpg"',
     twoHanded: false,
     pt: 'Cajado de Dragão Dourado Morto-vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Wand',
@@ -7964,6 +8437,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10028.jpg"',
     twoHanded: false,
     pt: 'Varinha do Dragão Dourado Cromático',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Golden Dragon Staff',
@@ -7982,6 +8456,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10001.jpg"',
     twoHanded: false,
     pt: 'Cajado de Dragão Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Dagger',
@@ -8000,6 +8475,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3000.jpg"',
     twoHanded: false,
     pt: 'Adaga',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Rapier',
@@ -8018,6 +8494,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11005.jpg"',
     twoHanded: false,
     pt: 'Florete',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Long Dagger',
@@ -8036,6 +8513,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3001.jpg"',
     twoHanded: false,
     pt: 'Adaga Longa',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Katana',
@@ -8054,6 +8532,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3002.jpg"',
     twoHanded: false,
     pt: 'Katana',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Sword',
@@ -8072,6 +8551,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11006.jpg"',
     twoHanded: false,
     pt: 'Espada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Long Sword',
@@ -8090,6 +8570,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3003.jpg"',
     twoHanded: true,
     pt: 'Espada Longa',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Spike Sword',
@@ -8108,6 +8589,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11008.jpg"',
     twoHanded: false,
     pt: 'Espada Afiada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Silver Sword',
@@ -8127,6 +8609,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3004.jpg"',
     twoHanded: false,
     pt: 'Espada Prateada',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Humanoid Lizard Sword',
@@ -8145,6 +8628,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11027.jpg"',
     twoHanded: false,
     pt: 'Espada de lagarto humanóide',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Bright Sword',
@@ -8163,6 +8647,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3005.jpg"',
     twoHanded: false,
     pt: 'Espada Brilhante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Curved Sword',
@@ -8181,6 +8666,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3006.jpg"',
     twoHanded: false,
     pt: 'Espada Curva',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Giant Sword',
@@ -8199,6 +8685,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3007.jpg"',
     twoHanded: true,
     pt: 'Espada Gigante',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Novice Gladiator Sword',
@@ -8217,6 +8704,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11009.jpg"',
     twoHanded: false,
     pt: 'Espada do Gladiador Novato',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Fire Sword',
@@ -8235,6 +8723,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3008.jpg"',
     twoHanded: false,
     pt: 'Espada de fogo',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Black Sword',
@@ -8253,6 +8742,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3050.jpg"',
     twoHanded: false,
     pt: 'Espada Negra',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Forgotten Sword',
@@ -8271,6 +8761,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11002.jpg"',
     twoHanded: true,
     pt: 'Espada Esquecida',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Ice Beetle Sword',
@@ -8289,6 +8780,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11028.jpg"',
     twoHanded: false,
     pt: 'Espada de Besouro de Gelo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Nobles Sword',
@@ -8307,6 +8799,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3051.jpg"',
     twoHanded: false,
     pt: 'Espada dos Nobres',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Clan's Sword",
@@ -8326,6 +8819,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11000.jpg"',
     twoHanded: false,
     pt: 'Espada dos Clãs',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Intermediate Gladiator Sword',
@@ -8344,6 +8838,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11010.jpg"',
     twoHanded: false,
     pt: 'Espada do Gladiador Intermediário',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragon Sword',
@@ -8362,6 +8857,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3065.jpg"',
     twoHanded: false,
     pt: 'Espada do Dragão',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Winter Rapier',
@@ -8382,6 +8878,7 @@ const weapons = [
     pt: 'Florete do Inverno',
     obs: 'Expire in 10 seconds',
     obsPtBr: 'Expira em 10 segundos',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Mystic Sword',
@@ -8400,6 +8897,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11007.jpg"',
     twoHanded: false,
     pt: 'Espada Mística',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Champion Sword',
@@ -8418,6 +8916,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3009.jpg"',
     twoHanded: false,
     pt: 'Espada de Campeão',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Sword of Justice',
@@ -8436,6 +8935,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11013.jpg"',
     twoHanded: false,
     pt: 'Espada da Justiça',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
   {
     en: 'Lava Sword',
@@ -8454,6 +8954,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3058.jpg"',
     twoHanded: false,
     pt: 'Espada de lava',
+    rarity: { en: 'Commom', pt: 'Comum' },
   },
   {
     en: 'Poison Beetle Sword',
@@ -8472,6 +8973,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11029.jpg"',
     twoHanded: false,
     pt: 'Espada de Besouro Venenoso',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Advanced Gladiator Sword',
@@ -8490,6 +8992,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11011.jpg"',
     twoHanded: false,
     pt: 'Espada do Gladiador Avançado',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'The Decapitator',
@@ -8508,6 +9011,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11017.jpg"',
     twoHanded: false,
     pt: 'A Decapitadora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Void Sword',
@@ -8526,6 +9030,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11025.jpg"',
     twoHanded: false,
     pt: 'Espada do Vazio',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Sacred Sword',
@@ -8544,6 +9049,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11012.jpg"',
     twoHanded: false,
     pt: 'Espada Sagrada',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elven Sword',
@@ -8562,6 +9068,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11018.jpg"',
     twoHanded: false,
     pt: 'Espada de Elfo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Reaper's Sword",
@@ -8580,6 +9087,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11014.jpg"',
     twoHanded: false,
     pt: 'Espada da Morte',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Sky Elf Blade',
@@ -8598,6 +9106,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11024.jpg"',
     twoHanded: false,
     pt: 'Lâmina de Elfo do Céu',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Elora's Sword",
@@ -8616,6 +9125,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11019.jpg"',
     twoHanded: false,
     pt: 'Espada de Elora',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Undead Dragon Sword',
@@ -8634,6 +9144,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11026.jpg"',
     twoHanded: false,
     pt: 'Espada de Dragão Morto-vivo',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: "Dragon Hunters' Sword",
@@ -8652,6 +9163,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11016.jpg"',
     twoHanded: false,
     pt: 'Espada dos Caçadores de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Eternal Ice Sword',
@@ -8670,6 +9182,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11020.jpg"',
     twoHanded: false,
     pt: 'Espada de Gelo Eterno',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Elder Vampire Sword',
@@ -8688,6 +9201,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11023.jpg"',
     twoHanded: false,
     pt: 'Espada de Vampiro Ancião',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Sword of Glory',
@@ -8706,6 +9220,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11015.jpg"',
     twoHanded: false,
     pt: 'Espada da Glória',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Dragons Tamer Sword',
@@ -8724,6 +9239,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11021.jpg"',
     twoHanded: false,
     pt: 'Espada de Domador de Dragões',
+    rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
     en: 'Undead Golden Dragon Sword',
@@ -8742,6 +9258,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11022.jpg"',
     twoHanded: false,
     pt: 'Espada de Dragão Dourado Morto-vivo',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Chromatic Golden Dragon Sword',
@@ -8760,6 +9277,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11030.jpg"',
     twoHanded: false,
     pt: 'Espada de Dragão Dourado Cromática',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Golden Dragon Sword',
@@ -8778,6 +9296,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11004.jpg"',
     twoHanded: false,
     pt: 'Espada de Dragão Dourado',
+    rarity: { en: 'Rare', pt: 'Raro' },
   },
   {
     en: 'Warlord Sword',
@@ -8796,6 +9315,7 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11001.jpg"',
     twoHanded: false,
     pt: 'Espada Warlord',
+    rarity: { en: 'Legendary', pt: 'Legendário' },
   },
 ];
 
