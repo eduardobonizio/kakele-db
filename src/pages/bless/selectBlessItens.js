@@ -32,9 +32,8 @@ const findItemToSacrifice = (allItens, itemReference, ignoredItems) => {
   const item = allItens
     .filter(
       i =>
+        i.slot === itemReference.slot &&
         i.rarity.en === itemReference.rarity.en &&
-        (i.vocation === itemReference.vocation ||
-          i.vocation.toLowerCase() === 'all') &&
         !ignoredItems.includes(i['en']),
     )
     .sort((a, b) => a.level - b.level)
