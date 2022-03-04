@@ -42,7 +42,7 @@ const Bless = () => {
     <div className="container d-flex flex-column justify-content-around align-items-center">
       <h1>{text.h1}</h1>
 
-      <inputContainer className={style.searchInput}>
+      <inputcontainer className={style.searchInput}>
         <Input
           type="text"
           value={itemName}
@@ -50,7 +50,7 @@ const Bless = () => {
           labelText={text.searchLabel}
           placeholder={text.searchPlaceHolder}
         />
-      </inputContainer>
+      </inputcontainer>
 
       {itemName &&
         foundItems.map((suggestion, index) => {
