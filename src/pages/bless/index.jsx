@@ -19,6 +19,7 @@ const Bless = () => {
   const [selectedItem, setSelectedItem] = useState();
   const [ignoredItems, setiIgnoredItems] = useState(["Elora's Bow"]);
   const [desiredBless, setDesiredBless] = useState(1);
+  const [currentBless, setCurrentBless] = useState(0);
 
   const searchItem = searchText => {
     setItemName(searchText);
@@ -73,19 +74,20 @@ const Bless = () => {
 
       {query.item && selectedItem ? (
         <div>
-          <ButtonForKakele
-            onClick={() =>
-              findItensToSacrifice(
-                [...weapons, ...equipments],
-                selectedItem,
-                desiredBless,
-                ignoredItems,
-              )
-            }
-            text="chama func"
-            type="button"
+          Bless atual{`  `}
+          <input
+            type="number"
+            min={0}
+            max={9}
+            value={currentBless}
+            onChange={e => {
+              if (e.target.value > 9) return setCurrentBless(9);
+              if (e.target.value < 0) return setCurrentBless(0);
+              return setDesiredBless(e.target.value);
+            }}
           />
-
+          <br />
+          Bless desejada{`  `}
           <input
             type="number"
             min={1}
@@ -96,6 +98,19 @@ const Bless = () => {
               if (e.target.value < 1) return setDesiredBless(1);
               return setDesiredBless(e.target.value);
             }}
+          />
+          <br />
+          <ButtonForKakele
+            onClick={() =>
+              findItensToSacrifice(
+                [...weapons, ...equipments],
+                selectedItem,
+                desiredBless,
+                ignoredItems,
+              )
+            }
+            text="calcular"
+            type="button"
           />
           <ItemCard index={0} item={selectedItem} locale={locale} />
         </div>
