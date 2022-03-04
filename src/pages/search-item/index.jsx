@@ -52,6 +52,7 @@ export default function SearchItem() {
 
   useEffect(() => {
     lookForItens();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './set-maker.module.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAppContext } from '../../context/appContext/useAppState';
 
 import { setCreatorPageText as textOptions } from '../../data/dataLanguages';
@@ -26,6 +26,7 @@ import { useRouter } from 'next/router';
 export default function SetMaker() {
   const {
     state: { level, element, characterClass, mainStat },
+    actions: { updateFilter },
   } = useAppContext();
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
@@ -79,6 +80,10 @@ export default function SetMaker() {
     );
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
+
+  useEffect(() => {
+    if (characterClass === 'All') updateFilter('characterClass', 'Alchemist');
+  }, [characterClass, updateFilter]);
 
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>

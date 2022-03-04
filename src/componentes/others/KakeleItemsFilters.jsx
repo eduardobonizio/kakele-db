@@ -76,6 +76,7 @@ export default function KakeleItemsFilters(props) {
           <option value="Berserker">{text.berserker}</option>
           <option value="Warrior">{text.warrior}</option>
           <option value="Mage">{text.mage}</option>
+          {manualFilters && <option value="All">{text.anyClass}</option>}
         </select>
       </div>
 
