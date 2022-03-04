@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -17,9 +18,10 @@ const Bless = () => {
   const [itemName, setItemName] = useState('');
   const [foundItems, setFoundItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState();
-  const [ignoredItems, setiIgnoredItems] = useState(["Elora's Bow"]);
+  const [ignoredItems, setiIgnoredItems] = useState([]);
   const [desiredBless, setDesiredBless] = useState(1);
   const [currentBless, setCurrentBless] = useState(0);
+  const [itensToSacrifice, setItensToSacrifice] = useState(false);
 
   const searchItem = searchText => {
     setItemName(searchText);
@@ -43,7 +45,7 @@ const Bless = () => {
     <div className="container d-flex flex-column justify-content-around align-items-center">
       <h1>{text.h1}</h1>
 
-      <inputcontainer className={style.searchInput}>
+      <div className={style.searchInput}>
         <Input
           type="text"
           value={itemName}
@@ -51,7 +53,7 @@ const Bless = () => {
           labelText={text.searchLabel}
           placeholder={text.searchPlaceHolder}
         />
-      </inputcontainer>
+      </div>
 
       {itemName &&
         foundItems.map((suggestion, index) => {
@@ -83,7 +85,7 @@ const Bless = () => {
             onChange={e => {
               if (e.target.value > 9) return setCurrentBless(9);
               if (e.target.value < 0) return setCurrentBless(0);
-              return setDesiredBless(e.target.value);
+              return setCurrentBless(e.target.value);
             }}
           />
           <br />
@@ -101,14 +103,16 @@ const Bless = () => {
           />
           <br />
           <ButtonForKakele
-            onClick={() =>
-              findItensToSacrifice(
+            onClick={() => {
+              const toSacrifice = findItensToSacrifice(
                 [...weapons, ...equipments],
                 selectedItem,
+                currentBless,
                 desiredBless,
                 ignoredItems,
-              )
-            }
+              );
+              setItensToSacrifice(toSacrifice);
+            }}
             text="calcular"
             type="button"
           />
@@ -117,6 +121,39 @@ const Bless = () => {
       ) : (
         <div>Escolha um item</div>
       )}
+      {itensToSacrifice &&
+        itensToSacrifice.map((item, i) => {
+          return (
+            <div
+              key={`${item['en']}${i}`}
+              className="d-flex mb-2 mt-3 justify-content-around"
+              style={{ width: '400px' }}
+            >
+              <div>
+                <Image
+                  src={item.imgUrl.replace('"', '').replace('"', '')}
+                  alt={item[locale]}
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div className="d-flex flex-column">
+                <div>Item: {item[locale]}</div>
+                <div>
+                  {`Quantidade para sacrificar: ${item.quantityToSacrifice}`}
+                </div>
+              </div>
+              <div className="d-flex">
+                <input
+                  type="checkbox"
+                  id={`ignore${item[locale]}`}
+                  name="scales"
+                />
+                <label htmlFor={`ignore${item[locale]}`}>Trocar Item</label>
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 };
