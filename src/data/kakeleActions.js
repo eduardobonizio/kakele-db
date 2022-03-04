@@ -300,7 +300,7 @@ const filterItensByLevelAndClass = (listaDeItens, level, classe) => {
   return listaDeItens.filter(
     item =>
       useLevel >= Number(item.level) &&
-      (item.vocation === classe || item.vocation === 'All'),
+      (item.vocation === classe || item.vocation === 'All' || classe === 'All'),
   );
 };
 const elementQuantityInSet = (itensList, element) =>

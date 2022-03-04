@@ -71,6 +71,8 @@ export default function KakeleItemsFilters(props) {
           defaultValue={characterClass}
           onChange={e => updateFilter('characterClass', e.target.value)}
         >
+          {manualFilters && <option value="All">{text.anyClass}</option>}
+
           <option value="Alchemist">{text.alchemist}</option>
           <option value="Hunter">{text.hunter}</option>
           <option value="Berserker">{text.berserker}</option>
