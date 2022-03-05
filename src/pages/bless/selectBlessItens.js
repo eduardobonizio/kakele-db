@@ -172,6 +172,7 @@ const findBestCombination = (
     });
 
   if (!foundItem) {
+    if (constructingArray.length < 1) return [];
     const bigerArray = constructingArray.sort((a, b) => b.length - a.length)[0];
     return bigerArray;
   }
