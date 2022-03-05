@@ -27,6 +27,20 @@ Item Incomum
 */
 
 /*
+Item Common
+1x    5
+2x    7,5
+3x    8,75
+4x    9,374
+5x    9,686
+6x    9,842
+7x    9,92
+8x    9,96
+9x    9,98
+10x   10%
+*/
+
+/*
 price:
 rare: 10KK
 uncommon: 1KK

@@ -1,3 +1,31 @@
 .searchInput {
   max-width: 430px;
 }
+
+.resultCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 280px;
+  margin-bottom: 5px;
+  border-style: groove;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+  }
+
+  .filtersContainer {
+    margin-right: 10px;
+  }
+}
