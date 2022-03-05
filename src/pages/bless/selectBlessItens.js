@@ -92,32 +92,41 @@ const findItensToSacrificeRecursive = (
   itemReference,
   ignoredItems,
   foundItens = [],
+  foundItensName = [],
 ) => {
   const minLevel = itemReference.level / 2;
 
-  const selectedItem = allItens
-    .filter(
-      item =>
-        !ignoredItems.includes(item['en']) &&
-        item.slot === itemReference.slot &&
-        item.rarity.en === itemReference.rarity.en,
+  const selectedItem = allItens.filter(item => {
+    if (
+      item.slot === itemReference.slot &&
+      item.level >= minLevel &&
+      !ignoredItems.includes(item['en']) &&
+      !foundItensName.includes(item['en']) &&
+      item.rarity.en === itemReference.rarity.en
     )
-    .find(i => i.level >= minLevel);
+      return item;
+  });
 
-  const alreadyIn = foundItens.find(i => i.en === selectedItem.en);
-  if (alreadyIn) return foundItens;
-  const newFoundItens = [...foundItens, selectedItem];
+  const justToTest = selectedItem.find(i => {
+    return i.level >= minLevel;
+  });
+
+  console.log(minLevel);
+  if (!justToTest) return foundItens;
+
+  const newFoundItens = [...foundItens, justToTest];
+  const newFoundItensName = [...foundItensName, justToTest['en']];
+
   return findItensToSacrificeRecursive(
     allItens,
-    selectedItem,
+    justToTest,
     ignoredItems,
     newFoundItens,
+    newFoundItensName,
   );
 };
 
 const addItensQuantity = (itensToSacrifice, necessaryItensQuantity) => {
-  console.log('necessaryItensQuantity', necessaryItensQuantity);
-
   const firstPart = necessaryItensQuantity.filter((e, i) => {
     if (i < itensToSacrifice.length) return e;
   });

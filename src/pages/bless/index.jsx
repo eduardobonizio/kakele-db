@@ -18,7 +18,7 @@ const Bless = () => {
   const [itemName, setItemName] = useState('');
   const [foundItems, setFoundItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState();
-  const [ignoredItems, setiIgnoredItems] = useState([]);
+  const [ignoredItems, setIgnoredItems] = useState([]);
   const [desiredBless, setDesiredBless] = useState(1);
   const [currentBless, setCurrentBless] = useState(0);
   const [itensToSacrifice, setItensToSacrifice] = useState(false);
@@ -142,12 +142,22 @@ const Bless = () => {
                 <div>
                   {`Quantidade para sacrificar: ${item.quantityToSacrifice}`}
                 </div>
+                <div>lvl: {item.level}</div>
               </div>
               <div className="d-flex">
                 <input
                   type="checkbox"
                   id={`ignore${item[locale]}`}
                   name="scales"
+                  onClick={e => {
+                    if (e.target.checked) {
+                      return setIgnoredItems([...ignoredItems, item['en']]);
+                    }
+                    const removeThisItem = ignoredItems.filter(
+                      curItem => curItem !== item['en'],
+                    );
+                    setIgnoredItems(removeThisItem);
+                  }}
                 />
                 <label htmlFor={`ignore${item[locale]}`}>Trocar Item</label>
               </div>
