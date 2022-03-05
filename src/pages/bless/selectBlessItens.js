@@ -91,12 +91,12 @@ const findItensToSacrificeRecursive = (
   allItens,
   itemReference,
   ignoredItems,
-  foundItens = [],
+  currentLoopFoundItens = [],
   foundItensName = [],
 ) => {
   const minLevel = itemReference.level / 2;
 
-  const selectedItem = allItens.filter(item => {
+  const selectedItems = allItens.filter(item => {
     if (
       item.slot === itemReference.slot &&
       item.level >= minLevel &&
@@ -107,19 +107,18 @@ const findItensToSacrificeRecursive = (
       return item;
   });
 
-  const justToTest = selectedItem.find(i => {
+  const addThisItem = selectedItems.find(i => {
     return i.level >= minLevel;
   });
 
-  console.log(minLevel);
-  if (!justToTest) return foundItens;
+  if (!addThisItem) return currentLoopFoundItens;
 
-  const newFoundItens = [...foundItens, justToTest];
-  const newFoundItensName = [...foundItensName, justToTest['en']];
+  const newFoundItens = [...currentLoopFoundItens, addThisItem];
+  const newFoundItensName = [...foundItensName, addThisItem['en']];
 
   return findItensToSacrificeRecursive(
     allItens,
-    justToTest,
+    addThisItem,
     ignoredItems,
     newFoundItens,
     newFoundItensName,
@@ -158,6 +157,61 @@ const addItensQuantity = (itensToSacrifice, necessaryItensQuantity) => {
   return itemsToShow;
 };
 
+const findBestCombination = (
+  itensToSacrifice,
+  item,
+  constructingArray = [],
+  itensFound = [],
+  exclude = [],
+) => {
+  const minLevel = item.level / 2;
+  const foundItem = itensToSacrifice
+    .sort((a, b) => a.level > b.level)
+    .find(i => {
+      if (i.level >= minLevel && !exclude.includes(i.en)) return i;
+    });
+
+  if (!foundItem) {
+    const bigerArray = constructingArray.sort((a, b) => b.length - a.length)[0];
+    return bigerArray;
+  }
+
+  if (foundItem.level < item.level) {
+    return findBestCombination(
+      itensToSacrifice,
+      foundItem,
+      constructingArray,
+      [...itensFound, foundItem],
+      [...exclude, foundItem.en],
+    );
+  }
+
+  const newItensToSacrifice = itensToSacrifice.filter(i => i.en !== item.en);
+  const updateFoundItens =
+    itensFound.length > 0
+      ? [...constructingArray, itensFound]
+      : constructingArray;
+  return findBestCombination(
+    newItensToSacrifice,
+    foundItem,
+    updateFoundItens,
+    [],
+    [],
+  );
+};
+
+const validateItens = (itemToBless, itens) => {
+  const isValid = itens
+    .sort((a, b) => b.level - a.level)
+    .reduce((cur, next) => {
+      if (!next || !cur) return false;
+      if (next.level >= cur.level / 2) return next;
+      return false;
+    }, itemToBless);
+
+  return isValid;
+};
+
 const findItensToSacrifice = (
   allItens,
   itemToBless,
@@ -171,18 +225,22 @@ const findItensToSacrifice = (
     ignoredItems,
   );
 
+  const bestCombination = findBestCombination(itensToSacrifice, itemToBless);
+
   const necessaryItensQuantity = upgradesTotal[desiredBless].map(
     (curBless, index) => {
       return curBless - upgradesTotal[currentBless][index];
     },
   );
-
   const itensToSacrificeWithQuantity = addItensQuantity(
-    itensToSacrifice,
+    bestCombination,
     necessaryItensQuantity,
   );
 
-  return itensToSacrificeWithQuantity;
+  const isValidItens = validateItens(itemToBless, itensToSacrificeWithQuantity);
+  if (isValidItens) return itensToSacrificeWithQuantity;
+
+  return [];
 };
 
 export { findItensToSacrifice };
