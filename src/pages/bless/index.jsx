@@ -126,7 +126,7 @@ const Bless = () => {
           return (
             <div
               key={`${item['en']}${i}`}
-              className="d-flex mb-2 mt-3 justify-content-around"
+              className="d-flex mb-2 mt-3 justify-content-around align-items-center"
               style={{ width: '400px' }}
             >
               <div>
@@ -144,7 +144,7 @@ const Bless = () => {
                 </div>
                 <div>lvl: {item.level}</div>
               </div>
-              <div className="d-flex">
+              <div>
                 <input
                   type="checkbox"
                   id={`ignore${item[locale]}`}
