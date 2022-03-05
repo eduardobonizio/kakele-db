@@ -58,9 +58,11 @@ export default function ShowSet() {
         (current, next, index) => {
           const currentSlot = ALL_ITENS_SLOTS_LIST[index];
 
-          const item =
-            findItemByName(allItens, selectedItems[currentSlot], locale) ||
-            FAKE_ITEM;
+          const item = findItemByName(
+            allItens,
+            selectedItems[currentSlot],
+            locale,
+          ) || { ...FAKE_ITEM, slot: currentSlot };
 
           return {
             ...current,
