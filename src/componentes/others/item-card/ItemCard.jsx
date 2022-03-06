@@ -32,6 +32,7 @@ export default function ItemCard(props) {
     ignoreElementForThisSlot,
     item,
     blessModifier = 0,
+    blessQuantity = 0,
     item: {
       sources,
       obsPtBr,
@@ -105,6 +106,7 @@ export default function ItemCard(props) {
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
         <h6 className="card-title">{item[locale]}</h6>
+        {blessQuantity > 0 && <i className="bi bi-star"></i>}
         <div className="d-flex flex-column">
           <span className="card-text">
             {imgUrl && (

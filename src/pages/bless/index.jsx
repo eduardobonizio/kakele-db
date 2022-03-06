@@ -208,6 +208,7 @@ const Bless = () => {
                   item={item}
                   locale={locale}
                   updateIgnoredItens={updateIgnoredItens}
+                  blessQuantity={desiredBless}
                 />
               );
             })}
