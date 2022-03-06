@@ -1,6 +1,6 @@
 import { elements } from './dataLanguages';
 import { UPGRADES_DATA } from './kakeleData';
-
+import removeAccents from 'remove-accents';
 const FIVE_SECONDS = 5000;
 
 const urlParamsToObject = paramsText => {
@@ -348,16 +348,23 @@ const findItemByName = (itemList, itemName, locale = 'en') => {
   const nameKey = 'en';
   return itemList.find(item => {
     return (
-      item[nameKey].toLowerCase() === itemName.toLowerCase() ||
-      item[locale].toLowerCase() === itemName.toLowerCase()
+      removeAccents(item[nameKey].toLowerCase()) ===
+        removeAccents(itemName.toLowerCase()) ||
+      removeAccents(item[locale].toLowerCase()) ===
+        removeAccents(itemName.toLowerCase())
     );
   });
 };
 
 const filterItemsByName = (itemList, itemName, locale) => {
   if (!itemName) return [];
+
   return itemList
-    .filter(item => item[locale].toLowerCase().includes(itemName.toLowerCase()))
+    .filter(item =>
+      removeAccents(item[locale].toLowerCase()).includes(
+        removeAccents(itemName.toLowerCase()),
+      ),
+    )
     .map(item => {
       return {
         en: item['en'],
@@ -373,15 +380,19 @@ const filterItemsByName = (itemList, itemName, locale) => {
       }
       return 0;
     })
-    .slice(0, 10);
+    .slice(0, 15);
 };
 
 const findItemsByName = (itemList, itemName) => {
   if (!itemName) return false;
   return itemList.filter(
     item =>
-      item['en'].toLowerCase().includes(itemName.toLowerCase()) ||
-      item['pt'].toLowerCase().includes(itemName.toLowerCase()),
+      removeAccents(item['en'].toLowerCase()).includes(
+        removeAccents(itemName.toLowerCase()),
+      ) ||
+      removeAccents(item['pt'].toLowerCase()).includes(
+        removeAccents(itemName.toLowerCase()),
+      ),
   );
 };
 
