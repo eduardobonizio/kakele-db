@@ -83,6 +83,7 @@ const Bless = () => {
           labelText={text.searchLabel}
           placeholder={text.searchPlaceHolder}
         />
+
         {itemName && (
           <ul className={style.searchResult}>
             {foundItems.map((suggestion, index) => {
@@ -104,10 +105,11 @@ const Bless = () => {
             })}
           </ul>
         )}
+        {!selectedItem && <span>Escolha um item</span>}
       </div>
       <div className={style.content}>
         <div className={style.filtersContainer}>
-          {query.item && selectedItem ? (
+          {query.item && selectedItem && (
             <div>
               <ItemCard index={0} item={selectedItem} locale={locale} />
               Bless atual{`  `}
@@ -149,8 +151,6 @@ const Bless = () => {
                 />
               </div>
             </div>
-          ) : (
-            <div>Escolha um item</div>
           )}
         </div>
         <div>
