@@ -143,7 +143,7 @@ const Bless = () => {
                   if (value < 1) return setDesiredBless(1);
                   return setDesiredBless(value);
                 }}
-                optionsArray={BLESS_OPTIONS}
+                optionsArray={[...BLESS_OPTIONS].slice(1, BLESS_OPTIONS.length)}
               />
               <div className="d-flex justify-content-between">
                 <ButtonForKakele
