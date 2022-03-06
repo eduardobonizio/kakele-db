@@ -19,6 +19,6 @@ module.exports = {
       { userAgent: '*', allow: '/' },
     ],
   },
-  exclude: ['/wiki-to-json'],
+  exclude: ['/wiki-to-json', '/wiki-to-json/update-items'],
   additionalPaths: async config => await test(config),
 };

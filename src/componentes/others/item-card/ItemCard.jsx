@@ -31,6 +31,8 @@ export default function ItemCard(props) {
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
     item,
+    blessModifier = 0,
+    blessQuantity = 0,
     item: {
       sources,
       obsPtBr,
@@ -96,10 +98,20 @@ export default function ItemCard(props) {
     }
   };
 
+  const addBlessModifier = status => {
+    return Math.floor(status + (status * blessModifier) / 100);
+  };
   return (
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
         <h6 className="card-title">{item[locale]}</h6>
+        {blessQuantity > 0 && (
+          <div className={styles.stars}>
+            {[...Array(blessQuantity).keys()].map(e => (
+              <i key={e} className="bi bi-star-fill"></i>
+            ))}
+          </div>
+        )}
         <div className="d-flex flex-column">
           <span className="card-text">
             {imgUrl && (
@@ -117,9 +129,15 @@ export default function ItemCard(props) {
               </span>
             </span>
           </span>
-          <span className="card-text">{`${text.armor}: ${armor}`}</span>
-          <span className="card-text">{`${text.magic}: ${magic}`}</span>
-          <span className="card-text">{`${text.attack}: ${attack}`}</span>
+          <span className="card-text">{`${text.armor}: ${addBlessModifier(
+            armor,
+          )}`}</span>
+          <span className="card-text">{`${text.magic}: ${addBlessModifier(
+            magic,
+          )}`}</span>
+          <span className="card-text">{`${text.attack}: ${addBlessModifier(
+            attack,
+          )}`}</span>
           <span className="card-text">{`${text.level}: ${level}`}</span>
           <span className="card-text">{`${text.slot}: ${slot}`}</span>
 

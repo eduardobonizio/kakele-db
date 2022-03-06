@@ -6,6 +6,12 @@
       justify-content: space-around;
 }
 
+.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (min-width: 768px) {
   .card {
     padding: 0px;
@@ -27,7 +33,7 @@
 
 @media screen and (max-width: 767px) {
   .card {
-    width: 90%;
+    width: 280px;
   }
 }
 /*# sourceMappingURL=ItemCard.module.css.map */

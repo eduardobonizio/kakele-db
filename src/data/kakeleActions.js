@@ -1,6 +1,6 @@
 import { elements } from './dataLanguages';
 import { UPGRADES_DATA } from './kakeleData';
-
+import removeAccents from 'remove-accents';
 const FIVE_SECONDS = 5000;
 
 const urlParamsToObject = paramsText => {
@@ -342,24 +342,57 @@ const checkSetElement = (itens, locale) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName, locale) => {
+const findItemByName = (itemList, itemName, locale = 'en') => {
   if (!itemName) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const nameKey = 'en';
   return itemList.find(item => {
     return (
-      item[nameKey].toLowerCase() === itemName.toLowerCase() ||
-      item[nameKey].toLowerCase() === itemName.toLowerCase()
+      removeAccents(item[nameKey].toLowerCase()) ===
+        removeAccents(itemName.toLowerCase()) ||
+      removeAccents(item[locale].toLowerCase()) ===
+        removeAccents(itemName.toLowerCase())
     );
   });
+};
+
+const filterItemsByName = (itemList, itemName, locale) => {
+  if (!itemName) return [];
+
+  return itemList
+    .filter(item =>
+      removeAccents(item[locale].toLowerCase()).includes(
+        removeAccents(itemName.toLowerCase()),
+      ),
+    )
+    .map(item => {
+      return {
+        en: item['en'],
+        pt: item['pt'],
+      };
+    })
+    .sort((a, b) => {
+      if (a[locale] < b[locale]) {
+        return -1;
+      }
+      if (a[locale] > b[locale]) {
+        return 1;
+      }
+      return 0;
+    })
+    .slice(0, 15);
 };
 
 const findItemsByName = (itemList, itemName) => {
   if (!itemName) return false;
   return itemList.filter(
     item =>
-      item['en'].toLowerCase().includes(itemName.toLowerCase()) ||
-      item['pt'].toLowerCase().includes(itemName.toLowerCase()),
+      removeAccents(item['en'].toLowerCase()).includes(
+        removeAccents(itemName.toLowerCase()),
+      ) ||
+      removeAccents(item['pt'].toLowerCase()).includes(
+        removeAccents(itemName.toLowerCase()),
+      ),
   );
 };
 
@@ -368,8 +401,8 @@ const findItemsByRarity = (itemList, itemRarity) => {
   return itemList.filter(
     item =>
       itemRarity === 'any' ||
-      item.rarity['en'].toLowerCase().includes(itemRarity.toLowerCase()) ||
-      item.rarity['pt'].toLowerCase().includes(itemRarity.toLowerCase()),
+      item.rarity['en'].toLowerCase() === itemRarity.toLowerCase() ||
+      item.rarity['pt'].toLowerCase() === itemRarity.toLowerCase(),
   );
 };
 
@@ -390,4 +423,5 @@ export {
   saveSetInLocalStorage,
   loadSetFromLocalStorage,
   findItemsByRarity,
+  filterItemsByName,
 };

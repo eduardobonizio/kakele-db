@@ -32,6 +32,7 @@ const navBarJsx = {
     oreCalculator: 'Upgrades',
     expCalculator: 'Exp Calculator',
     seeItem: 'Wiki',
+    blessPage: 'Bless',
   },
   pt: {
     showSet: 'Ver Set',
@@ -40,6 +41,7 @@ const navBarJsx = {
     oreCalculator: 'Forja',
     expCalculator: 'Calculadora de Exp',
     seeItem: 'Wiki',
+    blessPage: 'Bless',
   },
 };
 
@@ -331,6 +333,29 @@ const expCalculatorJsx = {
   },
 };
 
+const blessJsx = {
+  en: {
+    h1: 'Kakele Bless System',
+    searchLabel: 'Item',
+    searchPlaceHolder: 'Item Name',
+    actualBless: 'Current Bless',
+    desiredBless: 'Desired Bless',
+    search: 'Search',
+    resetIgnored: 'Reset Ignored',
+    alert: 'Current blessing greater then desired bless',
+  },
+  pt: {
+    h1: 'Kakele Sistema de Bless',
+    searchLabel: 'Item',
+    searchPlaceHolder: 'Nome do item',
+    actualBless: 'Bless atual',
+    desiredBless: 'Bless desejada',
+    search: 'Procurar',
+    resetIgnored: 'Resetar Ignorados',
+    alert: 'Bless atual maior que a Bless desejada',
+  },
+};
+
 const elements = {
   light: {
     en: 'Light',
@@ -366,4 +391,5 @@ export {
   elements,
   homeText,
   pageNotFound,
+  blessJsx,
 };

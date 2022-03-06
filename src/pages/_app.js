@@ -6,6 +6,7 @@ import Analytics from '../context/analytics/Analytics';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
