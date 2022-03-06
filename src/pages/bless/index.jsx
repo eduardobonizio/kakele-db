@@ -75,23 +75,20 @@ const Bless = () => {
   return (
     <div className={`container ${style.mainContainer}`}>
       <h1>{text.h1}</h1>
-      <div className={style.content}>
-        <div className={style.filtersContainer}>
-          <div className={style.searchInput}>
-            <Input
-              type="text"
-              value={itemName}
-              onChange={e => searchItem(e.target.value)}
-              labelText={text.searchLabel}
-              placeholder={text.searchPlaceHolder}
-            />
-          </div>
-
-          {itemName &&
-            foundItems.map((suggestion, index) => {
+      <div className={style.searchInput}>
+        <Input
+          type="text"
+          value={itemName}
+          onChange={e => searchItem(e.target.value)}
+          labelText={text.searchLabel}
+          placeholder={text.searchPlaceHolder}
+        />
+        {itemName && (
+          <ul className={style.searchResult}>
+            {foundItems.map((suggestion, index) => {
               if (!suggestion) return false;
               return (
-                <div key={index}>
+                <li key={index}>
                   <Link
                     href={`/bless?item=${suggestion['en']}`}
                     locale={locale}
@@ -102,12 +99,17 @@ const Bless = () => {
                       text={suggestion[locale]}
                     />
                   </Link>
-                </div>
+                </li>
               );
             })}
-
+          </ul>
+        )}
+      </div>
+      <div className={style.content}>
+        <div className={style.filtersContainer}>
           {query.item && selectedItem ? (
             <div>
+              <ItemCard index={0} item={selectedItem} locale={locale} />
               Bless atual{`  `}
               <input
                 type="number"
@@ -146,7 +148,6 @@ const Bless = () => {
                   type="button"
                 />
               </div>
-              <ItemCard index={0} item={selectedItem} locale={locale} />
             </div>
           ) : (
             <div>Escolha um item</div>

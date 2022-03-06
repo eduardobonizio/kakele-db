@@ -1,5 +1,15 @@
 .searchInput {
-  max-width: 430px;
+  width: 296px;
+}
+
+.searchResult {
+  width: 296px;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  z-index: 9999;
+  display: table;
+  list-style-type: none;
 }
 
 .resultCard {
