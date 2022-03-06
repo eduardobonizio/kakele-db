@@ -204,7 +204,7 @@ const Bless = () => {
         <div>
           {totalBlessPrice > 0 && itensToSacrifice.length > 0 && (
             <div className={style.kksResult}>
-              <span>Cash Total (KKs): {addDotToKks(totalBlessPrice)}</span>
+              <span>{`${text.priceText}:${addDotToKks(totalBlessPrice)}`}</span>
             </div>
           )}
           {itensToSacrifice &&

@@ -344,6 +344,7 @@ const blessJsx = {
     resetIgnored: 'Reset Ignored',
     alert: 'Current blessing greater then desired bless',
     chooseItem: 'Chosse one item',
+    priceText: 'Gold Total (KKs)',
   },
   pt: {
     h1: 'Kakele Sistema de Bless',
@@ -355,6 +356,7 @@ const blessJsx = {
     resetIgnored: 'Resetar Ignorados',
     alert: 'Bless atual maior que a Bless desejada',
     chooseItem: 'Escolha um item',
+    priceText: 'Gold Total (KKs)',
   },
 };
 
