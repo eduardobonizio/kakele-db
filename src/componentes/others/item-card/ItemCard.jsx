@@ -16,6 +16,7 @@ import Image from 'next/image';
 
 import ButtonForKakele from '../../buttons/buttton-for-kakele/ButtonForKakele';
 import LinkButton from '../../buttons/link-as-button/LinkButton';
+import StatusDiv from './status-div/StatusDiv';
 
 export default function ItemCard(props) {
   const {
@@ -98,9 +99,6 @@ export default function ItemCard(props) {
     }
   };
 
-  const addBlessModifier = status => {
-    return Math.floor(status + (status * blessModifier) / 100);
-  };
   return (
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
@@ -129,17 +127,15 @@ export default function ItemCard(props) {
               </span>
             </span>
           </span>
-          <span className="card-text">{`${text.armor}: ${addBlessModifier(
-            armor,
-          )}`}</span>
-          <span className="card-text">{`${text.magic}: ${addBlessModifier(
-            magic,
-          )}`}</span>
-          <span className="card-text">{`${text.attack}: ${addBlessModifier(
-            attack,
-          )}`}</span>
-          <span className="card-text">{`${text.level}: ${level}`}</span>
-          <span className="card-text">{`${text.slot}: ${slot}`}</span>
+          <StatusDiv
+            text={text}
+            armor={armor}
+            magic={magic}
+            attack={attack}
+            level={level}
+            slot={slot}
+            blessModifier={blessModifier}
+          />
 
           <span className="card-text">
             {`${text.rarity}: `}
