@@ -99,7 +99,7 @@ const Bless = () => {
     setFoundItems([]);
     setIgnoredItems([]);
     setItensToSacrifice(false);
-    setShowStars(0);
+    // setShowStars(0);
   };
 
   useEffect(() => {
@@ -204,7 +204,9 @@ const Bless = () => {
         <div>
           {totalBlessPrice > 0 && itensToSacrifice.length > 0 && (
             <div className={style.kksResult}>
-              <span>{`${text.priceText}:${addDotToKks(totalBlessPrice)}`}</span>
+              <span>{`${text.priceText}: ${addDotToKks(
+                totalBlessPrice,
+              )}`}</span>
             </div>
           )}
           {itensToSacrifice &&
