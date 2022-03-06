@@ -174,44 +174,34 @@ const addItensQuantity = (itensToSacrifice, necessaryItensQuantity) => {
 const findBestCombination = (
   itensToSacrifice,
   item,
-  constructingArray = [],
   itensFound = [],
   exclude = [],
+  foundLevel = item.level,
 ) => {
-  const minLevel = item.level / 2;
-  const foundItem = itensToSacrifice
-    .sort((a, b) => a.level > b.level)
-    .find(i => {
-      if (i.level >= minLevel && !exclude.includes(i.en)) return i;
-    });
+  const minLevel = item && item.level / 2;
+
+  const foundItem = itensToSacrifice.find(i => {
+    if (
+      !exclude.includes(i.en) &&
+      i.level < foundLevel &&
+      i.level >= minLevel &&
+      i.level !== item.level
+    )
+      return i;
+  });
 
   if (!foundItem) {
-    if (constructingArray.length < 1) return [];
-    const bigerArray = constructingArray.sort((a, b) => b.length - a.length)[0];
+    if (itensFound.length < 1) return [];
+    const bigerArray = itensFound.sort((a, b) => b.length - a.length);
     return bigerArray;
   }
 
-  if (foundItem.level < item.level) {
-    return findBestCombination(
-      itensToSacrifice,
-      foundItem,
-      constructingArray,
-      [...itensFound, foundItem],
-      [...exclude, foundItem.en],
-    );
-  }
-
-  const newItensToSacrifice = itensToSacrifice.filter(i => i.en !== item.en);
-  const updateFoundItens =
-    itensFound.length > 0
-      ? [...constructingArray, itensFound]
-      : constructingArray;
   return findBestCombination(
-    newItensToSacrifice,
+    itensToSacrifice,
     foundItem,
-    updateFoundItens,
-    [],
-    [],
+    [...itensFound, foundItem],
+    [...exclude, foundItem.en],
+    foundItem.level,
   );
 };
 
@@ -239,14 +229,14 @@ const findItensToSacrifice = (
     itemToBless,
     ignoredItems,
   );
-
   const bestCombination = findBestCombination(itensToSacrifice, itemToBless);
-
+  console.log(bestCombination);
   const necessaryItensQuantity = upgradesTotal[desiredBless].map(
     (curBless, index) => {
       return curBless - upgradesTotal[currentBless][index];
     },
   );
+
   const itensToSacrificeWithQuantity = addItensQuantity(
     bestCombination,
     necessaryItensQuantity,
