@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Alert from '../../componentes/alert/Alert';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import Input from '../../componentes/inputs/Input';
@@ -28,6 +29,7 @@ const Bless = () => {
   const [currentBless, setCurrentBless] = useState(0);
   const [itensToSacrifice, setItensToSacrifice] = useState(false);
   const [totalBlessPrice, setTotalBlessPrice] = useState(0);
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const searchItem = searchText => {
     setItemName(searchText);
@@ -60,6 +62,10 @@ const Bless = () => {
   };
 
   const findItens = itensToIgnore => {
+    if (currentBless >= desiredBless) {
+      !showErrorMessage && setShowErrorMessage(!showErrorMessage);
+      return;
+    }
     const ignore = itensToIgnore || ignoredItems;
     const toSacrifice = findItensToSacrifice(
       [...weapons, ...equipments],
@@ -78,6 +84,15 @@ const Bless = () => {
     setTotalBlessPrice(price);
   };
 
+  const changeItem = iName => {
+    updateShowItem(iName);
+    setIgnoredItems([]);
+    findItens([]);
+    setFoundItems([]);
+    setIgnoredItems([]);
+    setItensToSacrifice(false);
+  };
+
   useEffect(() => {
     updateShowItem(query.item);
     const ignored =
@@ -87,6 +102,14 @@ const Bless = () => {
 
   return (
     <div className={`container ${style.mainContainer}`}>
+      {showErrorMessage && (
+        <Alert
+          message="Bless atual não pode ser maior que a Bless desejada"
+          timeOut={2000}
+          hideFunc={() => setShowErrorMessage(!showErrorMessage)}
+        />
+      )}
+
       <h1>{text.h1}</h1>
       <div className={style.searchInput}>
         <Input
@@ -109,7 +132,7 @@ const Bless = () => {
                     passHref
                   >
                     <LinkButton
-                      onClick={() => updateShowItem(suggestion['en'])}
+                      onClick={() => changeItem(suggestion['en'])}
                       text={suggestion[locale]}
                     />
                   </Link>
