@@ -152,7 +152,7 @@ const Bless = () => {
             })}
           </ul>
         )}
-        {!selectedItem && <span>Escolha um item</span>}
+        {!selectedItem && <span>{text.chooseItem}</span>}
       </div>
       <div className={style.content}>
         <div className={style.filtersContainer}>

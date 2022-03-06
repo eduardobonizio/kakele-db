@@ -343,6 +343,7 @@ const blessJsx = {
     search: 'Search',
     resetIgnored: 'Reset Ignored',
     alert: 'Current blessing greater then desired bless',
+    chooseItem: 'Chosse one item',
   },
   pt: {
     h1: 'Kakele Sistema de Bless',
@@ -353,6 +354,7 @@ const blessJsx = {
     search: 'Procurar',
     resetIgnored: 'Resetar Ignorados',
     alert: 'Bless atual maior que a Bless desejada',
+    chooseItem: 'Escolha um item',
   },
 };
 
