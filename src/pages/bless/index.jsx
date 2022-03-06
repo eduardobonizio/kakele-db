@@ -10,7 +10,7 @@ import { blessJsx as textOptions } from '../../data/dataLanguages';
 import { filterItemsByName, findItemByName } from '../../data/kakeleActions';
 import { equipments, weapons } from '../../data/kakeleData';
 import style from './Bless.module.css';
-import { findItensToSacrifice } from './selectBlessItens';
+import { findItensToSacrifice } from '../../lib/bless';
 
 const Bless = () => {
   const { query, locale } = useRouter();
