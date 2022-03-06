@@ -128,6 +128,7 @@ const Bless = () => {
           onChange={e => searchItem(e.target.value)}
           labelText={text.searchLabel}
           placeholder={text.searchPlaceHolder}
+          autocomplete="off"
         />
 
         {itemName && (

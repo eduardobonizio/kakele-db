@@ -5,6 +5,7 @@ export default function Input({
   labelText,
   style,
   placeholder,
+  autocomplete,
 }) {
   return (
     <div className="input-group mb-2">
@@ -19,6 +20,7 @@ export default function Input({
         name={labelText}
         className={`form-control ${style && style.labelStyle}`}
         placeholder={placeholder || ''}
+        autoComplete={autocomplete || 'on'}
       />
     </div>
   );
