@@ -338,11 +338,15 @@ const blessJsx = {
     h1: 'Kakele Bless System',
     searchLabel: 'Item',
     searchPlaceHolder: 'Item Name',
+    actualBless: 'Current Bless',
+    desiredBless: 'Desired Bless',
   },
   pt: {
     h1: 'Kakele Sistema de Bless',
     searchLabel: 'Item',
     searchPlaceHolder: 'Nome do item',
+    actualBless: 'Bless atual',
+    desiredBless: 'Bless desejada',
   },
 };
 

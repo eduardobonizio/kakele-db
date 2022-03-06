@@ -6,6 +6,7 @@ import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/Button
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import Input from '../../componentes/inputs/Input';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
+import UpgradeSelector from '../../componentes/others/UpgradeSelector';
 import { blessJsx as textOptions } from '../../data/dataLanguages';
 import { filterItemsByName, findItemByName } from '../../data/kakeleActions';
 import { equipments, weapons } from '../../data/kakeleData';
@@ -112,32 +113,24 @@ const Bless = () => {
           {query.item && selectedItem && (
             <div>
               <ItemCard index={0} item={selectedItem} locale={locale} />
-              Bless atual{`  `}
-              <input
-                type="number"
-                min={0}
-                max={9}
-                value={currentBless}
-                onChange={e => {
-                  if (e.target.value > 9) return setCurrentBless(9);
-                  if (e.target.value < 0) return setCurrentBless(0);
-                  return setCurrentBless(e.target.value);
+              <UpgradeSelector
+                elementId="bless-atual"
+                labelText={text.actualBless}
+                onChange={value => {
+                  if (value > 9) return setCurrentBless(9);
+                  if (value < 0) return setCurrentBless(0);
+                  return setCurrentBless(value);
                 }}
               />
-              <br />
-              Bless desejada{`  `}
-              <input
-                type="number"
-                min={1}
-                max={10}
-                value={desiredBless}
-                onChange={e => {
-                  if (e.target.value > 10) return setDesiredBless(10);
-                  if (e.target.value < 1) return setDesiredBless(1);
-                  return setDesiredBless(e.target.value);
+              <UpgradeSelector
+                elementId="bless-desejada"
+                labelText={text.desiredBless}
+                onChange={value => {
+                  if (value > 10) return setDesiredBless(10);
+                  if (value < 1) return setDesiredBless(1);
+                  return setDesiredBless(value);
                 }}
               />
-              <br />
               <div className="d-flex justify-content-between">
                 <ButtonForKakele
                   onClick={() => findItens()}
