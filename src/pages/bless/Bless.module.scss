@@ -13,12 +13,17 @@
 }
 
 .resultCard {
+  width: 300px;
+  height: 150px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  width: 280px;
   margin-bottom: 5px;
   border-style: groove;
+}
+
+.resultCardImage {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .mainContainer {

@@ -158,7 +158,7 @@ const Bless = () => {
             itensToSacrifice.map((item, i) => {
               return (
                 <div key={`${item['en']}${i}`} className={style.resultCard}>
-                  <div>
+                  <div className={style.resultCardImage}>
                     <Image
                       src={item.imgUrl.replace('"', '').replace('"', '')}
                       alt={item[locale]}
@@ -168,9 +168,7 @@ const Bless = () => {
                   </div>
                   <div className="d-flex flex-column me-2">
                     <div>Item: {item[locale]}</div>
-                    <div>
-                      {`Quantidade para sacrificar: ${item.quantityToSacrifice}`}
-                    </div>
+                    <div>{`Quantidade: ${item.quantityToSacrifice}`}</div>
                     <div>lvl: {item.level}</div>
 
                     <div>
