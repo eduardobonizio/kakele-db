@@ -12,21 +12,8 @@
   list-style-type: none;
 }
 
-.resultCard {
-  width: 280px;
-  height: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 5px;
-  border-style: groove;
-}
-
 .kksResult {
-  width: 280px;
+  width: 296px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,19 +27,23 @@
   border-style: groove;
 }
 
-.resultCardTextContainer {
-  width: 100%;
-  height: 100%;
+.cardContainer {
+  width: 296px;
+  height: 155px;
+}
+
+.cardTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48px;
+  text-align: center;
 }
 
 .resultCardText {
@@ -66,12 +57,20 @@
 }
 
 .resultCardImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 42px;
-  margin-right: 5px;
-  margin-left: 5px;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  background-color: none;
 }
 
 .mainContainer {

@@ -6,6 +6,7 @@ import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/Button
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import Input from '../../componentes/inputs/Input';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
+import SacrificeItemCard from '../../componentes/others/sacrifice-item-card/SacrificeItemCard';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
 import { blessJsx as textOptions } from '../../data/dataLanguages';
 import {
@@ -161,45 +162,21 @@ const Bless = () => {
           )}
         </div>
         <div>
-          {totalBlessPrice > 0 && (
+          {totalBlessPrice > 0 && itensToSacrifice.length > 0 && (
             <div className={style.kksResult}>
-              <span>Total KKs: {addDotToKks(totalBlessPrice)}</span>
+              <span>Cash Total (KKs): {addDotToKks(totalBlessPrice)}</span>
             </div>
           )}
           {itensToSacrifice &&
             itensToSacrifice.map((item, i) => {
               return (
-                <div key={`${item['en']}${i}`} className={style.resultCard}>
-                  <div className={style.resultCardImage}>
-                    <Image
-                      src={item.imgUrl.replace('"', '').replace('"', '')}
-                      alt={item[locale]}
-                      width="32"
-                      height="32"
-                    />
-                  </div>
-                  <div className={style.resultCardTextContainer}>
-                    <div className={style.resultCardText}>
-                      <span>Item: {item[locale]}</span>
-                      <span>{`Quantidade: ${item.quantityToSacrifice}`}</span>
-                      <span>lvl: {item.level}</span>
-                      <span>{item.rarity[locale]}</span>
-                    </div>
-                    <div>
-                      <input
-                        type="checkbox"
-                        id={`ignore${item[locale]}`}
-                        name="scales"
-                        onClick={e =>
-                          updateIgnoredItens(e.target.checked, item.en)
-                        }
-                      />
-                      <label htmlFor={`ignore${item[locale]}`}>
-                        Trocar Item
-                      </label>
-                    </div>
-                  </div>
-                </div>
+                <SacrificeItemCard
+                  key={`${item['en']}${i}`}
+                  style={style}
+                  item={item}
+                  locale={locale}
+                  updateIgnoredItens={updateIgnoredItens}
+                />
               );
             })}
         </div>
