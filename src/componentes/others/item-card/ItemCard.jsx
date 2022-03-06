@@ -101,12 +101,17 @@ export default function ItemCard(props) {
   const addBlessModifier = status => {
     return Math.floor(status + (status * blessModifier) / 100);
   };
-
   return (
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
         <h6 className="card-title">{item[locale]}</h6>
-        {blessQuantity > 0 && <i className="bi bi-star"></i>}
+        {blessQuantity > 0 && (
+          <div className={styles.stars}>
+            {[...Array(blessQuantity).keys()].map(e => (
+              <i key={e} className="bi bi-star-fill"></i>
+            ))}
+          </div>
+        )}
         <div className="d-flex flex-column">
           <span className="card-text">
             {imgUrl && (

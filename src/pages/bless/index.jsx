@@ -32,6 +32,7 @@ const Bless = () => {
   const [desiredBless, setDesiredBless] = useState(0);
   const [currentBless, setCurrentBless] = useState(0);
   const [blessModifier, setBlessModifier] = useState(0);
+  const [showStars, setShowStars] = useState(0);
   const [itensToSacrifice, setItensToSacrifice] = useState(false);
   const [totalBlessPrice, setTotalBlessPrice] = useState(0);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -85,6 +86,7 @@ const Bless = () => {
       currentBless,
       desiredBless,
     );
+    setShowStars(desiredBless);
     setItensToSacrifice(toSacrifice);
     setTotalBlessPrice(price);
     setBlessModifier(RARITY_BONUS[selectedItem.rarity.en][desiredBless]);
@@ -96,13 +98,16 @@ const Bless = () => {
     setFoundItems([]);
     setIgnoredItems([]);
     setItensToSacrifice(false);
+    setShowStars(0);
   };
 
   useEffect(() => {
+    changeItem(query.item);
     updateShowItem(query.item);
     const ignored =
       JSON.parse(localStorage.getItem('ignoredSacrificeItens')) || '';
     setIgnoredItems(ignored);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query.item]);
 
   return (
@@ -157,6 +162,7 @@ const Bless = () => {
                 item={selectedItem}
                 locale={locale}
                 blessModifier={blessModifier}
+                blessQuantity={showStars}
               />
               <UpgradeSelector
                 elementId="bless-atual"
@@ -208,7 +214,6 @@ const Bless = () => {
                   item={item}
                   locale={locale}
                   updateIgnoredItens={updateIgnoredItens}
-                  blessQuantity={desiredBless}
                 />
               );
             })}

@@ -4,6 +4,9 @@
   display: flex;
   justify-content: space-around;
 }
+.stars {
+  display: flex;
+}
 
 @media screen and (min-width: 768px) {
   .card {
