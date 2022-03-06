@@ -17,15 +17,15 @@ const StatusDiv = props => {
   return (
     <>
       <span className="card-text">
-        {`${text.armor}: `}
+        {`${text.armor}: ${armor} -> `}
         <span className="blue">{`${addBlessModifier(armor)}`}</span>
       </span>
       <span className="card-text green">
-        {`${text.magic}: `}
+        {`${text.magic}: ${magic} -> `}
         <span className="blue">{`${addBlessModifier(magic)}`}</span>
       </span>
       <span className="card-text green">
-        {`${text.attack}: `}
+        {`${text.attack}: ${attack} -> `}
         <span className="blue">{`${addBlessModifier(attack)}`}</span>
       </span>
       <span className="card-text">{`${text.level}: ${level}`}</span>
