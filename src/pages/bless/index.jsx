@@ -69,7 +69,6 @@ const Bless = () => {
     updateShowItem(query.item);
     const ignored =
       JSON.parse(localStorage.getItem('ignoredSacrificeItens')) || '';
-    console.log(ignored);
     setIgnoredItems(ignored);
   }, [query.item]);
 

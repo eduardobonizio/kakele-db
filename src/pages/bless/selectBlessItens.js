@@ -230,6 +230,8 @@ const findItensToSacrifice = (
     ignoredItems,
   );
 
+  if (itensToSacrifice.length < 1) return [];
+
   const foundLevels = [];
 
   const bestCombination = itensToSacrifice
