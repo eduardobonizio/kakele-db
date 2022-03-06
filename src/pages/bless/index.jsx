@@ -166,11 +166,13 @@ const Bless = () => {
                       height="32"
                     />
                   </div>
-                  <div className="d-flex flex-column me-2">
-                    <div>Item: {item[locale]}</div>
-                    <div>{`Quantidade: ${item.quantityToSacrifice}`}</div>
-                    <div>lvl: {item.level}</div>
-
+                  <div className={style.resultCardTextContainer}>
+                    <div className={style.resultCardText}>
+                      <span>Item: {item[locale]}</span>
+                      <span>{`Quantidade: ${item.quantityToSacrifice}`}</span>
+                      <span>lvl: {item.level}</span>
+                      <span>{item.rarity[locale]}</span>
+                    </div>
                     <div>
                       <input
                         type="checkbox"
