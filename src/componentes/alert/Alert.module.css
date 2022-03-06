@@ -1,6 +1,9 @@
 .alert {
   position: fixed;
   top: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   z-index: 1000;
   text-align: center;
 }
