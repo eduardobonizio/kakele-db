@@ -87,7 +87,6 @@ const Bless = () => {
   const changeItem = iName => {
     updateShowItem(iName);
     setIgnoredItems([]);
-    findItens([]);
     setFoundItems([]);
     setIgnoredItems([]);
     setItensToSacrifice(false);
