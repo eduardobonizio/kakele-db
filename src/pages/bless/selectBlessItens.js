@@ -174,8 +174,8 @@ const addItensQuantity = (itensToSacrifice, necessaryItensQuantity) => {
 const findBestCombination = (
   itensToSacrifice,
   item,
-  itensFound = [],
-  exclude = [],
+  itensFound = [item],
+  exclude = [item.en],
   foundLevel = item.level,
 ) => {
   const minLevel = item && item.level / 2;
@@ -229,8 +229,19 @@ const findItensToSacrifice = (
     itemToBless,
     ignoredItems,
   );
-  const bestCombination = findBestCombination(itensToSacrifice, itemToBless);
-  console.log(bestCombination);
+
+  const foundLevels = [];
+
+  const bestCombination = itensToSacrifice
+    .map(i => {
+      if (i.level >= itemToBless.level / 2 && !foundLevels.includes(i.level)) {
+        foundLevels.push(i.level);
+        const result = findBestCombination(itensToSacrifice, i);
+        return result;
+      }
+    })
+    .sort((a, b) => a[0].level - b[0].level);
+
   const necessaryItensQuantity = upgradesTotal[desiredBless].map(
     (curBless, index) => {
       return curBless - upgradesTotal[currentBless][index];
@@ -238,7 +249,7 @@ const findItensToSacrifice = (
   );
 
   const itensToSacrificeWithQuantity = addItensQuantity(
-    bestCombination,
+    bestCombination[0],
     necessaryItensQuantity,
   );
 
