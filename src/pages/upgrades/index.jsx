@@ -8,7 +8,6 @@ import OrePriceUpdater from '../../componentes/others/OrePriceUpdater';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
 import { oreCalculatorJsx as textOptions } from '../../data/dataLanguages';
 import {
-  activateAlert,
   addDotToKks,
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
@@ -34,7 +33,7 @@ export default function OreCalculator() {
 
   const calculateOres = () => {
     if (startUpgradeLvl >= desiredUpgradeLvl) {
-      if (!showAlert) activateAlert(setShowAlert);
+      if (!showAlert) setShowAlert(!showAlert);
       setNecessaryItens();
       return;
     }
@@ -122,7 +121,13 @@ export default function OreCalculator() {
             </div>
           </div>
         )}
-        {showAlert && <Alert message={text.alert} />}
+        {showAlert && (
+          <Alert
+            message={text.alert}
+            timeOut={2000}
+            hideFunc={() => setShowAlert(!showAlert)}
+          />
+        )}
       </div>
     </div>
   );
