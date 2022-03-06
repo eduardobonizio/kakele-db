@@ -8,9 +8,13 @@ import Input from '../../componentes/inputs/Input';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
 import { blessJsx as textOptions } from '../../data/dataLanguages';
-import { filterItemsByName, findItemByName } from '../../data/kakeleActions';
+import {
+  addDotToKks,
+  filterItemsByName,
+  findItemByName,
+} from '../../data/kakeleActions';
 import { BLESS_OPTIONS, equipments, weapons } from '../../data/kakeleData';
-import { findItensToSacrifice } from '../../lib/bless';
+import { calcBlessPrice, findItensToSacrifice } from '../../lib/bless';
 import style from './Bless.module.css';
 
 const Bless = () => {
@@ -23,6 +27,7 @@ const Bless = () => {
   const [desiredBless, setDesiredBless] = useState(1);
   const [currentBless, setCurrentBless] = useState(0);
   const [itensToSacrifice, setItensToSacrifice] = useState(false);
+  const [totalBlessPrice, setTotalBlessPrice] = useState(0);
 
   const searchItem = searchText => {
     setItemName(searchText);
@@ -63,7 +68,14 @@ const Bless = () => {
       desiredBless,
       ignore,
     );
+
+    const price = calcBlessPrice(
+      selectedItem.rarity.en,
+      currentBless,
+      desiredBless,
+    );
     setItensToSacrifice(toSacrifice);
+    setTotalBlessPrice(price);
   };
 
   useEffect(() => {
@@ -149,6 +161,11 @@ const Bless = () => {
           )}
         </div>
         <div>
+          {totalBlessPrice > 0 && (
+            <div className={style.kksResult}>
+              <span>Total KKs: {addDotToKks(totalBlessPrice)}</span>
+            </div>
+          )}
           {itensToSacrifice &&
             itensToSacrifice.map((item, i) => {
               return (

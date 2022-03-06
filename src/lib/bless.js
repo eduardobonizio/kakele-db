@@ -1,3 +1,9 @@
+const RARITY_BLESS_PRICE = {
+  Common: 100000,
+  Uncommom: 1000000,
+  Rare: 10000000,
+};
+
 /*
 Tabela de bonus
 Item Raro
@@ -99,6 +105,15 @@ const sacrificeQuantityFromBlessToBless = {
   8: 255,
   9: 511,
   10: 1023,
+};
+
+const calcBlessPrice = (rarity, initialBless, finalBless) => {
+  const price =
+    RARITY_BLESS_PRICE[rarity] *
+    (sacrificeQuantityFromBlessToBless[finalBless] -
+      sacrificeQuantityFromBlessToBless[initialBless]);
+
+  return price;
 };
 
 const findItensToSacrificeRecursive = (
@@ -261,4 +276,4 @@ const findItensToSacrifice = (
   return [];
 };
 
-export { findItensToSacrifice };
+export { findItensToSacrifice, calcBlessPrice };

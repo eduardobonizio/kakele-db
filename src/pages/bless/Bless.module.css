@@ -25,6 +25,21 @@
   border-style: groove;
 }
 
+.kksResult {
+  width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+  border-style: groove;
+}
+
 .resultCardTextContainer {
   width: 100%;
   height: 100%;
