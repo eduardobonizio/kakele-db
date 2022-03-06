@@ -335,7 +335,7 @@ const expCalculatorJsx = {
 
 const blessJsx = {
   en: {
-    h1: 'Kakele Bless System',
+    h1: 'Kakele Bless System (BETA)',
     searchLabel: 'Item',
     searchPlaceHolder: 'Item Name',
     actualBless: 'Current Bless',
@@ -347,7 +347,7 @@ const blessJsx = {
     priceText: 'Gold Total (KKs)',
   },
   pt: {
-    h1: 'Kakele Sistema de Bless',
+    h1: 'Kakele Sistema de Bless (BETA)',
     searchLabel: 'Item',
     searchPlaceHolder: 'Nome do item',
     actualBless: 'Bless atual',
