@@ -37,8 +37,40 @@ const Bless = () => {
     setItemName('');
   };
 
+  const updateIgnoredItens = (saveItem, item) => {
+    const itensToIgnore = [...ignoredItems, item];
+    localStorage.setItem(
+      'ignoredSacrificeItens',
+      JSON.stringify(itensToIgnore),
+    );
+    setIgnoredItems(itensToIgnore);
+    findItens(itensToIgnore);
+  };
+
+  const resetIgnoredItens = () => {
+    localStorage.removeItem('ignoredSacrificeItens');
+    setIgnoredItems([]);
+    findItens([]);
+  };
+
+  const findItens = itensToIgnore => {
+    const ignore = itensToIgnore || ignoredItems;
+    const toSacrifice = findItensToSacrifice(
+      [...weapons, ...equipments],
+      selectedItem,
+      currentBless,
+      desiredBless,
+      ignore,
+    );
+    setItensToSacrifice(toSacrifice);
+  };
+
   useEffect(() => {
     updateShowItem(query.item);
+    const ignored =
+      JSON.parse(localStorage.getItem('ignoredSacrificeItens')) || '';
+    console.log(ignored);
+    setIgnoredItems(ignored);
   }, [query.item]);
 
   return (
@@ -105,30 +137,12 @@ const Bless = () => {
               <br />
               <div className="d-flex justify-content-between">
                 <ButtonForKakele
-                  onClick={() => {
-                    const toSacrifice = findItensToSacrifice(
-                      [...weapons, ...equipments],
-                      selectedItem,
-                      currentBless,
-                      desiredBless,
-                      ignoredItems,
-                    );
-                    setItensToSacrifice(toSacrifice);
-                  }}
+                  onClick={() => findItens()}
                   text="calcular"
                   type="button"
                 />
                 <ButtonForKakele
-                  onClick={() => {
-                    const toSacrifice = findItensToSacrifice(
-                      [...weapons, ...equipments],
-                      selectedItem,
-                      currentBless,
-                      desiredBless,
-                      ignoredItems,
-                    );
-                    setItensToSacrifice(toSacrifice);
-                  }}
+                  onClick={() => resetIgnoredItens()}
                   text="Resetar ignorados"
                   type="button"
                 />
@@ -164,18 +178,9 @@ const Bless = () => {
                         type="checkbox"
                         id={`ignore${item[locale]}`}
                         name="scales"
-                        onClick={e => {
-                          if (e.target.checked) {
-                            return setIgnoredItems([
-                              ...ignoredItems,
-                              item['en'],
-                            ]);
-                          }
-                          const removeThisItem = ignoredItems.filter(
-                            curItem => curItem !== item['en'],
-                          );
-                          setIgnoredItems(removeThisItem);
-                        }}
+                        onClick={e =>
+                          updateIgnoredItens(e.target.checked, item.en)
+                        }
                       />
                       <label htmlFor={`ignore${item[locale]}`}>
                         Trocar Item
