@@ -13,6 +13,7 @@ import {
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
 } from '../../data/kakeleActions';
+import { UPGRADES_STAGES } from '../../data/kakeleData';
 
 export default function OreCalculator() {
   const { locale, locales } = useRouter();
@@ -76,11 +77,13 @@ export default function OreCalculator() {
           elementId="upgrade-inicial"
           labelText={text.startUpgrade}
           onChange={setStartUpgradeLvl}
+          optionsArray={UPGRADES_STAGES}
         />
         <UpgradeSelector
           elementId="upgrade-final"
           labelText={text.finishUpgrade}
           onChange={setDesiredUpgradeLvl}
+          optionsArray={UPGRADES_STAGES}
         />
         <InputCheckBox
           labelText={text.buyOres}

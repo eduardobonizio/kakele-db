@@ -9,7 +9,7 @@ import ItemCard from '../../componentes/others/item-card/ItemCard';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
 import { blessJsx as textOptions } from '../../data/dataLanguages';
 import { filterItemsByName, findItemByName } from '../../data/kakeleActions';
-import { equipments, weapons } from '../../data/kakeleData';
+import { BLESS_OPTIONS, equipments, weapons } from '../../data/kakeleData';
 import { findItensToSacrifice } from '../../lib/bless';
 import style from './Bless.module.css';
 
@@ -121,6 +121,7 @@ const Bless = () => {
                   if (value < 0) return setCurrentBless(0);
                   return setCurrentBless(value);
                 }}
+                optionsArray={BLESS_OPTIONS}
               />
               <UpgradeSelector
                 elementId="bless-desejada"
@@ -130,16 +131,17 @@ const Bless = () => {
                   if (value < 1) return setDesiredBless(1);
                   return setDesiredBless(value);
                 }}
+                optionsArray={BLESS_OPTIONS}
               />
               <div className="d-flex justify-content-between">
                 <ButtonForKakele
                   onClick={() => findItens()}
-                  text="calcular"
+                  text={text.search}
                   type="button"
                 />
                 <ButtonForKakele
                   onClick={() => resetIgnoredItens()}
-                  text="Resetar ignorados"
+                  text={text.resetIgnored}
                   type="button"
                 />
               </div>

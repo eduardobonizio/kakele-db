@@ -340,6 +340,8 @@ const blessJsx = {
     searchPlaceHolder: 'Item Name',
     actualBless: 'Current Bless',
     desiredBless: 'Desired Bless',
+    search: 'Search',
+    resetIgnored: 'Reset Ignored',
   },
   pt: {
     h1: 'Kakele Sistema de Bless',
@@ -347,6 +349,8 @@ const blessJsx = {
     searchPlaceHolder: 'Nome do item',
     actualBless: 'Bless atual',
     desiredBless: 'Bless desejada',
+    search: 'Procurar',
+    resetIgnored: 'Resetar Ignorados',
   },
 };
 
