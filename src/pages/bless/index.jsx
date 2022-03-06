@@ -86,6 +86,7 @@ const Bless = () => {
       currentBless,
       desiredBless,
     );
+    console.log(selectedItem.rarity.en, desiredBless);
     setShowStars(desiredBless);
     setItensToSacrifice(toSacrifice);
     setTotalBlessPrice(price);
