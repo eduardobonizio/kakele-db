@@ -390,8 +390,8 @@ const findItemsByRarity = (itemList, itemRarity) => {
   return itemList.filter(
     item =>
       itemRarity === 'any' ||
-      item.rarity['en'].toLowerCase().includes(itemRarity.toLowerCase()) ||
-      item.rarity['pt'].toLowerCase().includes(itemRarity.toLowerCase()),
+      item.rarity['en'].toLowerCase() === itemRarity.toLowerCase() ||
+      item.rarity['pt'].toLowerCase() === itemRarity.toLowerCase(),
   );
 };
 
