@@ -335,7 +335,9 @@ const expCalculatorJsx = {
 
 const blessJsx = {
   en: {
-    h1: 'Kakele Bless System (BETA)',
+    title: 'Kakele Bless System (BETA)',
+    description:
+      'Bless system guide for Kakele MMORPG, get all suggestions for bless your itens',
     searchLabel: 'Item',
     searchPlaceHolder: 'Item Name',
     actualBless: 'Current Bless',
@@ -347,7 +349,9 @@ const blessJsx = {
     priceText: 'Gold Total (KKs)',
   },
   pt: {
-    h1: 'Kakele Sistema de Bless (BETA)',
+    title: 'Kakele Sistema de Bless (BETA)',
+    description:
+      'Guia do sistema de Bless do Kakele MMORPG, as melhores sugestões de item para você fazer o bless dos seus equipamentos',
     searchLabel: 'Item',
     searchPlaceHolder: 'Nome do item',
     actualBless: 'Bless atual',

@@ -1,4 +1,6 @@
+import Head from 'next/head';
 import Link from 'next/link';
+
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Alert from '../../componentes/alert/Alert';
@@ -23,7 +25,7 @@ import {
 import style from './Bless.module.css';
 
 const Bless = () => {
-  const { query, locale } = useRouter();
+  const { query, locale, locales } = useRouter();
   const text = textOptions[locale];
   const [itemName, setItemName] = useState('');
   const [foundItems, setFoundItems] = useState([]);
@@ -113,6 +115,22 @@ const Bless = () => {
 
   return (
     <div className={`container ${style.mainContainer}`}>
+      <Head>
+        <title>{text.title}</title>
+        {locales.map(loc => {
+          return (
+            <link
+              rel="alternate"
+              hrefLang={loc}
+              href={`https://www.kakeletools.com/${loc}/bless`}
+              key={loc}
+            />
+          );
+        })}
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.title} key="title" />
+        <link rel="canonical" href="https://www.kakeletools.com/en/bless" />
+      </Head>
       {showErrorMessage && (
         <Alert
           message={text.alert}
@@ -121,7 +139,7 @@ const Bless = () => {
         />
       )}
 
-      <h1>{text.h1}</h1>
+      <h1>{text.title}</h1>
       <div className={style.searchInput}>
         <Input
           type="text"

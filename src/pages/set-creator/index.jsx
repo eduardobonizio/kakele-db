@@ -102,6 +102,10 @@ export default function SetMaker() {
         })}
         <meta name="description" content={text.description} />
         <meta property="og:title" content={text.title} key="title" />
+        <link
+          rel="canonical"
+          href="https://www.kakeletools.com/en/set-creator"
+        />
       </Head>
 
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>

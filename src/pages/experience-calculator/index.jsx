@@ -36,13 +36,17 @@ export default function ExpCalculator() {
             <link
               rel="alternate"
               hrefLang={loc}
-              href={`https://www.kakeletools.com/${loc}/experience calculator`}
+              href={`https://www.kakeletools.com/${loc}/experience-calculator`}
               key={loc}
             />
           );
         })}
         <meta name="description" content={text.description} />
         <meta property="og:title" content={text.title} key="title" />
+        <link
+          rel="canonical"
+          href="https://www.kakeletools.com/en/experience-calculator"
+        />
       </Head>
       <h3>{text.title}</h3>
       <div className={`form-group row ${style.formContainer}`}>
