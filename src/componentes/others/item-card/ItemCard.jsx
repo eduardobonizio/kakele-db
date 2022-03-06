@@ -31,6 +31,7 @@ export default function ItemCard(props) {
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
     item,
+    blessModifier = 0,
     item: {
       sources,
       obsPtBr,
@@ -96,6 +97,10 @@ export default function ItemCard(props) {
     }
   };
 
+  const addBlessModifier = status => {
+    return Math.floor(status + (status * blessModifier) / 100);
+  };
+
   return (
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
@@ -117,9 +122,15 @@ export default function ItemCard(props) {
               </span>
             </span>
           </span>
-          <span className="card-text">{`${text.armor}: ${armor}`}</span>
-          <span className="card-text">{`${text.magic}: ${magic}`}</span>
-          <span className="card-text">{`${text.attack}: ${attack}`}</span>
+          <span className="card-text">{`${text.armor}: ${addBlessModifier(
+            armor,
+          )}`}</span>
+          <span className="card-text">{`${text.magic}: ${addBlessModifier(
+            magic,
+          )}`}</span>
+          <span className="card-text">{`${text.attack}: ${addBlessModifier(
+            attack,
+          )}`}</span>
           <span className="card-text">{`${text.level}: ${level}`}</span>
           <span className="card-text">{`${text.slot}: ${slot}`}</span>
 

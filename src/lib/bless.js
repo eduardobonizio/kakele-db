@@ -4,54 +4,47 @@ const RARITY_BLESS_PRICE = {
   Rare: 10000000,
 };
 
-/*
-Tabela de bonus
-Item Raro
-1x     25%
-2x     37,5%. 
-3x     43,75%. 
-4x     46,87% 
-5x     48,43%   
-6x     49,21%
-7x     49,60%
-8x     49,80
-9x     49,90
-10x    50%
-
-
-Item Incomum
-1x    12,5%
-2x    18,75%
-3x     21,87%
-4x     23,43%
-5x     24,21%
-6x     24,60%
-7x     24,80%
-8x     24,85%
-9x     24,90%
-10x   25%
-*/
-
-/*
-Item Common
-1x    5
-2x    7,5
-3x    8,75
-4x    9,374
-5x    9,686
-6x    9,842
-7x    9,92
-8x    9,96
-9x    9,98
-10x   10%
-*/
-
-/*
-price:
-rare: 10KK
-uncommon: 1KK
-common: 100k
-*/
+const RARITY_BONUS = {
+  Rare: {
+    0: 0,
+    1: 25,
+    2: 37.5,
+    3: 43.75,
+    4: 46.87,
+    5: 48.43,
+    6: 49.21,
+    7: 49.6,
+    8: 49.8,
+    9: 49.9,
+    10: 50,
+  },
+  Uncommom: {
+    0: 0,
+    1: 12.5,
+    2: 18.75,
+    3: 21.87,
+    4: 23.43,
+    5: 24.21,
+    6: 24.6,
+    7: 24.8,
+    8: 24.85,
+    9: 24.9,
+    10: 25,
+  },
+  Commom: {
+    0: 0,
+    1: 5,
+    2: 7.5,
+    3: 8.75,
+    4: 9.374,
+    5: 9.686,
+    6: 9.842,
+    7: 9.92,
+    8: 9.96,
+    9: 9.98,
+    10: 10,
+  },
+};
 
 const upgradesOneByOne = [
   [1],
@@ -276,4 +269,4 @@ const findItensToSacrifice = (
   return [];
 };
 
-export { findItensToSacrifice, calcBlessPrice };
+export { findItensToSacrifice, calcBlessPrice, RARITY_BONUS };

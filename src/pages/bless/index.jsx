@@ -15,7 +15,11 @@ import {
   findItemByName,
 } from '../../data/kakeleActions';
 import { BLESS_OPTIONS, equipments, weapons } from '../../data/kakeleData';
-import { calcBlessPrice, findItensToSacrifice } from '../../lib/bless';
+import {
+  calcBlessPrice,
+  findItensToSacrifice,
+  RARITY_BONUS,
+} from '../../lib/bless';
 import style from './Bless.module.css';
 
 const Bless = () => {
@@ -25,8 +29,9 @@ const Bless = () => {
   const [foundItems, setFoundItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState();
   const [ignoredItems, setIgnoredItems] = useState([]);
-  const [desiredBless, setDesiredBless] = useState(1);
+  const [desiredBless, setDesiredBless] = useState(0);
   const [currentBless, setCurrentBless] = useState(0);
+  const [blessModifier, setBlessModifier] = useState(0);
   const [itensToSacrifice, setItensToSacrifice] = useState(false);
   const [totalBlessPrice, setTotalBlessPrice] = useState(0);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -64,8 +69,8 @@ const Bless = () => {
   const findItens = itensToIgnore => {
     if (currentBless >= desiredBless) {
       !showErrorMessage && setShowErrorMessage(!showErrorMessage);
-      return;
     }
+
     const ignore = itensToIgnore || ignoredItems;
     const toSacrifice = findItensToSacrifice(
       [...weapons, ...equipments],
@@ -82,6 +87,7 @@ const Bless = () => {
     );
     setItensToSacrifice(toSacrifice);
     setTotalBlessPrice(price);
+    setBlessModifier(RARITY_BONUS[selectedItem.rarity.en][desiredBless]);
   };
 
   const changeItem = iName => {
@@ -103,7 +109,7 @@ const Bless = () => {
     <div className={`container ${style.mainContainer}`}>
       {showErrorMessage && (
         <Alert
-          message="Bless atual não pode ser maior que a Bless desejada"
+          message={text.alert}
           timeOut={2000}
           hideFunc={() => setShowErrorMessage(!showErrorMessage)}
         />
@@ -146,7 +152,12 @@ const Bless = () => {
         <div className={style.filtersContainer}>
           {query.item && selectedItem && (
             <div>
-              <ItemCard index={0} item={selectedItem} locale={locale} />
+              <ItemCard
+                index={0}
+                item={selectedItem}
+                locale={locale}
+                blessModifier={blessModifier}
+              />
               <UpgradeSelector
                 elementId="bless-atual"
                 labelText={text.actualBless}
@@ -155,17 +166,17 @@ const Bless = () => {
                   if (value < 0) return setCurrentBless(0);
                   return setCurrentBless(value);
                 }}
-                optionsArray={BLESS_OPTIONS}
+                optionsArray={[...BLESS_OPTIONS]}
               />
               <UpgradeSelector
                 elementId="bless-desejada"
                 labelText={text.desiredBless}
                 onChange={value => {
                   if (value > 10) return setDesiredBless(10);
-                  if (value < 1) return setDesiredBless(1);
+                  if (value < 0) return setDesiredBless(0);
                   return setDesiredBless(value);
                 }}
-                optionsArray={[...BLESS_OPTIONS].slice(1, BLESS_OPTIONS.length)}
+                optionsArray={[...BLESS_OPTIONS]}
               />
               <div className="d-flex justify-content-between">
                 <ButtonForKakele
