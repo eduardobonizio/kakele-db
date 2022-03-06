@@ -1,5 +1,5 @@
 const RARITY_BLESS_PRICE = {
-  Common: 100000,
+  Commom: 100000,
   Uncommom: 1000000,
   Rare: 10000000,
 };
