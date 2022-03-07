@@ -110,6 +110,7 @@ export default function ItemCard(props) {
             ))}
           </div>
         )}
+
         <div className="d-flex flex-column">
           <span className="card-text">
             {imgUrl && (
