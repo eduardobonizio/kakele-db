@@ -71,7 +71,7 @@ export default function OreCalculator() {
         <link rel="canonical" href="https://www.kakeletools.com/upgrades" />
       </Head>
 
-      <h3>{text.title}</h3>
+      <h1>{text.title}</h1>
       <div className="d-flex flex-column ore-upgrader-filter-container">
         <UpgradeSelector
           elementId="upgrade-inicial"
