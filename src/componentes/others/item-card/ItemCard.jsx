@@ -36,7 +36,7 @@ export default function ItemCard(props) {
     blessQuantity = 0,
     item: {
       sources,
-      obsPtBr,
+      info,
       energy,
       armor,
       magic,
@@ -44,10 +44,12 @@ export default function ItemCard(props) {
       level,
       slot,
       imgUrl,
+      bonus,
     },
   } = props;
 
-  const showDetails = router.pathname.includes('wiki');
+  const showDetails =
+    router.pathname.includes('wiki') || router.pathname.includes('new-items');
   const text = textOptions[locale];
 
   const decide = thisItem => {
@@ -148,10 +150,16 @@ export default function ItemCard(props) {
           {showDetails && (
             <>
               <span className="card-text">{`${text.sources}: ${sources}`}</span>
-              <span className="card-text card-info">
-                {`${text.info}: ${obsPtBr}`}
-              </span>
+              {info && (
+                <span className="card-text card-info">
+                  {`${text.info}: ${info[locale]}`}
+                </span>
+              )}
             </>
+          )}
+
+          {showDetails && bonus && (
+            <span className="card-text">{`${text.bonus}: ${bonus[locale]}`}</span>
           )}
         </div>
         {ignoredItens && (

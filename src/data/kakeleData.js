@@ -8875,9 +8875,11 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11003.jpg"',
     twoHanded: false,
+    info: {
+      en: 'Expire in 10 seconds',
+      pt: 'Expira em 10 segundos',
+    },
     pt: 'Florete do Inverno',
-    obs: 'Expire in 10 seconds',
-    obsPtBr: 'Expira em 10 segundos',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
   },
   {
@@ -9497,7 +9499,7 @@ const NEW_ITEMS = [
       pt: 'Roubo de vida 100%',
     },
     sources: '???',
-    obs: {
+    info: {
       en: 'Expire in 60 seconds',
       pt: 'Expira em 60 segundos',
     },

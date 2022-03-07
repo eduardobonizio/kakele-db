@@ -64,6 +64,7 @@ const itemCardJsx = {
     equipItem: 'Equip',
     showItem: 'Show Item',
     copy: 'Copy',
+    bonus: 'Bonus',
   },
   pt: {
     armor: 'Armadura',
@@ -81,6 +82,7 @@ const itemCardJsx = {
     equipItem: 'Equipar',
     showItem: 'Ver Item',
     copy: 'Copiar',
+    bonus: 'Bônus',
   },
 };
 const setCreatorPageText = {
