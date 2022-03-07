@@ -63,6 +63,7 @@ export default function ShowItem() {
         <link rel="canonical" href="https://www.kakeletools.com/wiki" />
       </Head>
 
+      <h1>{`${item[locale]} ${text.title}`}</h1>
       <div className={`${styles.buttonContainer}`}>
         <Link href={previousItemLink} passHref locale={locale}>
           <LinkButton text={text.previous} />
