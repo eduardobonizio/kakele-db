@@ -71,6 +71,11 @@ function NavBar() {
                 <a className="nav-link">{text.blessPage}</a>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/new-items" locale={locale}>
+                <a className="nav-link">{text.newItems}</a>
+              </Link>
+            </li>
             <li>
               <LanguageSwitcher locale={locale} locales={locales} />
             </li>

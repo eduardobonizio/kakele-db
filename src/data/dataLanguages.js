@@ -32,7 +32,8 @@ const navBarJsx = {
     oreCalculator: 'Upgrades',
     expCalculator: 'Exp Calculator',
     seeItem: 'Wiki',
-    blessPage: 'Bless (BETA)',
+    blessPage: 'Bless (BETA 4.1)',
+    newItems: 'New Items (BETA 4.1)',
   },
   pt: {
     showSet: 'Ver Set',
@@ -41,7 +42,8 @@ const navBarJsx = {
     oreCalculator: 'Forja',
     expCalculator: 'Calculadora de Exp',
     seeItem: 'Wiki',
-    blessPage: 'Bless (BETA)',
+    blessPage: 'Bless (BETA 4.1)',
+    newItems: 'Novos Itens (BETA 4.1)',
   },
 };
 
