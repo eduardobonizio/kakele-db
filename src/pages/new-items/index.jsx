@@ -26,7 +26,7 @@ const NewItemsPage = () => {
         })}
         <meta name="description" content={text.description} />
         <meta property="og:title" content={text.title} key="title" />
-        <link rel="canonical" href="https://www.kakeletools.com/en/new-items" />
+        <link rel="canonical" href="https://www.kakeletools.com/new-items" />
       </Head>
       <h1 className={styles.title}>{text.title}</h1>
       <div className={`row row-cols-auto ${styles.row}`}>

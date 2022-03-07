@@ -60,7 +60,7 @@ export default function ShowItem() {
           content={`${item[locale]} ${text.title}`}
           key="title"
         />
-        <link rel="canonical" href="https://www.kakeletools.com/en/wiki" />
+        <link rel="canonical" href="https://www.kakeletools.com/wiki" />
       </Head>
 
       <div className={`${styles.buttonContainer}`}>

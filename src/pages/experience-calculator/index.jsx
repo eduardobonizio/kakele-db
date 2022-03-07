@@ -45,7 +45,7 @@ export default function ExpCalculator() {
         <meta property="og:title" content={text.title} key="title" />
         <link
           rel="canonical"
-          href="https://www.kakeletools.com/en/experience-calculator"
+          href="https://www.kakeletools.com/experience-calculator"
         />
       </Head>
       <h3>{text.title}</h3>
