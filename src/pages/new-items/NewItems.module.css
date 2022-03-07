@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px) {
-  .container {
+  .mainContainer {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -40,4 +40,4 @@
     width: auto;
   }
 }
-/*# sourceMappingURL=SearchItem.module.css.map */
+/*# sourceMappingURL=NewItems.module.css.map */
