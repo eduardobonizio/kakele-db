@@ -1,17 +1,37 @@
+import { useEffect } from 'react/cjs/react.production.min';
+
 const StatusDiv = props => {
-  const { text, armor, magic, attack, level, slot, blessModifier, styles } =
-    props;
+  const {
+    text,
+    armor,
+    magic,
+    attack,
+    level,
+    slot,
+    blessModifier,
+    styles,
+    itemsUpgrades,
+  } = props;
   const addBlessModifier = status => {
-    return Math.floor(status + (status * blessModifier) / 100);
+    return Math.floor(
+      itemsUpgrades[status],
+      status + (status * blessModifier) / 100,
+    );
   };
 
   if (blessModifier < 1)
     return (
       <div className={styles.statusDiv}>
         <span className="card-text">{`${text.level}: ${level}`}</span>
-        <span className="card-text">{`${text.armor}: ${armor}`}</span>
-        <span className="card-text">{`${text.magic}: ${magic}`}</span>
-        <span className="card-text">{`${text.attack}: ${attack}`}</span>
+        <span className="card-text">{`${text.armor}: ${
+          armor + itemsUpgrades.armor
+        }`}</span>
+        <span className="card-text">{`${text.magic}: ${
+          magic + itemsUpgrades.magic
+        }`}</span>
+        <span className="card-text">{`${text.attack}: ${
+          attack + itemsUpgrades.attack
+        }`}</span>
         <span className="card-text">{`${text.slot}: ${slot}`}</span>
       </div>
     );

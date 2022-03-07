@@ -3,7 +3,7 @@ import { UPGRADES_STAGES } from '../../../../data/kakeleData';
 const UpgradeDiv = props => {
   const { text, changeUpgrades, upgrades, styles } = props;
   const status = ['armor', 'magic', 'attack'];
-  console.log(upgrades);
+
   return (
     <div className={styles.upgradeDiv}>
       <span className="card-text">Upgrade</span>

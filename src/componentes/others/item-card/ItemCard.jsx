@@ -141,6 +141,7 @@ export default function ItemCard(props) {
               level={level}
               slot={slot}
               blessModifier={blessModifier}
+              itemsUpgrades={itemsUpgrades}
               styles={styles}
             />
             <UpgradeDiv
