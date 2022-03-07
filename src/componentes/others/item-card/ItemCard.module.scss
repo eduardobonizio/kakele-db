@@ -1,16 +1,28 @@
 @import '../../../styles/_variables';
 
+.titleAndImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cardImage {
+  min-width: 32px;
+  margin-right: 5px;
+  align-self: center;
+}
+
 .buttonContainer {
   display: flex;
   justify-content: space-around;
 }
+
 .stars {
   display: flex;
 }
 
 @media screen and (min-width: 768px) {
   .card {
-    padding: 0px;
     width: auto;
     width: 280px;
   }

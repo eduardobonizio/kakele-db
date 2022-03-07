@@ -104,17 +104,8 @@ export default function ItemCard(props) {
   return (
     <div className={`card mb-2 ${styles.card}`}>
       <div className={`card-body pb-0 ${styles.cardBody}`}>
-        <h6 className="card-title">{item[locale]}</h6>
-        {blessQuantity > 0 && (
-          <div className={styles.stars}>
-            {[...Array(blessQuantity).keys()].map(e => (
-              <i key={e} className="bi bi-star-fill"></i>
-            ))}
-          </div>
-        )}
-
-        <div className="d-flex flex-column">
-          <span className="card-text">
+        <div className={styles.titleAndImgContainer}>
+          <span className={styles.cardImage}>
             {imgUrl && (
               <Image
                 alt={item[locale]}
@@ -123,13 +114,18 @@ export default function ItemCard(props) {
                 height={32}
               />
             )}
-            <span>
-              {`${text.element}: `}
-              <span className={energy}>
-                {elements[energy.toLowerCase()][locale]}
-              </span>
-            </span>
           </span>
+          <h6 className="card-title">{item[locale]}</h6>
+        </div>
+        <div className="d-flex flex-column">
+          {blessQuantity > 0 && (
+            <div className={styles.stars}>
+              {[...Array(blessQuantity).keys()].map(e => (
+                <i key={e} className="bi bi-star-fill"></i>
+              ))}
+            </div>
+          )}
+
           <StatusDiv
             text={text}
             armor={armor}
@@ -139,7 +135,12 @@ export default function ItemCard(props) {
             slot={slot}
             blessModifier={blessModifier}
           />
-
+          <span>
+            {`${text.element}: `}
+            <span className={energy}>
+              {elements[energy.toLowerCase()][locale]}
+            </span>
+          </span>
           <span className="card-text">
             {`${text.rarity}: `}
             <span className={item.rarity['en'].toLowerCase()}>
@@ -164,7 +165,7 @@ export default function ItemCard(props) {
         </div>
         {ignoredItens && (
           <>
-            <div className="input-group mb-2">
+            <div className="input-group">
               <div className="input-group-text">
                 <input
                   className="form-check-input"
@@ -183,7 +184,7 @@ export default function ItemCard(props) {
                 {text.ignoreItem}
               </label>
             </div>
-            <div className="input-group mb-2">
+            <div className="input-group">
               <div className="input-group-text">
                 <input
                   className="form-check-input"

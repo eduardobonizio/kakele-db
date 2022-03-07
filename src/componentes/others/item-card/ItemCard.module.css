@@ -1,3 +1,23 @@
+.titleAndImgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.cardImage {
+  min-width: 32px;
+  margin-right: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +34,6 @@
 
 @media screen and (min-width: 768px) {
   .card {
-    padding: 0px;
     width: auto;
     width: 280px;
   }

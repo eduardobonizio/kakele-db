@@ -7,15 +7,16 @@ const StatusDiv = props => {
   if (blessModifier < 1)
     return (
       <>
+        <span className="card-text">{`${text.level}: ${level}`}</span>
         <span className="card-text">{`${text.armor}: ${armor}`}</span>
         <span className="card-text">{`${text.magic}: ${magic}`}</span>
         <span className="card-text">{`${text.attack}: ${attack}`}</span>
-        <span className="card-text">{`${text.level}: ${level}`}</span>
         <span className="card-text">{`${text.slot}: ${slot}`}</span>
       </>
     );
   return (
     <>
+      <span className="card-text">{`${text.level}: ${level}`}</span>
       <span className="card-text">
         {`${text.armor}: ${armor} -> `}
         <span className="blue">{`${addBlessModifier(armor)}`}</span>
@@ -28,7 +29,6 @@ const StatusDiv = props => {
         {`${text.attack}: ${attack} -> `}
         <span className="blue">{`${addBlessModifier(attack)}`}</span>
       </span>
-      <span className="card-text">{`${text.level}: ${level}`}</span>
       <span className="card-text">{`${text.slot}: ${slot}`}</span>
     </>
   );
