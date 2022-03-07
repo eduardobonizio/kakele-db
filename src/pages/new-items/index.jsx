@@ -9,11 +9,13 @@ const NewItemsPage = () => {
   return (
     <div className={`container ${styles.mainContainer}`}>
       <div className={`row row-cols-auto ${styles.row}`}>
-        {newItems.map((item, index) => (
-          <div className={`col ${styles.col}`} key={item[locale]}>
-            <ItemCard index={index} item={item} locale={locale} />
-          </div>
-        ))}
+        {newItems
+          .sort((a, b) => a.en - b.en)
+          .map((item, index) => (
+            <div className={`col ${styles.col}`} key={item[locale]}>
+              <ItemCard index={index} item={item} locale={locale} />
+            </div>
+          ))}
       </div>
     </div>
   );
