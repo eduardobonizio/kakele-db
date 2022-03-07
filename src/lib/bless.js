@@ -33,7 +33,7 @@ const RARITY_BONUS = {
   },
   Uncommom: {
     0: 0,
-    1: 12.5,
+    1: 12.5, //Mage mostrou 6% no vídeo
     2: 18.75,
     3: 21.87,
     4: 23.43,
@@ -46,7 +46,7 @@ const RARITY_BONUS = {
   },
   Commom: {
     0: 0,
-    1: 5,
+    1: 5, //Mage mostrou 2% no vídeo
     2: 7.5,
     3: 8.75,
     4: 9.374,
