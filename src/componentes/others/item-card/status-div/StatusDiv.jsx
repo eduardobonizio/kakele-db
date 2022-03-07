@@ -12,11 +12,9 @@ const StatusDiv = props => {
     styles,
     itemsUpgrades,
   } = props;
-  const addBlessModifier = status => {
-    return Math.floor(
-      itemsUpgrades[status],
-      status + (status * blessModifier) / 100,
-    );
+  const addBlessModifier = (statusValue, statusName) => {
+    const totalStatus = itemsUpgrades[statusName] + statusValue;
+    return Math.floor(totalStatus + (totalStatus * blessModifier) / 100);
   };
 
   if (blessModifier < 1)
@@ -40,15 +38,15 @@ const StatusDiv = props => {
       <span className="card-text">{`${text.level}: ${level}`}</span>
       <span className="card-text">
         {`${text.armor}: ${armor} -> `}
-        <span className="blue">{`${addBlessModifier(armor)}`}</span>
+        <span className="blue">{`${addBlessModifier(armor, 'armor')}`}</span>
       </span>
       <span className="card-text green">
         {`${text.magic}: ${magic} -> `}
-        <span className="blue">{`${addBlessModifier(magic)}`}</span>
+        <span className="blue">{`${addBlessModifier(magic, 'magic')}`}</span>
       </span>
       <span className="card-text green">
         {`${text.attack}: ${attack} -> `}
-        <span className="blue">{`${addBlessModifier(attack)}`}</span>
+        <span className="blue">{`${addBlessModifier(attack, 'attack')}`}</span>
       </span>
       <span className="card-text">{`${text.slot}: ${slot}`}</span>
     </div>
