@@ -48,7 +48,7 @@ export default function ExpCalculator() {
           href="https://www.kakeletools.com/experience-calculator"
         />
       </Head>
-      <h3>{text.title}</h3>
+      <h1>{text.title}</h1>
       <div className={`form-group row ${style.formContainer}`}>
         <form action="" onSubmit={e => calExp(e)}>
           <Input

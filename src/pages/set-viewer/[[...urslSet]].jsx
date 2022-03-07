@@ -98,7 +98,7 @@ export default function ShowSet() {
   };
 
   return (
-    <div className={`container ${styles.statusAndCardContainer}`}>
+    <div className="container">
       <Head>
         <title>{text.title}</title>
 
@@ -116,112 +116,115 @@ export default function ShowSet() {
         <meta property="og:title" content={text.title} key="title" />
         <link rel="canonical" href="https://www.kakeletools.com/set-viewer" />
       </Head>
-
-      <div className="d-flex flex-column">
-        <div className={styles.statusContainer}>
-          {showSet && (
-            <ShowSetStatus itensListToShowStatus={showSet} locale={locale} />
-          )}
+      <h1 className={styles.h1}>{text.title}</h1>
+      <div className={styles.statusAndCardContainer}>
+        <div className="d-flex flex-column">
+          <div className={styles.statusContainer}>
+            {showSet && (
+              <ShowSetStatus itensListToShowStatus={showSet} locale={locale} />
+            )}
+          </div>
+          <Link href="/search-item" passHref locale={locale}>
+            <LinkButton text={text.searchItems} />
+          </Link>
+          <ButtonForKakele onClick={copyLink} text={text.copy} />
         </div>
-        <Link href="/search-item" passHref locale={locale}>
-          <LinkButton text={text.searchItems} />
-        </Link>
-        <ButtonForKakele onClick={copyLink} text={text.copy} />
-      </div>
-      {showSet && (
-        <div className={`row row-cols-auto ${styles.row}`}>
-          {showSet.necklace && (
-            <ItemCard
-              item={showSet.necklace}
-              index={showSet.necklace[locale]}
-              locale={locale}
-            />
-          )}
 
-          {showSet.helmet && (
-            <ItemCard
-              item={showSet.helmet}
-              index={showSet.helmet[locale]}
-              locale={locale}
-            />
-          )}
-
-          {showSet.ring && (
-            <ItemCard
-              item={showSet.ring}
-              index={showSet.ring[locale]}
-              locale={locale}
-            />
-          )}
-
-          {showSet.weapon && (
-            <ItemCard
-              item={showSet.weapon}
-              index={showSet.weapon[locale]}
-              locale={locale}
-            />
-          )}
-
-          {showSet.armor && (
-            <ItemCard
-              item={showSet.armor}
-              index={showSet.armor[locale]}
-              locale={locale}
-            />
-          )}
-
-          {showSet.shield && showSet.shield[locale] !== '-----------' && (
-            <ItemCard
-              item={showSet.shield || showSet.book}
-              index={showSet.shield[locale] || showSet.book[locale]}
-              locale={locale}
-            />
-          )}
-
-          {showSet.book && showSet.book[locale] !== '-----------' && (
-            <ItemCard
-              item={showSet.book}
-              index={showSet.book[locale]}
-              locale={locale}
-            />
-          )}
-
-          {showSet.book &&
-            showSet.book[locale] === '-----------' &&
-            showSet.shield &&
-            showSet.shield[locale] === '-----------' && (
+        {showSet && (
+          <div className={`row row-cols-auto ${styles.row}`}>
+            {showSet.necklace && (
               <ItemCard
-                item={showSet.shield}
-                index={showSet.shield[locale]}
+                item={showSet.necklace}
+                index={showSet.necklace[locale]}
                 locale={locale}
               />
             )}
 
-          {showSet.accessorie && (
-            <ItemCard
-              item={showSet.accessorie}
-              index={showSet.accessorie[locale]}
-              locale={locale}
-            />
-          )}
+            {showSet.helmet && (
+              <ItemCard
+                item={showSet.helmet}
+                index={showSet.helmet[locale]}
+                locale={locale}
+              />
+            )}
 
-          {showSet.pants && (
-            <ItemCard
-              item={showSet.pants}
-              index={showSet.pants[locale]}
-              locale={locale}
-            />
-          )}
+            {showSet.ring && (
+              <ItemCard
+                item={showSet.ring}
+                index={showSet.ring[locale]}
+                locale={locale}
+              />
+            )}
 
-          {showSet.shoe && (
-            <ItemCard
-              item={showSet.shoe}
-              index={showSet.shoe[locale]}
-              locale={locale}
-            />
-          )}
-        </div>
-      )}
+            {showSet.weapon && (
+              <ItemCard
+                item={showSet.weapon}
+                index={showSet.weapon[locale]}
+                locale={locale}
+              />
+            )}
+
+            {showSet.armor && (
+              <ItemCard
+                item={showSet.armor}
+                index={showSet.armor[locale]}
+                locale={locale}
+              />
+            )}
+
+            {showSet.shield && showSet.shield[locale] !== '-----------' && (
+              <ItemCard
+                item={showSet.shield || showSet.book}
+                index={showSet.shield[locale] || showSet.book[locale]}
+                locale={locale}
+              />
+            )}
+
+            {showSet.book && showSet.book[locale] !== '-----------' && (
+              <ItemCard
+                item={showSet.book}
+                index={showSet.book[locale]}
+                locale={locale}
+              />
+            )}
+
+            {showSet.book &&
+              showSet.book[locale] === '-----------' &&
+              showSet.shield &&
+              showSet.shield[locale] === '-----------' && (
+                <ItemCard
+                  item={showSet.shield}
+                  index={showSet.shield[locale]}
+                  locale={locale}
+                />
+              )}
+
+            {showSet.accessorie && (
+              <ItemCard
+                item={showSet.accessorie}
+                index={showSet.accessorie[locale]}
+                locale={locale}
+              />
+            )}
+
+            {showSet.pants && (
+              <ItemCard
+                item={showSet.pants}
+                index={showSet.pants[locale]}
+                locale={locale}
+              />
+            )}
+
+            {showSet.shoe && (
+              <ItemCard
+                item={showSet.shoe}
+                index={showSet.shoe[locale]}
+                locale={locale}
+              />
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

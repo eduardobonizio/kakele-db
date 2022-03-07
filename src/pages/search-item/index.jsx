@@ -56,7 +56,7 @@ export default function SearchItem() {
   }, []);
 
   return (
-    <div className={`container d-flex ${styles.container}`}>
+    <div className="container">
       <Head>
         <title>{text.title}</title>
 
@@ -74,30 +74,35 @@ export default function SearchItem() {
         <meta property="og:title" content={text.title} key="title" />
         <link rel="canonical" href="https://www.kakeletools.com/search-item" />
       </Head>
-      <div className={`d-flex d-flex flex-column ${styles.filters}`}>
-        <KakeleItemsFilters manualFilters locale={locale} />
-        <div className="container-fluid d-flex justify-content-around">
-          <ButtonForKakele onClick={lookForItens} text={text.search} />
-          <Link href="/set-viewer" passHref locale={locale}>
-            <LinkButton text={text.showSet} />
-          </Link>
+
+      <h1 className={styles.h1}>{text.title}</h1>
+
+      <div className="d-flex">
+        <div className={`d-flex d-flex flex-column ${styles.filters}`}>
+          <KakeleItemsFilters manualFilters locale={locale} />
+          <div className="container-fluid d-flex justify-content-around">
+            <ButtonForKakele onClick={lookForItens} text={text.search} />
+            <Link href="/set-viewer" passHref locale={locale}>
+              <LinkButton text={text.showSet} />
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className={`row row-cols-auto ${styles.row}`}>
-        {foundItens.length > 0 ? (
-          foundItens.map((item, i) => {
-            if (item) {
-              return (
-                <div className={`col ${styles.col}`} key={item[locale]}>
-                  <ItemCard index={i} item={item} locale={locale} />
-                </div>
-              );
-            }
-            return false;
-          })
-        ) : (
-          <span>{text.notFound}</span>
-        )}
+        <div className={`row row-cols-auto ${styles.row}`}>
+          {foundItens.length > 0 ? (
+            foundItens.map((item, i) => {
+              if (item) {
+                return (
+                  <div className={`col ${styles.col}`} key={item[locale]}>
+                    <ItemCard index={i} item={item} locale={locale} />
+                  </div>
+                );
+              }
+              return false;
+            })
+          ) : (
+            <span>{text.notFound}</span>
+          )}
+        </div>
       </div>
     </div>
   );
