@@ -368,12 +368,12 @@ const blessJsx = {
 
 const newItemsJsx = {
   en: {
-    title: 'Kakele Bless System (BETA 4.1)',
+    title: 'Kakele New Items (BETA 4.1)',
     description:
       'New item from Kakele MMORPG update 4.1 which will be released in april/2022',
   },
   pt: {
-    title: 'Kakele Sistema de Bless (BETA 4.1)',
+    title: 'Kakele Novos Items (BETA 4.1)',
     description:
       'Novos items do update 4.1 do Kakele MMORPG, que será lançado em abril/2022',
   },
