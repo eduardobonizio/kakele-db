@@ -28,16 +28,12 @@ import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 
 export default function ShowSet() {
+  const { locale, locales, query } = useRouter();
   const {
-    locale,
-    locales,
-    query: { urslSet },
-  } = useRouter();
-  const {
+    state: { currentSet },
     actions: { updateCurrentSet },
   } = useAppContext();
   const text = textOptions[locale];
-  const [showSet, setShowSet] = useState();
 
   useEffect(() => {
     const normalizeSet = setItems => {
@@ -71,10 +67,8 @@ export default function ShowSet() {
         },
         { ...selectedItems },
       );
-
     const storedSet = loadSetFromLocalStorage();
-    const selectedSet = urslSet ? urslSet[0] : storedSet;
-
+    const selectedSet = Object.keys(query).length > 0 ? query : storedSet;
     const itensTextToObject = (urlText, allItens) => {
       const itensOnUrl = urlParamsToObject(urlText);
 
@@ -85,14 +79,14 @@ export default function ShowSet() {
       return normalizedSet;
     };
 
-    updateCurrentSet(itensTextToObject(storedSet, [...equipments, ...weapons]));
-
-    setShowSet(itensTextToObject(selectedSet, [...equipments, ...weapons]));
-  }, [locale, updateCurrentSet, urslSet]);
+    updateCurrentSet(
+      itensTextToObject(selectedSet, [...equipments, ...weapons]),
+    );
+  }, [locale, updateCurrentSet, query]);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
-    const setToArray = Object.values(showSet).map(item => item);
+    const setToArray = Object.values(currentSet).map(item => item);
     const link = genereateLinkToViewSet(setToArray, origin, locale);
     if (link) copy(link);
   };
@@ -120,8 +114,11 @@ export default function ShowSet() {
       <div className={styles.statusAndCardContainer}>
         <div className="d-flex flex-column">
           <div className={styles.statusContainer}>
-            {showSet && (
-              <ShowSetStatus itensListToShowStatus={showSet} locale={locale} />
+            {currentSet && (
+              <ShowSetStatus
+                itensListToShowStatus={currentSet}
+                locale={locale}
+              />
             )}
           </div>
           <Link href="/search-item" passHref locale={locale}>
@@ -129,101 +126,82 @@ export default function ShowSet() {
           </Link>
           <ButtonForKakele onClick={copyLink} text={text.copy} />
         </div>
+        <div className={`row row-cols-auto ${styles.row}`}>
+          <ItemCard
+            item={currentSet.necklace}
+            index={currentSet.necklace[locale]}
+            locale={locale}
+          />
 
-        {showSet && (
-          <div className={`row row-cols-auto ${styles.row}`}>
-            {showSet.necklace && (
+          <ItemCard
+            item={currentSet.helmet}
+            index={currentSet.helmet[locale]}
+            locale={locale}
+          />
+
+          <ItemCard
+            item={currentSet.ring}
+            index={currentSet.ring[locale]}
+            locale={locale}
+          />
+
+          <ItemCard
+            item={currentSet.weapon}
+            index={currentSet.weapon[locale]}
+            locale={locale}
+          />
+
+          <ItemCard
+            item={currentSet.armor}
+            index={currentSet.armor[locale]}
+            locale={locale}
+          />
+
+          {currentSet.shield && currentSet.shield[locale] !== '-----------' && (
+            <ItemCard
+              item={currentSet.shield || currentSet.book}
+              index={currentSet.shield[locale] || currentSet.book[locale]}
+              locale={locale}
+            />
+          )}
+
+          {currentSet.book && currentSet.book[locale] !== '-----------' && (
+            <ItemCard
+              item={currentSet.book}
+              index={currentSet.book[locale]}
+              locale={locale}
+            />
+          )}
+
+          {currentSet.book &&
+            currentSet.book[locale] === '-----------' &&
+            currentSet.shield &&
+            currentSet.shield[locale] === '-----------' && (
               <ItemCard
-                item={showSet.necklace}
-                index={showSet.necklace[locale]}
+                item={currentSet.shield}
+                index={currentSet.shield[locale]}
                 locale={locale}
               />
             )}
 
-            {showSet.helmet && (
-              <ItemCard
-                item={showSet.helmet}
-                index={showSet.helmet[locale]}
-                locale={locale}
-              />
-            )}
+          <ItemCard
+            item={currentSet.accessorie}
+            index={currentSet.accessorie[locale]}
+            locale={locale}
+          />
 
-            {showSet.ring && (
-              <ItemCard
-                item={showSet.ring}
-                index={showSet.ring[locale]}
-                locale={locale}
-              />
-            )}
+          <ItemCard
+            item={currentSet.pants}
+            index={currentSet.pants[locale]}
+            locale={locale}
+          />
 
-            {showSet.weapon && (
-              <ItemCard
-                item={showSet.weapon}
-                index={showSet.weapon[locale]}
-                locale={locale}
-              />
-            )}
-
-            {showSet.armor && (
-              <ItemCard
-                item={showSet.armor}
-                index={showSet.armor[locale]}
-                locale={locale}
-              />
-            )}
-
-            {showSet.shield && showSet.shield[locale] !== '-----------' && (
-              <ItemCard
-                item={showSet.shield || showSet.book}
-                index={showSet.shield[locale] || showSet.book[locale]}
-                locale={locale}
-              />
-            )}
-
-            {showSet.book && showSet.book[locale] !== '-----------' && (
-              <ItemCard
-                item={showSet.book}
-                index={showSet.book[locale]}
-                locale={locale}
-              />
-            )}
-
-            {showSet.book &&
-              showSet.book[locale] === '-----------' &&
-              showSet.shield &&
-              showSet.shield[locale] === '-----------' && (
-                <ItemCard
-                  item={showSet.shield}
-                  index={showSet.shield[locale]}
-                  locale={locale}
-                />
-              )}
-
-            {showSet.accessorie && (
-              <ItemCard
-                item={showSet.accessorie}
-                index={showSet.accessorie[locale]}
-                locale={locale}
-              />
-            )}
-
-            {showSet.pants && (
-              <ItemCard
-                item={showSet.pants}
-                index={showSet.pants[locale]}
-                locale={locale}
-              />
-            )}
-
-            {showSet.shoe && (
-              <ItemCard
-                item={showSet.shoe}
-                index={showSet.shoe[locale]}
-                locale={locale}
-              />
-            )}
-          </div>
-        )}
+          <ItemCard
+            item={currentSet.shoe}
+            index={currentSet.shoe[locale]}
+            locale={locale}
+          />
+        </div>
       </div>
     </div>
   );

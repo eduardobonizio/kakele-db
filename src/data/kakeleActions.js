@@ -20,19 +20,17 @@ const urlParamsToObject = paramsText => {
 
 const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
+  console.log(setList);
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const name = 'en';
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
-      const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
-        ' ',
-        '-',
-      );
-      return `${anterior}_${adicionarTexto}`;
+      const adicionarTexto = `${proximo.slot}=${proximo[name]}&&`;
+      return `${anterior}${adicionarTexto}`;
     }
     return anterior;
   }, '');
-  if (origin) return `${origin}/${locale}/set-viewer/${link}`;
+  if (origin) return `${origin}/${locale}/set-viewer?${link}`;
   return `/set-viewer/${link}`;
 };
 

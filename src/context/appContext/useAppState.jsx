@@ -1,4 +1,5 @@
 import React, { useContext, useMemo, useState } from 'react';
+import { FAKE_ITEM } from '../../data/kakeleData';
 // import { useRouter } from 'next/router';
 
 // https://ricostacruz.com/til/state-management-with-react-hooks
@@ -14,6 +15,7 @@ const AppProvider = ({ children }) => {
 
   // console.log(['pt-BR', 'en'].includes(router));
   // Inicializa o estado, mas em alguns casos não é necessário
+
   const initialState = {
     language: 'PTBR',
     level: 1,
@@ -25,16 +27,16 @@ const AppProvider = ({ children }) => {
     orderBy: 'level',
     rarity: 'any',
     currentSet: {
-      necklace: {},
-      helmet: {},
-      ring: {},
-      weapon: {},
-      armor: {},
-      shield: {},
-      book: {},
-      accessorie: {},
-      pants: {},
-      shoe: {},
+      necklace: { ...FAKE_ITEM, slot: 'necklace' },
+      helmet: { ...FAKE_ITEM, slot: 'helmet' },
+      ring: { ...FAKE_ITEM, slot: 'ring' },
+      weapon: { ...FAKE_ITEM, slot: 'weapon' },
+      armor: { ...FAKE_ITEM, slot: 'armor' },
+      shield: { ...FAKE_ITEM, slot: 'shield' },
+      book: { ...FAKE_ITEM, slot: 'book' },
+      accessorie: { ...FAKE_ITEM, slot: 'accessorie' },
+      pants: { ...FAKE_ITEM, slot: 'pants' },
+      shoe: { ...FAKE_ITEM, slot: 'shoe' },
     },
   };
 
