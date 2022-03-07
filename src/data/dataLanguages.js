@@ -337,7 +337,7 @@ const expCalculatorJsx = {
 
 const blessJsx = {
   en: {
-    title: 'Kakele Bless System (BETA)',
+    title: 'Kakele Bless System (BETA 4.1)',
     description:
       'Bless system guide for Kakele MMORPG, get all suggestions for bless your itens',
     searchLabel: 'Item',
@@ -351,7 +351,7 @@ const blessJsx = {
     priceText: 'Gold Total (KKs)',
   },
   pt: {
-    title: 'Kakele Sistema de Bless (BETA)',
+    title: 'Kakele Sistema de Bless (BETA 4.1)',
     description:
       'Guia do sistema de Bless do Kakele MMORPG, as melhores sugestões de item para você fazer o bless dos seus equipamentos',
     searchLabel: 'Item',
@@ -363,6 +363,19 @@ const blessJsx = {
     alert: 'Bless atual maior que a Bless desejada',
     chooseItem: 'Escolha um item',
     priceText: 'Gold Total (KKs)',
+  },
+};
+
+const newItemsJsx = {
+  en: {
+    title: 'Kakele Bless System (BETA 4.1)',
+    description:
+      'New item from Kakele MMORPG update 4.1 which will be released in april/2022',
+  },
+  pt: {
+    title: 'Kakele Sistema de Bless (BETA 4.1)',
+    description:
+      'Novos items do update 4.1 do Kakele MMORPG, que será lançado em abril/2022',
   },
 };
 
@@ -402,4 +415,5 @@ export {
   homeText,
   pageNotFound,
   blessJsx,
+  newItemsJsx,
 };
