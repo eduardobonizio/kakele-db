@@ -77,7 +77,7 @@ export default function SearchItem() {
 
       <h1 className={styles.h1}>{text.title}</h1>
 
-      <div className="d-flex">
+      <div className={styles.mainContainer}>
         <div className={`d-flex d-flex flex-column ${styles.filters}`}>
           <KakeleItemsFilters manualFilters locale={locale} />
           <div className="container-fluid d-flex justify-content-around">
