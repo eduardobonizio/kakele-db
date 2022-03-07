@@ -109,7 +109,7 @@ export default function SetMaker() {
         <h1>{text.h1}</h1>
 
         <KakeleItemsFilters statusPrincipal locale={locale} />
-        <div className="container-fluid d-flex justify-content-around">
+        <div className={styles.buttonsContainer}>
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
           <Link href="/search-item" passHref locale={locale}>
             <LinkButton text={text.searchItens} />
