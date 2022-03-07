@@ -1,5 +1,5 @@
 import styles from './ItemCard.module.css';
-import React from 'react';
+import React, { useState } from 'react';
 import copy from 'copy-to-clipboard';
 
 import { useRouter } from 'next/router';
@@ -17,6 +17,7 @@ import Image from 'next/image';
 import ButtonForKakele from '../../buttons/buttton-for-kakele/ButtonForKakele';
 import LinkButton from '../../buttons/link-as-button/LinkButton';
 import StatusDiv from './status-div/StatusDiv';
+import UpgradeDiv from './ugrade-div/UpgradeDiv';
 
 export default function ItemCard(props) {
   const {
@@ -47,6 +48,12 @@ export default function ItemCard(props) {
       bonus,
     },
   } = props;
+
+  const [itemsUpgrades, setItemsUpgrades] = useState({
+    armor: 0,
+    magic: 0,
+    attack: 0,
+  });
 
   const showDetails =
     router.pathname.includes('wiki') || router.pathname.includes('new-items');
@@ -125,16 +132,30 @@ export default function ItemCard(props) {
               ))}
             </div>
           )}
-
-          <StatusDiv
-            text={text}
-            armor={armor}
-            magic={magic}
-            attack={attack}
-            level={level}
-            slot={slot}
-            blessModifier={blessModifier}
-          />
+          <div className={styles.statusAndUpgradeContainer}>
+            <StatusDiv
+              text={text}
+              armor={armor}
+              magic={magic}
+              attack={attack}
+              level={level}
+              slot={slot}
+              blessModifier={blessModifier}
+              styles={styles}
+            />
+            <UpgradeDiv
+              text={text}
+              armor={armor}
+              magic={magic}
+              attack={attack}
+              level={level}
+              slot={slot}
+              blessModifier={blessModifier}
+              styles={styles}
+              upgrades={itemsUpgrades}
+              changeUpgrades={setItemsUpgrades}
+            />
+          </div>
           <span>
             {`${text.element}: `}
             <span className={energy}>

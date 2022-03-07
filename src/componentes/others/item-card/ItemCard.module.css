@@ -32,6 +32,46 @@
   display: flex;
 }
 
+.statusAndUpgradeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.statusDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.statusDiv > span {
+  margin-top: 3px;
+}
+
+.upgradeDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+}
+
+.upgradeDiv > div {
+  margin-top: 3px;
+}
+
+.select {
+  border: none;
+  border-bottom: 2px solid;
+}
+
 @media screen and (min-width: 768px) {
   .card {
     width: auto;
