@@ -9506,7 +9506,7 @@ const NEW_ITEMS = [
     imgUrl: '/newitems/Anel Comedor De Carne.png',
     slot: 'ring',
     pt: 'Anel Comedor De Carne',
-    rarity: { en: 'Uncommom', pt: 'Incomum' },
+    rarity: { en: 'Uncommon', pt: 'Incomum' },
   },
   {
     en: 'Meat Eater Book',
@@ -9526,7 +9526,7 @@ const NEW_ITEMS = [
     imgUrl: '/newitems/Livro Comedor de Carne.png',
     slot: 'book',
     pt: 'Livro Comedor de Carne',
-    rarity: { en: 'Uncommom', pt: 'Incomum' },
+    rarity: { en: 'Uncommon', pt: 'Incomum' },
   },
   {
     en: 'Dragon Winged Helm',
