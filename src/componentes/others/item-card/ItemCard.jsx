@@ -165,7 +165,7 @@ export default function ItemCard(props) {
         </div>
         {ignoredItens && (
           <>
-            <div className="input-group">
+            <div className="input-group mb-1">
               <div className="input-group-text">
                 <input
                   className="form-check-input"
@@ -184,7 +184,7 @@ export default function ItemCard(props) {
                 {text.ignoreItem}
               </label>
             </div>
-            <div className="input-group">
+            <div className="input-group mb-1">
               <div className="input-group-text">
                 <input
                   className="form-check-input"
