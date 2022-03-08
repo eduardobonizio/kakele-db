@@ -13,7 +13,6 @@ const UpgradeDiv = props => {
             <select
               className={styles.select}
               id={`${stat}-upgrade`}
-              defaultValue={upgrades[stat]}
               value={upgrades[stat]}
               onChange={e => changeUpgrades(Number(e.target.value), stat)}
             >

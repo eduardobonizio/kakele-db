@@ -124,8 +124,6 @@ export default function ItemCard(props) {
       };
       const whatToDo = decide(updatedItem);
 
-      updateCurrentSet({ ...currentSet, ...whatToDo });
-
       const newSet = Object.values({
         ...currentSet,
         ...whatToDo,
