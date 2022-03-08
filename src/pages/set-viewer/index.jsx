@@ -68,22 +68,22 @@ export default function ShowSet() {
         { ...selectedItems },
       );
     };
-    const storedSet = loadSetFromLocalStorage();
 
-    const selectedSet = Object.keys(query).length > 0 ? query : storedSet;
+    const itensTextToObject = allItens => {
+      const storedSet = loadSetFromLocalStorage() || [];
 
-    const itensTextToObject = (textItens, allItens) => {
-      const itensOnUrl = urlParamsToObject(textItens);
+      const querySet = Object.keys(query).length > 0;
 
-      const allSlotItens = addMissingItens(itensOnUrl, allItens);
+      const items = querySet ? query : storedSet;
+
+      const allSlotItens = addMissingItens(items, allItens);
 
       const normalizedSet = normalizeSet(allSlotItens);
 
       return normalizedSet;
     };
-    updateCurrentSet(
-      itensTextToObject(selectedSet, [...equipments, ...weapons]),
-    );
+
+    updateCurrentSet(itensTextToObject([...equipments, ...weapons]));
   }, [locale, updateCurrentSet, query]);
 
   const copyLink = () => {

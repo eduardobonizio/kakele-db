@@ -1,6 +1,7 @@
 import { elements } from './dataLanguages';
 import { UPGRADES_DATA } from './kakeleData';
 import removeAccents from 'remove-accents';
+import next from 'next';
 const FIVE_SECONDS = 5000;
 
 const urlParamsToObject = itemText => {
@@ -31,18 +32,21 @@ const genereateLinkToViewSet = (setList, origin, locale) => {
 
 const saveSetInLocalStorage = newSet => {
   if (!newSet) return;
-  const slotsAndName = newSet.reduce((cur, next) => {
-    return {
-      ...cur,
-      [next.slot]: next.en,
-    };
-  }, {});
-  localStorage.setItem('currentSet', JSON.stringify(slotsAndName));
+  const onlyValidItems = newSet
+    .filter(i => i)
+    .reduce((anterior, proximo) => {
+      console.log(proximo.slot);
+      return {
+        ...anterior,
+        [proximo.slot]: proximo,
+      };
+    }, {});
+  localStorage.setItem('currentSet', JSON.stringify(onlyValidItems));
 };
 
 const loadSetFromLocalStorage = () => {
   try {
-    const currentSet = localStorage.getItem('currentSet');
+    const currentSet = JSON.parse(localStorage.getItem('currentSet'));
     return currentSet;
   } catch (error) {}
 };
@@ -330,16 +334,16 @@ const checkSetElement = (itens, locale) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName, locale = 'en') => {
-  if (!itemName) return false;
+const findItemByName = (itemList, item, locale = 'en') => {
+  if (!item) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
-  const nameKey = 'en';
+  const useName = item.en || item;
   return itemList.find(item => {
     return (
-      removeAccents(item[nameKey].toLowerCase()) ===
-        removeAccents(itemName.toLowerCase()) ||
+      removeAccents(item.en.toLowerCase()) ===
+        removeAccents(useName.toLowerCase()) ||
       removeAccents(item[locale].toLowerCase()) ===
-        removeAccents(itemName.toLowerCase())
+        removeAccents(useName.toLowerCase())
     );
   });
 };
