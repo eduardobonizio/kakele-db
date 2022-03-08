@@ -60,9 +60,16 @@ export default function ShowSet() {
             locale,
           ) || { ...FAKE_ITEM, slot: currentSlot };
 
+          const iBonus = selectedItems[currentSlot]
+            ? selectedItems[currentSlot].itemBonus
+            : item.itemBonus;
+
           return {
             ...current,
-            [currentSlot]: { ...item },
+            [currentSlot]: {
+              ...item,
+              itemBonus: iBonus,
+            },
           };
         },
         { ...selectedItems },
