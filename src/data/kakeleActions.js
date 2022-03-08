@@ -3,58 +3,48 @@ import { UPGRADES_DATA } from './kakeleData';
 import removeAccents from 'remove-accents';
 const FIVE_SECONDS = 5000;
 
-const urlParamsToObject = paramsText => {
-  // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
+const urlParamsToObject = itemText => {
+  if (itemText === '' || !itemText) return [];
   try {
-    const formatedText = `{"${paramsText
-      .replace('_', '')
-      .replaceAll('_', '","')
-      .replaceAll('=', '":"')
-      .replaceAll('-', ' ')}"}`;
-
-    return JSON.parse(formatedText);
-  } catch {
+    return JSON.parse(itemText);
+  } catch (e) {
+    if (itemText) return itemText;
     return [];
   }
 };
 
 const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
-  console.log(setList);
-  //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
-  const name = 'en';
-  const link = setList.reduce((anterior, proximo) => {
-    if (proximo.level > 0) {
-      const adicionarTexto = `${proximo.slot}=${proximo[name]}&&`;
-      return `${anterior}${adicionarTexto}`;
+
+  // Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
+  const link = Object.keys(setList).reduce((anterior, proximo) => {
+    if (setList[proximo].level > 0) {
+      const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].en}`;
+      if (anterior === '?') return `${anterior}${adicionarTexto}`;
+      return `${anterior}&&${adicionarTexto}`;
     }
     return anterior;
-  }, '');
-  if (origin) return `${origin}/${locale}/set-viewer?${link}`;
+  }, '?');
+  if (origin) return `${origin}/${locale}/set-viewer${link}`;
   return `/set-viewer/${link}`;
 };
 
 const saveSetInLocalStorage = newSet => {
   if (!newSet) return;
-  const link = genereateLinkToViewSet(newSet, false);
-  if (!link) return;
-
-  localStorage.setItem(
-    'currentSet',
-    JSON.stringify(link.replace('/set-viewer/', '')),
-  );
+  const slotsAndName = newSet.reduce((cur, next) => {
+    return {
+      ...cur,
+      [next.slot]: next.en,
+    };
+  }, {});
+  localStorage.setItem('currentSet', JSON.stringify(slotsAndName));
 };
 
 const loadSetFromLocalStorage = () => {
   try {
-    const currentSet = localStorage
-      .getItem('currentSet')
-      .replace('"', '')
-      .replace('"', '');
+    const currentSet = localStorage.getItem('currentSet');
     return currentSet;
-  } catch (error) {
-    return '""';
-  }
+  } catch (error) {}
 };
 
 const activateAlert = setShowAlert => {

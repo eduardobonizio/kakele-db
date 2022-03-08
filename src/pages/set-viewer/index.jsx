@@ -49,8 +49,8 @@ export default function ShowSet() {
       return { ...setItems, shield: { ...shield }, book: { ...book } };
     };
 
-    const addMissingItens = (selectedItems, allItens) =>
-      ALL_ITENS_SLOTS_LIST.reduce(
+    const addMissingItens = (selectedItems, allItens) => {
+      return ALL_ITENS_SLOTS_LIST.reduce(
         (current, next, index) => {
           const currentSlot = ALL_ITENS_SLOTS_LIST[index];
 
@@ -67,10 +67,13 @@ export default function ShowSet() {
         },
         { ...selectedItems },
       );
+    };
     const storedSet = loadSetFromLocalStorage();
+
     const selectedSet = Object.keys(query).length > 0 ? query : storedSet;
-    const itensTextToObject = (urlText, allItens) => {
-      const itensOnUrl = urlParamsToObject(urlText);
+
+    const itensTextToObject = (textItens, allItens) => {
+      const itensOnUrl = urlParamsToObject(textItens);
 
       const allSlotItens = addMissingItens(itensOnUrl, allItens);
 
@@ -78,7 +81,6 @@ export default function ShowSet() {
 
       return normalizedSet;
     };
-
     updateCurrentSet(
       itensTextToObject(selectedSet, [...equipments, ...weapons]),
     );
@@ -86,8 +88,7 @@ export default function ShowSet() {
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
-    const setToArray = Object.values(currentSet).map(item => item);
-    const link = genereateLinkToViewSet(setToArray, origin, locale);
+    const link = genereateLinkToViewSet(currentSet, origin, locale);
     if (link) copy(link);
   };
 
