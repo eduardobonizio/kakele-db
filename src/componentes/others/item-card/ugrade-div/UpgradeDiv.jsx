@@ -6,7 +6,7 @@ const UpgradeDiv = props => {
 
   return (
     <div className={styles.upgradeDiv}>
-      <span className="card-text">Upgrade</span>
+      <span className="card-text">{text.upgrade}</span>
       {status.map((stat, index) => {
         return (
           <div key={stat + index}>
