@@ -66,6 +66,7 @@ const itemCardJsx = {
     copy: 'Copy',
     bonus: 'Bonus',
     upgrade: 'Upgrade',
+    saveItem: 'Save',
   },
   pt: {
     armor: 'Armadura',
@@ -85,6 +86,7 @@ const itemCardJsx = {
     copy: 'Copiar',
     bonus: 'Bônus',
     upgrade: 'Forja',
+    saveItem: 'Salvar',
   },
 };
 const setCreatorPageText = {

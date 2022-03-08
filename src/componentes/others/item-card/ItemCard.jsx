@@ -54,7 +54,10 @@ export default function ItemCard(props) {
     },
   } = props;
 
+  const [showUpdateItem, setShowUpdateItem] = useState(false);
+
   const updateStats = (newValue, stat) => {
+    if (!showUpdateItem) setShowUpdateItem(!showUpdateItem);
     const updatedItemBonus = { ...itemBonus, [stat]: newValue };
 
     const newItem = {
@@ -114,6 +117,7 @@ export default function ItemCard(props) {
 
   const equipItem = thisItem => {
     if (thisItem[locale] !== '-----------') {
+      if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
       const updatedItem = {
         ...thisItem,
         ...itemBonus,
@@ -268,11 +272,15 @@ export default function ItemCard(props) {
           <ButtonForKakele
             onClick={() => equipItem(item)}
             text={
-              currentSet[slot][locale] === item[locale]
+              showUpdateItem
+                ? text.saveItem
+                : currentSet[slot][locale] === item[locale]
                 ? text.equiped
                 : text.equipItem
             }
-            disabled={currentSet[slot][locale] === item[locale]}
+            disabled={
+              !showUpdateItem && currentSet[slot][locale] === item[locale]
+            }
           />
         </div>
       </div>

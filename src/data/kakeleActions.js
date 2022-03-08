@@ -35,7 +35,6 @@ const saveSetInLocalStorage = newSet => {
   const onlyValidItems = newSet
     .filter(i => i)
     .reduce((anterior, proximo) => {
-      console.log(proximo.slot);
       return {
         ...anterior,
         [proximo.slot]: proximo,
