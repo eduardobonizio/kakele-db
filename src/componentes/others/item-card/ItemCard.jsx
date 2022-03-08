@@ -1,5 +1,5 @@
 import styles from './ItemCard.module.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import copy from 'copy-to-clipboard';
 
 import { useRouter } from 'next/router';
@@ -21,8 +21,8 @@ import UpgradeDiv from './ugrade-div/UpgradeDiv';
 
 export default function ItemCard(props) {
   const {
-    state: { currentSet },
-    actions: { updateCurrentSet },
+    state: { currentSet, setUpgradeBonus },
+    actions: { updateCurrentSet, updateSetUpgradeBonus },
   } = useAppContext();
   const router = useRouter();
   const {
@@ -54,6 +54,13 @@ export default function ItemCard(props) {
     magic: 0,
     attack: 0,
   });
+
+  const updateStats = (newValue, stat) => {
+    const oldValue = itemsUpgrades[stat];
+    const newTotal = setUpgradeBonus[stat] - oldValue + newValue;
+    setItemsUpgrades({ ...itemsUpgrades, [stat]: newValue });
+    updateSetUpgradeBonus({ ...setUpgradeBonus, [stat]: newTotal });
+  };
 
   const showDetails =
     router.pathname.includes('wiki') || router.pathname.includes('new-items');
@@ -154,7 +161,7 @@ export default function ItemCard(props) {
               blessModifier={blessModifier}
               styles={styles}
               upgrades={itemsUpgrades}
-              changeUpgrades={setItemsUpgrades}
+              changeUpgrades={updateStats}
             />
           </div>
           <span>
