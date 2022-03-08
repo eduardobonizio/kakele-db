@@ -141,6 +141,8 @@ export default function SetMaker() {
                     item={item}
                     stleFromParent={styles}
                     locale={locale}
+                    updatedRecomendedSet={setRecomendedSet}
+                    recomendedSet={recomendedSet}
                   />
                 </div>
               );

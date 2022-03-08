@@ -15,7 +15,6 @@ const UpgradeDiv = props => {
               className={styles.select}
               id={`${stat}-upgrade`}
               defaultValue={upgrades[stat]}
-              // onChange={e => updateFilter('characterClass', e.target.value)}
               onChange={e => changeUpgrades(Number(e.target.value), stat)}
             >
               {UPGRADES_STAGES.map((value, index) => (

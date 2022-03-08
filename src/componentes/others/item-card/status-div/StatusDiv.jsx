@@ -1,5 +1,3 @@
-import { useEffect } from 'react/cjs/react.production.min';
-
 const StatusDiv = props => {
   const {
     text,
@@ -12,6 +10,7 @@ const StatusDiv = props => {
     styles,
     itemsUpgrades,
   } = props;
+
   const addBlessModifier = (statusValue, statusName) => {
     const totalStatus = itemsUpgrades[statusName] + statusValue;
     return Math.floor(totalStatus + (totalStatus * blessModifier) / 100);

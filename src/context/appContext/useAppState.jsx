@@ -26,13 +26,6 @@ const AppProvider = ({ children }) => {
     slot: 'All',
     orderBy: 'level',
     rarity: 'any',
-    setUpgradeBonus: {
-      attack: 0,
-      def: 0,
-      armor: 0,
-      magic: 0,
-      blessPercentage: 0,
-    },
     currentSet: {
       necklace: { ...FAKE_ITEM, slot: 'necklace' },
       helmet: { ...FAKE_ITEM, slot: 'helmet' },
@@ -82,12 +75,6 @@ const getActions = setState => ({
   },
   updateCurrentSet: newSet => {
     setState(state => ({ ...state, currentSet: newSet }));
-  },
-  updateSetUpgradeBonus: updatedValues => {
-    setState(state => ({
-      ...state,
-      setUpgradeBonus: updatedValues,
-    }));
   },
   udateOneEquipment: (currentSet, newItem) => {
     setState(state => ({

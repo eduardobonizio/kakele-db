@@ -21,8 +21,8 @@ import UpgradeDiv from './ugrade-div/UpgradeDiv';
 
 export default function ItemCard(props) {
   const {
-    state: { currentSet, setUpgradeBonus },
-    actions: { updateCurrentSet, updateSetUpgradeBonus },
+    state: { currentSet },
+    actions: { updateCurrentSet, udateOneEquipment },
   } = useAppContext();
   const router = useRouter();
   const {
@@ -35,6 +35,8 @@ export default function ItemCard(props) {
     item,
     blessModifier = 0,
     blessQuantity = 0,
+    updatedRecomendedSet,
+    recomendedSet,
     item: {
       sources,
       info,
@@ -53,13 +55,28 @@ export default function ItemCard(props) {
     armor: 0,
     magic: 0,
     attack: 0,
+    blessPercentage: 1,
   });
 
   const updateStats = (newValue, stat) => {
-    const oldValue = itemsUpgrades[stat];
-    const newTotal = setUpgradeBonus[stat] - oldValue + newValue;
-    setItemsUpgrades({ ...itemsUpgrades, [stat]: newValue });
-    updateSetUpgradeBonus({ ...setUpgradeBonus, [stat]: newTotal });
+    const updatedItemBonus = { ...itemsUpgrades, [stat]: newValue };
+    setItemsUpgrades(updatedItemBonus);
+
+    const newItem = {
+      ...item,
+      itemBonus: { ...updatedItemBonus },
+    };
+
+    if (recomendedSet) {
+      const position = recomendedSet.indexOf(item);
+      const curRecomendedSet = [...recomendedSet];
+      curRecomendedSet[position] = newItem;
+
+      updatedRecomendedSet([...curRecomendedSet]);
+    }
+
+    if (currentSet[slot].en !== item.en) return;
+    udateOneEquipment(currentSet, newItem);
   };
 
   const showDetails =
@@ -102,7 +119,16 @@ export default function ItemCard(props) {
 
   const equipItem = thisItem => {
     if (thisItem[locale] !== '-----------') {
-      const whatToDo = decide(thisItem);
+      const updatedItem = {
+        ...thisItem,
+        itemBonus: {
+          attack: itemsUpgrades,
+          armor: itemsUpgrades,
+          magic: itemsUpgrades,
+          blessPercentage: 1,
+        },
+      };
+      const whatToDo = decide(updatedItem);
 
       updateCurrentSet({ ...currentSet, ...whatToDo });
 
@@ -151,18 +177,20 @@ export default function ItemCard(props) {
               itemsUpgrades={itemsUpgrades}
               styles={styles}
             />
-            <UpgradeDiv
-              text={text}
-              armor={armor}
-              magic={magic}
-              attack={attack}
-              level={level}
-              slot={slot}
-              blessModifier={blessModifier}
-              styles={styles}
-              upgrades={itemsUpgrades}
-              changeUpgrades={updateStats}
-            />
+            {item.level > 0 && (
+              <UpgradeDiv
+                text={text}
+                armor={armor}
+                magic={magic}
+                attack={attack}
+                level={level}
+                slot={slot}
+                blessModifier={blessModifier}
+                styles={styles}
+                upgrades={itemsUpgrades}
+                changeUpgrades={updateStats}
+              />
+            )}
           </div>
           <span>
             {`${text.element}: `}
