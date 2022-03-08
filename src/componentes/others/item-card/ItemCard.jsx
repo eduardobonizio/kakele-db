@@ -53,17 +53,9 @@ export default function ItemCard(props) {
       itemBonus,
     },
   } = props;
-  console.log(itemBonus);
-  const [itemsUpgrades, setItemsUpgrades] = useState({
-    armor: 0,
-    magic: 0,
-    attack: 0,
-    blessPercentage: 1,
-  });
 
   const updateStats = (newValue, stat) => {
-    const updatedItemBonus = { ...itemsUpgrades, [stat]: newValue };
-    setItemsUpgrades(updatedItemBonus);
+    const updatedItemBonus = { ...itemBonus, [stat]: newValue };
 
     const newItem = {
       ...item,
@@ -124,12 +116,7 @@ export default function ItemCard(props) {
     if (thisItem[locale] !== '-----------') {
       const updatedItem = {
         ...thisItem,
-        itemBonus: {
-          attack: itemsUpgrades,
-          armor: itemsUpgrades,
-          magic: itemsUpgrades,
-          blessPercentage: 1,
-        },
+        ...itemBonus,
       };
       const whatToDo = decide(updatedItem);
 
