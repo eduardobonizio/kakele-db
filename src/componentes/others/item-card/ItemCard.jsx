@@ -20,11 +20,13 @@ import StatusDiv from './status-div/StatusDiv';
 import UpgradeDiv from './ugrade-div/UpgradeDiv';
 
 export default function ItemCard(props) {
+  const router = useRouter();
+
   const {
     state: { currentSet },
     actions: { updateCurrentSet, udateOneEquipment },
   } = useAppContext();
-  const router = useRouter();
+
   const {
     locale,
     index,
@@ -48,9 +50,10 @@ export default function ItemCard(props) {
       slot,
       imgUrl,
       bonus,
+      itemBonus,
     },
   } = props;
-
+  console.log(itemBonus);
   const [itemsUpgrades, setItemsUpgrades] = useState({
     armor: 0,
     magic: 0,
@@ -174,7 +177,7 @@ export default function ItemCard(props) {
               level={level}
               slot={slot}
               blessModifier={blessModifier}
-              itemsUpgrades={itemsUpgrades}
+              itemsUpgrades={itemBonus}
               styles={styles}
             />
             {item.level > 0 && (
@@ -187,7 +190,7 @@ export default function ItemCard(props) {
                 slot={slot}
                 blessModifier={blessModifier}
                 styles={styles}
-                upgrades={itemsUpgrades}
+                upgrades={itemBonus}
                 changeUpgrades={updateStats}
               />
             )}
