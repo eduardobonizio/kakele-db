@@ -43,11 +43,11 @@ const StatusDiv = props => {
         <span className="blue">{`${addBlessModifier(armor, 'armor')}`}</span>
       </span>
       <span className="card-text green">
-        {`${text.magic}: ${magic} -> `}
+        {`${text.magic}: ${magic}+${itemsUpgrades.armor} -> `}
         <span className="blue">{`${addBlessModifier(magic, 'magic')}`}</span>
       </span>
       <span className="card-text green">
-        {`${text.attack}: ${attack} -> `}
+        {`${text.attack}: ${attack}+${itemsUpgrades.armor} -> `}
         <span className="blue">{`${addBlessModifier(attack, 'attack')}`}</span>
       </span>
       <span className="card-text">{`${text.slot}: ${slot}`}</span>
