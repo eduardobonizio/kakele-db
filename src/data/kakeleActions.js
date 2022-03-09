@@ -135,6 +135,7 @@ const saveSetInLocalStorage = newSet => {
 const loadSetFromLocalStorage = () => {
   try {
     const currentSet = JSON.parse(localStorage.getItem('currentSet'));
+    if (typeof currentSet === 'string') return false;
     return currentSet;
   } catch (error) {}
 };
