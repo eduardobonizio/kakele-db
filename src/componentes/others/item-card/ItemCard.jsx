@@ -242,20 +242,21 @@ export default function ItemCard(props) {
               <LinkButton text={text.showItem} />
             </Link>
           )}
-
-          <ButtonForKakele
-            onClick={() => equipItem(item)}
-            text={
-              showUpdateItem
-                ? text.saveItem
-                : currentSet[slot][locale] === item[locale]
-                ? text.equiped
-                : text.equipItem
-            }
-            disabled={
-              !showUpdateItem && currentSet[slot][locale] === item[locale]
-            }
-          />
+          {currentSet && (
+            <ButtonForKakele
+              onClick={() => equipItem(item)}
+              text={
+                showUpdateItem
+                  ? text.saveItem
+                  : currentSet[slot][locale] === item[locale]
+                  ? text.equiped
+                  : text.equipItem
+              }
+              disabled={
+                !showUpdateItem && currentSet[slot][locale] === item[locale]
+              }
+            />
+          )}
         </div>
       </div>
     </div>

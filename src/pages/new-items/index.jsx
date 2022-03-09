@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import { NEW_ITEMS } from '../../data/kakeleData';
@@ -8,7 +9,15 @@ import { newItemsJsx as textOptions } from '../../data/dataLanguages';
 const NewItemsPage = () => {
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
-  const newItems = NEW_ITEMS;
+  const [newItems, setNewItems] = useState(NEW_ITEMS);
+
+  const updateOneItemOnly = (oldItem, newItem) => {
+    const items = [...newItems];
+    const index = items.indexOf(oldItem);
+    items[index] = newItem;
+    setNewItems(items);
+  };
+
   return (
     <div className={`container ${styles.mainContainer}`}>
       <Head>
@@ -34,7 +43,13 @@ const NewItemsPage = () => {
           .sort((a, b) => a.en - b.en)
           .map((item, index) => (
             <div className={`col ${styles.col}`} key={item[locale]}>
-              <ItemCard index={index} item={item} locale={locale} />
+              <ItemCard
+                index={index}
+                item={item}
+                locale={locale}
+                onlyOneItem="true"
+                updatedRecomendedSet={i => updateOneItemOnly(item, i)}
+              />
             </div>
           ))}
       </div>
