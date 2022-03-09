@@ -22,18 +22,30 @@ const StatusDiv = props => {
         <span className="card-text">{`${text.level}: ${level}`}</span>
         <span className="card-text">
           {`${text.armor}: ${armor}`}
-          {itemsUpgrades.armor > 0 &&
-            `+${itemsUpgrades.armor} -> ${itemsUpgrades.armor + armor}`}
+          {itemsUpgrades.armor > 0 && (
+            <span>
+              {`+${itemsUpgrades.armor} -> `}
+              <span className="blue">{itemsUpgrades.armor + armor}</span>
+            </span>
+          )}
         </span>
         <span className="card-text">
           {`${text.magic}: ${magic}`}
-          {itemsUpgrades.magic > 0 &&
-            `+${itemsUpgrades.magic} -> ${itemsUpgrades.magic + magic}`}
+          {itemsUpgrades.magic > 0 && (
+            <span>
+              {`+${itemsUpgrades.magic} -> `}
+              <span className="blue">{itemsUpgrades.magic + magic}</span>
+            </span>
+          )}
         </span>
         <span className="card-text">
           {`${text.attack}: ${attack}`}
-          {itemsUpgrades.attack > 0 &&
-            `+${itemsUpgrades.attack} -> ${itemsUpgrades.attack + attack}`}
+          {itemsUpgrades.attack > 0 && (
+            <span>
+              {`+${itemsUpgrades.attack} -> `}
+              <span className="blue">{itemsUpgrades.attack + attack}</span>
+            </span>
+          )}
         </span>
         <span className="card-text">{`${text.slot}: ${slot}`}</span>
       </div>
