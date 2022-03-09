@@ -14,6 +14,7 @@ import {
   equipments,
   weapons,
   ALL_ITENS_SLOTS_LIST,
+  FAKE_SET,
 } from '../../data/kakeleData';
 import Link from 'next/link';
 
@@ -31,8 +32,9 @@ export default function SetMaker() {
   } = useAppContext();
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
-  const [recomendedSet, setRecomendedSet] = useState(false);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
   const [ignoredItens, setIgnoredItens] = useState([]);
+  const [showEquipAll, setShowEquipAll] = useState(false);
 
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
@@ -43,19 +45,23 @@ export default function SetMaker() {
       characterClass,
     );
 
-    const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
-      findBestSet(
-        itensList,
-        mainStat,
-        slot,
-        characterClass,
-        ignoredItens,
-        ignoreThisSlotsElement,
-        element,
-        locale,
+    const bestItens = equipmentsArrayToObject(
+      ALL_ITENS_SLOTS_LIST.map(slot =>
+        findBestSet(
+          itensList,
+          mainStat,
+          slot,
+          characterClass,
+          ignoredItens,
+          ignoreThisSlotsElement,
+          element,
+          locale,
+        ),
       ),
     );
-    setRecomendedSet(bestItens);
+
+    setShowEquipAll(true);
+    setCurrentSet(bestItens);
   };
 
   const ignoreItens = (itemName, ignore) => {
@@ -83,8 +89,7 @@ export default function SetMaker() {
   };
 
   const equipAllListed = () => {
-    const result = equipmentsArrayToObject(recomendedSet);
-    saveSetInLocalStorage(result);
+    saveSetInLocalStorage(currentSet);
   };
 
   useEffect(() => {
@@ -119,38 +124,38 @@ export default function SetMaker() {
           <Link href="/search-item" passHref locale={locale}>
             <LinkButton text={text.searchItens} />
           </Link>
-          {recomendedSet && (
+          {showEquipAll && (
             <Link href="/set-viewer" passHref locale={locale}>
               <LinkButton text={text.equipAll} onClick={equipAllListed} />
             </Link>
           )}
         </div>
 
-        <ShowSetStatus itensListToShowStatus={recomendedSet} locale={locale} />
+        <ShowSetStatus itensListToShowStatus={currentSet} locale={locale} />
       </div>
       <div className={`row row-cols-auto ${styles.row}`}>
-        {recomendedSet &&
-          recomendedSet.map((item, i) => {
-            if (item) {
-              return (
-                <div className={`col ${styles.col}`} key={item[locale]}>
-                  <ItemCard
-                    index={i}
-                    ignoredItens={ignoredItens}
-                    ignoreItens={ignoreItens}
-                    ignoreThisSlotsElement={ignoreThisSlotsElement}
-                    ignoreElementForThisSlot={ignoreElementForThisSlot}
-                    item={item}
-                    stleFromParent={styles}
-                    locale={locale}
-                    updatedRecomendedSet={setRecomendedSet}
-                    recomendedSet={recomendedSet}
-                  />
-                </div>
-              );
-            }
-            return false;
-          })}
+        {Object.keys(currentSet).map((key, i) => {
+          if (currentSet[key].level < 1) return;
+          return (
+            <div className={`col ${styles.col}`} key={currentSet[key].en + i}>
+              <ItemCard
+                index={key}
+                ignoredItens={ignoredItens}
+                ignoreItens={ignoreItens}
+                ignoreThisSlotsElement={ignoreThisSlotsElement}
+                ignoreElementForThisSlot={ignoreElementForThisSlot}
+                item={currentSet[key]}
+                stleFromParent={styles}
+                locale={locale}
+                currentSet={currentSet}
+                updateCurrentSet={() => ''}
+                updatedRecomendedSet={item =>
+                  setCurrentSet({ ...currentSet, ...item })
+                }
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
