@@ -197,6 +197,7 @@ const Bless = () => {
                 blessQuantity={showStars}
                 recomendedSet={selectedItem}
                 currentSet={currentSet}
+                updateCurrentSet={setCurrentSet}
                 updatedRecomendedSet={i => setSelectedItem(i)}
                 onlyOneItem="true"
               />
