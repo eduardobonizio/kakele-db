@@ -13,11 +13,12 @@ import {
   filterItemsByName,
   findItemByName,
   loadAndAddMissingItems,
+  loadSetFromLocalStorage,
 } from '../../data/kakeleActions';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function ShowItem() {
-  const { locale, locales } = useRouter();
+  const { locale, locales, query } = useRouter();
   const text = textOptions[locale];
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
   const [item, setItem] = useState({ ...equipments[0] });
@@ -34,9 +35,12 @@ export default function ShowItem() {
     const result = filterItemsByName(allItems, searchText, locale);
     setFoundItems(result);
   };
+
   const changeItem = itemName => {
     const allItens = [...equipments, ...weapons];
+
     const newItem = findItemByName(allItens, itemName, locale);
+
     const itemIndex = allItens.indexOf(newItem);
 
     const previous = itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
@@ -44,6 +48,7 @@ export default function ShowItem() {
     const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
 
     setItem(newItem);
+
     setOtherItems({
       previous: allItens[previous].en,
       next: allItens[nextIndex].en,
@@ -52,10 +57,22 @@ export default function ShowItem() {
   };
 
   useEffect(() => {
-    const curSet = loadAndAddMissingItems(locale);
+    const savedSet = loadSetFromLocalStorage();
+
+    const curSet = loadAndAddMissingItems(savedSet);
+
     if (curSet[item.slot].en === item.en) setItem(curSet[item.slot]);
+
     setCurrentSet(curSet);
   }, [item.en, item.slot, locale]);
+
+  useEffect(() => {
+    if (!query.item) return;
+
+    changeItem(query.item);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   return (
     <div className={`container ${styles.itemContainer}`}>
@@ -120,6 +137,7 @@ export default function ShowItem() {
           type="buttom"
         />
       </div>
+
       <div className="row">
         <ItemCard
           item={item}
