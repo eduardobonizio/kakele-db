@@ -10030,6 +10030,7 @@ const NEW_ITEMS = [
     slot: 'ring',
     pt: 'Anel Comedor De Carne',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Meat Eater Book',
@@ -10050,6 +10051,7 @@ const NEW_ITEMS = [
     slot: 'book',
     pt: 'Livro Comedor de Carne',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragon Winged Helm',
@@ -10066,6 +10068,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Elmo Alado de Dragão',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Ring',
@@ -10082,6 +10085,7 @@ const NEW_ITEMS = [
     slot: 'ring',
     pt: 'Anel Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Bow',
@@ -10100,6 +10104,7 @@ const NEW_ITEMS = [
     range: 3,
     pt: 'Arco Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Armor',
@@ -10118,6 +10123,7 @@ const NEW_ITEMS = [
     range: 3,
     pt: 'Armadura Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lurking Boots',
@@ -10138,6 +10144,7 @@ const NEW_ITEMS = [
       pt: 'Velocidade de movimento -20',
     },
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lurking Helmet',
@@ -10154,6 +10161,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Capacete Espreitador',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Shoes',
@@ -10170,6 +10178,7 @@ const NEW_ITEMS = [
     slot: 'shoe',
     pt: 'Botas Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Staff',
@@ -10186,6 +10195,7 @@ const NEW_ITEMS = [
     slot: 'weapon',
     pt: 'Cajado Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Necklace',
@@ -10202,6 +10212,7 @@ const NEW_ITEMS = [
     slot: 'necklace',
     pt: 'Colar Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Helmet',
@@ -10218,6 +10229,7 @@ const NEW_ITEMS = [
     slot: 'necklace',
     pt: 'Elmo Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Shield',
@@ -10234,6 +10246,7 @@ const NEW_ITEMS = [
     slot: 'shield',
     pt: 'Escudo Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Scythe',
@@ -10250,6 +10263,7 @@ const NEW_ITEMS = [
     slot: 'weapon',
     pt: 'Foice Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Glove',
@@ -10266,6 +10280,7 @@ const NEW_ITEMS = [
     slot: 'weapon',
     pt: 'Luva Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Scroll',
@@ -10282,6 +10297,7 @@ const NEW_ITEMS = [
     slot: 'book',
     pt: 'Pergaminhos Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Pants',
@@ -10298,6 +10314,7 @@ const NEW_ITEMS = [
     slot: 'pants',
     pt: 'Calças Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sentinel Armor',
@@ -10314,6 +10331,7 @@ const NEW_ITEMS = [
     slot: 'armor',
     pt: 'Armadura Sentinela',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sentinel Necklace',
@@ -10330,6 +10348,7 @@ const NEW_ITEMS = [
     slot: 'necklace',
     pt: 'Colar Sentinela',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crawler Helmet',
@@ -10346,6 +10365,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Capacete de Rastejador',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crawler Shield',
@@ -10362,6 +10382,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Escudo de Rastejador',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
 ];
 

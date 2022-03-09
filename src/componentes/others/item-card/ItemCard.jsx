@@ -24,7 +24,7 @@ export default function ItemCard(props) {
 
   const {
     state: { currentSet },
-    actions: { updateCurrentSet, udateOneEquipment },
+    actions: { udateOneEquipment },
   } = useAppContext();
 
   const {
@@ -53,7 +53,7 @@ export default function ItemCard(props) {
       itemBonus,
     },
   } = props;
-
+  // console.log(item);
   const [showUpdateItem, setShowUpdateItem] = useState(false);
 
   const updateStats = (newValue, stat) => {
@@ -122,6 +122,7 @@ export default function ItemCard(props) {
         ...thisItem,
         ...itemBonus,
       };
+
       const whatToDo = decide(updatedItem);
 
       const newSet = Object.values({

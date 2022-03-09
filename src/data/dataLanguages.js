@@ -300,21 +300,23 @@ const showSetJsx = {
 const showItemJsx = {
   en: {
     title: 'Kakele Wiki',
-    description: 'See and search for any item existent in Kakele MMORPG',
-    oneItemDescription:
-      'status, element, sources, and more informations about the item',
+    description:
+      'Kakele wiki see and search for any item existent in Kakele MMORPG',
     previous: 'Previous',
     next: 'Next',
     showSet: 'Show set',
+    searchLabel: 'Item',
+    searchPlaceHolder: 'Item Name',
   },
   pt: {
     title: 'Kakele Wiki',
-    description: 'Veja e procure por qualquer item que existe no Kakele MMORPG',
-    oneItemDescription:
-      'status, elemento, onde conseguir, e muitas outras informações sobre o item',
+    description:
+      'Kakele wiki veja e procure por qualquer item que existe no Kakele MMORPG',
     previous: 'Anterior',
     next: 'Próximo',
     showSet: 'Ver set',
+    searchLabel: 'Item',
+    searchPlaceHolder: 'Nome do item',
   },
 };
 
