@@ -25,6 +25,7 @@ export default function ShowSet() {
   const text = textOptions[locale];
 
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
+  const [viewQuerySet, setViewQuerySet] = useState(false);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
@@ -37,11 +38,16 @@ export default function ShowSet() {
       const storedSet = loadSetFromLocalStorage() || [];
       const querySet = Object.keys(query).length > 0;
 
-      const items = querySet ? query : storedSet;
+      if (querySet) {
+        const items = query;
+        const curSet = loadAndAddMissingItems(items, locale, storedSet);
+        setViewQuerySet(curSet);
+      }
 
+      const items = storedSet;
       const curSet = loadAndAddMissingItems(items, locale, storedSet);
-
       setCurrentSet(curSet);
+      if (!querySet) setViewQuerySet(false);
     };
 
     loadShowItens();
@@ -83,24 +89,46 @@ export default function ShowSet() {
           <ButtonForKakele onClick={copyLink} text={text.copy} />
         </div>
 
-        <div className={`row row-cols-auto ${styles.row}`}>
-          {ALL_ITENS_SLOTS_LIST.map(key => {
-            if (!currentSet[key]) return;
+        {viewQuerySet ? (
+          <div className={`row row-cols-auto ${styles.row}`}>
+            {ALL_ITENS_SLOTS_LIST.map(key => {
+              if (!viewQuerySet[key]) return;
 
-            return (
-              <ItemCard
-                key={key}
-                item={currentSet[key]}
-                locale={locale}
-                currentSet={currentSet}
-                updateCurrentSet={item => ''}
-                updatedRecomendedSet={item =>
-                  setCurrentSet({ ...currentSet, ...item })
-                }
-              />
-            );
-          })}
-        </div>
+              return (
+                <ItemCard
+                  key={key}
+                  item={viewQuerySet[key]}
+                  locale={locale}
+                  currentSet={currentSet}
+                  updateCurrentSet={item => ''}
+                  updatedRecomendedSet={item => {
+                    setCurrentSet({ ...currentSet, ...item });
+                    setViewQuerySet({ ...viewQuerySet, ...item });
+                  }}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <div className={`row row-cols-auto ${styles.row}`}>
+            {ALL_ITENS_SLOTS_LIST.map(key => {
+              if (!currentSet[key]) return;
+
+              return (
+                <ItemCard
+                  key={key}
+                  item={currentSet[key]}
+                  locale={locale}
+                  currentSet={currentSet}
+                  updateCurrentSet={item => ''}
+                  updatedRecomendedSet={item =>
+                    setCurrentSet({ ...currentSet, ...item })
+                  }
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
