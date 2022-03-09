@@ -64,10 +64,10 @@ export default function ShowItem() {
     if (curSet[item.slot].en === item.en) setItem(curSet[item.slot]);
 
     setCurrentSet(curSet);
-  }, [item.en, item.slot, locale]);
+  }, [item.en, item.slot]);
 
   useEffect(() => {
-    if (!query.item) return;
+    if (!query.item || query.item === item.en) return;
 
     changeItem(query.item);
 
