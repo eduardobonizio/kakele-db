@@ -7,9 +7,7 @@ import {
   elements,
   itemCardJsx as textOptions,
 } from '../../../data/dataLanguages';
-import { FAKE_ITEM } from '../../../data/kakeleData';
 import {
-  addMissingItens,
   loadSetFromLocalStorage,
   normalizeHandsItems,
   saveSetInLocalStorage,
@@ -63,6 +61,8 @@ export default function ItemCard(props) {
   const updateStats = (newValue, stat) => {
     if (!showUpdateItem) setShowUpdateItem(!showUpdateItem);
     const updatedItemBonus = { ...itemBonus, [stat]: newValue };
+
+    console.log(newValue, stat);
 
     const newItem = {
       ...item,

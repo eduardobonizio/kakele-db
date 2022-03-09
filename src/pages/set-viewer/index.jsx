@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import styles from './ShowSet.module.css';
@@ -16,18 +16,16 @@ import {
 import Link from 'next/link';
 
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
-import { useAppContext } from '../../context/appContext/useAppState';
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import { FAKE_SET } from '../../data/kakeleData';
 
 export default function ShowSet() {
   const { locale, locales, query } = useRouter();
-  const {
-    state: { currentSet },
-    actions: { updateCurrentSet },
-  } = useAppContext();
   const text = textOptions[locale];
+
+  const [currentSet, updateCurrentSet] = useState(FAKE_SET);
 
   useEffect(() => {
     const itensTextToObject = () => {
@@ -93,30 +91,40 @@ export default function ShowSet() {
             item={currentSet.necklace}
             index={currentSet.necklace[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.helmet}
             index={currentSet.helmet[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.ring}
             index={currentSet.ring[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.weapon}
             index={currentSet.weapon[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.armor}
             index={currentSet.armor[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           {currentSet.shield && currentSet.shield[locale] !== '-----------' && (
@@ -124,6 +132,8 @@ export default function ShowSet() {
               item={currentSet.shield || currentSet.book}
               index={currentSet.shield[locale] || currentSet.book[locale]}
               locale={locale}
+              updatedcurrentSet={updateCurrentSet}
+              currentSet={currentSet}
             />
           )}
 
@@ -132,6 +142,8 @@ export default function ShowSet() {
               item={currentSet.book}
               index={currentSet.book[locale]}
               locale={locale}
+              updatedcurrentSet={updateCurrentSet}
+              currentSet={currentSet}
             />
           )}
 
@@ -143,6 +155,8 @@ export default function ShowSet() {
                 item={currentSet.shield}
                 index={currentSet.shield[locale]}
                 locale={locale}
+                updatedcurrentSet={updateCurrentSet}
+                currentSet={currentSet}
               />
             )}
 
@@ -150,18 +164,24 @@ export default function ShowSet() {
             item={currentSet.accessorie}
             index={currentSet.accessorie[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.pants}
             index={currentSet.pants[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.shoe}
             index={currentSet.shoe[locale]}
             locale={locale}
+            updatedcurrentSet={updateCurrentSet}
+            currentSet={currentSet}
           />
         </div>
       </div>

@@ -9977,6 +9977,19 @@ const FAKE_ITEM = {
   },
 };
 
+const FAKE_SET = {
+  necklace: { ...FAKE_ITEM, slot: 'necklace' },
+  helmet: { ...FAKE_ITEM, slot: 'helmet' },
+  ring: { ...FAKE_ITEM, slot: 'ring' },
+  weapon: { ...FAKE_ITEM, slot: 'weapon' },
+  armor: { ...FAKE_ITEM, slot: 'armor' },
+  shield: { ...FAKE_ITEM, slot: 'shield' },
+  book: { ...FAKE_ITEM, slot: 'book' },
+  accessorie: { ...FAKE_ITEM, slot: 'accessorie' },
+  pants: { ...FAKE_ITEM, slot: 'pants' },
+  shoe: { ...FAKE_ITEM, slot: 'shoe' },
+};
+
 const ITEM_RARITY = {
   any: {
     en: 'Any',
@@ -10399,4 +10412,5 @@ export {
   FAKE_ITEM,
   BLESS_OPTIONS,
   NEW_ITEMS,
+  FAKE_SET,
 };
