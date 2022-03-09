@@ -26,11 +26,10 @@ export default function ShowSet() {
   const text = textOptions[locale];
 
   const [currentSet, updateCurrentSet] = useState(FAKE_SET);
-  console.log(currentSet);
+
   useEffect(() => {
     const itensTextToObject = () => {
       const storedSet = loadSetFromLocalStorage() || [];
-
       const querySet = Object.keys(query).length > 0;
 
       const items = querySet ? query : storedSet;

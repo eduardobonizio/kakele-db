@@ -8,12 +8,10 @@ import {
   itemCardJsx as textOptions,
 } from '../../../data/dataLanguages';
 import {
-  addMissingItens,
   loadSetFromLocalStorage,
   normalizeHandsItems,
   saveSetInLocalStorage,
 } from '../../../data/kakeleActions';
-import { useAppContext } from '../../../context/appContext/useAppState';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -26,10 +24,10 @@ import UpgradeDiv from './ugrade-div/UpgradeDiv';
 export default function ItemCard(props) {
   const router = useRouter();
 
-  const {
-    state: { currentSet },
-    actions: { udateOneEquipment, updateCurrentSet },
-  } = useAppContext();
+  // const {
+  //   state: { currentSet },
+  //   actions: { udateOneEquipment, updateCurrentSet },
+  // } = useAppContext();
 
   const {
     locale,
@@ -41,8 +39,11 @@ export default function ItemCard(props) {
     item,
     blessModifier = 0,
     blessQuantity = 0,
+    onlyOneItem = false,
+    updateCurrentSet,
     updatedRecomendedSet,
     recomendedSet,
+    currentSet,
     item: {
       sources,
       info,
@@ -57,51 +58,53 @@ export default function ItemCard(props) {
       itemBonus,
     },
   } = props;
+  const text = textOptions[locale];
   const [showUpdateItem, setShowUpdateItem] = useState(false);
+  const showDetails =
+    router.pathname.includes('wiki') || router.pathname.includes('new-items');
 
   const updateStats = (newValue, stat) => {
     if (!showUpdateItem) setShowUpdateItem(!showUpdateItem);
-    const updatedItemBonus = { ...itemBonus, [stat]: newValue };
 
     const newItem = {
       ...item,
-      itemBonus: { ...updatedItemBonus },
+      itemBonus: { ...itemBonus, [stat]: newValue },
     };
 
-    if (recomendedSet) {
-      updatedRecomendedSet({
-        ...recomendedSet,
-        [newItem.slot]: { ...newItem },
-      });
-    }
+    // console.log('newItem', newItem);
 
-    if (currentSet[slot].en !== item.en) return;
-    udateOneEquipment(currentSet, newItem);
+    // console.log('oldSet', recomendedSet);
+
+    // console.log('newSet', {
+    //   ...recomendedSet,
+    //   [newItem.slot]: { ...newItem },
+    // });
+
+    if (onlyOneItem) return updatedRecomendedSet(newItem);
+    updatedRecomendedSet({
+      ...recomendedSet,
+      [newItem.slot]: { ...newItem },
+    });
   };
 
-  const showDetails =
-    router.pathname.includes('wiki') || router.pathname.includes('new-items');
-  const text = textOptions[locale];
+  const equipItem = itemFromThisCard => {
+    if (itemFromThisCard[locale] === '-----------') return;
 
-  const equipItem = thisItem => {
-    if (thisItem[locale] !== '-----------') {
-      if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
+    if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
+    const updatedItem = {
+      ...itemFromThisCard,
+      ...itemBonus,
+    };
 
-      const updatedItem = {
-        ...thisItem,
-        ...itemBonus,
-      };
+    const oldSeld = loadSetFromLocalStorage();
 
-      const oldSeld = loadSetFromLocalStorage();
+    const whatToDo = normalizeHandsItems(updatedItem, oldSeld);
 
-      const whatToDo = normalizeHandsItems(updatedItem, oldSeld);
+    const newSet = { ...oldSeld, ...whatToDo };
 
-      const newSet = { ...oldSeld, ...whatToDo };
+    updateCurrentSet(newSet);
 
-      updateCurrentSet(newSet);
-
-      saveSetInLocalStorage(newSet);
-    }
+    saveSetInLocalStorage(newSet);
   };
 
   return (

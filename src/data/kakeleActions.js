@@ -140,6 +140,16 @@ const loadSetFromLocalStorage = () => {
   } catch (error) {}
 };
 
+const loadAndAddMissingItems = locale => {
+  const storedSet = loadSetFromLocalStorage() || [];
+
+  const allSlotItens = addMissingItens(storedSet, locale);
+
+  const normalizedSet = normalizeSet(allSlotItens, locale);
+
+  return normalizedSet;
+};
+
 const activateAlert = setShowAlert => {
   setShowAlert(true);
   setTimeout(() => {
@@ -510,4 +520,5 @@ export {
   normalizeSet,
   normalizeHandsItems,
   equipmentsArrayToObject,
+  loadAndAddMissingItems,
 };

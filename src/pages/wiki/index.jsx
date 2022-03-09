@@ -6,16 +6,21 @@ import React, { useState, useEffect } from 'react';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
-import { equipments, weapons } from '../../data/kakeleData';
+import { equipments, FAKE_SET, weapons } from '../../data/kakeleData';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import Input from '../../componentes/inputs/Input';
-import { filterItemsByName, findItemByName } from '../../data/kakeleActions';
+import {
+  filterItemsByName,
+  findItemByName,
+  loadAndAddMissingItems,
+} from '../../data/kakeleActions';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function ShowItem() {
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
-  const [item, setItem] = useState(equipments[0]);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
+  const [item, setItem] = useState({ ...equipments[0] });
   const [itemName, setItemName] = useState('');
   const [foundItems, setFoundItems] = useState([]);
   const [otherItems, setOtherItems] = useState({
@@ -47,6 +52,11 @@ export default function ShowItem() {
     setItemName('');
   };
 
+  useEffect(() => {
+    const curSet = loadAndAddMissingItems(locale);
+    setCurrentSet(curSet);
+  }, [locale]);
+
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
@@ -66,9 +76,7 @@ export default function ShowItem() {
         <meta property="og:title" content={text.description} key="title" />
         <link rel="canonical" href="https://www.kakeletools.com/wiki" />
       </Head>
-
       <h1>{text.title}</h1>
-
       <div className={styles.searchInput}>
         <Input
           type="text"
@@ -97,7 +105,6 @@ export default function ShowItem() {
           </ul>
         )}
       </div>
-
       <div className={`${styles.buttonContainer}`}>
         <ButtonForKakele
           onClick={() => changeItem(otherItems.previous)}
@@ -113,13 +120,18 @@ export default function ShowItem() {
           type="buttom"
         />
       </div>
-
       <div className="row">
         <ItemCard
           item={item}
           locale={locale}
-          recomendedSet={[item]}
-          updatedRecomendedSet={item => setItem(item[0])}
+          currentSet={currentSet}
+          recomendedSet={item}
+          updateCurrentSet={setCurrentSet}
+          updatedRecomendedSet={item => {
+            console.log('vai setar', item);
+            setItem(item);
+          }}
+          onlyOneItem="true"
         />
       </div>
     </div>
