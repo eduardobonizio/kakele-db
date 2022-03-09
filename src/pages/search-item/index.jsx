@@ -62,7 +62,7 @@ export default function SearchItem() {
     const filtered = itensListByName || itensListByRarity;
 
     const result = loadSet ? changeItensOnFirstLoad(filtered) : filtered;
-    console.log(result);
+
     setFoundItens(result);
   };
 
