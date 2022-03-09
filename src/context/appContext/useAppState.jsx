@@ -26,18 +26,6 @@ const AppProvider = ({ children }) => {
     slot: 'All',
     orderBy: 'level',
     rarity: 'any',
-    currentSet: {
-      necklace: { ...FAKE_ITEM, slot: 'necklace' },
-      helmet: { ...FAKE_ITEM, slot: 'helmet' },
-      ring: { ...FAKE_ITEM, slot: 'ring' },
-      weapon: { ...FAKE_ITEM, slot: 'weapon' },
-      armor: { ...FAKE_ITEM, slot: 'armor' },
-      shield: { ...FAKE_ITEM, slot: 'shield' },
-      book: { ...FAKE_ITEM, slot: 'book' },
-      accessorie: { ...FAKE_ITEM, slot: 'accessorie' },
-      pants: { ...FAKE_ITEM, slot: 'pants' },
-      shoe: { ...FAKE_ITEM, slot: 'shoe' },
-    },
   };
 
   // Esse componente tem um estado, que será acessado por todos os outros
@@ -72,18 +60,6 @@ const getActions = setState => ({
   },
   updateFilter: (filter, value) => {
     setState(state => ({ ...state, [filter]: value }));
-  },
-  updateCurrentSet: newSet => {
-    setState(state => ({
-      ...state,
-      currentSet: { ...state.currentSet, ...newSet },
-    }));
-  },
-  udateOneEquipment: (currentSet, newItem) => {
-    setState(state => ({
-      ...state,
-      currentSet: { ...currentSet, [newItem.slot]: newItem },
-    }));
   },
 });
 
