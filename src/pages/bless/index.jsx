@@ -182,6 +182,8 @@ const Bless = () => {
                 locale={locale}
                 blessModifier={blessModifier}
                 blessQuantity={showStars}
+                recomendedSet={[selectedItem]}
+                updatedRecomendedSet={itemList => setSelectedItem(itemList[0])}
               />
               <UpgradeSelector
                 elementId="bless-atual"
