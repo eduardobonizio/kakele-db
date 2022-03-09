@@ -10,6 +10,7 @@ import { showSetJsx as textOptions } from '../../data/dataLanguages';
 import {
   addMissingItens,
   genereateLinkToViewSet,
+  loadAndAddMissingItems,
   loadSetFromLocalStorage,
   normalizeSet,
 } from '../../data/kakeleActions';
@@ -25,30 +26,35 @@ export default function ShowSet() {
   const { locale, locales, query } = useRouter();
   const text = textOptions[locale];
 
-  const [currentSet, updateCurrentSet] = useState(FAKE_SET);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
 
-  useEffect(() => {
-    const itensTextToObject = () => {
-      const storedSet = loadSetFromLocalStorage() || [];
-      const querySet = Object.keys(query).length > 0;
+  // useEffect(() => {
+  //   const itensTextToObject = () => {
+  //     const storedSet = loadSetFromLocalStorage() || [];
+  //     const querySet = Object.keys(query).length > 0;
 
-      const items = querySet ? query : storedSet;
+  //     const items = querySet ? query : storedSet;
 
-      const allSlotItens = addMissingItens(items, locale);
+  //     const allSlotItens = addMissingItens(items, locale);
 
-      const normalizedSet = normalizeSet(allSlotItens, locale);
+  //     const normalizedSet = normalizeSet(allSlotItens, locale);
 
-      return normalizedSet;
-    };
+  //     return normalizedSet;
+  //   };
 
-    updateCurrentSet(itensTextToObject());
-  }, [locale, updateCurrentSet, query]);
+  //   setShowCurrentSet(itensTextToObject());
+  // }, [locale, query]);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
     const link = genereateLinkToViewSet(currentSet, origin, locale);
     if (link) copy(link);
   };
+
+  useEffect(() => {
+    const curSet = loadAndAddMissingItems(locale);
+    setCurrentSet(curSet);
+  }, [locale]);
 
   return (
     <div className="container">
@@ -85,103 +91,22 @@ export default function ShowSet() {
           </Link>
           <ButtonForKakele onClick={copyLink} text={text.copy} />
         </div>
+
         <div className={`row row-cols-auto ${styles.row}`}>
-          <ItemCard
-            item={currentSet.necklace}
-            index={currentSet.necklace[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          <ItemCard
-            item={currentSet.helmet}
-            index={currentSet.helmet[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          <ItemCard
-            item={currentSet.ring}
-            index={currentSet.ring[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          <ItemCard
-            item={currentSet.weapon}
-            index={currentSet.weapon[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          <ItemCard
-            item={currentSet.armor}
-            index={currentSet.armor[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          {currentSet.shield && currentSet.shield[locale] !== '-----------' && (
-            <ItemCard
-              item={currentSet.shield || currentSet.book}
-              index={currentSet.shield[locale] || currentSet.book[locale]}
-              locale={locale}
-              updatedRecomendedSet={updateCurrentSet}
-              recomendedSet={currentSet}
-            />
-          )}
-
-          {currentSet.book && currentSet.book[locale] !== '-----------' && (
-            <ItemCard
-              item={currentSet.book}
-              index={currentSet.book[locale]}
-              locale={locale}
-              updatedRecomendedSet={updateCurrentSet}
-              recomendedSet={currentSet}
-            />
-          )}
-
-          {currentSet.book &&
-            currentSet.book[locale] === '-----------' &&
-            currentSet.shield &&
-            currentSet.shield[locale] === '-----------' && (
+          {Object.keys(currentSet).map(key => {
+            return (
               <ItemCard
-                item={currentSet.shield}
-                index={currentSet.shield[locale]}
+                key={key}
+                item={currentSet[key]}
                 locale={locale}
-                updatedRecomendedSet={updateCurrentSet}
-                recomendedSet={currentSet}
+                currentSet={currentSet}
+                updateCurrentSet={item => ''}
+                updatedRecomendedSet={item =>
+                  setCurrentSet({ ...currentSet, ...item })
+                }
               />
-            )}
-
-          <ItemCard
-            item={currentSet.accessorie}
-            index={currentSet.accessorie[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          <ItemCard
-            item={currentSet.pants}
-            index={currentSet.pants[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
-
-          <ItemCard
-            item={currentSet.shoe}
-            index={currentSet.shoe[locale]}
-            locale={locale}
-            updatedRecomendedSet={updateCurrentSet}
-            recomendedSet={currentSet}
-          />
+            );
+          })}
         </div>
       </div>
     </div>
