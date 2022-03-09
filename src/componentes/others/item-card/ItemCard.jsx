@@ -71,15 +71,6 @@ export default function ItemCard(props) {
       itemBonus: { ...itemBonus, [stat]: newValue },
     };
 
-    // console.log('newItem', newItem);
-
-    // console.log('oldSet', recomendedSet);
-
-    // console.log('newSet', {
-    //   ...recomendedSet,
-    //   [newItem.slot]: { ...newItem },
-    // });
-
     if (onlyOneItem) return updatedRecomendedSet(newItem);
     updatedRecomendedSet({
       ...recomendedSet,
