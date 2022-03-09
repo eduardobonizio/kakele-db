@@ -11,6 +11,7 @@ import { FAKE_ITEM } from '../../../data/kakeleData';
 import {
   addMissingItens,
   loadSetFromLocalStorage,
+  normalizeHandsItems,
   saveSetInLocalStorage,
 } from '../../../data/kakeleActions';
 import { useAppContext } from '../../../context/appContext/useAppState';
@@ -57,7 +58,6 @@ export default function ItemCard(props) {
       itemBonus,
     },
   } = props;
-  console.log(currentSet);
   const [showUpdateItem, setShowUpdateItem] = useState(false);
 
   const updateStats = (newValue, stat) => {
@@ -85,40 +85,6 @@ export default function ItemCard(props) {
     router.pathname.includes('wiki') || router.pathname.includes('new-items');
   const text = textOptions[locale];
 
-  const decide = thisItem => {
-    if (thisItem.slot === 'weapon') {
-      return thisItem.twoHanded
-        ? {
-            weapon: thisItem,
-            book: { ...FAKE_ITEM, sloot: 'book' },
-            shield: { ...FAKE_ITEM, slot: 'shield' },
-          }
-        : { weapon: thisItem };
-    }
-    if (thisItem.slot === 'shield') {
-      return currentSet.weapon.twoHanded
-        ? {
-            shield: thisItem,
-            weapon: { ...FAKE_ITEM, slot: 'weapon' },
-            book: { ...FAKE_ITEM, sloot: 'book' },
-          }
-        : { shield: thisItem, book: { ...FAKE_ITEM, sloot: 'book' } };
-    }
-    if (thisItem.slot === 'book') {
-      return currentSet.weapon.twoHanded
-        ? {
-            book: thisItem,
-            weapon: { ...FAKE_ITEM, slot: 'weapon' },
-            shield: { ...FAKE_ITEM, sloot: 'shield' },
-          }
-        : {
-            book: thisItem,
-            shield: { ...FAKE_ITEM, sloot: 'shield' },
-          };
-    }
-    return { [thisItem.slot]: thisItem };
-  };
-
   const equipItem = thisItem => {
     if (thisItem[locale] !== '-----------') {
       if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
@@ -128,15 +94,11 @@ export default function ItemCard(props) {
         ...itemBonus,
       };
 
-      const whatToDo = decide(updatedItem);
-
       const oldSeld = loadSetFromLocalStorage();
 
-      console.log('oldSeld', oldSeld);
+      const whatToDo = normalizeHandsItems(updatedItem, oldSeld);
 
       const newSet = addMissingItens({ ...oldSeld, ...whatToDo }, locale);
-
-      console.log('newSet', newSet);
 
       updateCurrentSet(newSet);
 

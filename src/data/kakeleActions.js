@@ -20,6 +20,50 @@ const urlParamsToObject = itemText => {
   }
 };
 
+const equipmentsArrayToObject = itemsList => {
+  return itemsList.reduce((cur, next) => {
+    if (!next) return cur;
+    return {
+      ...cur,
+      [next.slot]: { ...next },
+    };
+  }, {});
+};
+
+const normalizeHandsItems = (thisItem, currentSet) => {
+  if (thisItem.slot === 'weapon') {
+    return thisItem.twoHanded
+      ? {
+          weapon: thisItem,
+          book: { ...FAKE_ITEM, sloot: 'book' },
+          shield: { ...FAKE_ITEM, slot: 'shield' },
+        }
+      : { weapon: thisItem };
+  }
+  if (thisItem.slot === 'shield') {
+    return currentSet.weapon.twoHanded
+      ? {
+          shield: thisItem,
+          weapon: { ...FAKE_ITEM, slot: 'weapon' },
+          book: { ...FAKE_ITEM, sloot: 'book' },
+        }
+      : { shield: thisItem, book: { ...FAKE_ITEM, sloot: 'book' } };
+  }
+  if (thisItem.slot === 'book') {
+    return currentSet.weapon.twoHanded
+      ? {
+          book: thisItem,
+          weapon: { ...FAKE_ITEM, slot: 'weapon' },
+          shield: { ...FAKE_ITEM, sloot: 'shield' },
+        }
+      : {
+          book: thisItem,
+          shield: { ...FAKE_ITEM, sloot: 'shield' },
+        };
+  }
+  return { [thisItem.slot]: thisItem };
+};
+
 const normalizeSet = (setItems, locale) => {
   const shield =
     setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
@@ -84,6 +128,8 @@ const saveSetInLocalStorage = newSet => {
   if (!newSet) return;
 
   localStorage.setItem('currentSet', JSON.stringify(newSet));
+
+  return newSet;
 };
 
 const loadSetFromLocalStorage = () => {
@@ -461,4 +507,6 @@ export {
   filterItemsByName,
   addMissingItens,
   normalizeSet,
+  normalizeHandsItems,
+  equipmentsArrayToObject,
 };

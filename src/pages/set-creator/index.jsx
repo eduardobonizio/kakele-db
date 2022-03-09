@@ -5,6 +5,7 @@ import { useAppContext } from '../../context/appContext/useAppState';
 
 import { setCreatorPageText as textOptions } from '../../data/dataLanguages';
 import {
+  equipmentsArrayToObject,
   filterItensByLevelAndClass,
   findBestSet,
   saveSetInLocalStorage,
@@ -81,6 +82,11 @@ export default function SetMaker() {
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
+  const equipAllListed = () => {
+    const result = equipmentsArrayToObject(recomendedSet);
+    saveSetInLocalStorage(result);
+  };
+
   useEffect(() => {
     if (characterClass === 'All') updateFilter('characterClass', 'Alchemist');
   }, [characterClass, updateFilter]);
@@ -107,7 +113,6 @@ export default function SetMaker() {
 
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h1>{text.h1}</h1>
-
         <KakeleItemsFilters statusPrincipal locale={locale} />
         <div className={styles.buttonsContainer}>
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
@@ -116,10 +121,7 @@ export default function SetMaker() {
           </Link>
           {recomendedSet && (
             <Link href="/set-viewer" passHref locale={locale}>
-              <LinkButton
-                text={text.equipAll}
-                onClick={() => saveSetInLocalStorage(recomendedSet, locale)}
-              />
+              <LinkButton text={text.equipAll} onClick={equipAllListed} />
             </Link>
           )}
         </div>
