@@ -34,7 +34,6 @@ export default function ShowItem() {
     const result = filterItemsByName(allItems, searchText, locale);
     setFoundItems(result);
   };
-
   const changeItem = itemName => {
     const allItens = [...equipments, ...weapons];
     const newItem = findItemByName(allItens, itemName, locale);
@@ -127,10 +126,7 @@ export default function ShowItem() {
           currentSet={currentSet}
           recomendedSet={item}
           updateCurrentSet={setCurrentSet}
-          updatedRecomendedSet={item => {
-            console.log('vai setar', item);
-            setItem(item);
-          }}
+          updatedRecomendedSet={item => setItem(item)}
           onlyOneItem="true"
         />
       </div>
