@@ -26,7 +26,7 @@ export default function ShowSet() {
   const text = textOptions[locale];
 
   const [currentSet, updateCurrentSet] = useState(FAKE_SET);
-
+  console.log(currentSet);
   useEffect(() => {
     const itensTextToObject = () => {
       const storedSet = loadSetFromLocalStorage() || [];
@@ -91,40 +91,40 @@ export default function ShowSet() {
             item={currentSet.necklace}
             index={currentSet.necklace[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.helmet}
             index={currentSet.helmet[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.ring}
             index={currentSet.ring[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.weapon}
             index={currentSet.weapon[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.armor}
             index={currentSet.armor[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           {currentSet.shield && currentSet.shield[locale] !== '-----------' && (
@@ -132,8 +132,8 @@ export default function ShowSet() {
               item={currentSet.shield || currentSet.book}
               index={currentSet.shield[locale] || currentSet.book[locale]}
               locale={locale}
-              updatedcurrentSet={updateCurrentSet}
-              currentSet={currentSet}
+              updatedRecomendedSet={updateCurrentSet}
+              recomendedSet={currentSet}
             />
           )}
 
@@ -142,8 +142,8 @@ export default function ShowSet() {
               item={currentSet.book}
               index={currentSet.book[locale]}
               locale={locale}
-              updatedcurrentSet={updateCurrentSet}
-              currentSet={currentSet}
+              updatedRecomendedSet={updateCurrentSet}
+              recomendedSet={currentSet}
             />
           )}
 
@@ -155,8 +155,8 @@ export default function ShowSet() {
                 item={currentSet.shield}
                 index={currentSet.shield[locale]}
                 locale={locale}
-                updatedcurrentSet={updateCurrentSet}
-                currentSet={currentSet}
+                updatedRecomendedSet={updateCurrentSet}
+                recomendedSet={currentSet}
               />
             )}
 
@@ -164,24 +164,24 @@ export default function ShowSet() {
             item={currentSet.accessorie}
             index={currentSet.accessorie[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.pants}
             index={currentSet.pants[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
 
           <ItemCard
             item={currentSet.shoe}
             index={currentSet.shoe[locale]}
             locale={locale}
-            updatedcurrentSet={updateCurrentSet}
-            currentSet={currentSet}
+            updatedRecomendedSet={updateCurrentSet}
+            recomendedSet={currentSet}
           />
         </div>
       </div>

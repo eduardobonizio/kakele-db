@@ -8,6 +8,7 @@ import {
   itemCardJsx as textOptions,
 } from '../../../data/dataLanguages';
 import {
+  addMissingItens,
   loadSetFromLocalStorage,
   normalizeHandsItems,
   saveSetInLocalStorage,
@@ -62,19 +63,16 @@ export default function ItemCard(props) {
     if (!showUpdateItem) setShowUpdateItem(!showUpdateItem);
     const updatedItemBonus = { ...itemBonus, [stat]: newValue };
 
-    console.log(newValue, stat);
-
     const newItem = {
       ...item,
       itemBonus: { ...updatedItemBonus },
     };
 
     if (recomendedSet) {
-      const position = recomendedSet.indexOf(item);
-      const curRecomendedSet = [...recomendedSet];
-      curRecomendedSet[position] = newItem;
-
-      updatedRecomendedSet([...curRecomendedSet]);
+      updatedRecomendedSet({
+        ...recomendedSet,
+        [newItem.slot]: { ...newItem },
+      });
     }
 
     if (currentSet[slot].en !== item.en) return;
@@ -158,6 +156,7 @@ export default function ItemCard(props) {
               />
             )}
           </div>
+
           <span>
             {`${text.element}: `}
             <span className={energy}>
