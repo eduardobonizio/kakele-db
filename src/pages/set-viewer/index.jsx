@@ -39,7 +39,7 @@ export default function ShowSet() {
 
       const items = querySet ? query : storedSet;
 
-      const curSet = loadAndAddMissingItems(items, locale);
+      const curSet = loadAndAddMissingItems(items, locale, storedSet);
 
       setCurrentSet(curSet);
     };
@@ -86,6 +86,7 @@ export default function ShowSet() {
         <div className={`row row-cols-auto ${styles.row}`}>
           {ALL_ITENS_SLOTS_LIST.map(key => {
             if (!currentSet[key]) return;
+
             return (
               <ItemCard
                 key={key}

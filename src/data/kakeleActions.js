@@ -87,6 +87,7 @@ const normalizeSet = (setItems, locale) => {
 const addMissingItens = (
   selectedItems,
   locale,
+  storedSet = [],
   allItens = [...equipments, ...weapons],
 ) => {
   return ALL_ITENS_SLOTS_LIST.reduce(
@@ -99,9 +100,12 @@ const addMissingItens = (
         locale,
       ) || { ...FAKE_ITEM, slot: currentSlot };
 
-      const iBonus = selectedItems[currentSlot]
-        ? selectedItems[currentSlot].itemBonus
-        : item.itemBonus;
+      const iBonus =
+        selectedItems[currentSlot] && selectedItems[currentSlot].itemBonus
+          ? selectedItems[currentSlot].itemBonus
+          : storedSet[currentSlot] && storedSet[currentSlot].en === item.en
+          ? storedSet[currentSlot].itemBonus
+          : item.itemBonus;
 
       return {
         ...current,
@@ -147,8 +151,8 @@ const loadSetFromLocalStorage = () => {
   } catch (error) {}
 };
 
-const loadAndAddMissingItems = (items, locale) => {
-  const allSlotItens = addMissingItens(items, locale);
+const loadAndAddMissingItems = (items, locale, storedSet) => {
+  const allSlotItens = addMissingItens(items, locale, storedSet);
 
   const normalizedSet = normalizeSet(allSlotItens, locale);
 
