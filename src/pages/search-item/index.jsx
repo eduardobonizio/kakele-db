@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './SearchItem.module.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 
 import { useAppContext } from '../../context/appContext/useAppState';
@@ -29,6 +29,7 @@ export default function SearchItem() {
   const text = textOptions[locale];
   const [foundItens, setFoundItens] = useState(false);
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
+  const [loadItens, setLoadItens] = useState(5);
 
   const changeItensOnFirstLoad = itemList => {
     const savedSet = loadAndAddMissingItems(locale);
@@ -57,13 +58,14 @@ export default function SearchItem() {
 
     const itensListByRarity = findItemsByRarity(itensListByElement, rarity);
 
-    const itensListByName = findItemsByName(itensListByRarity, itemName);
+    const itensListByName =
+      itemName !== '' ? findItemsByName(itensListByRarity, itemName) : false;
 
     const filtered = itensListByName || itensListByRarity;
 
     const result = loadSet ? changeItensOnFirstLoad(filtered) : filtered;
-
     setFoundItens(result);
+    setLoadItens(5);
   };
 
   const updateOneItemOnly = (oldItem, newItem) => {
@@ -82,6 +84,21 @@ export default function SearchItem() {
     lookForItens('loadSet');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // https://www.youtube.com/watch?v=NZKUirTtxcg
+  const observer = useRef();
+  const lastCardRef = useCallback(
+    card => {
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          setLoadItens(loadItens + 10);
+        }
+      });
+      if (card) observer.current.observe(card);
+    },
+    [loadItens],
+  );
 
   return (
     <div className="container">
@@ -118,8 +135,28 @@ export default function SearchItem() {
 
         <div className={`row row-cols-auto ${styles.row}`}>
           {foundItens.length > 0 ? (
-            foundItens.map((item, i) => {
+            foundItens.slice(0, loadItens).map((item, i) => {
               if (item) {
+                if (loadItens - 1 === i) {
+                  return (
+                    <div
+                      className={`col ${styles.col}`}
+                      key={item[locale]}
+                      ref={lastCardRef}
+                    >
+                      <ItemCard
+                        index={i}
+                        item={item}
+                        locale={locale}
+                        currentSet={currentSet}
+                        updateCurrentSet={setCurrentSet}
+                        recomendedSet={item}
+                        updatedRecomendedSet={i => updateOneItemOnly(item, i)}
+                        onlyOneItem="true"
+                      />
+                    </div>
+                  );
+                }
                 return (
                   <div className={`col ${styles.col}`} key={item[locale]}>
                     <ItemCard
