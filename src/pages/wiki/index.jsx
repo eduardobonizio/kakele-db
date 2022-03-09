@@ -53,8 +53,9 @@ export default function ShowItem() {
 
   useEffect(() => {
     const curSet = loadAndAddMissingItems(locale);
+    if (curSet[item.slot].en === item.en) setItem(curSet[item.slot]);
     setCurrentSet(curSet);
-  }, [locale]);
+  }, [item.en, item.slot, locale]);
 
   return (
     <div className={`container ${styles.itemContainer}`}>
