@@ -98,7 +98,7 @@ export default function ItemCard(props) {
 
       const whatToDo = normalizeHandsItems(updatedItem, oldSeld);
 
-      const newSet = addMissingItens({ ...oldSeld, ...whatToDo }, locale);
+      const newSet = { ...oldSeld, ...whatToDo };
 
       updateCurrentSet(newSet);
 
