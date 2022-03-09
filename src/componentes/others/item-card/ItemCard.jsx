@@ -8,7 +8,11 @@ import {
   itemCardJsx as textOptions,
 } from '../../../data/dataLanguages';
 import { FAKE_ITEM } from '../../../data/kakeleData';
-import { saveSetInLocalStorage } from '../../../data/kakeleActions';
+import {
+  addMissingItens,
+  loadSetFromLocalStorage,
+  saveSetInLocalStorage,
+} from '../../../data/kakeleActions';
 import { useAppContext } from '../../../context/appContext/useAppState';
 
 import Link from 'next/link';
@@ -24,7 +28,7 @@ export default function ItemCard(props) {
 
   const {
     state: { currentSet },
-    actions: { udateOneEquipment },
+    actions: { udateOneEquipment, updateCurrentSet },
   } = useAppContext();
 
   const {
@@ -53,7 +57,7 @@ export default function ItemCard(props) {
       itemBonus,
     },
   } = props;
-  // console.log(item);
+  console.log(currentSet);
   const [showUpdateItem, setShowUpdateItem] = useState(false);
 
   const updateStats = (newValue, stat) => {
@@ -118,6 +122,7 @@ export default function ItemCard(props) {
   const equipItem = thisItem => {
     if (thisItem[locale] !== '-----------') {
       if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
+
       const updatedItem = {
         ...thisItem,
         ...itemBonus,
@@ -125,12 +130,17 @@ export default function ItemCard(props) {
 
       const whatToDo = decide(updatedItem);
 
-      const newSet = Object.values({
-        ...currentSet,
-        ...whatToDo,
-      }).map(item => item);
+      const oldSeld = loadSetFromLocalStorage();
 
-      saveSetInLocalStorage(newSet, locale);
+      console.log('oldSeld', oldSeld);
+
+      const newSet = addMissingItens({ ...oldSeld, ...whatToDo }, locale);
+
+      console.log('newSet', newSet);
+
+      updateCurrentSet(newSet);
+
+      saveSetInLocalStorage(newSet);
     }
   };
 

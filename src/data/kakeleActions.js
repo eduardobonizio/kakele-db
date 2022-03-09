@@ -1,7 +1,13 @@
 import { elements } from './dataLanguages';
-import { UPGRADES_DATA } from './kakeleData';
+import {
+  ALL_ITENS_SLOTS_LIST,
+  equipments,
+  FAKE_ITEM,
+  UPGRADES_DATA,
+  weapons,
+} from './kakeleData';
 import removeAccents from 'remove-accents';
-import next from 'next';
+
 const FIVE_SECONDS = 5000;
 
 const urlParamsToObject = itemText => {
@@ -12,6 +18,50 @@ const urlParamsToObject = itemText => {
     if (itemText) return itemText;
     return [];
   }
+};
+
+const normalizeSet = (setItems, locale) => {
+  const shield =
+    setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
+      ? { ...FAKE_ITEM, slot: 'shield' }
+      : { ...setItems.shield };
+  const book =
+    setItems.weapon.twoHanded || setItems.shield[locale] !== '-----------'
+      ? { ...FAKE_ITEM, slot: 'book' }
+      : { ...setItems.book };
+
+  return { ...setItems, shield: { ...shield }, book: { ...book } };
+};
+
+const addMissingItens = (
+  selectedItems,
+  locale,
+  allItens = [...equipments, ...weapons],
+) => {
+  return ALL_ITENS_SLOTS_LIST.reduce(
+    (current, next, index) => {
+      const currentSlot = ALL_ITENS_SLOTS_LIST[index];
+
+      const item = findItemByName(
+        allItens,
+        selectedItems[currentSlot],
+        locale,
+      ) || { ...FAKE_ITEM, slot: currentSlot };
+
+      const iBonus = selectedItems[currentSlot]
+        ? selectedItems[currentSlot].itemBonus
+        : item.itemBonus;
+
+      return {
+        ...current,
+        [currentSlot]: {
+          ...item,
+          itemBonus: iBonus,
+        },
+      };
+    },
+    { ...selectedItems },
+  );
 };
 
 const genereateLinkToViewSet = (setList, origin, locale) => {
@@ -32,15 +82,8 @@ const genereateLinkToViewSet = (setList, origin, locale) => {
 
 const saveSetInLocalStorage = newSet => {
   if (!newSet) return;
-  const onlyValidItems = newSet
-    .filter(i => i)
-    .reduce((anterior, proximo) => {
-      return {
-        ...anterior,
-        [proximo.slot]: proximo,
-      };
-    }, {});
-  localStorage.setItem('currentSet', JSON.stringify(onlyValidItems));
+
+  localStorage.setItem('currentSet', JSON.stringify(newSet));
 };
 
 const loadSetFromLocalStorage = () => {
@@ -337,11 +380,12 @@ const findItemByName = (itemList, item, locale = 'en') => {
   if (!item) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const useName = item.en || item;
-  return itemList.find(item => {
+
+  return itemList.find(i => {
     return (
-      removeAccents(item.en.toLowerCase()) ===
+      removeAccents(i.en.toLowerCase()) ===
         removeAccents(useName.toLowerCase()) ||
-      removeAccents(item[locale].toLowerCase()) ===
+      removeAccents(i[locale].toLowerCase()) ===
         removeAccents(useName.toLowerCase())
     );
   });
@@ -415,4 +459,6 @@ export {
   loadSetFromLocalStorage,
   findItemsByRarity,
   filterItemsByName,
+  addMissingItens,
+  normalizeSet,
 };

@@ -74,7 +74,10 @@ const getActions = setState => ({
     setState(state => ({ ...state, [filter]: value }));
   },
   updateCurrentSet: newSet => {
-    setState(state => ({ ...state, currentSet: newSet }));
+    setState(state => ({
+      ...state,
+      currentSet: { ...state.currentSet, ...newSet },
+    }));
   },
   udateOneEquipment: (currentSet, newItem) => {
     setState(state => ({

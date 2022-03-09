@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import styles from './ShowSet.module.css';
@@ -8,17 +8,11 @@ import copy from 'copy-to-clipboard';
 
 import { showSetJsx as textOptions } from '../../data/dataLanguages';
 import {
-  findItemByName,
+  addMissingItens,
   genereateLinkToViewSet,
   loadSetFromLocalStorage,
-  urlParamsToObject,
+  normalizeSet,
 } from '../../data/kakeleActions';
-import {
-  equipments,
-  weapons,
-  ALL_ITENS_SLOTS_LIST,
-  FAKE_ITEM,
-} from '../../data/kakeleData';
 import Link from 'next/link';
 
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
@@ -36,61 +30,21 @@ export default function ShowSet() {
   const text = textOptions[locale];
 
   useEffect(() => {
-    const normalizeSet = setItems => {
-      const shield =
-        setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
-          ? { ...FAKE_ITEM, slot: 'shield' }
-          : { ...setItems.shield };
-      const book =
-        setItems.weapon.twoHanded || setItems.shield[locale] !== '-----------'
-          ? { ...FAKE_ITEM, slot: 'book' }
-          : { ...setItems.book };
-
-      return { ...setItems, shield: { ...shield }, book: { ...book } };
-    };
-
-    const addMissingItens = (selectedItems, allItens) => {
-      return ALL_ITENS_SLOTS_LIST.reduce(
-        (current, next, index) => {
-          const currentSlot = ALL_ITENS_SLOTS_LIST[index];
-
-          const item = findItemByName(
-            allItens,
-            selectedItems[currentSlot],
-            locale,
-          ) || { ...FAKE_ITEM, slot: currentSlot };
-
-          const iBonus = selectedItems[currentSlot]
-            ? selectedItems[currentSlot].itemBonus
-            : item.itemBonus;
-
-          return {
-            ...current,
-            [currentSlot]: {
-              ...item,
-              itemBonus: iBonus,
-            },
-          };
-        },
-        { ...selectedItems },
-      );
-    };
-
-    const itensTextToObject = allItens => {
+    const itensTextToObject = () => {
       const storedSet = loadSetFromLocalStorage() || [];
 
       const querySet = Object.keys(query).length > 0;
 
       const items = querySet ? query : storedSet;
 
-      const allSlotItens = addMissingItens(items, allItens);
+      const allSlotItens = addMissingItens(items, locale);
 
-      const normalizedSet = normalizeSet(allSlotItens);
+      const normalizedSet = normalizeSet(allSlotItens, locale);
 
       return normalizedSet;
     };
 
-    updateCurrentSet(itensTextToObject([...equipments, ...weapons]));
+    updateCurrentSet(itensTextToObject());
   }, [locale, updateCurrentSet, query]);
 
   const copyLink = () => {
