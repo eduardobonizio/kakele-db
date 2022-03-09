@@ -15,8 +15,14 @@ import {
   addDotToKks,
   filterItemsByName,
   findItemByName,
+  loadAndAddMissingItems,
 } from '../../data/kakeleActions';
-import { BLESS_OPTIONS, equipments, weapons } from '../../data/kakeleData';
+import {
+  BLESS_OPTIONS,
+  equipments,
+  FAKE_SET,
+  weapons,
+} from '../../data/kakeleData';
 import {
   calcBlessPrice,
   findItensToSacrifice,
@@ -103,6 +109,13 @@ const Bless = () => {
     // setShowStars(0);
   };
 
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
+
+  useEffect(() => {
+    const curSet = loadAndAddMissingItems(locale);
+    setCurrentSet(curSet);
+  }, [locale]);
+
   useEffect(() => {
     changeItem(query.item);
     updateShowItem(query.item);
@@ -182,8 +195,10 @@ const Bless = () => {
                 locale={locale}
                 blessModifier={blessModifier}
                 blessQuantity={showStars}
-                recomendedSet={[selectedItem]}
-                updatedRecomendedSet={itemList => setSelectedItem(itemList[0])}
+                recomendedSet={selectedItem}
+                currentSet={currentSet}
+                updatedRecomendedSet={i => setSelectedItem(i)}
+                onlyOneItem="true"
               />
               <UpgradeSelector
                 elementId="bless-atual"
