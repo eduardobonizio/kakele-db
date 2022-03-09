@@ -58,6 +58,7 @@ export default function ShowItem() {
 
   useEffect(() => {
     const savedSet = loadSetFromLocalStorage();
+    if (!savedSet) return;
 
     const curSet = loadAndAddMissingItems(savedSet);
 
