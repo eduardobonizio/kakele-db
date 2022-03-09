@@ -75,6 +75,10 @@
   border-bottom: 2px solid;
 }
 
+.card {
+  padding: 0;
+}
+
 @media screen and (min-width: 768px) {
   .card {
     width: auto;
