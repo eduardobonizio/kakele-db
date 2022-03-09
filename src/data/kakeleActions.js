@@ -31,6 +31,7 @@ const equipmentsArrayToObject = itemsList => {
 };
 
 const normalizeHandsItems = (thisItem, currentSet) => {
+  if (!currentSet) return { [thisItem.slot]: thisItem };
   if (thisItem.slot === 'weapon') {
     return thisItem.twoHanded
       ? {
@@ -41,7 +42,7 @@ const normalizeHandsItems = (thisItem, currentSet) => {
       : { weapon: thisItem };
   }
   if (thisItem.slot === 'shield') {
-    return currentSet.weapon.twoHanded
+    return currentSet.weapon && currentSet.weapon.twoHanded
       ? {
           shield: thisItem,
           weapon: { ...FAKE_ITEM, slot: 'weapon' },
@@ -50,7 +51,7 @@ const normalizeHandsItems = (thisItem, currentSet) => {
       : { shield: thisItem, book: { ...FAKE_ITEM, sloot: 'book' } };
   }
   if (thisItem.slot === 'book') {
-    return currentSet.weapon.twoHanded
+    return currentSet.weapon && currentSet.weapon.twoHanded
       ? {
           book: thisItem,
           weapon: { ...FAKE_ITEM, slot: 'weapon' },

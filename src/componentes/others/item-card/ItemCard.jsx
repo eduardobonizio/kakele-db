@@ -248,12 +248,15 @@ export default function ItemCard(props) {
               text={
                 showUpdateItem
                   ? text.saveItem
-                  : currentSet[slot][locale] === item[locale]
+                  : currentSet[slot] &&
+                    currentSet[slot][locale] === item[locale]
                   ? text.equiped
                   : text.equipItem
               }
               disabled={
-                !showUpdateItem && currentSet[slot][locale] === item[locale]
+                !showUpdateItem &&
+                currentSet[slot] &&
+                currentSet[slot][locale] === item[locale]
               }
             />
           )}

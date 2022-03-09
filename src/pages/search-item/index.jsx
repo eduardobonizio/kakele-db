@@ -11,8 +11,9 @@ import {
   filterItensBySlot,
   findItemsByName,
   findItemsByRarity,
+  loadAndAddMissingItems,
 } from '../../data/kakeleActions';
-import { equipments, weapons } from '../../data/kakeleData';
+import { equipments, FAKE_SET, weapons } from '../../data/kakeleData';
 
 import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
@@ -27,8 +28,21 @@ export default function SearchItem() {
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [foundItens, setFoundItens] = useState(false);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
 
-  const lookForItens = () => {
+  const changeItensOnFirstLoad = itemList => {
+    const savedSet = loadAndAddMissingItems(locale);
+    const newList = [...itemList];
+    itemList.forEach((item, index) => {
+      if (item.en === savedSet[item.slot].en) {
+        newList[index] = { ...savedSet[item.slot] };
+      }
+    });
+
+    return newList;
+  };
+
+  const lookForItens = (loadSet = false) => {
     const itensList = filterItensByLevelAndClass(
       [...equipments, ...weapons],
       level,
@@ -45,13 +59,27 @@ export default function SearchItem() {
 
     const itensListByName = findItemsByName(itensListByRarity, itemName);
 
-    const result = itensListByName || itensListByRarity;
+    const filtered = itensListByName || itensListByRarity;
 
+    const result = loadSet ? changeItensOnFirstLoad(filtered) : filtered;
+    console.log(result);
     setFoundItens(result);
   };
 
+  const updateOneItemOnly = (oldItem, newItem) => {
+    const items = [...foundItens];
+    const index = items.indexOf(oldItem);
+    items[index] = newItem;
+    setFoundItens(items);
+  };
+
   useEffect(() => {
-    lookForItens();
+    const curSet = loadAndAddMissingItems(locale);
+    setCurrentSet(curSet);
+  }, [locale]);
+
+  useEffect(() => {
+    lookForItens('loadSet');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -87,13 +115,23 @@ export default function SearchItem() {
             </Link>
           </div>
         </div>
+
         <div className={`row row-cols-auto ${styles.row}`}>
           {foundItens.length > 0 ? (
             foundItens.map((item, i) => {
               if (item) {
                 return (
                   <div className={`col ${styles.col}`} key={item[locale]}>
-                    <ItemCard index={i} item={item} locale={locale} />
+                    <ItemCard
+                      index={i}
+                      item={item}
+                      locale={locale}
+                      currentSet={currentSet}
+                      updateCurrentSet={setCurrentSet}
+                      recomendedSet={item}
+                      updatedRecomendedSet={i => updateOneItemOnly(item, i)}
+                      onlyOneItem="true"
+                    />
                   </div>
                 );
               }
