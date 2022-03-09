@@ -24,11 +24,6 @@ import UpgradeDiv from './ugrade-div/UpgradeDiv';
 export default function ItemCard(props) {
   const router = useRouter();
 
-  // const {
-  //   state: { currentSet },
-  //   actions: { udateOneEquipment, updateCurrentSet },
-  // } = useAppContext();
-
   const {
     locale,
     index,

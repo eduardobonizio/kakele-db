@@ -8,11 +8,9 @@ import copy from 'copy-to-clipboard';
 
 import { showSetJsx as textOptions } from '../../data/dataLanguages';
 import {
-  addMissingItens,
   genereateLinkToViewSet,
   loadAndAddMissingItems,
   loadSetFromLocalStorage,
-  normalizeSet,
 } from '../../data/kakeleActions';
 import Link from 'next/link';
 
@@ -20,30 +18,13 @@ import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/Button
 import ShowSetStatus from '../../componentes/others/status-displayer/ShowSetStatus';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
-import { FAKE_SET } from '../../data/kakeleData';
+import { ALL_ITENS_SLOTS_LIST, FAKE_SET } from '../../data/kakeleData';
 
 export default function ShowSet() {
   const { locale, locales, query } = useRouter();
   const text = textOptions[locale];
 
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
-
-  // useEffect(() => {
-  //   const itensTextToObject = () => {
-  //     const storedSet = loadSetFromLocalStorage() || [];
-  //     const querySet = Object.keys(query).length > 0;
-
-  //     const items = querySet ? query : storedSet;
-
-  //     const allSlotItens = addMissingItens(items, locale);
-
-  //     const normalizedSet = normalizeSet(allSlotItens, locale);
-
-  //     return normalizedSet;
-  //   };
-
-  //   setShowCurrentSet(itensTextToObject());
-  // }, [locale, query]);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
@@ -52,9 +33,19 @@ export default function ShowSet() {
   };
 
   useEffect(() => {
-    const curSet = loadAndAddMissingItems(locale);
-    setCurrentSet(curSet);
-  }, [locale]);
+    const loadShowItens = () => {
+      const storedSet = loadSetFromLocalStorage() || [];
+      const querySet = Object.keys(query).length > 0;
+
+      const items = querySet ? query : storedSet;
+
+      const curSet = loadAndAddMissingItems(items, locale);
+
+      setCurrentSet(curSet);
+    };
+
+    loadShowItens();
+  }, [locale, query]);
 
   return (
     <div className="container">
@@ -93,7 +84,8 @@ export default function ShowSet() {
         </div>
 
         <div className={`row row-cols-auto ${styles.row}`}>
-          {Object.keys(currentSet).map(key => {
+          {ALL_ITENS_SLOTS_LIST.map(key => {
+            if (!currentSet[key]) return;
             return (
               <ItemCard
                 key={key}

@@ -66,16 +66,22 @@ const normalizeHandsItems = (thisItem, currentSet) => {
 };
 
 const normalizeSet = (setItems, locale) => {
-  const shield =
-    setItems.weapon.twoHanded || setItems.book[locale] !== '-----------'
-      ? { ...FAKE_ITEM, slot: 'shield' }
-      : { ...setItems.shield };
-  const book =
-    setItems.weapon.twoHanded || setItems.shield[locale] !== '-----------'
-      ? { ...FAKE_ITEM, slot: 'book' }
-      : { ...setItems.book };
-
-  return { ...setItems, shield: { ...shield }, book: { ...book } };
+  if (setItems.shield.level < 1 && setItems.book.level < 1) {
+    const newSet = { ...setItems };
+    delete newSet.book;
+    return newSet;
+  }
+  if (setItems.shield.level < 1) {
+    const newSet = { ...setItems };
+    delete newSet.shield;
+    return newSet;
+  }
+  if (setItems.book.level < 1) {
+    const newSet = { ...setItems };
+    delete newSet.book;
+    return newSet;
+  }
+  return setItems;
 };
 
 const addMissingItens = (
@@ -141,10 +147,8 @@ const loadSetFromLocalStorage = () => {
   } catch (error) {}
 };
 
-const loadAndAddMissingItems = locale => {
-  const storedSet = loadSetFromLocalStorage() || [];
-
-  const allSlotItens = addMissingItens(storedSet, locale);
+const loadAndAddMissingItems = (items, locale) => {
+  const allSlotItens = addMissingItens(items, locale);
 
   const normalizedSet = normalizeSet(allSlotItens, locale);
 
