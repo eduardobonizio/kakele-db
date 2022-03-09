@@ -1,5 +1,5 @@
 import styles from './ItemCard.module.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import copy from 'copy-to-clipboard';
 
 import { useRouter } from 'next/router';
@@ -151,6 +151,7 @@ export default function ItemCard(props) {
           <h6 className="card-title">{item[locale]}</h6>
         </div>
         <div className="d-flex flex-column">
+          {blessQuantity < 1 && <i className="bi bi-star"></i>}
           {blessQuantity > 0 && (
             <div className={styles.stars}>
               {[...Array(blessQuantity).keys()].map(e => (

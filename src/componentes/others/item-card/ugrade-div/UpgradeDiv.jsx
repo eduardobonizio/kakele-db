@@ -9,7 +9,6 @@ const UpgradeDiv = props => {
       {status.map((stat, index) => {
         return (
           <div key={stat + index}>
-            +
             <select
               className={styles.select}
               id={`${stat}-upgrade`}
