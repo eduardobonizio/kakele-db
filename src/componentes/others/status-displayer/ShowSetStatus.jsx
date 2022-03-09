@@ -27,17 +27,28 @@ export default function ShowSetStatus(props) {
 
   useEffect(() => {
     if (!itensList) return;
-    const values = itensList.reduce(
-      (anterior, proximo) => {
-        if (!proximo) return anterior;
-        return {
-          armor: anterior.armor + proximo.armor + proximo.itemBonus.armor,
-          magic: anterior.magic + proximo.magic + proximo.itemBonus.magic,
-          attack: anterior.attack + proximo.attack + proximo.itemBonus.attack,
-        };
-      },
-      { armor: 0, magic: 0, attack: 0 },
-    );
+
+    const sumStatusValues = () => {
+      try {
+        return itensList.reduce(
+          (anterior, proximo) => {
+            if (!proximo) return anterior;
+            return {
+              armor: anterior.armor + proximo.armor + proximo.itemBonus.armor,
+              magic: anterior.magic + proximo.magic + proximo.itemBonus.magic,
+              attack:
+                anterior.attack + proximo.attack + proximo.itemBonus.attack,
+            };
+          },
+          { armor: 0, magic: 0, attack: 0 },
+        );
+      } catch {
+        return { armor: 0, magic: 0, attack: 0 };
+      }
+    };
+
+    const values = sumStatusValues();
+
     setStatusTowShow(values);
   }, [itensList]);
 
