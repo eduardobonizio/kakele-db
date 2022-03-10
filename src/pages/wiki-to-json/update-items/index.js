@@ -12,7 +12,7 @@ const UpdateItems = () => {
           attack: 0,
           armor: 0,
           magic: 0,
-          blessPercentage: 0,
+          bless: 0,
         },
       };
     });
@@ -32,7 +32,7 @@ const UpdateItems = () => {
           attack: 0,
           armor: 0,
           magic: 0,
-          blessPercentage: 0,
+          bless: 0,
         },
       };
     });

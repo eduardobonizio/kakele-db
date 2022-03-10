@@ -179,14 +179,8 @@ const genereateLinkToViewSet = (setList, origin, locale) => {
   // Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const link = Object.keys(setList).reduce((anterior, proximo) => {
     if (setList[proximo].level > 0) {
-      const { attack, armor, magic, blessPercentage } =
-        setList[proximo].itemBonus;
-      const upgrades = upgradesToString([
-        attack,
-        armor,
-        magic,
-        blessPercentage,
-      ]);
+      const { attack, armor, magic, bless } = setList[proximo].itemBonus;
+      const upgrades = upgradesToString([attack, armor, magic, bless]);
       const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].id}${upgrades}`;
       if (anterior === '?') return `${anterior}${adicionarTexto}`;
       return `${anterior}&&${adicionarTexto}`;
