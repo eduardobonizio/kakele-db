@@ -30,7 +30,8 @@ export default function ShowSet() {
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
-    const link = genereateLinkToViewSet(currentSet, origin, locale);
+    const copySet = viewQuerySet || currentSet;
+    const link = genereateLinkToViewSet(copySet, origin, locale);
     if (link) copy(link);
   };
 
