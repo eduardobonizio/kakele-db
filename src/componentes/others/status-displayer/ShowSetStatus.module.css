@@ -1,0 +1,19 @@
+.containerStyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.labelStyle {
+  padding: 0;
+  height: 25px;
+}
+
+.inputStyle {
+  -webkit-appearance: none;
+  margin: 0;
+  height: 25px;
+  min-width: 80px;
+  max-width: 80px;
+}
+/*# sourceMappingURL=ShowSetStatus.module.css.map */

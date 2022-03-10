@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import { showSetStatusJsx as textOptions } from '../../../data/dataLanguages';
 import { checkSetElement } from '../../../data/kakeleActions';
+import Input from '../../inputs/Input';
+import styles from './ShowSetStatus.module.css';
 
 export default function ShowSetStatus(props) {
-  const { itensListToShowStatus, locale } = props;
+  const { itensListToShowStatus, locale, level = false } = props;
   const [element, setElement] = useState(false);
   const [itensList, setItensList] = useState(false);
+  const [charLevel, setCharLevel] = useState(1);
   const [statusTowShow, setStatusTowShow] = useState({
     armor: 0,
     magic: 0,
@@ -52,12 +55,41 @@ export default function ShowSetStatus(props) {
     setStatusTowShow(values);
   }, [itensList]);
 
+  useEffect(() => {
+    const savedLevel = localStorage.getItem('charLevel') || 1;
+    setCharLevel(Number(savedLevel));
+  }, []);
+
+  const updateLevel = newValue => {
+    const value = newValue > 1000 ? 1000 : newValue < 1 ? 1 : newValue;
+    setCharLevel(value);
+    localStorage.setItem('charLevel', JSON.stringify(value));
+  };
+
   return (
     <div className="status-container">
       <h3>{text.attributes}</h3>
-      <p>{`${text.armor}: ${statusTowShow.armor}`}</p>
-      <p>{`${text.magic}: ${statusTowShow.magic}`}</p>
-      <p>{`${text.attack}: ${statusTowShow.attack}`}</p>
+      {!level && (
+        <Input
+          type="number"
+          value={charLevel}
+          onChange={e => updateLevel(Number(e.target.value))}
+          labelText="Char level"
+          placeholder="Char level"
+          autocomplete="off"
+          style={styles}
+        />
+      )}
+
+      <p>{`${text.armor}: ${
+        statusTowShow.armor + (Number(level) || charLevel)
+      }`}</p>
+      <p>{`${text.magic}: ${
+        statusTowShow.magic + +(Number(level) || charLevel)
+      }`}</p>
+      <p>{`${text.attack}: ${
+        statusTowShow.attack + +(Number(level) || charLevel)
+      }`}</p>
       {itensList && (
         <>
           <p>

@@ -59,7 +59,15 @@ const getActions = setState => ({
     setState(state => ({ ...state, language: newLanguage }));
   },
   updateFilter: (filter, value) => {
-    setState(state => ({ ...state, [filter]: value }));
+    setState(state => {
+      if (filter === 'level' && value < 1) {
+        return { ...state, [filter]: 1 };
+      }
+      if (filter === 'level' && value > 1000) {
+        return { ...state, [filter]: 1000 };
+      }
+      return { ...state, [filter]: value };
+    });
   },
 });
 

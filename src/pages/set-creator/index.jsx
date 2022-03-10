@@ -131,7 +131,11 @@ export default function SetMaker() {
           )}
         </div>
 
-        <ShowSetStatus itensListToShowStatus={currentSet} locale={locale} />
+        <ShowSetStatus
+          itensListToShowStatus={currentSet}
+          locale={locale}
+          level={level}
+        />
       </div>
       <div className={`row row-cols-auto ${styles.row}`}>
         {Object.keys(currentSet).map((key, i) => {
