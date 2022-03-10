@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "LanguageSwitcher.module.scss"
+    ],
+    "names": [],
+    "file": "LanguageSwitcher.module.css"
+}
