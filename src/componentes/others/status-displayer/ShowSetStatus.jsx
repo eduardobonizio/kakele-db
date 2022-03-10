@@ -68,7 +68,7 @@ export default function ShowSetStatus(props) {
 
   return (
     <div className="status-container">
-      <h3>{text.attributes}</h3>
+      <h3 className={styles.h3}>{text.attributes}</h3>
       {!level && (
         <Input
           type="number"
