@@ -7,6 +7,7 @@ import Alert from '../../componentes/alert/Alert';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
 import Input from '../../componentes/inputs/Input';
+import BlessSelector from '../../componentes/others/BlessSelector';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import SacrificeItemCard from '../../componentes/others/sacrifice-item-card/SacrificeItemCard';
 import UpgradeSelector from '../../componentes/others/UpgradeSelector';
@@ -15,8 +16,15 @@ import {
   addDotToKks,
   filterItemsByName,
   findItemByName,
+  loadAndAddMissingItems,
+  loadSetFromLocalStorage,
 } from '../../data/kakeleActions';
-import { BLESS_OPTIONS, equipments, weapons } from '../../data/kakeleData';
+import {
+  BLESS_OPTIONS,
+  equipments,
+  FAKE_SET,
+  weapons,
+} from '../../data/kakeleData';
 import {
   calcBlessPrice,
   findItensToSacrifice,
@@ -38,6 +46,7 @@ const Bless = () => {
   const [itensToSacrifice, setItensToSacrifice] = useState(false);
   const [totalBlessPrice, setTotalBlessPrice] = useState(0);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
 
   const searchItem = searchText => {
     setItemName(searchText);
@@ -49,7 +58,11 @@ const Bless = () => {
   const updateShowItem = item => {
     const allItems = [...equipments, ...weapons];
     const foundItem = findItemByName(allItems, item);
-    setSelectedItem(foundItem);
+    const equipedItem = currentSet[foundItem.slot];
+
+    const useEquippedItem = equipedItem && equipedItem.level > 0;
+
+    setSelectedItem(useEquippedItem ? equipedItem : foundItem);
     setItemName('');
   };
 
@@ -88,7 +101,6 @@ const Bless = () => {
       currentBless,
       desiredBless,
     );
-    console.log(selectedItem.rarity.en, desiredBless);
     setShowStars(desiredBless);
     setItensToSacrifice(toSacrifice);
     setTotalBlessPrice(price);
@@ -101,8 +113,15 @@ const Bless = () => {
     setFoundItems([]);
     setIgnoredItems([]);
     setItensToSacrifice(false);
-    // setShowStars(0);
+    setShowStars(0);
+    setBlessModifier(0);
   };
+
+  useEffect(() => {
+    const storedSet = loadSetFromLocalStorage() || [];
+    const curSet = loadAndAddMissingItems(locale, storedSet, storedSet);
+    setCurrentSet(curSet);
+  }, [locale]);
 
   useEffect(() => {
     changeItem(query.item);
@@ -183,10 +202,16 @@ const Bless = () => {
                 locale={locale}
                 blessModifier={blessModifier}
                 blessQuantity={showStars}
+                recomendedSet={selectedItem}
+                currentSet={currentSet}
+                updateCurrentSet={setCurrentSet}
+                updatedRecomendedSet={i => setSelectedItem(i)}
+                onlyOneItem="true"
               />
-              <UpgradeSelector
+              <BlessSelector
                 elementId="bless-atual"
                 labelText={text.actualBless}
+                value={currentBless}
                 onChange={value => {
                   if (value > 9) return setCurrentBless(9);
                   if (value < 0) return setCurrentBless(0);
@@ -194,9 +219,10 @@ const Bless = () => {
                 }}
                 optionsArray={[...BLESS_OPTIONS]}
               />
-              <UpgradeSelector
+              <BlessSelector
                 elementId="bless-desejada"
                 labelText={text.desiredBless}
+                value={desiredBless}
                 onChange={value => {
                   if (value > 10) return setDesiredBless(10);
                   if (value < 0) return setDesiredBless(0);

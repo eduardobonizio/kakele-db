@@ -21,6 +21,39 @@
   display: flex;
 }
 
+.statusAndUpgradeContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.statusDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.statusDiv > span {
+  margin-top: 3px;
+}
+
+.upgradeDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.upgradeDiv > div {
+  margin-top: 3px;
+}
+
+.select {
+  border: none;
+  border-bottom: 2px solid;
+}
+
+.card {
+  padding: 0;
+}
+
 @media screen and (min-width: 768px) {
   .card {
     width: auto;

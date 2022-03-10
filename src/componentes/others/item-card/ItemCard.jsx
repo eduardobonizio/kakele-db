@@ -1,5 +1,5 @@
 import styles from './ItemCard.module.css';
-import React from 'react';
+import React, { useState } from 'react';
 import copy from 'copy-to-clipboard';
 
 import { useRouter } from 'next/router';
@@ -7,9 +7,11 @@ import {
   elements,
   itemCardJsx as textOptions,
 } from '../../../data/dataLanguages';
-import { FAKE_ITEM } from '../../../data/kakeleData';
-import { saveSetInLocalStorage } from '../../../data/kakeleActions';
-import { useAppContext } from '../../../context/appContext/useAppState';
+import {
+  loadSetFromLocalStorage,
+  normalizeHandsItems,
+  saveSetInLocalStorage,
+} from '../../../data/kakeleActions';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,13 +19,11 @@ import Image from 'next/image';
 import ButtonForKakele from '../../buttons/buttton-for-kakele/ButtonForKakele';
 import LinkButton from '../../buttons/link-as-button/LinkButton';
 import StatusDiv from './status-div/StatusDiv';
+import UpgradeDiv from './ugrade-div/UpgradeDiv';
 
 export default function ItemCard(props) {
-  const {
-    state: { currentSet },
-    actions: { updateCurrentSet },
-  } = useAppContext();
   const router = useRouter();
+
   const {
     locale,
     index,
@@ -34,6 +34,11 @@ export default function ItemCard(props) {
     item,
     blessModifier = 0,
     blessQuantity = 0,
+    onlyOneItem = false,
+    updateCurrentSet,
+    updatedRecomendedSet,
+    recomendedSet,
+    currentSet,
     item: {
       sources,
       info,
@@ -45,60 +50,47 @@ export default function ItemCard(props) {
       slot,
       imgUrl,
       bonus,
+      itemBonus,
     },
   } = props;
-
+  const text = textOptions[locale];
+  const [showUpdateItem, setShowUpdateItem] = useState(false);
   const showDetails =
     router.pathname.includes('wiki') || router.pathname.includes('new-items');
-  const text = textOptions[locale];
 
-  const decide = thisItem => {
-    if (thisItem.slot === 'weapon') {
-      return thisItem.twoHanded
-        ? {
-            weapon: thisItem,
-            book: { ...FAKE_ITEM, sloot: 'book' },
-            shield: { ...FAKE_ITEM, slot: 'shield' },
-          }
-        : { weapon: thisItem };
-    }
-    if (thisItem.slot === 'shield') {
-      return currentSet.weapon.twoHanded
-        ? {
-            shield: thisItem,
-            weapon: { ...FAKE_ITEM, slot: 'weapon' },
-            book: { ...FAKE_ITEM, sloot: 'book' },
-          }
-        : { shield: thisItem, book: { ...FAKE_ITEM, sloot: 'book' } };
-    }
-    if (thisItem.slot === 'book') {
-      return currentSet.weapon.twoHanded
-        ? {
-            book: thisItem,
-            weapon: { ...FAKE_ITEM, slot: 'weapon' },
-            shield: { ...FAKE_ITEM, sloot: 'shield' },
-          }
-        : {
-            book: thisItem,
-            shield: { ...FAKE_ITEM, sloot: 'shield' },
-          };
-    }
-    return { [thisItem.slot]: thisItem };
+  const updateStats = (newValue, stat) => {
+    if (!showUpdateItem) setShowUpdateItem(!showUpdateItem);
+
+    const newItem = {
+      ...item,
+      itemBonus: { ...itemBonus, [stat]: newValue },
+    };
+
+    if (onlyOneItem) return updatedRecomendedSet(newItem);
+    updatedRecomendedSet({
+      ...recomendedSet,
+      [newItem.slot]: { ...newItem },
+    });
   };
 
-  const equipItem = thisItem => {
-    if (thisItem[locale] !== '-----------') {
-      const whatToDo = decide(thisItem);
+  const equipItem = itemFromThisCard => {
+    if (itemFromThisCard[locale] === '-----------') return;
+    if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
 
-      updateCurrentSet({ ...currentSet, ...whatToDo });
+    const updatedItem = {
+      ...itemFromThisCard,
+      itemBonus: { ...itemBonus },
+    };
 
-      const newSet = Object.values({
-        ...currentSet,
-        ...whatToDo,
-      }).map(item => item);
+    const oldSeld = loadSetFromLocalStorage();
 
-      saveSetInLocalStorage(newSet, locale);
-    }
+    const whatToDo = normalizeHandsItems(updatedItem, oldSeld);
+
+    const newSet = { ...oldSeld, ...whatToDo };
+
+    updateCurrentSet(newSet);
+
+    saveSetInLocalStorage(newSet);
   };
 
   return (
@@ -118,6 +110,7 @@ export default function ItemCard(props) {
           <h6 className="card-title">{item[locale]}</h6>
         </div>
         <div className="d-flex flex-column">
+          {blessQuantity < 1 && <i className="bi bi-star"></i>}
           {blessQuantity > 0 && (
             <div className={styles.stars}>
               {[...Array(blessQuantity).keys()].map(e => (
@@ -125,16 +118,34 @@ export default function ItemCard(props) {
               ))}
             </div>
           )}
+          <div className={styles.statusAndUpgradeContainer}>
+            <StatusDiv
+              text={text}
+              armor={armor}
+              magic={magic}
+              attack={attack}
+              level={level}
+              slot={slot}
+              blessModifier={blessModifier}
+              itemsUpgrades={itemBonus}
+              styles={styles}
+            />
+            {item.level > 0 && (
+              <UpgradeDiv
+                text={text}
+                armor={armor}
+                magic={magic}
+                attack={attack}
+                level={level}
+                slot={slot}
+                blessModifier={blessModifier}
+                styles={styles}
+                upgrades={itemBonus}
+                changeUpgrades={updateStats}
+              />
+            )}
+          </div>
 
-          <StatusDiv
-            text={text}
-            armor={armor}
-            magic={magic}
-            attack={attack}
-            level={level}
-            slot={slot}
-            blessModifier={blessModifier}
-          />
           <span>
             {`${text.element}: `}
             <span className={energy}>
@@ -217,16 +228,24 @@ export default function ItemCard(props) {
               <LinkButton text={text.showItem} />
             </Link>
           )}
-
-          <ButtonForKakele
-            onClick={() => equipItem(item)}
-            text={
-              currentSet[slot][locale] === item[locale]
-                ? text.equiped
-                : text.equipItem
-            }
-            disabled={currentSet[slot][locale] === item[locale]}
-          />
+          {currentSet && (
+            <ButtonForKakele
+              onClick={() => equipItem(item)}
+              text={
+                showUpdateItem
+                  ? text.saveItem
+                  : currentSet[slot] &&
+                    currentSet[slot][locale] === item[locale]
+                  ? text.equiped
+                  : text.equipItem
+              }
+              disabled={
+                !showUpdateItem &&
+                currentSet[slot] &&
+                currentSet[slot][locale] === item[locale]
+              }
+            />
+          )}
         </div>
       </div>
     </div>

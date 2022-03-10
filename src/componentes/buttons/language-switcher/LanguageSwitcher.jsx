@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import styles from './LanguageSwitcher.module.css';
 
 const LanguageSwitcher = ({ locale, locales }) => {
   const router = useRouter();
@@ -9,7 +10,7 @@ const LanguageSwitcher = ({ locale, locales }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   return (
-    <div>
+    <div className={styles.languageContainer}>
       <Image
         src={`/${language}-flag.svg`}
         alt={`/${language} flag`}

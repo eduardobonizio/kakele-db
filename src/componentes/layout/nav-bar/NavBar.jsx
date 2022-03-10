@@ -34,8 +34,11 @@ function NavBar() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbar-itens">
-          <ul className="navbar-nav">
+        <div
+          className={`collapse navbar-collapse ${styles.navLinkContainer}`}
+          id="navbar-itens"
+        >
+          <ul className={`navbar-nav ${styles.navLinksUl}`}>
             <li className="nav-item">
               <Link href="/set-creator" locale={locale}>
                 <a className="nav-link">{text.generateSet}</a>

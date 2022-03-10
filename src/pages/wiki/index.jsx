@@ -2,86 +2,154 @@ import Head from 'next/head';
 import styles from './ShowItem.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 
 import { showItemJsx as textOptions } from '../../data/dataLanguages';
-import { equipments, weapons } from '../../data/kakeleData';
+import { equipments, FAKE_SET, weapons } from '../../data/kakeleData';
 import LinkButton from '../../componentes/buttons/link-as-button/LinkButton';
+import Input from '../../componentes/inputs/Input';
+import {
+  filterItemsByName,
+  findItemByName,
+  loadAndAddMissingItems,
+  loadSetFromLocalStorage,
+} from '../../data/kakeleActions';
+import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function ShowItem() {
-  const { query, locale, locales } = useRouter();
-
+  const { locale, locales, query } = useRouter();
   const text = textOptions[locale];
-  const allItens = [...equipments, ...weapons];
-  const itemName = query.item || allItens[0]['en'];
-  const currentItem = allItens.find(
-    e => e[locale] === itemName || e['en'] === itemName,
-  );
-  const itemIndex = allItens.indexOf(currentItem);
-  const previousIndex = itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
-  const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
+  const [item, setItem] = useState({ ...equipments[0] });
+  const [itemName, setItemName] = useState('');
+  const [foundItems, setFoundItems] = useState([]);
+  const [otherItems, setOtherItems] = useState({
+    previous: weapons[weapons.length - 1].en,
+    next: equipments[1].en,
+  });
 
-  const [item, setItem] = useState(false);
-  const [previousItemLink, setPreviousItemLink] = useState(
-    `/wiki?item=${allItens[previousIndex]['en']}`,
-  );
-  const [nextItemLink, setNextItemLink] = useState(
-    `/wiki?item=${allItens[nextIndex]['en']}`,
-  );
+  const searchItem = searchText => {
+    setItemName(searchText);
+    const allItems = [...equipments, ...weapons];
+    const result = filterItemsByName(allItems, searchText, locale);
+    setFoundItems(result);
+  };
 
-  if (item['en'] !== itemName) {
-    setItem(currentItem);
-    setPreviousItemLink(`/wiki?item=${allItens[previousIndex]['en']}`);
-    setNextItemLink(`/wiki?item=${allItens[nextIndex]['en']}`);
-  }
+  const changeItem = itemName => {
+    const allItens = [...equipments, ...weapons];
+
+    const newItem = findItemByName(allItens, itemName, locale);
+
+    const itemIndex = allItens.indexOf(newItem);
+
+    const previous = itemIndex < 1 ? allItens.length - 1 : itemIndex - 1;
+
+    const nextIndex = itemIndex >= allItens.length - 1 ? 0 : itemIndex + 1;
+
+    setItem(newItem);
+
+    setOtherItems({
+      previous: allItens[previous].en,
+      next: allItens[nextIndex].en,
+    });
+    setItemName('');
+  };
+
+  useEffect(() => {
+    const savedSet = loadSetFromLocalStorage();
+    if (!savedSet) return;
+
+    const curSet = loadAndAddMissingItems(locale, savedSet, savedSet);
+
+    if (curSet[item.slot].en === item.en) setItem(curSet[item.slot]);
+
+    setCurrentSet(curSet);
+  }, [item.en, item.slot, locale]);
+
+  useEffect(() => {
+    if (!query.item || query.item === item.en) return;
+
+    changeItem(query.item);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   return (
     <div className={`container ${styles.itemContainer}`}>
       <Head>
-        <title>{`${item[locale]} ${text.title}`}</title>
+        <title>{`${text.title}`}</title>
 
         {locales.map(loc => {
           return (
             <link
               rel="alternate"
               hrefLang={loc}
-              href={`https://www.kakeletools.com/${loc}/wiki?item=${itemName}`}
+              href={`https://www.kakeletools.com/${loc}/wiki`}
               key={loc}
             />
           );
         })}
-        <meta
-          name="description"
-          content={`${item[locale]} ${text.oneItemDescription}`}
-        />
-        <meta
-          property="og:title"
-          content={`${item[locale]} ${text.title}`}
-          key="title"
-        />
+        <meta name="description" content={text.description} />
+        <meta property="og:title" content={text.description} key="title" />
         <link rel="canonical" href="https://www.kakeletools.com/wiki" />
       </Head>
+      <h1>{text.title}</h1>
+      <div className={styles.searchInput}>
+        <Input
+          type="text"
+          value={itemName}
+          onChange={e => searchItem(e.target.value)}
+          labelText={text.searchLabel}
+          placeholder={text.searchPlaceHolder}
+          autocomplete="off"
+        />
 
-      <h1>{`${item[locale]} ${text.title}`}</h1>
+        {itemName && (
+          <ul className={styles.searchResult}>
+            {foundItems.map((suggestion, index) => {
+              if (!suggestion) return false;
+              return (
+                <li key={index}>
+                  <Link href="/wiki" locale={locale} passHref>
+                    <LinkButton
+                      onClick={() => changeItem(suggestion['en'])}
+                      text={suggestion[locale]}
+                    />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </div>
       <div className={`${styles.buttonContainer}`}>
-        <Link href={previousItemLink} passHref locale={locale}>
-          <LinkButton text={text.previous} />
-        </Link>
+        <ButtonForKakele
+          onClick={() => changeItem(otherItems.previous)}
+          text={text.previous}
+          type="buttom"
+        />
         <Link href="/set-viewer" passHref locale={locale}>
           <LinkButton text={text.showSet} />
         </Link>
-        <Link href={nextItemLink} passHref locale={locale}>
-          <LinkButton text={text.next} />
-        </Link>
+        <ButtonForKakele
+          onClick={() => changeItem(otherItems.next)}
+          text={text.next}
+          type="buttom"
+        />
       </div>
-      {item ? (
-        <div className="row">
-          <ItemCard item={item} locale={locale} />
-        </div>
-      ) : (
-        <div>Item não encontrado</div>
-      )}
+
+      <div className="row">
+        <ItemCard
+          item={item}
+          locale={locale}
+          currentSet={currentSet}
+          recomendedSet={item}
+          updateCurrentSet={setCurrentSet}
+          updatedRecomendedSet={item => setItem(item)}
+          onlyOneItem="true"
+        />
+      </div>
     </div>
   );
 }

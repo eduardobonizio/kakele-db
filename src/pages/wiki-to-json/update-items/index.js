@@ -6,13 +6,14 @@ import copy from 'copy-to-clipboard';
 const UpdateItems = () => {
   const processarDadosArmas = () => {
     const updatedWeapons = weapons.map(item => {
-      const itemAtualizado = tempWeapons.find(updatedItem => {
-        if (!updatedItem) return;
-        return updatedItem.name === item.en;
-      });
       return {
         ...item,
-        rarity: itemAtualizado.rarity,
+        itemBonus: {
+          attack: 0,
+          armor: 0,
+          magic: 0,
+          blessPercentage: 0,
+        },
       };
     });
 
@@ -25,13 +26,14 @@ const UpdateItems = () => {
 
   const processarDadosEquipamentos = () => {
     const updatedEquipments = equipments.map(item => {
-      const itemAtualizado = tempEquips.find(updatedItem => {
-        if (!updatedItem) return;
-        return updatedItem.name === item.en;
-      });
       return {
         ...item,
-        rarity: itemAtualizado.rarity,
+        itemBonus: {
+          attack: 0,
+          armor: 0,
+          magic: 0,
+          blessPercentage: 0,
+        },
       };
     });
 

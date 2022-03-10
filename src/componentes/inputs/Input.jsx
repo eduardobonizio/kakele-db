@@ -8,8 +8,11 @@ export default function Input({
   autocomplete,
 }) {
   return (
-    <div className="input-group mb-2">
-      <label htmlFor={labelText} className="input-group-text">
+    <div className={`input-group mb-2 ${style && style.containerStyle}`}>
+      <label
+        htmlFor={labelText}
+        className={`input-group-text ${style && style.labelStyle}`}
+      >
         {labelText}
       </label>
       <input
@@ -18,7 +21,7 @@ export default function Input({
         onChange={onChange}
         id={labelText}
         name={labelText}
-        className={`form-control ${style && style.labelStyle}`}
+        className={`form-control ${style && style.inputStyle}`}
         placeholder={placeholder || ''}
         autoComplete={autocomplete || 'on'}
       />

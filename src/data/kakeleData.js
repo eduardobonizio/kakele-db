@@ -15,6 +15,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Boina Verde',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Swimming Goggles',
@@ -32,6 +33,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Óculos de natação',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Unknown Helmet',
@@ -49,6 +51,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo desconhecido',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Purple Bandana',
@@ -66,6 +69,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Bandana Roxa',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Helmet',
@@ -84,6 +88,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Bronze',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Black Bandana',
@@ -101,6 +106,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Bandana Preta',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Steel Helmet',
@@ -118,6 +124,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Aço',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Witch Hat',
@@ -135,6 +142,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Chapéu de bruxo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Explorer Helmet',
@@ -152,6 +160,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Explorador',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Helmet',
@@ -170,6 +179,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Prata',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Alamogordo Helmet',
@@ -187,6 +197,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Alamogordo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mastermind Hat',
@@ -204,6 +215,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Chapéu de Mentor',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Iron Helmet',
@@ -221,6 +233,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Ferro',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Golin's Helmet",
@@ -238,6 +251,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete do Golin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Lioncat Helmet',
@@ -255,6 +269,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Leão Gato Humanóide',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Demon Horn Helmet',
@@ -272,6 +287,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Chifre Demoníaco',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Noble Guard Helmet',
@@ -289,6 +305,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo da Guarda Nobre',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Darkness Hat',
@@ -306,6 +323,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Chapéu das Trevas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Skeletons Helmet',
@@ -323,6 +341,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete dos Esqueletos',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Spider Silk Helmet',
@@ -340,6 +359,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Seda de Aranha',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Helmet",
@@ -358,6 +378,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Skeleton Warrior Helmet',
@@ -375,6 +396,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Esqueleto Guerreiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Poison Beetle Helmet',
@@ -392,6 +414,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Besouro Venenoso',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Warrior Helmet',
@@ -409,6 +432,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Guerreiro',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Hell's Helmet",
@@ -426,6 +450,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Helmet',
@@ -443,6 +468,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete Congelado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dwarf Miner Helmet',
@@ -460,6 +486,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Anão Mineiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Helmet of the Void',
@@ -477,6 +504,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Helmet',
@@ -494,6 +522,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de lava',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Noble Topper',
@@ -511,6 +540,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Cartola Nobre',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Cruzader Helmet',
@@ -528,6 +558,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo das Cruzadas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Dragon Rider Helmet',
@@ -545,6 +576,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Cavaleiro de Dragão Morto Vivo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Night Elf Lord Helmet',
@@ -562,6 +594,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Lorde Elfo da Noite',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crown of the Skies',
@@ -579,6 +612,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Coroa dos Céus',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Helmet of the Doom',
@@ -596,6 +630,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete da Perdição',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Revenant Helmet',
@@ -613,6 +648,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Revenant',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Helmet",
@@ -630,6 +666,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Devil Hunter Helmet',
@@ -647,6 +684,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Caçador de Diabo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Helmet',
@@ -664,6 +702,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Scale Helmet',
@@ -681,6 +720,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Escama de Dragão Dourada',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Scale Helmet',
@@ -698,6 +738,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo de Escamas de Dragão Dourado Morto-Vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crown of Enlightenment',
@@ -715,6 +756,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Coroa da Iluminação',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Scale Helmet',
@@ -732,6 +774,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Capacete de Escamas de Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Rainbow Helmet',
@@ -749,6 +792,7 @@ const equipments = [
     slot: 'helmet',
     pt: 'Elmo Arco-íris',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wool Shirt',
@@ -766,6 +810,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Camisa de lã',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wool Coat',
@@ -783,6 +828,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Casaco de lã',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Reinforced Shirt',
@@ -800,6 +846,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Camisa Reforçada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Winter Coat',
@@ -817,6 +864,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Casaco de inverno',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Leather Armor',
@@ -835,6 +883,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de couro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ghostly Coat',
@@ -852,6 +901,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Casaco Espectral',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Plate Armor',
@@ -870,6 +920,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Placa',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Armor',
@@ -887,6 +938,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Bronze',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Armor',
@@ -904,6 +956,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Prata',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Fox Cape',
@@ -921,6 +974,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Capa de Raposa Humanóide',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'War Armor',
@@ -938,6 +992,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Guerra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vortex Robe',
@@ -955,6 +1010,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Manto do Vórtice',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Armor',
@@ -972,6 +1028,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Dourada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vulcana Armor',
@@ -989,6 +1046,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Vulcana',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Beetle Carapace Armor',
@@ -1006,6 +1064,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Carapaça de Besouro de Gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dark Armor',
@@ -1023,6 +1082,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Negra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Blue Robe',
@@ -1040,6 +1100,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Túnica Azul',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Skeleton Warrior Armor',
@@ -1057,6 +1118,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Esqueleto Guerreiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Spider Silk Armor',
@@ -1074,6 +1136,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Seda de Aranha',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Heron's Armor",
@@ -1091,6 +1154,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura do Heron',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Hell's Cloak",
@@ -1108,6 +1172,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Manto do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Armor",
@@ -1126,6 +1191,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Abyssal Skeleton Armor',
@@ -1143,6 +1209,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Esqueleto Abissal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Royal Cloak',
@@ -1160,6 +1227,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Manto Real',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Armor',
@@ -1177,6 +1245,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de lava',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Armor',
@@ -1194,6 +1263,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Congelada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mystic Robe',
@@ -1211,6 +1281,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Túnica Mística',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Armor of the Void',
@@ -1228,6 +1299,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Paladin Armor',
@@ -1245,6 +1317,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Paladino',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Black Dragon Scale Armor',
@@ -1262,6 +1335,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Escamas de Dragão Preto',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Devil Hunter Armor',
@@ -1279,6 +1353,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Caçador de Diabo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Unstable Vortex Robe',
@@ -1296,6 +1371,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Manto do Vórtice Instável',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dwarf Warrior Armor',
@@ -1313,6 +1389,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Anão Guerreiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elemental Armor',
@@ -1330,6 +1407,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Elemental',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Saint Armor',
@@ -1347,6 +1425,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Santa',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Armor',
@@ -1365,6 +1444,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Vampiro Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Armor",
@@ -1382,6 +1462,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Revenant Armor',
@@ -1399,6 +1480,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Revenante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Corrupted Armor',
@@ -1416,6 +1498,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Corrompida',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Armor',
@@ -1433,6 +1516,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Scale Armor',
@@ -1450,6 +1534,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Escama de Dragão Dourada',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Scale Armor',
@@ -1467,6 +1552,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Escama de Dragão Dourado Morto-vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Scale Armor',
@@ -1484,6 +1570,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura de Escamas de Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Rainbow Armor',
@@ -1501,6 +1588,7 @@ const equipments = [
     slot: 'armor',
     pt: 'Armadura Arco-Íris',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Leather Boot',
@@ -1518,6 +1606,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Couro',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Strange Cloth Shoe',
@@ -1535,6 +1624,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Sapato de Tecido Estranho',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Tin Boot',
@@ -1552,6 +1642,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Lata',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Reinforced Leather Boot',
@@ -1570,6 +1661,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Couro Reforçada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Light Boot',
@@ -1587,6 +1679,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota Leve',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Steeltoe Boot',
@@ -1604,6 +1697,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota com Biqueira de Aço',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Steel Boot',
@@ -1621,6 +1715,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Aço',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Warrior Boot',
@@ -1638,6 +1733,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Guerreiro Morto-vivo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Winged Boot',
@@ -1655,6 +1751,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota Alada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dark Boot',
@@ -1672,6 +1769,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota Negra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Boot',
@@ -1689,6 +1787,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota dourada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Giant Beetle Carapace Boot',
@@ -1706,6 +1805,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Carapaça de Besouro Gigante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Demon Boot',
@@ -1723,6 +1823,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota Demoníaca',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Boots of Haste',
@@ -1740,6 +1841,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas da Velocidade',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Spider Silk Boot',
@@ -1757,6 +1859,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Seda de Aranha',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Noble Extractor Boot',
@@ -1774,6 +1877,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas de Extrator Nobre',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Skeleton Warrior Boot',
@@ -1791,6 +1895,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Esqueleto Guerreiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Boot',
@@ -1808,6 +1913,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Lava',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Boots",
@@ -1825,6 +1931,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mystic Boot',
@@ -1842,6 +1949,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota Mística',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Boots',
@@ -1859,6 +1967,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas Congeladas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Widow Silk Boot',
@@ -1876,6 +1985,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Seda da Viúva de Gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Noble Boots',
@@ -1893,6 +2003,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas Nobres',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Abyssal Cultist Boot',
@@ -1910,6 +2021,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Cultista Abissal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Angelical Boots',
@@ -1927,6 +2039,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas Angelicais',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Giant Worm Boot',
@@ -1944,6 +2057,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Verme Gigante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Dragon Tamer Boot',
@@ -1961,6 +2075,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Domador de Dragões Morto-Vivo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Hunter Boot',
@@ -1978,6 +2093,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Caçador do Gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Boots of Dark Magic',
@@ -1995,6 +2111,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas de Magia Negra',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crystal Boot',
@@ -2012,6 +2129,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Cristal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Boots",
@@ -2029,6 +2147,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Revenant Boot',
@@ -2046,6 +2165,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Bota de Revenante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Interdimensional Boots',
@@ -2063,6 +2183,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas Interdimensionais',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Boots',
@@ -2080,6 +2201,7 @@ const equipments = [
     slot: 'shoe',
     pt: 'Botas Celestiais',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Reinforced Shield',
@@ -2097,6 +2219,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Reforçado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Round Wooden Shield',
@@ -2114,6 +2237,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Madeira Redondo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Copper Shield',
@@ -2131,6 +2255,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Cobre',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Squared Wooden Shield',
@@ -2149,6 +2274,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Madeira Quadrado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Heritage Shield',
@@ -2166,6 +2292,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Herança',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Warrior Shield',
@@ -2183,6 +2310,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de guerreiro morto-vivo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Steel Shield',
@@ -2200,6 +2328,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Aço',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dark Shield',
@@ -2218,6 +2347,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Negro',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Toad Shield',
@@ -2235,6 +2365,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Sapo Humanoide',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dwarven Shield',
@@ -2252,6 +2383,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo dos Anões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bones Shield',
@@ -2269,6 +2401,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Ossos',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Shield',
@@ -2286,6 +2419,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Gelado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Troll Shield',
@@ -2303,6 +2437,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Troll',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crown Shield',
@@ -2320,6 +2455,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Real',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Shield',
@@ -2337,6 +2473,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Dourado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Evil Shield',
@@ -2354,6 +2491,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Maléfico',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Time Shield',
@@ -2371,6 +2509,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Temporal',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Giant Spider Shield',
@@ -2388,6 +2527,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Aranha Gigante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Tower Shield',
@@ -2405,6 +2545,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo das Torres',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'The Winter Shield',
@@ -2422,6 +2563,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo do Inverno',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Skull Shield',
@@ -2439,6 +2581,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Crânio',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crystal Shield',
@@ -2456,6 +2599,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Cristal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Shield",
@@ -2474,6 +2618,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mithril Shield',
@@ -2491,6 +2636,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Mithril',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Shield of the Void',
@@ -2508,6 +2654,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Shield',
@@ -2525,6 +2672,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gladiator Shield',
@@ -2542,6 +2690,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Gladiador',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sacred Shield',
@@ -2559,6 +2708,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Sagrado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Draconia Shield',
@@ -2576,6 +2726,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Draconia',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Devil Shield',
@@ -2593,6 +2744,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Diabo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Angaina Shield',
@@ -2610,6 +2762,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo Angaina',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Righteous Shield',
@@ -2627,6 +2780,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo dos Justos',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Paladin Shield',
@@ -2644,6 +2798,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Paladino',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Shield',
@@ -2662,6 +2817,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Vampiro Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragon Shield',
@@ -2680,6 +2836,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Dragão',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Shield",
@@ -2697,6 +2854,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Revenant Shield',
@@ -2714,6 +2872,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Revenante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Corrupted Shield',
@@ -2731,6 +2890,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo corrompido',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragons Tamer Shield',
@@ -2748,6 +2908,7 @@ const equipments = [
     slot: 'shield',
     pt: 'Escudo de Domador de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Beginner's Spellbook",
@@ -2765,6 +2926,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de feitiços para iniciantes',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fragile Grimoire',
@@ -2782,6 +2944,7 @@ const equipments = [
     slot: 'book',
     pt: 'Grimório Frágil',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Faun Book',
@@ -2799,6 +2962,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de Fauno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Incarnated Spellbook',
@@ -2816,6 +2980,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de Feitiços Encarnado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Reincarnated Spellbook',
@@ -2833,6 +2998,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de feitiços reencarnado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Preserved Tome',
@@ -2850,6 +3016,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Preservado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frigid Grimoire',
@@ -2867,6 +3034,7 @@ const equipments = [
     slot: 'book',
     pt: 'Grimório Frígido',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Blazefury Tome',
@@ -2884,6 +3052,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo da Fúria de Fogo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Warlock's Secrets",
@@ -2901,6 +3070,7 @@ const equipments = [
     slot: 'book',
     pt: 'Segredos de Magos',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vampiric Spellbook',
@@ -2918,6 +3088,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de feitiços vampírico',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silk Book',
@@ -2935,6 +3106,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de seda',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Spellbook",
@@ -2953,6 +3125,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de feitiços do Clã',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hellish Tome',
@@ -2970,6 +3143,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Infernal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Earth Tome',
@@ -2987,6 +3161,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo da Natureza',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Demonic Spellbook',
@@ -3004,6 +3179,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de Feitiços Demoníaco',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Prayer Book',
@@ -3021,6 +3197,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de Orações',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Tome of the Void',
@@ -3038,6 +3215,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Artificer Tome',
@@ -3055,6 +3233,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Artífice',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Draconic Tome',
@@ -3072,6 +3251,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Dracônico',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Book of Good Deeds',
@@ -3089,6 +3269,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro de boas ações',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vortex Book',
@@ -3106,6 +3287,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro do Vórtice',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sacred Tome',
@@ -3123,6 +3305,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Sagrado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ancient Tome',
@@ -3140,6 +3323,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Tome',
@@ -3157,6 +3341,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo de Vampiro Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Tome",
@@ -3174,6 +3359,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Tome',
@@ -3191,6 +3377,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Forgotten Tome',
@@ -3208,6 +3395,7 @@ const equipments = [
     slot: 'book',
     pt: 'Tomo Esquecido',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Book',
@@ -3225,6 +3413,7 @@ const equipments = [
     slot: 'book',
     pt: 'Livro cromático',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bow Tie',
@@ -3242,6 +3431,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Gravata-borboleta',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Amulet of Death',
@@ -3259,6 +3449,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto da Morte',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Spirit Necklace',
@@ -3276,6 +3467,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Espiritual',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Health Charm',
@@ -3293,6 +3485,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Bronze da Saúde',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Mana Charm',
@@ -3310,6 +3503,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Bronze de Mana',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Defense Charm',
@@ -3327,6 +3521,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Bronze de Defesa',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Anti Spell Charm',
@@ -3344,6 +3539,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Bronze Anti Magia',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Amulet of Life',
@@ -3361,6 +3557,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Vida',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Unbreakable Necklace',
@@ -3378,6 +3575,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Inquebrável',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Medusa Necklace',
@@ -3395,6 +3593,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Medusa',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Oceanic Necklace',
@@ -3412,6 +3611,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Oceânico',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Health Charm',
@@ -3429,6 +3629,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Prata da Saúde',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Anti Spell Charm',
@@ -3446,6 +3647,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Prata Anti Magia',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Mana Charm',
@@ -3463,6 +3665,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Prata de Mana',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Defense Charm',
@@ -3480,6 +3683,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Prata de Defesa',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Blessed Amulet',
@@ -3497,6 +3701,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto Abençoado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Troll Necklace',
@@ -3514,6 +3719,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Troll',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vampire Necklace',
@@ -3531,6 +3737,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Vampiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gold Anti Spell Charm',
@@ -3548,6 +3755,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Ouro Anti Magia',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gold Health Charm',
@@ -3566,6 +3774,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Ouro de Saúde',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gold Mana Charm',
@@ -3584,6 +3793,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Ouro de Mana',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gold Defense Charm',
@@ -3601,6 +3811,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Ouro de Defesa',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Giant Spider Necklace',
@@ -3618,6 +3829,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Aranha Gigante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Antichrist Amulet',
@@ -3635,6 +3847,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto do Anticristo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Amulet",
@@ -3653,6 +3866,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto dos Clãs',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Antidemonic Amulet',
@@ -3670,6 +3884,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto Antidemônico',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mystic Amulet',
@@ -3687,6 +3902,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto Místico',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Amulet',
@@ -3704,6 +3920,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Monk Necklace',
@@ -3721,6 +3938,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Monge',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Night Amulet',
@@ -3738,6 +3956,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Amuleto de Elfo da Noite',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Banshee Necklace',
@@ -3755,6 +3974,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Banshee',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Noble Necklace',
@@ -3772,6 +3992,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Nobre',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elemental Necklace',
@@ -3789,6 +4010,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Elemental',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Dragon Necklace',
@@ -3806,6 +4028,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Dragão Morto-vivo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Angel Essence Necklace',
@@ -3823,6 +4046,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Essência de Anjo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Necklace',
@@ -3841,6 +4065,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Vampiro Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Necklace",
@@ -3858,6 +4083,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elf Guardian Necklace',
@@ -3875,6 +4101,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Elfo Guardião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Corrupted Necklace',
@@ -3892,6 +4119,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Corrompido',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Draconic Gems Necklace',
@@ -3909,6 +4137,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar de Gemas Dracônicas',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Necklace',
@@ -3926,6 +4155,7 @@ const equipments = [
     slot: 'necklace',
     pt: 'Colar Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Plato Ring',
@@ -3943,6 +4173,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Platão',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Goblin Ring',
@@ -3960,6 +4191,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Duende',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lost Soul Ring',
@@ -3977,6 +4209,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Alma Perdida',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mana Shield Ring',
@@ -3995,6 +4228,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Escudo de Mana',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Ring',
@@ -4013,6 +4247,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel Prateado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Octopus Ring',
@@ -4030,6 +4265,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Polvo Humanoide',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Stealth Ring',
@@ -4048,6 +4284,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Invisibilidade',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dark Ring',
@@ -4065,6 +4302,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel Negro',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Mermaid Ring',
@@ -4082,6 +4320,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de sereia de gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Ring',
@@ -4099,6 +4338,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Ring',
@@ -4116,6 +4356,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Uzara Ring',
@@ -4133,6 +4374,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Uzara',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Carapace Ring',
@@ -4150,6 +4392,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Carapaça',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Hell's Ring",
@@ -4167,6 +4410,7 @@ const equipments = [
     slot: 'ring',
     pt: 'anel do inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gladiator Ring',
@@ -4184,6 +4428,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Gladiador',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bone Ring',
@@ -4201,6 +4446,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Osso',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Power Ring',
@@ -4218,6 +4464,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel do Poder',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Ring',
@@ -4235,6 +4482,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Lava',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mystic Ring',
@@ -4252,6 +4500,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel Místico',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Ring",
@@ -4270,6 +4519,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel dos Clãs',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ring of the Skies',
@@ -4287,6 +4537,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel dos Céus',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Abyssal Cultist Ring',
@@ -4304,6 +4555,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Cultista Abissal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Nobility Night Ring',
@@ -4321,6 +4573,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Nobreza de Elfo da Noite',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Nobility Ring',
@@ -4338,6 +4591,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Nobreza de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Aristocrat Ring',
@@ -4355,6 +4609,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Aristocrata',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Galaxy Ring',
@@ -4372,6 +4627,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel Galáctico',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crystal Ring',
@@ -4389,6 +4645,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Cristal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Ring',
@@ -4406,6 +4663,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Draconic Gem Ring',
@@ -4423,6 +4681,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel de Gema Dracônica',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Ring',
@@ -4441,6 +4700,7 @@ const equipments = [
     slot: 'ring',
     pt: 'Anel cromático',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Comfortable Thong',
@@ -4458,6 +4718,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Tanga Confortável',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wool Legs',
@@ -4475,6 +4736,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Lã',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Leather Legs',
@@ -4493,6 +4755,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de couro',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wizard Legs',
@@ -4511,6 +4774,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de mago',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Toad Legs',
@@ -4528,6 +4792,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Sapo Humanóide',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chain Legs',
@@ -4546,6 +4811,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Corrente',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ninja Legs',
@@ -4563,6 +4829,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Ninja',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Heirloom Legs',
@@ -4580,6 +4847,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de herança',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vampire Legs',
@@ -4597,6 +4865,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Vampiro',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Reinforced Legs',
@@ -4615,6 +4884,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Reforçadas',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Prismatic Legs',
@@ -4632,6 +4902,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Prismáticas',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fairy Legs',
@@ -4649,6 +4920,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Fada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Legs',
@@ -4666,6 +4938,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Douradas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Plate Legs',
@@ -4683,6 +4956,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Placa',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Gladiator Legs',
@@ -4700,6 +4974,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Gladiador',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crystal Legs',
@@ -4718,6 +4993,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Cristal',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Abyssal Cultist Legs',
@@ -4735,6 +5011,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Cultista Abissal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Clan Legs',
@@ -4753,6 +5030,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Clã',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Legs',
@@ -4770,6 +5048,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças élficas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Void Legs',
@@ -4787,6 +5066,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Noble Legs',
@@ -4804,6 +5084,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Nobre',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Volcano Legs',
@@ -4821,6 +5102,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Vulcânicas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Hunter Legs',
@@ -4838,6 +5120,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Caçador da Geada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Demon Legs',
@@ -4855,6 +5138,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Demônio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elemental Legs',
@@ -4872,6 +5156,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Elementais',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Angelic Legs',
@@ -4889,6 +5174,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Angelicais',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragons Tamer Legs',
@@ -4906,6 +5192,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Domador de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Legs',
@@ -4923,6 +5210,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças cromáticas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ethereal Legs',
@@ -4940,6 +5228,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças Etéreas',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Scale Legs',
@@ -4957,6 +5246,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Escama de Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Scale Legs',
@@ -4974,6 +5264,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Escamas de Dragão Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Scale Legs',
@@ -4991,6 +5282,7 @@ const equipments = [
     slot: 'pants',
     pt: 'Calças de Escamas de Dragão Dourado Morto-Vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Axe',
@@ -5008,6 +5300,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Machado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hammer',
@@ -5025,6 +5318,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Martelo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crest of Fire',
@@ -5042,6 +5336,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Brasão de Fogo',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crest of Air',
@@ -5059,6 +5354,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Brasão de Ar',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crest of Time',
@@ -5076,6 +5372,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Brasão de Tempo',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crest of Water',
@@ -5093,6 +5390,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Brasão de Água',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crest of Earth',
@@ -5110,6 +5408,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Brasão da Terra',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Energy Totem',
@@ -5127,6 +5426,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Totem de Energia',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fishing Rod',
@@ -5144,6 +5444,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Vara de Pescar',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Pickaxe',
@@ -5161,6 +5462,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Picareta',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crystal Pickaxe',
@@ -5178,6 +5480,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Picareta de Cristal',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Rainbow Gauntlet',
@@ -5195,6 +5498,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Manopla Arco-íris',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Complete Rainbow Gauntlet',
@@ -5212,6 +5516,7 @@ const equipments = [
     slot: 'accessorie',
     pt: 'Manopla Arco-Íris Completa',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
 ];
 
@@ -5234,6 +5539,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva da Terra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Copper Glove',
@@ -5253,6 +5559,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de cobre',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Static Glove',
@@ -5272,6 +5579,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Estática',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Worn Glove',
@@ -5291,6 +5599,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Usada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Electrical Glove',
@@ -5310,6 +5619,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Elétrica',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Iron Glove',
@@ -5329,6 +5639,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Ferro',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Forest Glove',
@@ -5349,6 +5660,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva da Floresta',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Heat Glove',
@@ -5368,6 +5680,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Calor',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dark Glove',
@@ -5387,6 +5700,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Negra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Novice Gladiator Glove',
@@ -5406,6 +5720,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva do Gladiador Novato',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Arctic Glove',
@@ -5425,6 +5740,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva do Ártico',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Octopus Glove',
@@ -5444,6 +5760,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Polvo Humanoide',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Demon Glove',
@@ -5463,6 +5780,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Demoníaca',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Cursed Glove',
@@ -5482,6 +5800,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Amaldiçoada',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Nobles Glove',
@@ -5501,6 +5820,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva dos Nobres',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Intermediate Gladiator Glove',
@@ -5520,6 +5840,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva do Gladiador Intermediário',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hell Mage Glove',
@@ -5539,6 +5860,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Mago do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Poison Beetle Glove',
@@ -5558,6 +5880,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Besouro Venenoso',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Glove",
@@ -5578,6 +5901,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chaos Glove',
@@ -5597,6 +5921,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva do Caos',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Hell's Glove",
@@ -5616,6 +5941,7 @@ const weapons = [
     twoHanded: false,
     pt: 'luva do inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Justice Glove',
@@ -5635,6 +5961,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva da Justiça',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Glove',
@@ -5654,6 +5981,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de lava',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Advanced Gladiator Glove',
@@ -5673,6 +6001,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva do Gladiador Avançado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fire Manipulator Glove',
@@ -5692,6 +6021,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Manipulador de Fogo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Abyssal Cultist Glove',
@@ -5711,6 +6041,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Cultista Abissal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Righteous Glove',
@@ -5730,6 +6061,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva dos Justos',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Glove',
@@ -5749,6 +6081,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Diabolus Glove',
@@ -5768,6 +6101,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Diabolus',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fireblaze Glove',
@@ -5787,6 +6121,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva das Chamas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Glove",
@@ -5806,6 +6141,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Glove',
@@ -5826,6 +6162,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Vampiro Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Dragon Hunters' Glove",
@@ -5845,6 +6182,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva dos Caçadores de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Eternal Ice Glove',
@@ -5864,6 +6202,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Gelo Eterno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Revenant Glove',
@@ -5883,6 +6222,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Revenante',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Reaper's Glove",
@@ -5902,6 +6242,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva da Morte',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Glove',
@@ -5921,6 +6262,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Scale Glove',
@@ -5940,6 +6282,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Escama de Dragão Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Scale Glove',
@@ -5959,6 +6302,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de Escama de Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Scale Glove',
@@ -5978,6 +6322,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Luva de escama de dragão dourado morto-vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Slingshot',
@@ -5997,6 +6342,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Estilingue',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wooden Sword',
@@ -6016,6 +6362,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de madeira',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sharp Axe',
@@ -6035,6 +6382,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado Afiado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Club',
@@ -6054,6 +6402,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Porrete',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Double Axe',
@@ -6073,6 +6422,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado Duplo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Halberd',
@@ -6093,6 +6443,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Alabarda',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Morning Star',
@@ -6112,6 +6463,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Maça Cravada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hatchet',
@@ -6131,6 +6483,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Machadinha',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Axe',
@@ -6150,6 +6503,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Prata',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Specialist Axe',
@@ -6169,6 +6523,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Especialista',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Bielze's Mace",
@@ -6188,6 +6543,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Clava do Bielze',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Tribal Axe',
@@ -6207,6 +6563,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado Tribal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ritual Spear',
@@ -6226,6 +6583,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Lança de Ritual',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dwarven Axe',
@@ -6245,6 +6603,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Anão',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Axe',
@@ -6264,6 +6623,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado dourado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Novice Gladiator Hammer',
@@ -6283,6 +6643,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo do Gladiador Novato',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Demon Axe',
@@ -6302,6 +6663,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado Demoníaco',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crown Axe',
@@ -6321,6 +6683,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado Real',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Beetle Axe',
@@ -6340,6 +6703,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Besouro de Gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'War Spear',
@@ -6359,6 +6723,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Lança da Guerra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Giants Club',
@@ -6378,6 +6743,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Maça de Gigantes',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'The Winter Spear',
@@ -6397,6 +6763,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Lança do Inverno',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Justice Axe',
@@ -6416,6 +6783,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado da Justiça',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Intermediate Gladiator Hammer',
@@ -6435,6 +6803,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo do Gladiador Intermediário',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Axe",
@@ -6455,6 +6824,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Axe',
@@ -6474,6 +6844,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Congelado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Devil's Fork",
@@ -6493,6 +6864,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Garfo do Diabo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Club",
@@ -6513,6 +6885,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Maça dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Advanced Gladiator Hammer',
@@ -6532,6 +6905,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo do Gladiador Avançado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Tidal Bringer',
@@ -6551,6 +6925,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Causador de Marés',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Inferno Fork',
@@ -6570,6 +6945,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Garfo do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Thunder Hammer',
@@ -6589,6 +6965,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo do Trovão',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Axe',
@@ -6608,6 +6985,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Archangel Axe',
@@ -6627,6 +7005,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Arcanjo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Devil's Scythe",
@@ -6646,6 +7025,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Foice do Diabo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Axe",
@@ -6665,6 +7045,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Dragon Hunters' Hammer",
@@ -6684,6 +7065,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo dos Caçadores de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Axe',
@@ -6704,6 +7086,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Vampiro Ancião',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Eternal Ice Axe',
@@ -6723,6 +7106,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Gelo Eterno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Reaper's Axe",
@@ -6742,6 +7126,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado da Morte',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Revenant Axe',
@@ -6761,6 +7146,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Revenante',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Celestial Axe',
@@ -6780,6 +7166,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado Celestial',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Hammer',
@@ -6799,6 +7186,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo de Dragão Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Axe',
@@ -6818,6 +7206,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Machado de Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Hammer',
@@ -6837,6 +7226,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Martelo de Dragão Dourado Morto-vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wooden Bow',
@@ -6856,6 +7246,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de madeira',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Tin Bow',
@@ -6875,6 +7266,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Estanho',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Reinforced Bow',
@@ -6894,6 +7286,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco Reforçado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Copper Bow',
@@ -6913,6 +7306,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de cobre',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dark Bow',
@@ -6933,6 +7327,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco Negro',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Shuriken',
@@ -6952,6 +7347,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Shuriken',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Arctic Bow',
@@ -6971,6 +7367,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco do Ártico',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Light Bow',
@@ -6990,6 +7387,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco Leve',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bronze Bow',
@@ -7009,6 +7407,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Bronze',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bones Bow',
@@ -7029,6 +7428,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Ossos',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ornamented Bow',
@@ -7048,6 +7448,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco Ornamentado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Novice Gladiator Spear',
@@ -7067,6 +7468,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Lança do Gladiador Novato',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Cursed Bow',
@@ -7086,6 +7488,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco Amaldiçoado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fairy Bow',
@@ -7105,6 +7508,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Fada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Vulcana Bow',
@@ -7124,6 +7528,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Vulcana',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hardrock Bow',
@@ -7143,6 +7548,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Rochedo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Stardust Bow',
@@ -7162,6 +7568,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Poeira Estelar',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hellhound Bow',
@@ -7181,6 +7588,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Cão do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Bow",
@@ -7201,6 +7609,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Intermediate Gladiator Spear',
@@ -7220,6 +7629,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Lança do Gladiador Intermediário',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragon Bow',
@@ -7239,6 +7649,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco do Dragão',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Champion Bow',
@@ -7258,6 +7669,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Campeão',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Justice Bow',
@@ -7277,6 +7689,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco da Justiça',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Bow',
@@ -7296,6 +7709,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de lava',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Frost Bow',
@@ -7315,6 +7729,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco Congelado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Poison Beetle Bow',
@@ -7334,6 +7749,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Besouro Venenoso',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Expertise Bow",
@@ -7354,6 +7770,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Perícia dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Advanced Gladiator Spear',
@@ -7373,6 +7790,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Lança do Gladiador Avançado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Grue Bow',
@@ -7392,6 +7810,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Grue',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Nature's Bow",
@@ -7411,6 +7830,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco da Natureza',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bow of the Skies',
@@ -7430,6 +7850,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco dos Céus',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Bow',
@@ -7449,6 +7870,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Devil Bow',
@@ -7468,6 +7890,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Diabo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Soul Brander',
@@ -7487,6 +7910,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Marcadora de Almas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Bow",
@@ -7506,6 +7930,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Void Bow',
@@ -7525,6 +7950,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Dragon Hunters' Bow",
@@ -7544,6 +7970,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco dos Caçadores de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Eternal Ice Bow',
@@ -7563,6 +7990,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Gelo Eterno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Bow',
@@ -7582,6 +8010,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Vampiro Ancião',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Soul Piercer',
@@ -7601,6 +8030,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Perfuradora de Almas',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragons Tamer Bow',
@@ -7620,6 +8050,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Domador de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Bow',
@@ -7639,6 +8070,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Dragão Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Bow',
@@ -7658,6 +8090,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Bow',
@@ -7677,6 +8110,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Arco de Dragão Dourado Morto-vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Candy Staff',
@@ -7696,6 +8130,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão Doce',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Natural Staff',
@@ -7715,6 +8150,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado Natural',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Iron Staff',
@@ -7734,6 +8170,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão de Metal',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Voodoo Staff',
@@ -7753,6 +8190,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Vodu',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ruby Staff',
@@ -7772,6 +8210,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão de Rubi',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sapphire Staff',
@@ -7791,6 +8230,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão de Safira',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Amethyst Staff',
@@ -7810,6 +8250,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão de Ametista',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Skull Staff',
@@ -7830,6 +8271,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão de Crânio',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Fox Wand',
@@ -7849,6 +8291,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Raposa Humanóide',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Holy Staff',
@@ -7868,6 +8311,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão Sagrado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Staff',
@@ -7887,6 +8331,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão Prateado',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Novice Gladiator Staff',
@@ -7906,6 +8351,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão do Gladiador Novato',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crown Staff',
@@ -7925,6 +8371,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão Real',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Warlock Staff',
@@ -7944,6 +8391,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Mago',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Spider Wand',
@@ -7963,6 +8411,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Aranha',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Sceptre',
@@ -7982,6 +8431,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cetro Dourado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Staff",
@@ -8001,6 +8451,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Hell Mage Wand',
@@ -8020,6 +8471,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Mago do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Intermediate Gladiator Staff',
@@ -8039,6 +8491,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão do Gladiador Intermediário',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Staff',
@@ -8058,6 +8511,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Lava',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Poison Beetle Wand',
@@ -8077,6 +8531,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Besouro Venenoso',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Staff of Justice',
@@ -8096,6 +8551,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado da Justiça',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Hell's Staff",
@@ -8115,6 +8571,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado do Inferno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mystic Staff',
@@ -8134,6 +8591,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado Místico',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Advanced Gladiator Staff',
@@ -8153,6 +8611,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Bastão do Gladiador Avançado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'The Earthquaker',
@@ -8172,6 +8631,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Criador de Terremotos',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Abyssal Cultist Wand',
@@ -8191,6 +8651,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Cultista Abissal',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Righteous Staff',
@@ -8210,6 +8671,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado Justo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Staff',
@@ -8229,6 +8691,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sky Elf Wand',
@@ -8248,6 +8711,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Elfo do Céu',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wand of Doom',
@@ -8267,6 +8731,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha da Fatalidade',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Staff",
@@ -8286,6 +8751,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Dragon Hunters' Staff",
@@ -8305,6 +8771,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado dos Caçadores de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Dragon Wand',
@@ -8324,6 +8791,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha de Dragão Morto-vivo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Eternal Ice Staff',
@@ -8343,6 +8811,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Gelo Eterno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Staff',
@@ -8362,6 +8831,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Vampiro Ancião',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Wand of Salvation',
@@ -8381,6 +8851,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado da Salvação',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragons Tamer Staff',
@@ -8400,6 +8871,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Domador de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Staff',
@@ -8419,6 +8891,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Dragão Dourado Morto-vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Wand',
@@ -8438,6 +8911,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Varinha do Dragão Dourado Cromático',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Staff',
@@ -8457,6 +8931,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Cajado de Dragão Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dagger',
@@ -8476,6 +8951,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Adaga',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Rapier',
@@ -8495,6 +8971,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Florete',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Long Dagger',
@@ -8514,6 +8991,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Adaga Longa',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Katana',
@@ -8533,6 +9011,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Katana',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sword',
@@ -8552,6 +9031,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Long Sword',
@@ -8571,6 +9051,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Espada Longa',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Spike Sword',
@@ -8590,6 +9071,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Afiada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Silver Sword',
@@ -8610,6 +9092,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Prateada',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Humanoid Lizard Sword',
@@ -8629,6 +9112,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de lagarto humanóide',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Bright Sword',
@@ -8648,6 +9132,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Brilhante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Curved Sword',
@@ -8667,6 +9152,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Curva',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Giant Sword',
@@ -8686,6 +9172,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Espada Gigante',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Novice Gladiator Sword',
@@ -8705,6 +9192,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada do Gladiador Novato',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Fire Sword',
@@ -8724,6 +9212,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de fogo',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Black Sword',
@@ -8743,6 +9232,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Negra',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Forgotten Sword',
@@ -8762,6 +9252,7 @@ const weapons = [
     twoHanded: true,
     pt: 'Espada Esquecida',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Ice Beetle Sword',
@@ -8781,6 +9272,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Besouro de Gelo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Nobles Sword',
@@ -8800,6 +9292,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada dos Nobres',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Clan's Sword",
@@ -8820,6 +9313,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada dos Clãs',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Intermediate Gladiator Sword',
@@ -8839,6 +9333,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada do Gladiador Intermediário',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragon Sword',
@@ -8858,6 +9353,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada do Dragão',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Winter Rapier',
@@ -8875,12 +9371,10 @@ const weapons = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11003.jpg"',
     twoHanded: false,
-    info: {
-      en: 'Expire in 10 seconds',
-      pt: 'Expira em 10 segundos',
-    },
+    info: { en: 'Expire in 10 seconds', pt: 'Expira em 10 segundos' },
     pt: 'Florete do Inverno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Mystic Sword',
@@ -8900,6 +9394,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Mística',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Champion Sword',
@@ -8919,6 +9414,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Campeão',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sword of Justice',
@@ -8938,6 +9434,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada da Justiça',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lava Sword',
@@ -8957,6 +9454,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de lava',
     rarity: { en: 'Commom', pt: 'Comum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Poison Beetle Sword',
@@ -8976,6 +9474,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Besouro Venenoso',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Advanced Gladiator Sword',
@@ -8995,6 +9494,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada do Gladiador Avançado',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'The Decapitator',
@@ -9014,6 +9514,7 @@ const weapons = [
     twoHanded: false,
     pt: 'A Decapitadora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Void Sword',
@@ -9033,6 +9534,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada do Vazio',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sacred Sword',
@@ -9052,6 +9554,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Sagrada',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elven Sword',
@@ -9071,6 +9574,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Elfo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Reaper's Sword",
@@ -9090,6 +9594,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada da Morte',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sky Elf Blade',
@@ -9109,6 +9614,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Lâmina de Elfo do Céu',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Elora's Sword",
@@ -9128,6 +9634,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Elora',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Dragon Sword',
@@ -9147,6 +9654,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Dragão Morto-vivo',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: "Dragon Hunters' Sword",
@@ -9166,6 +9674,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada dos Caçadores de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Eternal Ice Sword',
@@ -9185,6 +9694,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Gelo Eterno',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Elder Vampire Sword',
@@ -9204,6 +9714,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Vampiro Ancião',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sword of Glory',
@@ -9223,6 +9734,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada da Glória',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragons Tamer Sword',
@@ -9242,6 +9754,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Domador de Dragões',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Undead Golden Dragon Sword',
@@ -9261,6 +9774,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Dragão Dourado Morto-vivo',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Chromatic Golden Dragon Sword',
@@ -9280,6 +9794,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Dragão Dourado Cromática',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Golden Dragon Sword',
@@ -9299,6 +9814,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada de Dragão Dourado',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Warlord Sword',
@@ -9318,6 +9834,7 @@ const weapons = [
     twoHanded: false,
     pt: 'Espada Warlord',
     rarity: { en: 'Legendary', pt: 'Legendário' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
 ];
 
@@ -9452,6 +9969,25 @@ const FAKE_ITEM = {
     pt: '',
   },
   twoHanded: false,
+  itemBonus: {
+    attack: 0,
+    armor: 0,
+    magic: 0,
+    blessPercentage: 0,
+  },
+};
+
+const FAKE_SET = {
+  necklace: { ...FAKE_ITEM, slot: 'necklace' },
+  helmet: { ...FAKE_ITEM, slot: 'helmet' },
+  ring: { ...FAKE_ITEM, slot: 'ring' },
+  weapon: { ...FAKE_ITEM, slot: 'weapon' },
+  armor: { ...FAKE_ITEM, slot: 'armor' },
+  shield: { ...FAKE_ITEM, slot: 'shield' },
+  book: { ...FAKE_ITEM, slot: 'book' },
+  accessorie: { ...FAKE_ITEM, slot: 'accessorie' },
+  pants: { ...FAKE_ITEM, slot: 'pants' },
+  shoe: { ...FAKE_ITEM, slot: 'shoe' },
 };
 
 const ITEM_RARITY = {
@@ -9507,6 +10043,7 @@ const NEW_ITEMS = [
     slot: 'ring',
     pt: 'Anel Comedor De Carne',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Meat Eater Book',
@@ -9527,6 +10064,7 @@ const NEW_ITEMS = [
     slot: 'book',
     pt: 'Livro Comedor de Carne',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Dragon Winged Helm',
@@ -9543,6 +10081,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Elmo Alado de Dragão',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Ring',
@@ -9559,6 +10098,7 @@ const NEW_ITEMS = [
     slot: 'ring',
     pt: 'Anel Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Bow',
@@ -9577,6 +10117,7 @@ const NEW_ITEMS = [
     range: 3,
     pt: 'Arco Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Armor',
@@ -9595,6 +10136,7 @@ const NEW_ITEMS = [
     range: 3,
     pt: 'Armadura Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lurking Boots',
@@ -9610,7 +10152,12 @@ const NEW_ITEMS = [
     imgUrl: '/newitems/Botas Espreitadoras.png',
     slot: 'shoe',
     pt: 'Botas Espreitadoras',
+    info: {
+      en: 'Movement speed -20',
+      pt: 'Velocidade de movimento -20',
+    },
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Lurking Helmet',
@@ -9627,6 +10174,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Capacete Espreitador',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Shoes',
@@ -9643,6 +10191,7 @@ const NEW_ITEMS = [
     slot: 'shoe',
     pt: 'Botas Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Staff',
@@ -9659,6 +10208,7 @@ const NEW_ITEMS = [
     slot: 'weapon',
     pt: 'Cajado Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Necklace',
@@ -9675,6 +10225,7 @@ const NEW_ITEMS = [
     slot: 'necklace',
     pt: 'Colar Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Helmet',
@@ -9691,6 +10242,7 @@ const NEW_ITEMS = [
     slot: 'necklace',
     pt: 'Elmo Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Shield',
@@ -9707,6 +10259,7 @@ const NEW_ITEMS = [
     slot: 'shield',
     pt: 'Escudo Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Scythe',
@@ -9723,6 +10276,7 @@ const NEW_ITEMS = [
     slot: 'weapon',
     pt: 'Foice Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Glove',
@@ -9739,6 +10293,7 @@ const NEW_ITEMS = [
     slot: 'weapon',
     pt: 'Luva Kajin',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Scroll',
@@ -9755,6 +10310,7 @@ const NEW_ITEMS = [
     slot: 'book',
     pt: 'Pergaminhos Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Kajin Pants',
@@ -9771,6 +10327,7 @@ const NEW_ITEMS = [
     slot: 'pants',
     pt: 'Calças Kajin',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sentinel Armor',
@@ -9787,6 +10344,7 @@ const NEW_ITEMS = [
     slot: 'armor',
     pt: 'Armadura Sentinela',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Sentinel Necklace',
@@ -9803,6 +10361,7 @@ const NEW_ITEMS = [
     slot: 'necklace',
     pt: 'Colar Sentinela',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crawler Helmet',
@@ -9819,6 +10378,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Capacete de Rastejador',
     rarity: { en: 'Rare', pt: 'Raro' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
   {
     en: 'Crawler Shield',
@@ -9835,6 +10395,7 @@ const NEW_ITEMS = [
     slot: 'helmet',
     pt: 'Escudo de Rastejador',
     rarity: { en: 'Uncommon', pt: 'Incomum' },
+    itemBonus: { attack: 0, armor: 0, magic: 0, blessPercentage: 0 },
   },
 ];
 
@@ -9851,4 +10412,5 @@ export {
   FAKE_ITEM,
   BLESS_OPTIONS,
   NEW_ITEMS,
+  FAKE_SET,
 };

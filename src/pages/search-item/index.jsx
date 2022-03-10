@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './SearchItem.module.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 
 import { useAppContext } from '../../context/appContext/useAppState';
@@ -11,8 +11,10 @@ import {
   filterItensBySlot,
   findItemsByName,
   findItemsByRarity,
+  loadAndAddMissingItems,
+  loadSetFromLocalStorage,
 } from '../../data/kakeleActions';
-import { equipments, weapons } from '../../data/kakeleData';
+import { equipments, FAKE_SET, weapons } from '../../data/kakeleData';
 
 import KakeleItemsFilters from '../../componentes/others/KakeleItemsFilters';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
@@ -27,8 +29,25 @@ export default function SearchItem() {
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [foundItens, setFoundItens] = useState(false);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
+  const [loadItens, setLoadItens] = useState(5);
 
-  const lookForItens = () => {
+  const changeItensOnFirstLoad = (itemList, storedSet) => {
+    const savedSet = loadAndAddMissingItems(locale, storedSet, storedSet);
+
+    const newList = [...itemList];
+
+    itemList.forEach((item, index) => {
+      if (!savedSet[item.slot]) return;
+      if (item.en === savedSet[item.slot].en) {
+        newList[index] = { ...savedSet[item.slot] };
+      }
+    });
+
+    return newList;
+  };
+
+  const lookForItens = (loadSet = false) => {
     const itensList = filterItensByLevelAndClass(
       [...equipments, ...weapons],
       level,
@@ -43,17 +62,51 @@ export default function SearchItem() {
 
     const itensListByRarity = findItemsByRarity(itensListByElement, rarity);
 
-    const itensListByName = findItemsByName(itensListByRarity, itemName);
+    const itensListByName =
+      itemName !== '' ? findItemsByName(itensListByRarity, itemName) : false;
 
-    const result = itensListByName || itensListByRarity;
+    const filtered = itensListByName || itensListByRarity;
 
+    const savedSet = loadSetFromLocalStorage() || [];
+
+    const result = loadSet
+      ? changeItensOnFirstLoad(filtered, savedSet)
+      : filtered;
     setFoundItens(result);
+    setLoadItens(5);
+  };
+
+  const updateOneItemOnly = (oldItem, newItem) => {
+    const items = [...foundItens];
+    const index = items.indexOf(oldItem);
+    items[index] = newItem;
+    setFoundItens(items);
   };
 
   useEffect(() => {
-    lookForItens();
+    const curSet = loadAndAddMissingItems(locale);
+    setCurrentSet(curSet);
+  }, [locale]);
+
+  useEffect(() => {
+    lookForItens('loadSet');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // https://www.youtube.com/watch?v=NZKUirTtxcg
+  const observer = useRef();
+  const lastCardRef = useCallback(
+    card => {
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          setLoadItens(loadItens + 10);
+        }
+      });
+      if (card) observer.current.observe(card);
+    },
+    [loadItens],
+  );
 
   return (
     <div className="container">
@@ -87,13 +140,43 @@ export default function SearchItem() {
             </Link>
           </div>
         </div>
+
         <div className={`row row-cols-auto ${styles.row}`}>
           {foundItens.length > 0 ? (
-            foundItens.map((item, i) => {
+            foundItens.slice(0, loadItens).map((item, i) => {
               if (item) {
+                if (loadItens - 1 === i) {
+                  return (
+                    <div
+                      className={`col ${styles.col}`}
+                      key={item[locale]}
+                      ref={lastCardRef}
+                    >
+                      <ItemCard
+                        index={i}
+                        item={item}
+                        locale={locale}
+                        currentSet={currentSet}
+                        updateCurrentSet={setCurrentSet}
+                        recomendedSet={item}
+                        updatedRecomendedSet={i => updateOneItemOnly(item, i)}
+                        onlyOneItem="true"
+                      />
+                    </div>
+                  );
+                }
                 return (
                   <div className={`col ${styles.col}`} key={item[locale]}>
-                    <ItemCard index={i} item={item} locale={locale} />
+                    <ItemCard
+                      index={i}
+                      item={item}
+                      locale={locale}
+                      currentSet={currentSet}
+                      updateCurrentSet={setCurrentSet}
+                      recomendedSet={item}
+                      updatedRecomendedSet={i => updateOneItemOnly(item, i)}
+                      onlyOneItem="true"
+                    />
                   </div>
                 );
               }

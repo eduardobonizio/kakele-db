@@ -1,62 +1,161 @@
 import { elements } from './dataLanguages';
-import { UPGRADES_DATA } from './kakeleData';
+import {
+  ALL_ITENS_SLOTS_LIST,
+  equipments,
+  FAKE_ITEM,
+  UPGRADES_DATA,
+  weapons,
+} from './kakeleData';
 import removeAccents from 'remove-accents';
+
 const FIVE_SECONDS = 5000;
 
-const urlParamsToObject = paramsText => {
-  // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
+const urlParamsToObject = itemText => {
+  if (itemText === '' || !itemText) return [];
   try {
-    const formatedText = `{"${paramsText
-      .replace('_', '')
-      .replaceAll('_', '","')
-      .replaceAll('=', '":"')
-      .replaceAll('-', ' ')}"}`;
-
-    return JSON.parse(formatedText);
-  } catch {
+    return JSON.parse(itemText);
+  } catch (e) {
+    if (itemText) return itemText;
     return [];
   }
 };
 
+const equipmentsArrayToObject = itemsList => {
+  return itemsList.reduce((cur, next) => {
+    if (!next) return cur;
+    return {
+      ...cur,
+      [next.slot]: { ...next },
+    };
+  }, {});
+};
+
+const normalizeHandsItems = (thisItem, currentSet) => {
+  if (!currentSet) return { [thisItem.slot]: thisItem };
+  if (thisItem.slot === 'weapon') {
+    return thisItem.twoHanded
+      ? {
+          weapon: thisItem,
+          book: { ...FAKE_ITEM, sloot: 'book' },
+          shield: { ...FAKE_ITEM, slot: 'shield' },
+        }
+      : { weapon: thisItem };
+  }
+  if (thisItem.slot === 'shield') {
+    return currentSet.weapon && currentSet.weapon.twoHanded
+      ? {
+          shield: thisItem,
+          weapon: { ...FAKE_ITEM, slot: 'weapon' },
+          book: { ...FAKE_ITEM, sloot: 'book' },
+        }
+      : { shield: thisItem, book: { ...FAKE_ITEM, sloot: 'book' } };
+  }
+  if (thisItem.slot === 'book') {
+    return currentSet.weapon && currentSet.weapon.twoHanded
+      ? {
+          book: thisItem,
+          weapon: { ...FAKE_ITEM, slot: 'weapon' },
+          shield: { ...FAKE_ITEM, sloot: 'shield' },
+        }
+      : {
+          book: thisItem,
+          shield: { ...FAKE_ITEM, sloot: 'shield' },
+        };
+  }
+  return { [thisItem.slot]: thisItem };
+};
+
+const normalizeSet = (setItems, locale) => {
+  if (setItems.shield.level < 1 && setItems.book.level < 1) {
+    const newSet = { ...setItems };
+    delete newSet.book;
+    return newSet;
+  }
+  if (setItems.shield.level < 1) {
+    const newSet = { ...setItems };
+    delete newSet.shield;
+    return newSet;
+  }
+  if (setItems.book.level < 1) {
+    const newSet = { ...setItems };
+    delete newSet.book;
+    return newSet;
+  }
+  return setItems;
+};
+
+const addMissingItens = (
+  selectedItems,
+  locale,
+  storedSet = {},
+  allItens = [...equipments, ...weapons],
+) => {
+  return ALL_ITENS_SLOTS_LIST.reduce(
+    (current, next, index) => {
+      const currentSlot = ALL_ITENS_SLOTS_LIST[index];
+
+      const item = findItemByName(
+        allItens,
+        selectedItems[currentSlot],
+        locale,
+      ) || { ...FAKE_ITEM, slot: currentSlot };
+
+      const iBonus =
+        selectedItems[currentSlot] && selectedItems[currentSlot].itemBonus
+          ? selectedItems[currentSlot].itemBonus
+          : storedSet[currentSlot] && storedSet[currentSlot].en === item.en
+          ? storedSet[currentSlot].itemBonus
+          : item.itemBonus;
+
+      return {
+        ...current,
+        [currentSlot]: {
+          ...item,
+          itemBonus: iBonus,
+        },
+      };
+    },
+    { ...selectedItems },
+  );
+};
+
 const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
-  //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
-  const name = 'en';
-  const link = setList.reduce((anterior, proximo) => {
-    if (proximo.level > 0) {
-      const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
-        ' ',
-        '-',
-      );
-      return `${anterior}_${adicionarTexto}`;
+
+  // Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
+  const link = Object.keys(setList).reduce((anterior, proximo) => {
+    if (setList[proximo].level > 0) {
+      const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].en}`;
+      if (anterior === '?') return `${anterior}${adicionarTexto}`;
+      return `${anterior}&&${adicionarTexto}`;
     }
     return anterior;
-  }, '');
-  if (origin) return `${origin}/${locale}/set-viewer/${link}`;
+  }, '?');
+  if (origin) return `${origin}/${locale}/set-viewer${link}`;
   return `/set-viewer/${link}`;
 };
 
 const saveSetInLocalStorage = newSet => {
   if (!newSet) return;
-  const link = genereateLinkToViewSet(newSet, false);
-  if (!link) return;
 
-  localStorage.setItem(
-    'currentSet',
-    JSON.stringify(link.replace('/set-viewer/', '')),
-  );
+  localStorage.setItem('currentSet', JSON.stringify(newSet));
+
+  return newSet;
 };
 
 const loadSetFromLocalStorage = () => {
   try {
-    const currentSet = localStorage
-      .getItem('currentSet')
-      .replace('"', '')
-      .replace('"', '');
+    const currentSet = JSON.parse(localStorage.getItem('currentSet'));
+    if (typeof currentSet === 'string') return false;
     return currentSet;
-  } catch (error) {
-    return '""';
-  }
+  } catch (error) {}
+};
+
+const loadAndAddMissingItems = (locale, storedSet = {}, items = {}) => {
+  const allSlotItens = addMissingItens(items, locale, storedSet);
+  const normalizedSet = normalizeSet(allSlotItens, locale);
+
+  return normalizedSet;
 };
 
 const activateAlert = setShowAlert => {
@@ -342,16 +441,17 @@ const checkSetElement = (itens, locale) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName, locale = 'en') => {
-  if (!itemName) return false;
+const findItemByName = (itemList, item, locale = 'en') => {
+  if (!item) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
-  const nameKey = 'en';
-  return itemList.find(item => {
+  const useName = item.en || item;
+
+  return itemList.find(i => {
     return (
-      removeAccents(item[nameKey].toLowerCase()) ===
-        removeAccents(itemName.toLowerCase()) ||
-      removeAccents(item[locale].toLowerCase()) ===
-        removeAccents(itemName.toLowerCase())
+      removeAccents(i.en.toLowerCase()) ===
+        removeAccents(useName.toLowerCase()) ||
+      removeAccents(i[locale].toLowerCase()) ===
+        removeAccents(useName.toLowerCase())
     );
   });
 };
@@ -424,4 +524,9 @@ export {
   loadSetFromLocalStorage,
   findItemsByRarity,
   filterItemsByName,
+  addMissingItens,
+  normalizeSet,
+  normalizeHandsItems,
+  equipmentsArrayToObject,
+  loadAndAddMissingItems,
 };

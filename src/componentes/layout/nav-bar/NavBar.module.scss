@@ -7,3 +7,14 @@
   margin-top: 8px;
   margin-right: 16px;
 }
+
+.navLinkContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLinksUl {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

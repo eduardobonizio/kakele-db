@@ -5,14 +5,18 @@ import { useAppContext } from '../../context/appContext/useAppState';
 
 import { setCreatorPageText as textOptions } from '../../data/dataLanguages';
 import {
+  equipmentsArrayToObject,
   filterItensByLevelAndClass,
   findBestSet,
+  loadAndAddMissingItems,
+  loadSetFromLocalStorage,
   saveSetInLocalStorage,
 } from '../../data/kakeleActions';
 import {
   equipments,
   weapons,
   ALL_ITENS_SLOTS_LIST,
+  FAKE_SET,
 } from '../../data/kakeleData';
 import Link from 'next/link';
 
@@ -30,8 +34,10 @@ export default function SetMaker() {
   } = useAppContext();
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
-  const [recomendedSet, setRecomendedSet] = useState(false);
+  const [savedSet, setSavedSet] = useState(FAKE_SET);
+  const [currentSet, setCurrentSet] = useState(FAKE_SET);
   const [ignoredItens, setIgnoredItens] = useState([]);
+  const [showEquipAll, setShowEquipAll] = useState(false);
 
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
@@ -42,19 +48,33 @@ export default function SetMaker() {
       characterClass,
     );
 
-    const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
-      findBestSet(
-        itensList,
-        mainStat,
-        slot,
-        characterClass,
-        ignoredItens,
-        ignoreThisSlotsElement,
-        element,
-        locale,
+    const bestItens = equipmentsArrayToObject(
+      ALL_ITENS_SLOTS_LIST.map(slot =>
+        findBestSet(
+          itensList,
+          mainStat,
+          slot,
+          characterClass,
+          ignoredItens,
+          ignoreThisSlotsElement,
+          element,
+          locale,
+        ),
       ),
     );
-    setRecomendedSet(bestItens);
+    const withSavedItems = Object.keys(bestItens).reduce((acc, nex) => {
+      if (savedSet[nex] && bestItens[nex].en === savedSet[nex].en) {
+        return {
+          ...acc,
+          [nex]: { ...savedSet[nex] },
+        };
+      }
+
+      return { ...acc, [nex]: { ...bestItens[nex] } };
+    }, {});
+
+    setShowEquipAll(true);
+    setCurrentSet(withSavedItems);
   };
 
   const ignoreItens = (itemName, ignore) => {
@@ -81,9 +101,19 @@ export default function SetMaker() {
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
+  const equipAllListed = () => {
+    saveSetInLocalStorage(currentSet);
+  };
+
   useEffect(() => {
     if (characterClass === 'All') updateFilter('characterClass', 'Alchemist');
   }, [characterClass, updateFilter]);
+
+  useEffect(() => {
+    const storedSet = loadSetFromLocalStorage() || [];
+    const curSet = loadAndAddMissingItems(locale, storedSet, storedSet);
+    setSavedSet(curSet);
+  }, [locale]);
 
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
@@ -107,46 +137,49 @@ export default function SetMaker() {
 
       <div className={`d-flex flex-column ${styles.filtersContainer}`}>
         <h1>{text.h1}</h1>
-
         <KakeleItemsFilters statusPrincipal locale={locale} />
         <div className={styles.buttonsContainer}>
           <ButtonForKakele onClick={generateSet} text={text.generateSet} />
           <Link href="/search-item" passHref locale={locale}>
             <LinkButton text={text.searchItens} />
           </Link>
-          {recomendedSet && (
+          {showEquipAll && (
             <Link href="/set-viewer" passHref locale={locale}>
-              <LinkButton
-                text={text.equipAll}
-                onClick={() => saveSetInLocalStorage(recomendedSet, locale)}
-              />
+              <LinkButton text={text.equipAll} onClick={equipAllListed} />
             </Link>
           )}
         </div>
 
-        <ShowSetStatus itensListToShowStatus={recomendedSet} locale={locale} />
+        <ShowSetStatus
+          itensListToShowStatus={currentSet}
+          locale={locale}
+          level={level}
+        />
       </div>
+
       <div className={`row row-cols-auto ${styles.row}`}>
-        {recomendedSet &&
-          recomendedSet.map((item, i) => {
-            if (item) {
-              return (
-                <div className={`col ${styles.col}`} key={item[locale]}>
-                  <ItemCard
-                    index={i}
-                    ignoredItens={ignoredItens}
-                    ignoreItens={ignoreItens}
-                    ignoreThisSlotsElement={ignoreThisSlotsElement}
-                    ignoreElementForThisSlot={ignoreElementForThisSlot}
-                    item={item}
-                    stleFromParent={styles}
-                    locale={locale}
-                  />
-                </div>
-              );
-            }
-            return false;
-          })}
+        {Object.keys(currentSet).map((key, i) => {
+          if (currentSet[key].level < 1) return;
+          return (
+            <div className={`col ${styles.col}`} key={key}>
+              <ItemCard
+                index={i}
+                ignoredItens={ignoredItens}
+                ignoreItens={ignoreItens}
+                ignoreThisSlotsElement={ignoreThisSlotsElement}
+                ignoreElementForThisSlot={ignoreElementForThisSlot}
+                item={currentSet[key]}
+                stleFromParent={styles}
+                locale={locale}
+                currentSet={savedSet}
+                updateCurrentSet={setSavedSet}
+                updatedRecomendedSet={item => {
+                  setCurrentSet({ ...currentSet, ...item });
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

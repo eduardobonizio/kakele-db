@@ -1,4 +1,5 @@
 import React, { useContext, useMemo, useState } from 'react';
+import { FAKE_ITEM } from '../../data/kakeleData';
 // import { useRouter } from 'next/router';
 
 // https://ricostacruz.com/til/state-management-with-react-hooks
@@ -14,6 +15,7 @@ const AppProvider = ({ children }) => {
 
   // console.log(['pt-BR', 'en'].includes(router));
   // Inicializa o estado, mas em alguns casos não é necessário
+
   const initialState = {
     language: 'PTBR',
     level: 1,
@@ -24,18 +26,6 @@ const AppProvider = ({ children }) => {
     slot: 'All',
     orderBy: 'level',
     rarity: 'any',
-    currentSet: {
-      necklace: {},
-      helmet: {},
-      ring: {},
-      weapon: {},
-      armor: {},
-      shield: {},
-      book: {},
-      accessorie: {},
-      pants: {},
-      shoe: {},
-    },
   };
 
   // Esse componente tem um estado, que será acessado por todos os outros
@@ -69,16 +59,15 @@ const getActions = setState => ({
     setState(state => ({ ...state, language: newLanguage }));
   },
   updateFilter: (filter, value) => {
-    setState(state => ({ ...state, [filter]: value }));
-  },
-  updateCurrentSet: newSet => {
-    setState(state => ({ ...state, currentSet: newSet }));
-  },
-  udateOneEquipment: (currentSet, newItem) => {
-    setState(state => ({
-      ...state,
-      currentSet: { ...currentSet, [newItem.slot]: newItem },
-    }));
+    setState(state => {
+      if (filter === 'level' && value < 1) {
+        return { ...state, [filter]: 1 };
+      }
+      if (filter === 'level' && value > 1000) {
+        return { ...state, [filter]: 1000 };
+      }
+      return { ...state, [filter]: value };
+    });
   },
 });
 

@@ -1,0 +1,21 @@
+.containerStyle {
+  display: flex;
+  justify-content: center;
+}
+
+.labelStyle {
+  padding: 8px;
+  height: 25px;
+}
+
+.inputStyle {
+  -webkit-appearance: none;
+  margin: 0;
+  height: 25px;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.h3 {
+  text-align: center;
+}
