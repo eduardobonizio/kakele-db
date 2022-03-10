@@ -12,7 +12,7 @@ const UpdateItems = () => {
           attack: 0,
           armor: 0,
           magic: 0,
-          blessPercentage: 0,
+          bless: 0,
         },
       };
     });
@@ -32,7 +32,7 @@ const UpdateItems = () => {
           attack: 0,
           armor: 0,
           magic: 0,
-          blessPercentage: 0,
+          bless: 0,
         },
       };
     });
@@ -44,12 +44,32 @@ const UpdateItems = () => {
     }
   };
 
+  const manageAllItens = () => {
+    let index = 1;
+
+    const updatedEquipments = equipments.map(item => {
+      const itemWithId = { ...item, id: index };
+      index++;
+      return itemWithId;
+    });
+
+    const updatedWeapons = weapons.map(item => {
+      const itemWithId = { ...item, id: index };
+      index++;
+      return itemWithId;
+    });
+
+    const allItensUpdated = [...updatedWeapons];
+
+    copy(JSON.stringify(allItensUpdated));
+  };
   return (
     <>
       <button onClick={() => processarDadosArmas()}>Copiar Armas</button>
       <button onClick={() => processarDadosEquipamentos()}>
         Copiar Equipamentos
       </button>
+      <button onClick={() => manageAllItens()}>Modificar</button>
     </>
   );
 };

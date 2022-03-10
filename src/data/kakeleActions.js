@@ -65,7 +65,7 @@ const normalizeHandsItems = (thisItem, currentSet) => {
   return { [thisItem.slot]: thisItem };
 };
 
-const normalizeSet = (setItems, locale) => {
+const normalizeSet = setItems => {
   if (setItems.shield.level < 1 && setItems.book.level < 1) {
     const newSet = { ...setItems };
     delete newSet.book;
@@ -119,13 +119,88 @@ const addMissingItens = (
   );
 };
 
+const normalizeUpgrades = uppgradeBonus => {
+  if (!uppgradeBonus || isNaN(Number(uppgradeBonus))) return 0;
+
+  return Number(uppgradeBonus) > 70
+    ? 70
+    : Number(uppgradeBonus) < 1
+    ? 0
+    : Math.floor(Number(uppgradeBonus) / 5) * 5;
+};
+
+const normalizeBless = blessBonus => {
+  if (!blessBonus || isNaN(Number(blessBonus))) return 0;
+  return Number(blessBonus) > 10 ? 10 : Number(blessBonus) < 1 ? 0 : blessBonus;
+};
+
+const findQueryItems = (slot, id, upgrade = 0) => {
+  const allItens = [...equipments, ...weapons];
+
+  const item = findItemByName(allItens, id, 'en', Number(id));
+
+  if (item) {
+    if (upgrade < 1) return item;
+
+    const upgradesList = upgrade.match(/.{1,2}/g);
+
+    const normalizedBonus = {
+      armor: normalizeUpgrades(upgradesList[0]),
+      magic: normalizeUpgrades(upgradesList[1]),
+      attack: normalizeUpgrades(upgradesList[2]),
+      bless: normalizeBless(upgradesList[3]),
+    };
+
+    return {
+      ...item,
+      itemBonus: { ...normalizedBonus },
+    };
+  }
+  const fakeitem = {
+    ...FAKE_ITEM,
+    slot: slot,
+  };
+
+  return fakeitem;
+};
+
+const loadSetFromQuery = query => {
+  const queryItems = Object.keys(query)
+    .map(key => {
+      const [itemName, upgrade] = query[key].split('U');
+
+      return findQueryItems(key, itemName, upgrade);
+    })
+    .reduce((acc, next) => {
+      return {
+        ...acc,
+        [next.slot]: { ...next },
+      };
+    }, {});
+
+  return normalizeSet(addMissingItens(queryItems));
+};
+
+const upgradesToString = upgrades => {
+  const normalizeUpgrades = upgrades.reduce((cur, next) => {
+    if (next < 1) return cur + '00';
+    if (next < 10) return cur + `0${next}`;
+    if (next < 100) return cur + `${next}`;
+    return cur;
+  }, '');
+  if (Number(normalizeUpgrades) < 1) return 'U0';
+  return `U${normalizeUpgrades}`;
+};
+
 const genereateLinkToViewSet = (setList, origin, locale) => {
   if (!setList) return false;
 
   // Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const link = Object.keys(setList).reduce((anterior, proximo) => {
     if (setList[proximo].level > 0) {
-      const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].en}`;
+      const { attack, armor, magic, bless } = setList[proximo].itemBonus;
+      const upgrades = upgradesToString([attack, armor, magic, bless]);
+      const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].id}${upgrades}`;
       if (anterior === '?') return `${anterior}${adicionarTexto}`;
       return `${anterior}&&${adicionarTexto}`;
     }
@@ -441,17 +516,18 @@ const checkSetElement = (itens, locale) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, item, locale = 'en') => {
+const findItemByName = (itemList, item, locale = 'en', id = 0) => {
   if (!item) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
-  const useName = item.en || item;
+  const currentItem = item.en || item;
 
   return itemList.find(i => {
     return (
+      i.id === Number(id) ||
       removeAccents(i.en.toLowerCase()) ===
-        removeAccents(useName.toLowerCase()) ||
+        removeAccents(currentItem.toLowerCase()) ||
       removeAccents(i[locale].toLowerCase()) ===
-        removeAccents(useName.toLowerCase())
+        removeAccents(currentItem.toLowerCase())
     );
   });
 };
@@ -529,4 +605,5 @@ export {
   normalizeHandsItems,
   equipmentsArrayToObject,
   loadAndAddMissingItems,
+  loadSetFromQuery,
 };
