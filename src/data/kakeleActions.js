@@ -87,7 +87,7 @@ const normalizeSet = (setItems, locale) => {
 const addMissingItens = (
   selectedItems,
   locale,
-  storedSet = [],
+  storedSet = {},
   allItens = [...equipments, ...weapons],
 ) => {
   return ALL_ITENS_SLOTS_LIST.reduce(
@@ -151,9 +151,8 @@ const loadSetFromLocalStorage = () => {
   } catch (error) {}
 };
 
-const loadAndAddMissingItems = (items, locale, storedSet) => {
+const loadAndAddMissingItems = (locale, storedSet = {}, items = {}) => {
   const allSlotItens = addMissingItens(items, locale, storedSet);
-
   const normalizedSet = normalizeSet(allSlotItens, locale);
 
   return normalizedSet;

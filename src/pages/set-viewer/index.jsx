@@ -40,12 +40,12 @@ export default function ShowSet() {
 
       if (querySet) {
         const items = query;
-        const curSet = loadAndAddMissingItems(items, locale, storedSet);
+        const curSet = loadAndAddMissingItems(locale, storedSet, items);
         setViewQuerySet(curSet);
       }
 
       const items = storedSet;
-      const curSet = loadAndAddMissingItems(items, locale, storedSet);
+      const curSet = loadAndAddMissingItems(locale, storedSet, items);
       setCurrentSet(curSet);
       if (!querySet) setViewQuerySet(false);
     };

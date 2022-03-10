@@ -60,12 +60,12 @@ export default function ShowItem() {
     const savedSet = loadSetFromLocalStorage();
     if (!savedSet) return;
 
-    const curSet = loadAndAddMissingItems(savedSet);
+    const curSet = loadAndAddMissingItems(locale, savedSet, savedSet);
 
     if (curSet[item.slot].en === item.en) setItem(curSet[item.slot]);
 
     setCurrentSet(curSet);
-  }, [item.en, item.slot]);
+  }, [item.en, item.slot, locale]);
 
   useEffect(() => {
     if (!query.item || query.item === item.en) return;

@@ -75,11 +75,11 @@ export default function ItemCard(props) {
 
   const equipItem = itemFromThisCard => {
     if (itemFromThisCard[locale] === '-----------') return;
-
     if (showUpdateItem) setShowUpdateItem(!showUpdateItem);
+
     const updatedItem = {
       ...itemFromThisCard,
-      ...itemBonus,
+      itemBonus: { ...itemBonus },
     };
 
     const oldSeld = loadSetFromLocalStorage();

@@ -12,6 +12,7 @@ import {
   findItemsByName,
   findItemsByRarity,
   loadAndAddMissingItems,
+  loadSetFromLocalStorage,
 } from '../../data/kakeleActions';
 import { equipments, FAKE_SET, weapons } from '../../data/kakeleData';
 
@@ -31,10 +32,13 @@ export default function SearchItem() {
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
   const [loadItens, setLoadItens] = useState(5);
 
-  const changeItensOnFirstLoad = itemList => {
-    const savedSet = loadAndAddMissingItems(locale);
+  const changeItensOnFirstLoad = (itemList, storedSet) => {
+    const savedSet = loadAndAddMissingItems(locale, storedSet, storedSet);
+
     const newList = [...itemList];
+
     itemList.forEach((item, index) => {
+      if (!savedSet[item.slot]) return;
       if (item.en === savedSet[item.slot].en) {
         newList[index] = { ...savedSet[item.slot] };
       }
@@ -63,7 +67,11 @@ export default function SearchItem() {
 
     const filtered = itensListByName || itensListByRarity;
 
-    const result = loadSet ? changeItensOnFirstLoad(filtered) : filtered;
+    const savedSet = loadSetFromLocalStorage() || [];
+
+    const result = loadSet
+      ? changeItensOnFirstLoad(filtered, savedSet)
+      : filtered;
     setFoundItens(result);
     setLoadItens(5);
   };

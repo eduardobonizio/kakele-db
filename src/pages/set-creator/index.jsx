@@ -8,6 +8,8 @@ import {
   equipmentsArrayToObject,
   filterItensByLevelAndClass,
   findBestSet,
+  loadAndAddMissingItems,
+  loadSetFromLocalStorage,
   saveSetInLocalStorage,
 } from '../../data/kakeleActions';
 import {
@@ -32,6 +34,7 @@ export default function SetMaker() {
   } = useAppContext();
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
+  const [savedSet, setSavedSet] = useState(FAKE_SET);
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [showEquipAll, setShowEquipAll] = useState(false);
@@ -59,9 +62,19 @@ export default function SetMaker() {
         ),
       ),
     );
+    const withSavedItems = Object.keys(bestItens).reduce((acc, nex) => {
+      if (savedSet[nex] && bestItens[nex].en === savedSet[nex].en) {
+        return {
+          ...acc,
+          [nex]: { ...savedSet[nex] },
+        };
+      }
+
+      return { ...acc, [nex]: { ...bestItens[nex] } };
+    }, {});
 
     setShowEquipAll(true);
-    setCurrentSet(bestItens);
+    setCurrentSet(withSavedItems);
   };
 
   const ignoreItens = (itemName, ignore) => {
@@ -95,6 +108,12 @@ export default function SetMaker() {
   useEffect(() => {
     if (characterClass === 'All') updateFilter('characterClass', 'Alchemist');
   }, [characterClass, updateFilter]);
+
+  useEffect(() => {
+    const storedSet = loadSetFromLocalStorage() || [];
+    const curSet = loadAndAddMissingItems(locale, storedSet, storedSet);
+    setSavedSet(curSet);
+  }, [locale]);
 
   return (
     <div className={`container ${styles.statusAndCardContainer}`}>
@@ -137,13 +156,14 @@ export default function SetMaker() {
           level={level}
         />
       </div>
+
       <div className={`row row-cols-auto ${styles.row}`}>
         {Object.keys(currentSet).map((key, i) => {
           if (currentSet[key].level < 1) return;
           return (
-            <div className={`col ${styles.col}`} key={currentSet[key].en + i}>
+            <div className={`col ${styles.col}`} key={key}>
               <ItemCard
-                index={key}
+                index={i}
                 ignoredItens={ignoredItens}
                 ignoreItens={ignoreItens}
                 ignoreThisSlotsElement={ignoreThisSlotsElement}
@@ -151,11 +171,11 @@ export default function SetMaker() {
                 item={currentSet[key]}
                 stleFromParent={styles}
                 locale={locale}
-                currentSet={currentSet}
-                updateCurrentSet={() => ''}
-                updatedRecomendedSet={item =>
-                  setCurrentSet({ ...currentSet, ...item })
-                }
+                currentSet={savedSet}
+                updateCurrentSet={setSavedSet}
+                updatedRecomendedSet={item => {
+                  setCurrentSet({ ...currentSet, ...item });
+                }}
               />
             </div>
           );
