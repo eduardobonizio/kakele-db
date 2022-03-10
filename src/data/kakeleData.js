@@ -10495,6 +10495,7 @@ const FAKE_ITEM = {
     magic: 0,
     blessPercentage: 0,
   },
+  id: 0,
 };
 
 const FAKE_SET = {
