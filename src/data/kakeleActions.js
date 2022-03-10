@@ -119,13 +119,33 @@ const addMissingItens = (
   );
 };
 
+const upgradesToString = upgrades => {
+  const normalizeUpgrades = upgrades.reduce((cur, next) => {
+    if (next < 1) return cur + '00';
+    if (next < 10) return cur + `0${next}`;
+    if (next < 100) return cur + `${next}`;
+  }, 'U');
+  if (Number(normalizeUpgrades) < 1) return 'U0';
+  return normalizeUpgrades;
+};
+
 const genereateLinkToViewSet = (setList, origin, locale) => {
+  console.log(setList);
   if (!setList) return false;
 
   // Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
   const link = Object.keys(setList).reduce((anterior, proximo) => {
     if (setList[proximo].level > 0) {
-      const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].en}`;
+      const { attack, armor, magic, blessPercentage } =
+        setList[proximo].itemBonus;
+      const upgrades = upgradesToString([
+        attack,
+        armor,
+        magic,
+        blessPercentage,
+      ]);
+
+      const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].id}${upgrades}`;
       if (anterior === '?') return `${anterior}${adicionarTexto}`;
       return `${anterior}&&${adicionarTexto}`;
     }
