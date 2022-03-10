@@ -42,7 +42,6 @@ export default function ShowSet() {
       if (querySet) {
         const items = query;
         const querySet = loadSetFromQuery(items);
-        console.log(querySet);
         setViewQuerySet(querySet);
       }
 

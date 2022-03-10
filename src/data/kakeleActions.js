@@ -65,7 +65,7 @@ const normalizeHandsItems = (thisItem, currentSet) => {
   return { [thisItem.slot]: thisItem };
 };
 
-const normalizeSet = (setItems, locale) => {
+const normalizeSet = setItems => {
   if (setItems.shield.level < 1 && setItems.book.level < 1) {
     const newSet = { ...setItems };
     delete newSet.book;
@@ -142,7 +142,7 @@ const findQueryItems = (slot, id, upgrade = 0) => {
   if (item) {
     if (upgrade < 1) return item;
 
-    const upgradesList = upgrade.match(/.{1,3}/g);
+    const upgradesList = upgrade.match(/.{1,2}/g);
 
     const normalizedBonus = {
       armor: normalizeUpgrades(upgradesList[0]),
@@ -177,14 +177,15 @@ const loadSetFromQuery = query => {
         [next.slot]: { ...next },
       };
     }, {});
-  return queryItems;
+
+  return normalizeSet(addMissingItens(queryItems));
 };
 
 const upgradesToString = upgrades => {
   const normalizeUpgrades = upgrades.reduce((cur, next) => {
-    if (next < 1) return cur + '000';
-    if (next < 10) return cur + `00${next}`;
-    if (next < 100) return cur + `0${next}`;
+    if (next < 1) return cur + '00';
+    if (next < 10) return cur + `0${next}`;
+    if (next < 100) return cur + `${next}`;
     return cur;
   }, '');
   if (Number(normalizeUpgrades) < 1) return 'U0';
