@@ -206,6 +206,7 @@ export default function WikiDataBaseToJson() {
           onClick={copyItensToObject}
           text="Copiar como objeto"
         />
+
         <ButtonForKakele
           onClick={addPtBrToItens}
           text="Adicionar texto Pt-BR"
