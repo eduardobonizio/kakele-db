@@ -119,6 +119,21 @@ const addMissingItens = (
   );
 };
 
+const normalizeUpgrades = uppgradeBonus => {
+  if (!uppgradeBonus || isNaN(Number(uppgradeBonus))) return 0;
+
+  return Number(uppgradeBonus) > 70
+    ? 70
+    : Number(uppgradeBonus) < 1
+    ? 0
+    : Math.floor(Number(uppgradeBonus) / 5) * 5;
+};
+
+const normalizeBless = blessBonus => {
+  if (!blessBonus || isNaN(Number(blessBonus))) return 0;
+  return Number(blessBonus) > 10 ? 10 : Number(blessBonus) < 1 ? 0 : blessBonus;
+};
+
 const findQueryItems = (slot, id, upgrade = 0) => {
   const allItens = [...equipments, ...weapons];
 
@@ -126,16 +141,19 @@ const findQueryItems = (slot, id, upgrade = 0) => {
 
   if (item) {
     if (upgrade < 1) return item;
-    console.log(upgrade);
-    console.log(upgrade.match(/.{1,3}/g));
+
+    const upgradesList = upgrade.match(/.{1,3}/g);
+
+    const normalizedBonus = {
+      armor: normalizeUpgrades(upgradesList[0]),
+      magic: normalizeUpgrades(upgradesList[1]),
+      attack: normalizeUpgrades(upgradesList[2]),
+      bless: normalizeBless(upgradesList[3]),
+    };
+
     return {
       ...item,
-      itemBonus: {
-        armor: 0,
-        magic: 0,
-        attack: 0,
-        bless: 0,
-      },
+      itemBonus: { ...normalizedBonus },
     };
   }
   const fakeitem = {
