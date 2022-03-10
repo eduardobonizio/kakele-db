@@ -119,18 +119,61 @@ const addMissingItens = (
   );
 };
 
+const findQueryItems = (slot, id, upgrade = 0) => {
+  const allItens = [...equipments, ...weapons];
+
+  const item = findItemByName(allItens, id, 'en', Number(id));
+
+  if (item) {
+    if (upgrade < 1) return item;
+    console.log(upgrade);
+    console.log(upgrade.match(/.{1,3}/g));
+    return {
+      ...item,
+      itemBonus: {
+        armor: 0,
+        magic: 0,
+        attack: 0,
+        bless: 0,
+      },
+    };
+  }
+  const fakeitem = {
+    ...FAKE_ITEM,
+    slot: slot,
+  };
+
+  return fakeitem;
+};
+
+const loadSetFromQuery = query => {
+  const queryItems = Object.keys(query)
+    .map(key => {
+      const [itemName, upgrade] = query[key].split('U');
+
+      return findQueryItems(key, itemName, upgrade);
+    })
+    .reduce((acc, next) => {
+      return {
+        ...acc,
+        [next.slot]: { ...next },
+      };
+    }, {});
+  return queryItems;
+};
+
 const upgradesToString = upgrades => {
   const normalizeUpgrades = upgrades.reduce((cur, next) => {
-    if (next < 1) return cur + '00';
-    if (next < 10) return cur + `0${next}`;
-    if (next < 100) return cur + `${next}`;
-  }, 'U');
+    if (next < 1) return cur + '000';
+    if (next < 10) return cur + `00${next}`;
+    if (next < 100) return cur + `0${next}`;
+    return cur;
+  }, '');
   if (Number(normalizeUpgrades) < 1) return 'U0';
-  return normalizeUpgrades;
+  return `U${normalizeUpgrades}`;
 };
 
 const genereateLinkToViewSet = (setList, origin, locale) => {
-  console.log(setList);
   if (!setList) return false;
 
   // Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
@@ -144,7 +187,6 @@ const genereateLinkToViewSet = (setList, origin, locale) => {
         magic,
         blessPercentage,
       ]);
-
       const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].id}${upgrades}`;
       if (anterior === '?') return `${anterior}${adicionarTexto}`;
       return `${anterior}&&${adicionarTexto}`;
@@ -461,17 +503,18 @@ const checkSetElement = (itens, locale) => {
   return { text, element };
 };
 
-const findItemByName = (itemList, item, locale = 'en') => {
+const findItemByName = (itemList, item, locale = 'en', id = 0) => {
   if (!item) return false;
   //Manter sempre a chave em ingles para o compartilhamento de link para o set não bugar
-  const useName = item.en || item;
+  const currentItem = item.en || item;
 
   return itemList.find(i => {
     return (
+      i.id === Number(id) ||
       removeAccents(i.en.toLowerCase()) ===
-        removeAccents(useName.toLowerCase()) ||
+        removeAccents(currentItem.toLowerCase()) ||
       removeAccents(i[locale].toLowerCase()) ===
-        removeAccents(useName.toLowerCase())
+        removeAccents(currentItem.toLowerCase())
     );
   });
 };
@@ -549,4 +592,5 @@ export {
   normalizeHandsItems,
   equipmentsArrayToObject,
   loadAndAddMissingItems,
+  loadSetFromQuery,
 };

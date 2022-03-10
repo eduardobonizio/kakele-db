@@ -11,6 +11,7 @@ import {
   genereateLinkToViewSet,
   loadAndAddMissingItems,
   loadSetFromLocalStorage,
+  loadSetFromQuery,
 } from '../../data/kakeleActions';
 import Link from 'next/link';
 
@@ -40,8 +41,10 @@ export default function ShowSet() {
 
       if (querySet) {
         const items = query;
-        const curSet = loadAndAddMissingItems(locale, storedSet, items);
-        setViewQuerySet(curSet);
+        const querySet = loadSetFromQuery(items);
+        // console.log(querySet);
+        // const curSet = loadAndAddMissingItems(locale, storedSet, items);
+        setViewQuerySet(querySet);
       }
 
       const items = storedSet;
