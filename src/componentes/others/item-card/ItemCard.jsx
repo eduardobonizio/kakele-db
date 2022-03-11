@@ -228,6 +228,7 @@ export default function ItemCard(props) {
               <LinkButton text={text.showItem} />
             </Link>
           )}
+
           {currentSet && (
             <ButtonForKakele
               onClick={() => equipItem(item)}
