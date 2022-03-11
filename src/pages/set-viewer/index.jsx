@@ -102,9 +102,10 @@ export default function ShowSet() {
                   item={viewQuerySet[key]}
                   locale={locale}
                   currentSet={currentSet}
-                  updateCurrentSet={item => ''}
+                  updateCurrentSet={item =>
+                    setCurrentSet({ ...currentSet, ...item })
+                  }
                   updatedRecomendedSet={item => {
-                    setCurrentSet({ ...currentSet, ...item });
                     setViewQuerySet({ ...viewQuerySet, ...item });
                   }}
                 />
