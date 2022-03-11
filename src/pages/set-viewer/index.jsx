@@ -80,7 +80,7 @@ export default function ShowSet() {
           <div className={styles.statusContainer}>
             {currentSet && (
               <ShowSetStatus
-                itensListToShowStatus={currentSet}
+                itensListToShowStatus={viewQuerySet || currentSet}
                 locale={locale}
               />
             )}
