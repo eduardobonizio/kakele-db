@@ -29,12 +29,10 @@ export default function SearchItem() {
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [foundItens, setFoundItens] = useState(false);
-  const [currentSet, setCurrentSet] = useState(FAKE_SET);
+  const [currentSet, setCurrentSet] = useState(loadAndAddMissingItems(locale));
   const [loadItens, setLoadItens] = useState(5);
 
-  const changeItensOnFirstLoad = (itemList, storedSet) => {
-    const savedSet = loadAndAddMissingItems(locale, storedSet, storedSet);
-
+  const changeToEquipedItems = (itemList, savedSet) => {
     const newList = [...itemList];
 
     itemList.forEach((item, index) => {
@@ -47,7 +45,7 @@ export default function SearchItem() {
     return newList;
   };
 
-  const lookForItens = (loadSet = false) => {
+  const lookForItens = () => {
     const itensList = filterItensByLevelAndClass(
       [...equipments, ...weapons],
       level,
@@ -67,11 +65,13 @@ export default function SearchItem() {
 
     const filtered = itensListByName || itensListByRarity;
 
-    const savedSet = loadSetFromLocalStorage() || [];
+    const storedSet = loadSetFromLocalStorage() || [];
 
-    const result = loadSet
-      ? changeItensOnFirstLoad(filtered, savedSet)
-      : filtered;
+    const curSet = loadAndAddMissingItems(locale, storedSet, storedSet);
+
+    const result = changeToEquipedItems(filtered, curSet);
+
+    setCurrentSet(curSet);
     setFoundItens(result);
     setLoadItens(5);
   };
@@ -84,12 +84,7 @@ export default function SearchItem() {
   };
 
   useEffect(() => {
-    const curSet = loadAndAddMissingItems(locale);
-    setCurrentSet(curSet);
-  }, [locale]);
-
-  useEffect(() => {
-    lookForItens('loadSet');
+    lookForItens();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
