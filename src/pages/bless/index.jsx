@@ -55,12 +55,13 @@ const Bless = () => {
     setFoundItems(result);
   };
 
-  const updateShowItem = item => {
+  const updateShowItem = (item, currSet = false) => {
     const allItems = [...equipments, ...weapons];
     const foundItem = findItemByName(allItems, item);
-    const equipedItem = currentSet[foundItem.slot];
+    const equipedItem = currSet[foundItem.slot] || currentSet[foundItem.slot];
 
-    const useEquippedItem = equipedItem && equipedItem.level > 0;
+    const useEquippedItem =
+      equipedItem && equipedItem.level > 0 && equipedItem.en === foundItem.en;
 
     setSelectedItem(useEquippedItem ? equipedItem : foundItem);
     setItemName('');
@@ -121,16 +122,14 @@ const Bless = () => {
     const storedSet = loadSetFromLocalStorage() || [];
     const curSet = loadAndAddMissingItems(locale, storedSet, storedSet);
     setCurrentSet(curSet);
-  }, [locale]);
 
-  useEffect(() => {
     changeItem(query.item);
-    updateShowItem(query.item);
+    updateShowItem(query.item, curSet);
     const ignored =
       JSON.parse(localStorage.getItem('ignoredSacrificeItens')) || '';
     setIgnoredItems(ignored);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query.item]);
+  }, [locale, query.item]);
 
   return (
     <div className={`container ${style.mainContainer}`}>
