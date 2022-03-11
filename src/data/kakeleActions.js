@@ -199,7 +199,8 @@ const genereateLinkToViewSet = (setList, origin, locale) => {
   const link = Object.keys(setList).reduce((anterior, proximo) => {
     if (setList[proximo].level > 0) {
       const { attack, armor, magic, bless } = setList[proximo].itemBonus;
-      const upgrades = upgradesToString([attack, armor, magic, bless]);
+      const upgrades = upgradesToString([armor, magic, attack, bless]);
+
       const adicionarTexto = `${setList[proximo].slot}=${setList[proximo].id}${upgrades}`;
       if (anterior === '?') return `${anterior}${adicionarTexto}`;
       return `${anterior}&&${adicionarTexto}`;
