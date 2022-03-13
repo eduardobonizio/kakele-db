@@ -10443,6 +10443,46 @@ const UPGRADES_DATA = [
       kks: 81920000,
     },
   },
+  {
+    75: {
+      cobre: 75,
+      estanho: 70,
+      prata: 65,
+      ferro: 60,
+      ouro: 55,
+      kks: 163840000,
+    },
+  },
+  {
+    80: {
+      cobre: 80,
+      estanho: 75,
+      prata: 70,
+      ferro: 65,
+      ouro: 60,
+      kks: 327680000,
+    },
+  },
+  {
+    85: {
+      cobre: 85,
+      estanho: 80,
+      prata: 75,
+      ferro: 70,
+      ouro: 65,
+      kks: 655360000,
+    },
+  },
+  {
+    90: {
+      cobre: 90,
+      estanho: 85,
+      prata: 80,
+      ferro: 75,
+      ouro: 70,
+      kks: 1310720000,
+    },
+  },
 ];
 
 const ALL_ITENS_SLOTS_LIST = [
@@ -10537,7 +10577,7 @@ const ITEM_RARITY = {
 const BLESS_OPTIONS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const UPGRADES_STAGES = [
-  0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70,
+  0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
 ];
 
 const NEW_ITEMS = [
