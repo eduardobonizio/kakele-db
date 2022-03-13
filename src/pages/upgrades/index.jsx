@@ -38,7 +38,10 @@ export default function OreCalculator() {
       return;
     }
 
-    const totalOres = calculateOreQuantityAndPrice(desiredUpgradeLvl);
+    const totalOres = calculateOreQuantityAndPrice(
+      startUpgradeLvl,
+      desiredUpgradeLvl,
+    );
 
     if (addOrePriceToTotal) {
       const newTotalPrice = calculateUpgradePriceWithOresPrice(
