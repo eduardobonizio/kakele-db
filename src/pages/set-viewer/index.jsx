@@ -27,6 +27,7 @@ export default function ShowSet() {
 
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
   const [viewQuerySet, setViewQuerySet] = useState(false);
+  const [charLevel, setCharLevel] = useState(1);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
@@ -55,6 +56,18 @@ export default function ShowSet() {
     loadShowItens();
   }, [locale, query]);
 
+  useEffect(() => {
+    const savedLevel = localStorage.getItem('charLevel') || 1;
+    setCharLevel(Number(savedLevel));
+  }, []);
+
+  const updateLevel = newValue => {
+    const value = newValue > 1000 ? 1000 : newValue <= 0 ? '' : newValue;
+
+    localStorage.setItem('charLevel', value);
+    setCharLevel(value);
+  };
+
   return (
     <div className="container">
       <Head>
@@ -82,6 +95,8 @@ export default function ShowSet() {
               <ShowSetStatus
                 itensListToShowStatus={viewQuerySet || currentSet}
                 locale={locale}
+                savedCharLevel={charLevel}
+                setSavedCharLevel={updateLevel}
               />
             )}
           </div>

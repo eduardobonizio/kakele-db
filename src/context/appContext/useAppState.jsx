@@ -60,8 +60,8 @@ const getActions = setState => ({
   },
   updateFilter: (filter, value) => {
     setState(state => {
-      if (filter === 'level' && value < 1) {
-        return { ...state, [filter]: 1 };
+      if (filter === 'level' && value <= 0) {
+        return { ...state, [filter]: '' };
       }
       if (filter === 'level' && value > 1000) {
         return { ...state, [filter]: 1000 };
