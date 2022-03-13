@@ -10,7 +10,6 @@ import Input from '../../componentes/inputs/Input';
 import BlessSelector from '../../componentes/others/BlessSelector';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
 import SacrificeItemCard from '../../componentes/others/sacrifice-item-card/SacrificeItemCard';
-import UpgradeSelector from '../../componentes/others/UpgradeSelector';
 import { blessJsx as textOptions } from '../../data/dataLanguages';
 import {
   addDotToKks,
@@ -245,11 +244,16 @@ const Bless = () => {
           )}
         </div>
         <div>
-          {totalBlessPrice > 0 && itensToSacrifice.length > 0 && (
+          {/* {totalBlessPrice > 0 && itensToSacrifice.length > 0 && (
             <div className={style.kksResult}>
               <span>{`${text.priceText}: ${addDotToKks(
                 totalBlessPrice,
               )}`}</span>
+            </div>
+          )} */}
+          {itensToSacrifice && (
+            <div className={style.kksResult}>
+              <span>Itens necessários</span>
             </div>
           )}
           {itensToSacrifice &&
