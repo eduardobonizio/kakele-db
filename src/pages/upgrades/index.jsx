@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Alert from '../../componentes/alert/Alert';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 import InputCheckBox from '../../componentes/inputs/InputCheckBox';
@@ -54,6 +54,19 @@ export default function OreCalculator() {
     setNecessaryItens(totalOres);
   };
 
+  const changeOrePrices = (key, value) => {
+    const newPrice = { ...oresPrice, [key]: Number(value) };
+    localStorage.setItem('savedOrePrices', JSON.stringify(newPrice));
+    setOresPrice(newPrice);
+  };
+
+  useEffect(() => {
+    const savedPrices = JSON.parse(localStorage.getItem('savedOrePrices'));
+    if (!savedPrices) return;
+
+    setOresPrice(savedPrices);
+  }, []);
+
   return (
     <div className="container ore-upgrader-container">
       <Head>
@@ -97,7 +110,7 @@ export default function OreCalculator() {
         {addOrePriceToTotal && (
           <OrePriceUpdater
             oresPrice={oresPrice}
-            setOresPrice={setOresPrice}
+            setOresPrice={changeOrePrices}
             text={text}
           />
         )}
