@@ -135,8 +135,12 @@ const findItensToSacrificeRecursive = (
   const minLevel = itemReference.level / 2;
 
   const selectedItems = allItens.filter(item => {
+    const refIsShieldOrBook = ['shield', 'book'].includes(itemReference.slot);
+    const currentIsShieldOrBook = ['shield', 'book'].includes(item.slot);
+    const acceptIfShieldOrBook = refIsShieldOrBook && currentIsShieldOrBook;
+
     if (
-      item.slot === itemReference.slot &&
+      (acceptIfShieldOrBook || item.slot === itemReference.slot) &&
       item.level >= minLevel &&
       !ignoredItems.includes(item['en']) &&
       !foundItensName.includes(item['en']) &&
