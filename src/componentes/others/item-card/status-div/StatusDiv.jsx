@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { RARITY_BONUS } from '../../../../lib/bless';
 
 const StatusDiv = props => {
@@ -13,12 +14,15 @@ const StatusDiv = props => {
     itemsUpgrades,
     rarity,
   } = props;
+  const { pathname } = useRouter();
 
   const addBlessModifier = (statusValue, statusName) => {
     const totalStatus = itemsUpgrades[statusName] + statusValue;
     const blessBonus = RARITY_BONUS[rarity.en][blessModifier];
     return Math.floor(totalStatus + (totalStatus * blessBonus) / 100);
   };
+
+  const blessPage = pathname.includes('/bless');
 
   if (blessModifier < 1)
     return (
@@ -51,7 +55,9 @@ const StatusDiv = props => {
             </span>
           )}
         </span>
-        <span className="card-text">{`${text.bless}: ${blessModifier}`}</span>
+        {!blessPage && (
+          <span className="card-text">{`${text.bless}: ${blessModifier}`}</span>
+        )}
         <span className="card-text">{`${text.slot}: ${slot}`}</span>
       </div>
     );
@@ -70,7 +76,9 @@ const StatusDiv = props => {
         {`${text.attack}: ${attack}+${itemsUpgrades.attack} -> `}
         <span className="blue">{`${addBlessModifier(attack, 'attack')}`}</span>
       </span>
-      <span className="card-text">{`${text.bless}: ${blessModifier}`}</span>
+      {!blessPage && (
+        <span className="card-text">{`${text.bless}: ${blessModifier}`}</span>
+      )}
       <span className="card-text">{`${text.slot}: ${slot}`}</span>
     </div>
   );

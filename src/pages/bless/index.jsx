@@ -104,7 +104,7 @@ const Bless = () => {
     setShowStars(desiredBless);
     setItensToSacrifice(toSacrifice);
     setTotalBlessPrice(price);
-    setBlessModifier(RARITY_BONUS[selectedItem.rarity.en][desiredBless]);
+    setBlessModifier(desiredBless);
   };
 
   const changeItem = iName => {

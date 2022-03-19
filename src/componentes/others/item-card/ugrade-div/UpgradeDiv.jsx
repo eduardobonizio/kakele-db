@@ -1,9 +1,11 @@
+import { useRouter } from 'next/router';
 import { BLESS_OPTIONS, UPGRADES_STAGES } from '../../../../data/kakeleData';
 
 const UpgradeDiv = props => {
+  const { pathname } = useRouter();
   const { text, changeUpgrades, upgrades, styles, rarity } = props;
   const status = ['armor', 'magic', 'attack'];
-
+  const blessPage = pathname.includes('/bless');
   return (
     <div className={styles.upgradeDiv}>
       <span className="card-text">{text.upgrade}</span>
@@ -25,7 +27,7 @@ const UpgradeDiv = props => {
           </div>
         );
       })}
-      {rarity.en !== 'Legendary' && (
+      {rarity.en !== 'Legendary' && !blessPage && (
         <div>
           <select
             className={styles.select}
