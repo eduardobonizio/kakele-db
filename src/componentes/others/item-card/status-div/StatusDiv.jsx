@@ -1,3 +1,5 @@
+import { RARITY_BONUS } from '../../../../lib/bless';
+
 const StatusDiv = props => {
   const {
     text,
@@ -9,11 +11,13 @@ const StatusDiv = props => {
     blessModifier,
     styles,
     itemsUpgrades,
+    rarity,
   } = props;
 
   const addBlessModifier = (statusValue, statusName) => {
     const totalStatus = itemsUpgrades[statusName] + statusValue;
-    return Math.floor(totalStatus + (totalStatus * blessModifier) / 100);
+    const blessBonus = RARITY_BONUS[rarity.en][blessModifier];
+    return Math.floor(totalStatus + (totalStatus * blessBonus) / 100);
   };
 
   if (blessModifier < 1)
@@ -47,6 +51,7 @@ const StatusDiv = props => {
             </span>
           )}
         </span>
+        <span className="card-text">{`${text.bless}: ${blessModifier}`}</span>
         <span className="card-text">{`${text.slot}: ${slot}`}</span>
       </div>
     );
@@ -65,6 +70,7 @@ const StatusDiv = props => {
         {`${text.attack}: ${attack}+${itemsUpgrades.attack} -> `}
         <span className="blue">{`${addBlessModifier(attack, 'attack')}`}</span>
       </span>
+      <span className="card-text">{`${text.bless}: ${blessModifier}`}</span>
       <span className="card-text">{`${text.slot}: ${slot}`}</span>
     </div>
   );

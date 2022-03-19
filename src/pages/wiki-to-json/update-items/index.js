@@ -72,8 +72,6 @@ const UpdateItems = () => {
       return newItem;
     });
 
-    console.log(lastId);
-
     const allItensUpdated = [...updatedItens];
 
     copy(JSON.stringify(allItensUpdated));

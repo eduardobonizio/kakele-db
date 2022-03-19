@@ -10977,16 +10977,16 @@ const UPGRADES_DATA = [
 ];
 
 const ALL_ITENS_SLOTS_LIST = [
+  'necklace',
   'helmet',
+  'ring',
+  'weapon',
   'armor',
-  'shoe',
   'shield',
   'book',
-  'necklace',
-  'ring',
-  'pants',
   'accessorie',
-  'weapon',
+  'pants',
+  'shoe',
 ];
 
 const ITEM_FILTERS = ['level', 'attack', 'armor', 'magic'];

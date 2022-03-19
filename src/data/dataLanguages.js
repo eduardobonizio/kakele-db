@@ -67,6 +67,7 @@ const itemCardJsx = {
     bonus: 'Bonus',
     upgrade: 'Upgrade',
     saveItem: 'Save',
+    bless: 'Bless',
   },
   pt: {
     armor: 'Armadura',
@@ -87,6 +88,7 @@ const itemCardJsx = {
     bonus: 'Bônus',
     upgrade: 'Forja',
     saveItem: 'Salvar',
+    bless: 'Bless',
   },
 };
 const setCreatorPageText = {

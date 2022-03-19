@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
-import { ALL_ITENS_SLOTS_LIST } from '../../data/kakeleData';
-
 import tempEquips from '../../data/tempEquips.json';
 import tempWeapons from '../../data/tempWeapons.json';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
@@ -110,7 +108,18 @@ export default function WikiDataBaseToJson() {
 
   const getEquipmentsItens = () => {
     const allTrElements = [...document.getElementsByTagName('tr')];
-    const slots = ALL_ITENS_SLOTS_LIST;
+    const slots = [
+      'helmet',
+      'armor',
+      'shoe',
+      'shield',
+      'book',
+      'necklace',
+      'ring',
+      'pants',
+      'accessorie',
+      'weapon',
+    ];
 
     let slotIndex = 0;
     let startLvl = 0;

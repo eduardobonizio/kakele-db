@@ -1,8 +1,9 @@
-import { UPGRADES_STAGES } from '../../../../data/kakeleData';
+import { BLESS_OPTIONS, UPGRADES_STAGES } from '../../../../data/kakeleData';
 
 const UpgradeDiv = props => {
-  const { text, changeUpgrades, upgrades, styles } = props;
+  const { text, changeUpgrades, upgrades, styles, rarity } = props;
   const status = ['armor', 'magic', 'attack'];
+
   return (
     <div className={styles.upgradeDiv}>
       <span className="card-text">{text.upgrade}</span>
@@ -24,6 +25,22 @@ const UpgradeDiv = props => {
           </div>
         );
       })}
+      {rarity.en !== 'Legendary' && (
+        <div>
+          <select
+            className={styles.select}
+            id="bless"
+            value={upgrades.bless}
+            onChange={e => changeUpgrades(Number(e.target.value), 'bless')}
+          >
+            {BLESS_OPTIONS.map((value, index) => (
+              <option key={index} value={value}>
+                {value}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
     </div>
   );
 };

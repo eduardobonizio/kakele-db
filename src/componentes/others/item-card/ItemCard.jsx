@@ -51,12 +51,15 @@ export default function ItemCard(props) {
       imgUrl,
       bonus,
       itemBonus,
+      rarity,
     },
   } = props;
   const text = textOptions[locale];
   const [showUpdateItem, setShowUpdateItem] = useState(false);
   const showDetails =
     router.pathname.includes('wiki') || router.pathname.includes('new-items');
+
+  const blessStars = blessQuantity || Number(itemBonus.bless);
 
   const updateStats = (newValue, stat) => {
     if (!showUpdateItem) setShowUpdateItem(!showUpdateItem);
@@ -110,10 +113,10 @@ export default function ItemCard(props) {
           <h6 className="card-title">{item[locale]}</h6>
         </div>
         <div className="d-flex flex-column">
-          {blessQuantity < 1 && <i className="bi bi-star"></i>}
-          {blessQuantity > 0 && (
+          {blessStars < 1 && <i className="bi bi-star"></i>}
+          {blessStars > 0 && (
             <div className={styles.stars}>
-              {[...Array(blessQuantity).keys()].map(e => (
+              {[...Array(blessStars).keys()].map(e => (
                 <i key={e} className="bi bi-star-fill"></i>
               ))}
             </div>
@@ -126,9 +129,10 @@ export default function ItemCard(props) {
               attack={attack}
               level={level}
               slot={slot}
-              blessModifier={blessModifier}
+              blessModifier={blessModifier || itemBonus.bless}
               itemsUpgrades={itemBonus}
               styles={styles}
+              rarity={rarity}
             />
             {item.level > 0 && (
               <UpgradeDiv
@@ -138,9 +142,10 @@ export default function ItemCard(props) {
                 attack={attack}
                 level={level}
                 slot={slot}
-                blessModifier={blessModifier}
+                blessModifier={blessModifier || itemBonus.bless}
                 styles={styles}
                 upgrades={itemBonus}
+                rarity={rarity}
                 changeUpgrades={updateStats}
               />
             )}

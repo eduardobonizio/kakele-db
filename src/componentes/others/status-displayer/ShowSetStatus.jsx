@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { showSetStatusJsx as textOptions } from '../../../data/dataLanguages';
 import { checkSetElement } from '../../../data/kakeleActions';
+import { RARITY_BONUS } from '../../../lib/bless';
 import Input from '../../inputs/Input';
 import styles from './ShowSetStatus.module.css';
 
@@ -36,21 +37,47 @@ export default function ShowSetStatus(props) {
   useEffect(() => {
     if (!itensList) return;
 
+    const addBlessModifier = (status, ugradeBonus, bless, rarity) => {
+      const totalStatus = status + ugradeBonus;
+      const blessBonus = RARITY_BONUS[rarity][bless];
+      return Math.floor(totalStatus + (totalStatus * blessBonus) / 100);
+    };
+
     const sumStatusValues = () => {
       try {
         return itensList.reduce(
           (anterior, proximo) => {
-            if (!proximo) return anterior;
+            if (!proximo || proximo.level < 1) return anterior;
             return {
-              armor: anterior.armor + proximo.armor + proximo.itemBonus.armor,
-              magic: anterior.magic + proximo.magic + proximo.itemBonus.magic,
+              armor:
+                anterior.armor +
+                addBlessModifier(
+                  proximo.armor,
+                  proximo.itemBonus.armor,
+                  proximo.itemBonus.bless,
+                  proximo.rarity.en,
+                ),
+              magic:
+                anterior.magic +
+                addBlessModifier(
+                  proximo.magic,
+                  proximo.itemBonus.magic,
+                  proximo.itemBonus.bless,
+                  proximo.rarity.en,
+                ),
               attack:
-                anterior.attack + proximo.attack + proximo.itemBonus.attack,
+                anterior.attack +
+                addBlessModifier(
+                  proximo.attack,
+                  proximo.itemBonus.attack,
+                  proximo.itemBonus.bless,
+                  proximo.rarity.en,
+                ),
             };
           },
           { armor: 0, magic: 0, attack: 0 },
         );
-      } catch {
+      } catch (e) {
         return { armor: 0, magic: 0, attack: 0 };
       }
     };
