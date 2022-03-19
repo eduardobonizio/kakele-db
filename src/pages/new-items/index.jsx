@@ -2,11 +2,12 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import ItemCard from '../../componentes/others/item-card/ItemCard';
-import { NEW_ITEMS } from '../../data/kakeleData';
+import NEW_ITEMS from '../../data/newItems.json';
 import styles from './NewItems.module.css';
 import { newItemsJsx as textOptions } from '../../data/dataLanguages';
 
 const NewItemsPage = () => {
+  console.log(NEW_ITEMS);
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [newItems, setNewItems] = useState(NEW_ITEMS);

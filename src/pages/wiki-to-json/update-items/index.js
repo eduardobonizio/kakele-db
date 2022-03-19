@@ -76,6 +76,11 @@ const UpdateItems = () => {
 
     copy(JSON.stringify(allItensUpdated));
   };
+
+  const getAllNewItens = () => {
+    const newItens = [...equipments, ...weapons].filter(item => item.id > 520);
+    copy(JSON.stringify(newItens));
+  };
   return (
     <>
       <button onClick={() => processarDadosArmas()}>Copiar Armas</button>
@@ -83,6 +88,7 @@ const UpdateItems = () => {
         Copiar Equipamentos
       </button>
       <button onClick={() => manageItens()}>Modificar</button>
+      <button onClick={() => getAllNewItens()}>Copy new items</button>
     </>
   );
 };
