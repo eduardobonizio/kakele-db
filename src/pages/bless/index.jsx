@@ -105,6 +105,11 @@ const Bless = () => {
     setItensToSacrifice(toSacrifice);
     setTotalBlessPrice(price);
     setBlessModifier(desiredBless);
+    const updatedItem = {
+      ...selectedItem,
+      itemBonus: { ...selectedItem.itemBonus, bless: desiredBless },
+    };
+    setSelectedItem(updatedItem);
   };
 
   const changeItem = iName => {
