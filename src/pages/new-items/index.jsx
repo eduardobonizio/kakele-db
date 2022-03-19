@@ -5,12 +5,13 @@ import ItemCard from '../../componentes/others/item-card/ItemCard';
 import NEW_ITEMS from '../../data/newItems.json';
 import styles from './NewItems.module.css';
 import { newItemsJsx as textOptions } from '../../data/dataLanguages';
+import { loadAndAddMissingItems } from '../../data/kakeleActions';
 
 const NewItemsPage = () => {
-  console.log(NEW_ITEMS);
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
   const [newItems, setNewItems] = useState(NEW_ITEMS);
+  const [currentSet, setCurrentSet] = useState(loadAndAddMissingItems(locale));
 
   const updateOneItemOnly = (oldItem, newItem) => {
     const items = [...newItems];
@@ -50,6 +51,9 @@ const NewItemsPage = () => {
                 locale={locale}
                 onlyOneItem="true"
                 updatedRecomendedSet={i => updateOneItemOnly(item, i)}
+                currentSet={currentSet}
+                updateCurrentSet={setCurrentSet}
+                recomendedSet={item}
               />
             </div>
           ))}
