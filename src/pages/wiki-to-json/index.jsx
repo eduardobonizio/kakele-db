@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
-import { equipments, weapons } from '../../data/kakeleData';
+import { ALL_ITENS_SLOTS_LIST } from '../../data/kakeleData';
+
+import tempEquips from '../../data/tempEquips.json';
+import tempWeapons from '../../data/tempWeapons.json';
 import ButtonForKakele from '../../componentes/buttons/buttton-for-kakele/ButtonForKakele';
 
 export default function WikiDataBaseToJson() {
@@ -30,16 +33,17 @@ export default function WikiDataBaseToJson() {
   const addPtBrToItens = () => {
     // Para funcionar tem que traduzir a página com o google tradutor e rolar até o final da página, depois volta para o inicio e clica no botão
     let newEquipmentData = [];
+
     if (wikiType === 'equipments') {
-      newEquipmentData = [...equipments];
+      newEquipmentData = [...tempEquips];
     } else {
-      newEquipmentData = [...weapons];
+      newEquipmentData = [...tempWeapons];
     }
     const allTrElements = [...document.getElementsByTagName('tr')];
 
     allTrElements.forEach((item, index) => {
       if (index === 0) return;
-      newEquipmentData[index - 1].namePtBr = item
+      newEquipmentData[index - 1].pt = item
         .getElementsByTagName('td')[0]
         .innerText.replace('Pernas', 'Calças');
     });
@@ -76,9 +80,10 @@ export default function WikiDataBaseToJson() {
       const imgLink = item
         .querySelector('.item')
         .style.backgroundImage.replace('url(', '')
-        .replace(')', '');
+        .replace(')', '')
+        .replaceAll('"', '');
       const itemAtributes = {
-        name: item.getElementsByTagName('td')[0].innerText,
+        en: item.getElementsByTagName('td')[0].innerText,
         level,
         vocation: item.getElementsByTagName('td')[2].innerText,
         energy: item.getElementsByTagName('td')[3].innerText,
@@ -105,18 +110,8 @@ export default function WikiDataBaseToJson() {
 
   const getEquipmentsItens = () => {
     const allTrElements = [...document.getElementsByTagName('tr')];
-    const slots = [
-      'helmet',
-      'armor',
-      'shoe',
-      'shield',
-      'book',
-      'necklace',
-      'ring',
-      'pants',
-      'accessorie',
-      'weapon',
-    ];
+    const slots = ALL_ITENS_SLOTS_LIST;
+
     let slotIndex = 0;
     let startLvl = 0;
 
@@ -144,9 +139,11 @@ export default function WikiDataBaseToJson() {
       const imgLink = item
         .querySelector('.item')
         .style.backgroundImage.replace('url(', '')
-        .replace(')', '');
+        .replace(')', '')
+        .replaceAll('"', '');
+
       const itemAtributes = {
-        name: item.getElementsByTagName('td')[0].innerText,
+        en: item.getElementsByTagName('td')[0].innerText,
         level,
         vocation: item.getElementsByTagName('td')[2].innerText,
         energy: item.getElementsByTagName('td')[3].innerText,

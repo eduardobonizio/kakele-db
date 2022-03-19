@@ -44,22 +44,37 @@ const UpdateItems = () => {
     }
   };
 
-  const manageAllItens = () => {
-    let index = 1;
+  const manageItens = () => {
+    // let lastId = 520;
+    let lastId = 562;
 
-    const updatedEquipments = equipments.map(item => {
-      const itemWithId = { ...item, id: index };
-      index++;
-      return itemWithId;
+    const updatedItens = tempWeapons.map(item => {
+      const oldItem = weapons.find(i => i.en === item.en);
+
+      if (oldItem) {
+        const updatedItem = {
+          ...oldItem,
+          ...item,
+          pt: oldItem.pt,
+        };
+
+        return updatedItem;
+      }
+
+      const newItem = {
+        ...item,
+        id: lastId + 1,
+        itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+      };
+
+      lastId += 1;
+
+      return newItem;
     });
 
-    const updatedWeapons = weapons.map(item => {
-      const itemWithId = { ...item, id: index };
-      index++;
-      return itemWithId;
-    });
+    console.log(lastId);
 
-    const allItensUpdated = [...updatedWeapons];
+    const allItensUpdated = [...updatedItens];
 
     copy(JSON.stringify(allItensUpdated));
   };
@@ -69,7 +84,7 @@ const UpdateItems = () => {
       <button onClick={() => processarDadosEquipamentos()}>
         Copiar Equipamentos
       </button>
-      <button onClick={() => manageAllItens()}>Modificar</button>
+      <button onClick={() => manageItens()}>Modificar</button>
     </>
   );
 };
