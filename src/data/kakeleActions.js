@@ -131,7 +131,11 @@ const normalizeUpgrades = uppgradeBonus => {
 
 const normalizeBless = blessBonus => {
   if (!blessBonus || isNaN(Number(blessBonus))) return 0;
-  return Number(blessBonus) > 10 ? 10 : Number(blessBonus) < 1 ? 0 : blessBonus;
+  return Number(blessBonus) > 10
+    ? 10
+    : Number(blessBonus) < 1
+    ? 0
+    : Number(blessBonus);
 };
 
 const findQueryItems = (slot, id, upgrade = 0) => {

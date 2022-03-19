@@ -39,7 +39,7 @@ export default function ShowSetStatus(props) {
 
     const addBlessModifier = (status, ugradeBonus, bless, rarity) => {
       const totalStatus = status + ugradeBonus;
-      const blessBonus = RARITY_BONUS[rarity][bless];
+      const blessBonus = RARITY_BONUS[rarity][Number(bless)];
       return Math.floor(totalStatus + (totalStatus * blessBonus) / 100);
     };
 
@@ -88,7 +88,6 @@ export default function ShowSetStatus(props) {
   }, [itensList]);
 
   const addLevel = !level ? Number(savedCharLevel) || 0 : Number(level);
-
   return (
     <div className="status-container">
       <h3 className={styles.h3}>{text.attributes}</h3>
