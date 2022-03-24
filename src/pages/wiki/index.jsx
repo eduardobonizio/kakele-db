@@ -62,7 +62,8 @@ export default function ShowItem() {
 
     const curSet = loadAndAddMissingItems(locale, savedSet, savedSet);
 
-    if (curSet[item.slot].en === item.en) setItem(curSet[item.slot]);
+    if (curSet[item.slot] && curSet[item.slot].en === item.en)
+      setItem(curSet[item.slot]);
 
     setCurrentSet(curSet);
   }, [item.en, item.slot, locale]);
