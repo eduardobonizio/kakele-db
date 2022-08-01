@@ -3,9 +3,17 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 767px) {
+// Android/iOS
+@media screen and (max-width: 574px) {
   .statusAndCardContainer {
     display: block;
+  }
+
+  .filtersContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 330px;
+    max-width: 330px;
   }
 
   .row {
@@ -18,9 +26,65 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+// x-small screen
+@media screen and (min-width: 575px) and (max-width: 766px) {
+  .statusAndCardContainer {
+    display: block;
+  }
+
+  .filtersContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .col {
+    margin-right: 5px;
+    padding: 0;
+  }
+}
+
+// Small Screen
+@media screen and (min-width: 767px) and (max-width: 990px) {
   .statusAndCardContainer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filtersContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .col {
+    display: flex;
+    width: auto;
+  }
+}
+
+// Medium Screen
+@media screen and (min-width: 991px) {
+  .statusAndCardContainer {
+    display: flex;
+  }
+
+  .filtersContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 330px;
+    max-width: 330px;
   }
 
   .filtersContainer {

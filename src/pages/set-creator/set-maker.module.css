@@ -7,9 +7,20 @@
           justify-content: space-between;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 574px) {
   .statusAndCardContainer {
     display: block;
+  }
+  .filtersContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 330px;
+    max-width: 330px;
   }
   .row {
     display: -webkit-box;
@@ -24,11 +35,84 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 575px) and (max-width: 766px) {
+  .statusAndCardContainer {
+    display: block;
+  }
+  .filtersContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .col {
+    margin-right: 5px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 990px) {
   .statusAndCardContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filtersContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .row {
+    margin-left: 0 !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100vw;
+  }
+  .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .statusAndCardContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .filtersContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 330px;
+    max-width: 330px;
   }
   .filtersContainer {
     min-width: 330px;

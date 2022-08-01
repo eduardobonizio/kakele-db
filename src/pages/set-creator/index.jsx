@@ -116,70 +116,78 @@ export default function SetMaker() {
   }, [locale]);
 
   return (
-    <div className={`container ${styles.statusAndCardContainer}`}>
-      <Head>
-        <title>{text.title}</title>
-
-        {locales.map(loc => {
-          return (
-            <link
-              rel="alternate"
-              hrefLang={loc}
-              href={`https://www.kakeletools.com/${loc}/set-creator`}
-              key={loc}
-            />
-          );
-        })}
-        <meta name="description" content={text.description} />
-        <meta property="og:title" content={text.title} key="title" />
-        <link rel="canonical" href="https://www.kakeletools.com/set-creator" />
-      </Head>
-
-      <div className={`d-flex flex-column ${styles.filtersContainer}`}>
+    <div className="container">
+      <div className="d-flex justify-content-center">
         <h1>{text.h1}</h1>
-        <KakeleItemsFilters statusPrincipal locale={locale} />
-        <div className={styles.buttonsContainer}>
-          <ButtonForKakele onClick={generateSet} text={text.generateSet} />
-          <Link href="/search-item" passHref locale={locale}>
-            <LinkButton text={text.searchItens} />
-          </Link>
-          {showEquipAll && (
-            <Link href="/set-viewer" passHref locale={locale}>
-              <LinkButton text={text.equipAll} onClick={equipAllListed} />
-            </Link>
-          )}
+      </div>
+      <div className={`${styles.statusAndCardContainer}`}>
+        <Head>
+          <title>{text.title}</title>
+
+          {locales.map(loc => {
+            return (
+              <link
+                rel="alternate"
+                hrefLang={loc}
+                href={`https://www.kakeletools.com/${loc}/set-creator`}
+                key={loc}
+              />
+            );
+          })}
+          <meta name="description" content={text.description} />
+          <meta property="og:title" content={text.title} key="title" />
+          <link
+            rel="canonical"
+            href="https://www.kakeletools.com/set-creator"
+          />
+        </Head>
+
+        <div className={styles.filtersContainer}>
+          <div>
+            <KakeleItemsFilters statusPrincipal locale={locale} />
+            <div className={styles.buttonsContainer}>
+              <ButtonForKakele onClick={generateSet} text={text.generateSet} />
+              <Link href="/search-item" passHref locale={locale}>
+                <LinkButton text={text.searchItens} />
+              </Link>
+              {showEquipAll && (
+                <Link href="/set-viewer" passHref locale={locale}>
+                  <LinkButton text={text.equipAll} onClick={equipAllListed} />
+                </Link>
+              )}
+            </div>
+          </div>
+          <ShowSetStatus
+            itensListToShowStatus={currentSet}
+            locale={locale}
+            level={level}
+          />
         </div>
 
-        <ShowSetStatus
-          itensListToShowStatus={currentSet}
-          locale={locale}
-          level={level}
-        />
-      </div>
-
-      <div className={`row row-cols-auto ${styles.row}`}>
-        {Object.keys(currentSet).map((key, i) => {
-          if (currentSet[key].level < 1) return;
-          return (
-            <div className={`col ${styles.col}`} key={key}>
-              <ItemCard
-                index={i}
-                ignoredItens={ignoredItens}
-                ignoreItens={ignoreItens}
-                ignoreThisSlotsElement={ignoreThisSlotsElement}
-                ignoreElementForThisSlot={ignoreElementForThisSlot}
-                item={currentSet[key]}
-                stleFromParent={styles}
-                locale={locale}
-                currentSet={savedSet}
-                updateCurrentSet={setSavedSet}
-                updatedRecomendedSet={item => {
-                  setCurrentSet({ ...currentSet, ...item });
-                }}
-              />
-            </div>
-          );
-        })}
+        <div className={`row row-cols-auto ${styles.row}`}>
+          {Object.keys(currentSet).map((key, i) => {
+            if (currentSet[key].level < 1) return;
+            return (
+              <div className={`col ${styles.col}`} key={key}>
+                <ItemCard
+                  index={i}
+                  ignoredItens={ignoredItens}
+                  ignoreItens={ignoreItens}
+                  ignoreThisSlotsElement={ignoreThisSlotsElement}
+                  ignoreElementForThisSlot={ignoreElementForThisSlot}
+                  item={currentSet[key]}
+                  stleFromParent={styles}
+                  locale={locale}
+                  currentSet={savedSet}
+                  updateCurrentSet={setSavedSet}
+                  updatedRecomendedSet={item => {
+                    setCurrentSet({ ...currentSet, ...item });
+                  }}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
