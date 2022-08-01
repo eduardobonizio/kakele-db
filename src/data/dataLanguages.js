@@ -32,8 +32,8 @@ const navBarJsx = {
     oreCalculator: 'Upgrades',
     expCalculator: 'Exp Calculator',
     seeItem: 'Wiki',
-    blessPage: 'Bless (BETA 4.1)',
-    newItems: 'New Items (BETA 4.1)',
+    blessPage: 'Bless',
+    newItems: 'New Items',
   },
   pt: {
     showSet: 'Ver Set',
@@ -42,8 +42,8 @@ const navBarJsx = {
     oreCalculator: 'Forja',
     expCalculator: 'Calculadora de Exp',
     seeItem: 'Wiki',
-    blessPage: 'Bless (BETA 4.1)',
-    newItems: 'Novos Itens (BETA 4.1)',
+    blessPage: 'Bless',
+    newItems: 'Novos Itens',
   },
 };
 
@@ -347,7 +347,7 @@ const expCalculatorJsx = {
 
 const blessJsx = {
   en: {
-    title: 'Kakele Bless System (BETA 4.1)',
+    title: 'Kakele Bless System',
     description:
       'Bless system guide for Kakele MMORPG, get all suggestions for bless your itens',
     searchLabel: 'Item',
@@ -361,7 +361,7 @@ const blessJsx = {
     priceText: 'Gold Total (KKs)',
   },
   pt: {
-    title: 'Kakele Sistema de Bless (BETA 4.1)',
+    title: 'Kakele Sistema de Bless',
     description:
       'Guia do sistema de Bless do Kakele MMORPG, as melhores sugestões de item para você fazer o bless dos seus equipamentos',
     searchLabel: 'Item',
@@ -378,12 +378,12 @@ const blessJsx = {
 
 const newItemsJsx = {
   en: {
-    title: 'Kakele New Items (BETA 4.1)',
+    title: 'Kakele New Items',
     description:
       'New item from Kakele MMORPG update 4.1 which will be released in april/2022',
   },
   pt: {
-    title: 'Kakele Novos Items (BETA 4.1)',
+    title: 'Kakele Novos Items',
     description:
       'Novos items do update 4.1 do Kakele MMORPG, que será lançado em abril/2022',
   },
