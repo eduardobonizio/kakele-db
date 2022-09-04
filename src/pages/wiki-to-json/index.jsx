@@ -40,8 +40,8 @@ export default function WikiDataBaseToJson() {
     const allTrElements = [...document.getElementsByTagName('tr')];
 
     allTrElements.forEach((item, index) => {
-      if (index === 0) return;
-      newEquipmentData[index - 1].pt = item
+      if (!newEquipmentData[index]) return;
+      newEquipmentData[index].pt = item
         .getElementsByTagName('td')[0]
         .innerText.replace('Pernas', 'Calças');
     });

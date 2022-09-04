@@ -4,52 +4,53 @@ import tempEquips from '../../../data/tempEquips.json';
 import copy from 'copy-to-clipboard';
 
 const UpdateItems = () => {
-  const processarDadosArmas = () => {
-    const updatedWeapons = weapons.map(item => {
-      return {
-        ...item,
-        itemBonus: {
-          attack: 0,
-          armor: 0,
-          magic: 0,
-          bless: 0,
-        },
-      };
-    });
+  // const processarDadosArmas = () => {
+  //   const updatedWeapons = weapons.map(item => {
+  //     return {
+  //       ...item,
+  //       itemBonus: {
+  //         attack: 0,
+  //         armor: 0,
+  //         magic: 0,
+  //         bless: 0,
+  //       },
+  //     };
+  //   });
 
-    if (updatedWeapons.length === weapons.length) {
-      copy(JSON.stringify(updatedWeapons));
-    } else {
-      copy('Quantidade de items diferentes');
-    }
-  };
+  //   if (updatedWeapons.length === weapons.length) {
+  //     copy(JSON.stringify(updatedWeapons));
+  //   } else {
+  //     copy('Quantidade de items diferentes');
+  //   }
+  // };
 
-  const processarDadosEquipamentos = () => {
-    const updatedEquipments = equipments.map(item => {
-      return {
-        ...item,
-        itemBonus: {
-          attack: 0,
-          armor: 0,
-          magic: 0,
-          bless: 0,
-        },
-      };
-    });
+  // const processarDadosEquipamentos = () => {
+  //   const updatedEquipments = equipments.map(item => {
+  //     return {
+  //       ...item,
+  //       itemBonus: {
+  //         attack: 0,
+  //         armor: 0,
+  //         magic: 0,
+  //         bless: 0,
+  //       },
+  //     };
+  //   });
 
-    if (updatedEquipments.length === equipments.length) {
-      copy(JSON.stringify(updatedEquipments));
-    } else {
-      copy('Quantidade de items diferentes');
-    }
-  };
+  //   if (updatedEquipments.length === equipments.length) {
+  //     copy(JSON.stringify(updatedEquipments));
+  //   } else {
+  //     copy('Quantidade de items diferentes');
+  //   }
+  // };
 
-  const manageItens = () => {
-    // let lastId = 520;
-    let lastId = 562;
+  const manageItens = (tempItems, items) => {
+    // Pegar o ultimo ID no arquivo KakeleData.js
+    // Novo equip começa em 568
+    let lastId = 592;
 
-    const updatedItens = tempWeapons.map(item => {
-      const oldItem = weapons.find(i => i.en === item.en);
+    const updatedItens = tempItems.map(item => {
+      const oldItem = items.find(i => i.en === item.en);
 
       if (oldItem) {
         const updatedItem = {
@@ -78,18 +79,35 @@ const UpdateItems = () => {
   };
 
   const getAllNewItens = () => {
-    const newItens = [...equipments, ...weapons].filter(item => item.id > 520);
+    const newItens = [...tempEquips, ...tempWeapons].filter(
+      item => item.id > 567,
+    );
     copy(JSON.stringify(newItens));
   };
   return (
-    <>
-      <button onClick={() => processarDadosArmas()}>Copiar Armas</button>
+    <div className="container">
+      <div className="d-flex flex-column align-items-center">
+        {/* <button onClick={() => processarDadosArmas()}>Copiar Armas</button>
       <button onClick={() => processarDadosEquipamentos()}>
         Copiar Equipamentos
-      </button>
-      <button onClick={() => manageItens()}>Modificar</button>
-      <button onClick={() => getAllNewItens()}>Copy new items</button>
-    </>
+      </button> */}
+        <button
+          className="mb-1"
+          onClick={() => manageItens(tempEquips, equipments)}
+        >
+          Adicionar propriedades aos Temp Equips
+        </button>
+        <button
+          className="mb-1"
+          onClick={() => manageItens(tempWeapons, weapons)}
+        >
+          Adicionar propriedades as Temp Weapons
+        </button>
+        <button className="mb-1" onClick={() => getAllNewItens()}>
+          Copy new items
+        </button>
+      </div>
+    </div>
   );
 };
 
