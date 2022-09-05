@@ -300,7 +300,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4033.jpg',
     slot: 'helmet',
-    pt: 'Elmo da Guarda Nobre',
+    pt: 'Elmo de Guarda Nobre',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 17,
@@ -606,7 +606,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4044.jpg',
     slot: 'helmet',
-    pt: 'Capacete de esteira',
+    pt: 'Capacete de Rastejador',
     id: 521,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -834,7 +834,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4045.jpg',
     slot: 'helmet',
-    pt: 'Capacete do Espreitador',
+    pt: 'Capacete de Espreitador',
     id: 522,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -910,7 +910,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4046.jpg',
     slot: 'helmet',
-    pt: 'Capacete Kajin',
+    pt: 'Elmo Kajin',
     id: 523,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -1367,7 +1367,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4111.jpg',
     slot: 'armor',
-    pt: 'Armadura do Heron',
+    pt: 'Armadura de Heron',
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 64,
@@ -1788,7 +1788,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4144.jpg',
     slot: 'armor',
-    pt: 'Armadura de Sentinela',
+    pt: 'Armadura Sentinela',
     id: 525,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -1902,7 +1902,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4200.jpg',
     slot: 'shoe',
-    pt: 'Botas de couro',
+    pt: 'Bota de couro',
     id: 527,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -1940,7 +1940,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4215.jpg',
     slot: 'shoe',
-    pt: 'Botas de Lata',
+    pt: 'Bota de Estanho',
     id: 528,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -1960,7 +1960,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4201.jpg',
     slot: 'shoe',
-    pt: 'Botas de Couro Reforçadas',
+    pt: 'Bota de Couro Reforçada',
     id: 529,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -1979,7 +1979,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4202.jpg',
     slot: 'shoe',
-    pt: 'Botas Leves',
+    pt: 'Bota Leve',
     id: 530,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -1998,7 +1998,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4212.jpg',
     slot: 'shoe',
-    pt: 'Botas Bico de Aço',
+    pt: 'Bota com Biqueira de Aço',
     id: 531,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2017,7 +2017,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4203.jpg',
     slot: 'shoe',
-    pt: 'Botas de Aço',
+    pt: 'Bota de Aço',
     id: 532,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2036,7 +2036,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4226.jpg',
     slot: 'shoe',
-    pt: 'Botas de guerreiro morto-vivo',
+    pt: 'Bota de guerreiro morto-vivo',
     id: 533,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2055,7 +2055,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4204.jpg',
     slot: 'shoe',
-    pt: 'Botas Aladas',
+    pt: 'Bota Alada',
     id: 534,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2074,7 +2074,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4205.jpg',
     slot: 'shoe',
-    pt: 'Botas Negras',
+    pt: 'Bota Negra',
     id: 535,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2093,7 +2093,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4207.jpg',
     slot: 'shoe',
-    pt: 'Botas de Ouro',
+    pt: 'Bota Dourada',
     id: 536,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2112,7 +2112,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4230.jpg',
     slot: 'shoe',
-    pt: 'Botas de Carapaça de Besouro Gigante',
+    pt: 'Bota de Carapaça de Besouro Gigante',
     id: 537,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2131,7 +2131,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4206.jpg',
     slot: 'shoe',
-    pt: 'Botas Demoníacas',
+    pt: 'Bota Demoníaca',
     id: 538,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2188,7 +2188,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4208.jpg',
     slot: 'shoe',
-    pt: 'Botas de Seda de Aranha',
+    pt: 'Bota de Seda de Aranha',
     id: 539,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2207,7 +2207,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4223.jpg',
     slot: 'shoe',
-    pt: 'Botas Extratoras Nobres',
+    pt: 'Botas de Extrator Nobre',
     id: 540,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2226,7 +2226,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4227.jpg',
     slot: 'shoe',
-    pt: 'Botas de Guerreiro Esqueleto',
+    pt: 'Bota de Esqueleto Guerreiro',
     id: 541,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2245,7 +2245,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4209.jpg',
     slot: 'shoe',
-    pt: 'Botas de lava',
+    pt: 'Bota de lava',
     id: 542,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2283,7 +2283,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4216.jpg',
     slot: 'shoe',
-    pt: 'Botas Místicas',
+    pt: 'Bota Mística',
     id: 543,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2321,7 +2321,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4231.jpg',
     slot: 'shoe',
-    pt: 'Botas de Seda da Viúva de Gelo',
+    pt: 'Bota de Seda da Viúva de Gelo',
     id: 544,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2359,7 +2359,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4228.jpg',
     slot: 'shoe',
-    pt: 'Botas do Cultista Abissal',
+    pt: 'Bota de Cultista Abissal',
     id: 545,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2397,7 +2397,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4232.jpg',
     slot: 'shoe',
-    pt: 'Botas de Minhoca Gigante',
+    pt: 'Bota de Verme Gigante',
     id: 546,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2416,7 +2416,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4229.jpg',
     slot: 'shoe',
-    pt: 'Botas do Domador de Dragões Mortos-vivos',
+    pt: 'Bota de Domador de Dragões Morto-vivo',
     id: 547,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2435,7 +2435,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4224.jpg',
     slot: 'shoe',
-    pt: 'Botas de Caçador de Gelo',
+    pt: 'Bota de Caçador do Gelo',
     id: 548,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2473,7 +2473,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4233.jpg',
     slot: 'shoe',
-    pt: 'Botas de Cristal',
+    pt: 'Bota de Cristal',
     id: 549,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2530,7 +2530,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4225.jpg',
     slot: 'shoe',
-    pt: 'Botas Revenant',
+    pt: 'Bota de Revenante',
     id: 550,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -2587,7 +2587,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4234.jpg',
     slot: 'shoe',
-    pt: 'Botas de Espreitador',
+    pt: 'Botas Espreitadoras',
     id: 551,
     info: { en: 'Movement speed -20', pt: 'Velocidade de movimento -20' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
@@ -3217,7 +3217,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4325.jpg',
     slot: 'shield',
-    pt: 'Escudo Angaina',
+    pt: 'Escudo de Angaina',
     rarity: { en: 'Uncommom', pt: 'Incomum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 153,
@@ -3410,7 +3410,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4340.jpg',
     slot: 'shield',
-    pt: 'Escudo do Rastreador',
+    pt: 'Escudo de Rastejador',
     id: 553,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -6319,7 +6319,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16032.jpg',
     slot: 'pants',
-    pt: 'Calças de Kajin',
+    pt: 'Calças Kajin',
     id: 561,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -6490,7 +6490,7 @@ const equipments = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17011.jpg',
     slot: 'accessorie',
-    pt: 'Que nem um chefe',
+    pt: 'Like A Boss',
     id: 562,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -8481,7 +8481,7 @@ const weapons = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8029.jpg',
     twoHanded: false,
-    pt: 'Kajin Scythe',
+    pt: 'Foice Kajin',
     id: 564,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -9493,7 +9493,7 @@ const weapons = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9030.jpg',
     twoHanded: true,
-    pt: 'Kajin Bow',
+    pt: 'Arco Kajin',
     id: 565,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
@@ -10439,7 +10439,7 @@ const weapons = [
     imgUrl:
       'https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10029.jpg',
     twoHanded: false,
-    pt: 'Kajin Staff',
+    pt: 'Cajado Kajin',
     id: 566,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
   },
