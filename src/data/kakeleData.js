@@ -6360,6 +6360,7 @@ const equipments = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 293,
+    ignoreAccessory: true,
   },
   {
     en: 'Crest of Fire',
@@ -6439,6 +6440,7 @@ const equipments = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 294,
+    ignoreAccessory: true,
   },
   {
     en: 'Crest of Water',
@@ -7909,7 +7911,6 @@ const weapons = [
     rarity: { en: 'Uncommom', pt: 'Incomum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 361,
-    ignoreAccessory: true,
   },
   {
     en: 'Demon Axe',
@@ -7931,7 +7932,6 @@ const weapons = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 362,
-    ignoreAccessory: true,
   },
   {
     en: 'Crown Axe',

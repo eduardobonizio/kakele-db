@@ -436,8 +436,12 @@ const findBestSet = (
     ignoreUltraRare,
   );
 
+  const itemsListWithoutNoElementAccessory = checkedUltraRareItemsList.filter(
+    item => !item.ignoreAccessory,
+  );
+
   const { itensFilteredBySlot, itensFilteredBySlotAndElement } = filterItens(
-    checkedUltraRareItemsList,
+    itemsListWithoutNoElementAccessory,
     slot,
     ignoredItens,
     element,
@@ -487,7 +491,6 @@ const filterItensByLevelAndClass = (listaDeItens, level, classe) => {
   return listaDeItens.filter(
     item =>
       useLevel >= Number(item.level) &&
-      !item.ignoreAccessory &&
       (item.vocation === classe || item.vocation === 'All' || classe === 'All'),
   );
 };
