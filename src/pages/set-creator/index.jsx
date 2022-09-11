@@ -36,10 +36,14 @@ export default function SetMaker() {
   const text = textOptions[locale];
   const [savedSet, setSavedSet] = useState(FAKE_SET);
   const [currentSet, setCurrentSet] = useState(FAKE_SET);
-  const [ignoredItens, setIgnoredItens] = useState([]);
   const [showEquipAll, setShowEquipAll] = useState(false);
-
+  const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
+
+  const resetIgnoredItemsAndElements = () => {
+    setIgnoredItens([]);
+    setIgnoreThisSlotsElement([]);
+  };
 
   const generateSet = () => {
     const itensList = filterItensByLevelAndClass(
@@ -153,6 +157,10 @@ export default function SetMaker() {
                   <LinkButton text={text.equipAll} onClick={equipAllListed} />
                 </Link>
               )}
+              <ButtonForKakele
+                onClick={resetIgnoredItemsAndElements}
+                text={text.resetSetCreatorIgnored}
+              />
             </div>
           </div>
           <ShowSetStatus

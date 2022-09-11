@@ -100,6 +100,7 @@ const setCreatorPageText = {
     equipAll: 'Equip all',
     searchItens: 'Search itens',
     h1: 'Set Creator',
+    resetSetCreatorIgnored: 'Reset Ignored',
   },
   pt: {
     title: 'Criador de set - Kakele MMORPG',
@@ -109,6 +110,7 @@ const setCreatorPageText = {
     equipAll: 'Equipar tudo',
     searchItens: 'Procurar itens',
     h1: 'Criador de set',
+    resetSetCreatorIgnored: 'Resetar Ignorados',
   },
 };
 const showSetStatusJsx = {
