@@ -168,7 +168,7 @@ const kakeleItemsFiltersJsx = {
     itemSlot: 'Item slot',
     orderBy: 'Order by',
     itemRarity: 'Rarity',
-    ignoreSuperRareItems: 'Ignore Super Rare Items',
+    ignoreSuperRareItems: 'Ignore super rare items',
     ignoreSuperRareItemsToolTip:
       'Ignored Items: Dragon, Elora, Warlord, Crests, Rainbow...',
   },
