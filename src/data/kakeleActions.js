@@ -487,6 +487,7 @@ const filterItensByLevelAndClass = (listaDeItens, level, classe) => {
   return listaDeItens.filter(
     item =>
       useLevel >= Number(item.level) &&
+      !item.ignoreAccessory &&
       (item.vocation === classe || item.vocation === 'All' || classe === 'All'),
   );
 };
