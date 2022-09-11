@@ -182,9 +182,12 @@ export default function ItemCard(props) {
         {ignoredItens && (
           <>
             <div className="input-group mb-1">
-              <div className="input-group-text">
+              <label
+                htmlFor={`exclude-item-${index}`}
+                className="input-group-text"
+              >
                 <input
-                  className="form-check-input"
+                  className="form-check-input m-1"
                   type="checkbox"
                   name={item[locale]}
                   id={`exclude-item-${index}`}
@@ -192,18 +195,16 @@ export default function ItemCard(props) {
                   aria-label="Checkbox for following text input"
                   onChange={e => ignoreItens(e.target.name, e.target.checked)}
                 />
-              </div>
-              <label
-                htmlFor={`exclude-item-${index}`}
-                className="input-group-text"
-              >
                 {text.ignoreItem}
               </label>
             </div>
             <div className="input-group mb-1">
-              <div className="input-group-text">
+              <label
+                htmlFor={`ignore-slot-element-${index}`}
+                className="input-group-text"
+              >
                 <input
-                  className="form-check-input"
+                  className="form-check-input m-1"
                   type="checkbox"
                   name={slot}
                   id={`ignore-slot-element-${index}`}
@@ -213,11 +214,6 @@ export default function ItemCard(props) {
                     ignoreElementForThisSlot(e.target.name, e.target.checked)
                   }
                 />
-              </div>
-              <label
-                htmlFor={`ignore-slot-element-${index}`}
-                className="input-group-text"
-              >
                 {text.ignoreElement}
               </label>
             </div>
