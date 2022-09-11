@@ -169,6 +169,8 @@ const kakeleItemsFiltersJsx = {
     orderBy: 'Order by',
     itemRarity: 'Rarity',
     ignoreSuperRareItems: 'Ignore Super Rare Items',
+    ignoreSuperRareItemsToolTip:
+      'Ignored Items: Dragon, Elora, Warlord, Crests, Rainbow...',
   },
   pt: {
     itemName: 'Nome do item',
@@ -193,6 +195,8 @@ const kakeleItemsFiltersJsx = {
     orderBy: 'Ordenar por',
     itemRarity: 'Raridade',
     ignoreSuperRareItems: 'Ignorar itens muito raros',
+    ignoreSuperRareItemsToolTip:
+      'Itens Ignorados: Dragão, Elora, Warlord, Brasão, Arco-íris...',
   },
 };
 const oreCalculatorJsx = {

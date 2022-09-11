@@ -174,7 +174,13 @@ export default function KakeleItemsFilters(props) {
         </>
       )}
       <div className="input-group mb-2 d-flex">
-        <label className="input-group-text" htmlFor="flexSwitchCheckDefault">
+        <label
+          className="input-group-text"
+          htmlFor="flexSwitchCheckDefault"
+          data-toggle="tooltip"
+          data-placement="top"
+          title={text.ignoreSuperRareItemsToolTip}
+        >
           <input
             className="m-1"
             type="checkbox"
