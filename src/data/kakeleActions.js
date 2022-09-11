@@ -623,4 +623,5 @@ export {
   equipmentsArrayToObject,
   loadAndAddMissingItems,
   loadSetFromQuery,
+  filteredUltraRareItems,
 };

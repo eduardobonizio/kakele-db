@@ -13,6 +13,7 @@ import {
   findItemsByRarity,
   loadAndAddMissingItems,
   loadSetFromLocalStorage,
+  filteredUltraRareItems,
 } from '../../data/kakeleActions';
 import { equipments, FAKE_SET, weapons } from '../../data/kakeleData';
 
@@ -24,7 +25,16 @@ import { useRouter } from 'next/router';
 
 export default function SearchItem() {
   const {
-    state: { level, itemName, element, slot, characterClass, orderBy, rarity },
+    state: {
+      level,
+      itemName,
+      element,
+      slot,
+      characterClass,
+      orderBy,
+      rarity,
+      ignoreUltraRare,
+    },
   } = useAppContext();
   const { locale, locales } = useRouter();
   const text = textOptions[locale];
@@ -52,7 +62,16 @@ export default function SearchItem() {
       characterClass,
     );
 
-    const itensListBySlot = filterItensBySlot(itensList, slot, [])
+    const itensListFilteredUltraRare = filteredUltraRareItems(
+      itensList,
+      ignoreUltraRare,
+    );
+
+    const itensListBySlot = filterItensBySlot(
+      itensListFilteredUltraRare,
+      slot,
+      [],
+    )
       .sort((a, b) => b.level - a.level)
       .sort((a, b) => b[orderBy] - a[orderBy]);
 
