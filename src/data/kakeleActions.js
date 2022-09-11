@@ -301,6 +301,14 @@ const addDotToKks = number =>
 
 const filterItensBySlot = (itensList, slot, ignoreItensList, locale) => {
   const name = locale;
+  if (slot === 'shield' || slot === 'book') {
+    return itensList.filter(
+      item =>
+        ((item.slot === 'shield' || item.slot === 'book') &&
+          !ignoreItensList.includes(item[name])) ||
+        slot === 'All',
+    );
+  }
   return itensList.filter(
     item =>
       (item.slot === slot && !ignoreItensList.includes(item[name])) ||
