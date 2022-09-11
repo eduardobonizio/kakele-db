@@ -8,7 +8,7 @@ export default function OrePriceUpdater(props) {
   return (
     <>
       {ores.map(key => (
-        <div className="input-group mb-2" key={key}>
+        <div className="input-group mb-1" key={key}>
           <span className="input-group-text" id={`preco-${key}-bruto`}>
             {text[key]}
           </span>

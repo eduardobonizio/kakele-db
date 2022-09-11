@@ -3,7 +3,7 @@ import React from 'react';
 export default function InputCheckBox(props) {
   const { labelText, id, onChangeFunc, changeOnCheck } = props;
   return (
-    <div className="input-group mb-2">
+    <div className="input-group mb-1">
       <div className="input-group-text">
         <input
           className="form-check-input"

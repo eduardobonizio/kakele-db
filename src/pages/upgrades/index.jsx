@@ -109,7 +109,7 @@ export default function OreCalculator() {
           onChange={setDesiredUpgradeLvl}
           optionsArray={UPGRADES_STAGES}
         />
-        <div className="input-group mb-2">
+        <div className="input-group mb-1">
           <span className="input-group-text" id="how-many-items-to-forge">
             {text.howManyItems}
           </span>
@@ -139,7 +139,7 @@ export default function OreCalculator() {
         <ButtonForKakele onClick={calculateOres} text="Calcular" />
         {necessaryItens && (
           <div>
-            <h3>{text.necessaryItens}:</h3>
+            <h4>{text.necessaryItens}:</h4>
             <div>
               {text.kks}: {addDotToKks(necessaryItens.kks)}
             </div>

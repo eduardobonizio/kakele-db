@@ -3,7 +3,7 @@ import React from 'react';
 export default function UpgradeSelector(props) {
   const { elementId, labelText, onChange, optionsArray } = props;
   return (
-    <div className="input-group mb-2">
+    <div className="input-group mb-1">
       <label className="input-group-text" htmlFor={elementId}>
         {labelText}
       </label>
