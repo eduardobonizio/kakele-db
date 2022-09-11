@@ -267,7 +267,11 @@ const calculateUpgradePriceWithOresPrice = (totalOres, oresPrice) => {
   return { ...totalOres, kks: totalPrice };
 };
 
-const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
+const calculateOreQuantityAndPrice = (
+  startUpgradeLvl,
+  finishUpgradeLvl,
+  itemsToForge,
+) => {
   const result = UPGRADES_DATA.reduce(
     (current, nex) => {
       if (nex.upgrade <= startUpgradeLvl || nex.upgrade > finishUpgradeLvl)
@@ -293,7 +297,14 @@ const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
       kks: 0,
     },
   );
-  return result;
+  return {
+    cobre: result.cobre * itemsToForge,
+    estanho: result.estanho * itemsToForge,
+    prata: result.prata * itemsToForge,
+    ferro: result.ferro * itemsToForge,
+    ouro: result.ouro * itemsToForge,
+    kks: result.kks * itemsToForge,
+  };
 };
 
 const addDotToKks = number =>

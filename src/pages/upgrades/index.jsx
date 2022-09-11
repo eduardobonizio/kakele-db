@@ -48,6 +48,7 @@ export default function OreCalculator() {
     const totalOres = calculateOreQuantityAndPrice(
       startUpgradeLvl,
       desiredUpgradeLvl,
+      itemsToForge,
     );
 
     if (addOrePriceToTotal) {
@@ -140,22 +141,22 @@ export default function OreCalculator() {
           <div>
             <h3>{text.necessaryItens}:</h3>
             <div>
-              {text.kks}: {addDotToKks(necessaryItens.kks * itemsToForge)}
+              {text.kks}: {addDotToKks(necessaryItens.kks)}
             </div>
             <div>
-              {text.copperOre}: {necessaryItens.cobre * itemsToForge}
+              {text.copperOre}: {necessaryItens.cobre}
             </div>
             <div>
-              {text.tinOre}: {necessaryItens.estanho * itemsToForge}
+              {text.tinOre}: {necessaryItens.estanho}
             </div>
             <div>
-              {text.silverOre}: {necessaryItens.prata * itemsToForge}
+              {text.silverOre}: {necessaryItens.prata}
             </div>
             <div>
-              {text.ironOre}: {necessaryItens.ferro * itemsToForge}
+              {text.ironOre}: {necessaryItens.ferro}
             </div>
             <div>
-              {text.goldOre}: {necessaryItens.ouro * itemsToForge}
+              {text.goldOre}: {necessaryItens.ouro}
             </div>
           </div>
         )}
