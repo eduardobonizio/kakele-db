@@ -147,9 +147,6 @@ export default function SetMaker() {
             <KakeleItemsFilters statusPrincipal locale={locale} />
             <div className={styles.buttonsContainer}>
               <ButtonForKakele onClick={generateSet} text={text.generateSet} />
-              <Link href="/search-item" passHref locale={locale}>
-                <LinkButton text={text.searchItens} />
-              </Link>
               {showEquipAll && (
                 <Link href="/set-viewer" passHref locale={locale}>
                   <LinkButton text={text.equipAll} onClick={equipAllListed} />

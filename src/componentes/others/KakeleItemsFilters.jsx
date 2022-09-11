@@ -24,6 +24,7 @@ export default function KakeleItemsFilters(props) {
       slot,
       orderBy,
       rarity,
+      ignoreUltraRare,
     },
     actions: { updateFilter },
   } = useAppContext();
@@ -114,6 +115,7 @@ export default function KakeleItemsFilters(props) {
           <option value="Nature">{text.nature}</option>
         </select>
       </div>
+
       {manualFilters && (
         <>
           <div className="input-group mb-2">
@@ -152,7 +154,6 @@ export default function KakeleItemsFilters(props) {
               ))}
             </select>
           </div>
-
           <div className="input-group mb-2">
             <label className="input-group-text" htmlFor="filtro">
               {text.orderBy}
@@ -172,6 +173,18 @@ export default function KakeleItemsFilters(props) {
           </div>
         </>
       )}
+      <div className="input-group mb-2 d-flex">
+        <label className="input-group-text" htmlFor="flexSwitchCheckDefault">
+          <input
+            className="m-1"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+            onChange={() => updateFilter('ignoreUltraRare', !ignoreUltraRare)}
+            checked={ignoreUltraRare}
+          />
+          Ignore Super Rare Items
+        </label>
+      </div>
     </>
   );
 }

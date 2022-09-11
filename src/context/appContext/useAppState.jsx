@@ -26,6 +26,7 @@ const AppProvider = ({ children }) => {
     slot: 'All',
     orderBy: 'level',
     rarity: 'any',
+    ignoreUltraRare: false,
   };
 
   // Esse componente tem um estado, que será acessado por todos os outros
