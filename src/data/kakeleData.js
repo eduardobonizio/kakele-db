@@ -6537,7 +6537,7 @@ const equipments = [
     pt: 'Pá',
     id: 591,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
-    ignoreAcessorie: true,
+    ignoreAccessory: true,
   },
   {
     en: 'Fishing Rod',
@@ -6557,7 +6557,7 @@ const equipments = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 301,
-    ignoreAcessorie: true,
+    ignoreAccessory: true,
   },
   {
     en: 'Slingshot',
@@ -6596,7 +6596,7 @@ const equipments = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 302,
-    ignoreAcessorie: true,
+    ignoreAccessory: true,
   },
   {
     en: 'Crystal Pickaxe',
@@ -7908,7 +7908,7 @@ const weapons = [
     rarity: { en: 'Uncommom', pt: 'Incomum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 361,
-    ignoreAcessorie: true,
+    ignoreAccessory: true,
   },
   {
     en: 'Demon Axe',
@@ -7930,7 +7930,7 @@ const weapons = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 362,
-    ignoreAcessorie: true,
+    ignoreAccessory: true,
   },
   {
     en: 'Crown Axe',
