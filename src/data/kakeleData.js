@@ -761,6 +761,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 37,
+    ultraRare: true,
   },
   {
     en: 'Magical Straw Hat',
@@ -780,6 +781,7 @@ const equipments = [
     pt: 'Chapéu de palha mágico',
     id: 571,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Devil Hunter Helmet',
@@ -856,6 +858,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 40,
+    ultraRare: true,
   },
   {
     en: 'Undead Golden Dragon Scale Helmet',
@@ -875,6 +878,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 41,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Scale Helmet',
@@ -894,6 +898,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 43,
+    ultraRare: true,
   },
   {
     en: 'Kajin Helmet',
@@ -932,6 +937,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 42,
+    ultraRare: true,
   },
   {
     en: 'Dragon Winged Helmet',
@@ -951,6 +957,7 @@ const equipments = [
     pt: 'Elmo Alado de Dragão',
     id: 524,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Rainbow Helmet',
@@ -970,6 +977,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 44,
+    ultraRare: true,
   },
   {
     en: 'Wool Shirt',
@@ -1715,6 +1723,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 81,
+    ultraRare: true,
   },
   {
     en: 'Revenant Armor',
@@ -1810,6 +1819,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 85,
+    ultraRare: true,
   },
   {
     en: 'Undead Golden Dragon Scale Armor',
@@ -1829,6 +1839,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 86,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Scale Armor',
@@ -1848,6 +1859,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 87,
+    ultraRare: true,
   },
   {
     en: 'Kajin Armor',
@@ -1886,6 +1898,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 88,
+    ultraRare: true,
   },
   {
     en: 'Leather Boots',
@@ -2514,6 +2527,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 119,
+    ultraRare: true,
   },
   {
     en: 'Revenant Boots',
@@ -3318,6 +3332,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 158,
+    ultraRare: true,
   },
   {
     en: 'Ghostly Pirate Shield',
@@ -6265,6 +6280,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 290,
+    ultraRare: true,
   },
   {
     en: 'Golden Dragon Scale Legs',
@@ -6284,6 +6300,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 291,
+    ultraRare: true,
   },
   {
     en: 'Undead Golden Dragon Scale Legs',
@@ -6303,6 +6320,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 292,
+    ultraRare: true,
   },
   {
     en: 'Kajin Legs',
@@ -6360,6 +6378,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 295,
+    ultraRare: true,
   },
   {
     en: 'Crest of Air',
@@ -6379,6 +6398,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 296,
+    ultraRare: true,
   },
   {
     en: 'Crest of Time',
@@ -6398,6 +6418,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 297,
+    ultraRare: true,
   },
   {
     en: 'Hammer',
@@ -6436,6 +6457,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 298,
+    ultraRare: true,
   },
   {
     en: 'Crest of Earth',
@@ -6455,6 +6477,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 299,
+    ultraRare: true,
   },
   {
     en: 'Energy Totem',
@@ -6474,6 +6497,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 300,
+    ultraRare: true,
   },
   {
     en: 'Like A Boss',
@@ -6493,6 +6517,7 @@ const equipments = [
     pt: 'Like A Boss',
     id: 562,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Shovel',
@@ -6512,6 +6537,7 @@ const equipments = [
     pt: 'Pá',
     id: 591,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ignoreAcessorie: true,
   },
   {
     en: 'Fishing Rod',
@@ -6531,6 +6557,7 @@ const equipments = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 301,
+    ignoreAcessorie: true,
   },
   {
     en: 'Slingshot',
@@ -6569,6 +6596,7 @@ const equipments = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 302,
+    ignoreAcessorie: true,
   },
   {
     en: 'Crystal Pickaxe',
@@ -6588,6 +6616,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 303,
+    ultraRare: true,
   },
   {
     en: 'Rainbow Gauntlet',
@@ -6607,6 +6636,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 304,
+    ultraRare: true,
   },
   {
     en: 'Complete Rainbow Gauntlet',
@@ -6626,6 +6656,7 @@ const equipments = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 305,
+    ultraRare: true,
   },
 ];
 
@@ -7303,6 +7334,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 336,
+    ultraRare: true,
   },
   {
     en: 'Elder Vampire Glove',
@@ -7493,6 +7525,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 343,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Scale Glove',
@@ -7514,6 +7547,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 344,
+    ultraRare: true,
   },
   {
     en: 'Undead Golden Dragon Scale Glove',
@@ -7535,6 +7569,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 345,
+    ultraRare: true,
   },
   {
     en: 'Warlord Glove',
@@ -7556,6 +7591,7 @@ const weapons = [
     pt: 'Luva Warlord',
     id: 595,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Wooden Sword',
@@ -7872,6 +7908,7 @@ const weapons = [
     rarity: { en: 'Uncommom', pt: 'Incomum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 361,
+    ignoreAcessorie: true,
   },
   {
     en: 'Demon Axe',
@@ -7893,6 +7930,7 @@ const weapons = [
     rarity: { en: 'Commom', pt: 'Comum' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 362,
+    ignoreAcessorie: true,
   },
   {
     en: 'Crown Axe',
@@ -8505,6 +8543,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 388,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Axe',
@@ -8526,6 +8565,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 389,
+    ultraRare: true,
   },
   {
     en: 'Undead Golden Dragon Hammer',
@@ -8547,6 +8587,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 390,
+    ultraRare: true,
   },
   {
     en: 'Warlord Axe',
@@ -8568,6 +8609,7 @@ const weapons = [
     pt: 'Machado Warlord',
     id: 598,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Wooden Bow',
@@ -9517,6 +9559,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 432,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Bow',
@@ -9538,6 +9581,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 433,
+    ultraRare: true,
   },
   {
     en: 'Undead Golden Dragon Bow',
@@ -9559,6 +9603,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 434,
+    ultraRare: true,
   },
   {
     en: 'Warlord Bow',
@@ -9580,6 +9625,7 @@ const weapons = [
     pt: 'Arco Warlord',
     id: 601,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Candy Staff',
@@ -10274,6 +10320,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 466,
+    ultraRare: true,
   },
   {
     en: "Dragon Hunters' Staff",
@@ -10463,6 +10510,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 473,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Wand',
@@ -10484,6 +10532,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 474,
+    ultraRare: true,
   },
   {
     en: 'Golden Dragon Staff',
@@ -10505,6 +10554,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 475,
+    ultraRare: true,
   },
   {
     en: 'Warlord Staff',
@@ -10526,6 +10576,7 @@ const weapons = [
     pt: 'Cajado Warlord',
     id: 604,
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
+    ultraRare: true,
   },
   {
     en: 'Dagger',
@@ -11285,6 +11336,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 510,
+    ultraRare: true,
   },
   {
     en: 'Undead Dragon Sword',
@@ -11474,6 +11526,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 517,
+    ultraRare: true,
   },
   {
     en: 'Chromatic Golden Dragon Sword',
@@ -11495,6 +11548,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 518,
+    ultraRare: true,
   },
   {
     en: 'Golden Dragon Sword',
@@ -11516,6 +11570,7 @@ const weapons = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 519,
+    ultraRare: true,
   },
   {
     en: 'Warlord Sword',
@@ -11537,6 +11592,7 @@ const weapons = [
     rarity: { en: 'Legendary', pt: 'Legendário' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 520,
+    ultraRare: true,
   },
 ];
 const UPGRADES_DATA = [
