@@ -29,7 +29,7 @@ import { useRouter } from 'next/router';
 
 export default function SetMaker() {
   const {
-    state: { level, element, characterClass, mainStat },
+    state: { level, element, characterClass, mainStat, ignoreUltraRare },
     actions: { updateFilter },
   } = useAppContext();
   const { locale, locales } = useRouter();
@@ -59,6 +59,7 @@ export default function SetMaker() {
           ignoreThisSlotsElement,
           element,
           locale,
+          ignoreUltraRare,
         ),
       ),
     );

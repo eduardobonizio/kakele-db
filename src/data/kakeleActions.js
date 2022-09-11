@@ -301,7 +301,6 @@ const addDotToKks = number =>
 
 const filterItensBySlot = (itensList, slot, ignoreItensList, locale) => {
   const name = locale;
-
   return itensList.filter(
     item =>
       (item.slot === slot && !ignoreItensList.includes(item[name])) ||
@@ -410,6 +409,13 @@ const skipItemSlot = (characterClass, slot) => {
   return false;
 };
 
+const filteredUltraRareItems = (itensList, ignoreUltraRare) => {
+  if (ignoreUltraRare) {
+    return itensList.filter(item => item.ultraRare !== true);
+  }
+  return itensList;
+};
+
 const findBestSet = (
   itensList,
   mainStat,
@@ -419,13 +425,19 @@ const findBestSet = (
   ignoreSlotElementList,
   element,
   language,
+  ignoreUltraRare,
 ) => {
   if (skipItemSlot(characterClass, slot)) return false;
 
   const ignoreElement = ignoreSlotElementList.includes(slot);
 
-  const { itensFilteredBySlot, itensFilteredBySlotAndElement } = filterItens(
+  const checkedUltraRareItemsList = filteredUltraRareItems(
     itensList,
+    ignoreUltraRare,
+  );
+
+  const { itensFilteredBySlot, itensFilteredBySlotAndElement } = filterItens(
+    checkedUltraRareItemsList,
     slot,
     ignoredItens,
     element,
