@@ -4937,6 +4937,7 @@ const equipments = [
     rarity: { en: 'Rare', pt: 'Raro' },
     itemBonus: { attack: 0, armor: 0, magic: 0, bless: 0 },
     id: 228,
+    ultraRare: true,
   },
   {
     en: 'Draconic Gems Necklace',
