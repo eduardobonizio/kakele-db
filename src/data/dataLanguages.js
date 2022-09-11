@@ -168,6 +168,7 @@ const kakeleItemsFiltersJsx = {
     itemSlot: 'Item slot',
     orderBy: 'Order by',
     itemRarity: 'Rarity',
+    ignoreSuperRareItems: 'Ignore Super Rare Items',
   },
   pt: {
     itemName: 'Nome do item',
@@ -191,6 +192,7 @@ const kakeleItemsFiltersJsx = {
     itemSlot: 'Slot do item',
     orderBy: 'Ordenar por',
     itemRarity: 'Raridade',
+    ignoreSuperRareItems: 'Ignorar itens muito raros',
   },
 };
 const oreCalculatorJsx = {

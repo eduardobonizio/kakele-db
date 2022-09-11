@@ -182,7 +182,7 @@ export default function KakeleItemsFilters(props) {
             onChange={() => updateFilter('ignoreUltraRare', !ignoreUltraRare)}
             checked={ignoreUltraRare}
           />
-          Ignore Super Rare Items
+          {text.ignoreSuperRareItems}
         </label>
       </div>
     </>
