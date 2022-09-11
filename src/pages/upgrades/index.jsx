@@ -21,6 +21,7 @@ export default function OreCalculator() {
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [desiredUpgradeLvl, setDesiredUpgradeLvl] = useState(0);
   const [necessaryItens, setNecessaryItens] = useState();
+  const [itemsToForge, setItemsToForge] = useState(1);
   const [showAlert, setShowAlert] = useState(false);
   const [addOrePriceToTotal, setAddOrePriceToTotal] = useState(false);
   const [oresPrice, setOresPrice] = useState({
@@ -30,6 +31,12 @@ export default function OreCalculator() {
     ironPrice: 0,
     goldPrice: 0,
   });
+
+  const updateItemsQuantityToForge = value => {
+    if (value < 2) return setItemsToForge(1);
+    if (value > 30) return setItemsToForge(30);
+    setItemsToForge(value);
+  };
 
   const calculateOres = () => {
     if (startUpgradeLvl >= desiredUpgradeLvl) {
@@ -101,6 +108,20 @@ export default function OreCalculator() {
           onChange={setDesiredUpgradeLvl}
           optionsArray={UPGRADES_STAGES}
         />
+        <div className="input-group mb-2">
+          <span className="input-group-text" id="how-many-items-to-forge">
+            {text.howManyItems}
+          </span>
+          <input
+            type="number"
+            className="form-control"
+            placeholder={text.howManyItemsTollTip}
+            aria-label={text.howManyItemsTollTip}
+            aria-describedby="how-many-items-to-forge"
+            value={itemsToForge}
+            onChange={e => updateItemsQuantityToForge(e.target.value)}
+          />
+        </div>
         <InputCheckBox
           labelText={text.buyOres}
           id="adicionarPrecoMinerios"
@@ -119,22 +140,22 @@ export default function OreCalculator() {
           <div>
             <h3>{text.necessaryItens}:</h3>
             <div>
-              {text.kks}: {addDotToKks(necessaryItens.kks)}
+              {text.kks}: {addDotToKks(necessaryItens.kks * itemsToForge)}
             </div>
             <div>
-              {text.copperOre}: {necessaryItens.cobre}
+              {text.copperOre}: {necessaryItens.cobre * itemsToForge}
             </div>
             <div>
-              {text.tinOre}: {necessaryItens.estanho}
+              {text.tinOre}: {necessaryItens.estanho * itemsToForge}
             </div>
             <div>
-              {text.silverOre}: {necessaryItens.prata}
+              {text.silverOre}: {necessaryItens.prata * itemsToForge}
             </div>
             <div>
-              {text.ironOre}: {necessaryItens.ferro}
+              {text.ironOre}: {necessaryItens.ferro * itemsToForge}
             </div>
             <div>
-              {text.goldOre}: {necessaryItens.ouro}
+              {text.goldOre}: {necessaryItens.ouro * itemsToForge}
             </div>
           </div>
         )}

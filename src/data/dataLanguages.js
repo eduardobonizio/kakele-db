@@ -223,6 +223,8 @@ const oreCalculatorJsx = {
     ironPrice: 'Iron ore price',
     goldPrice: 'Gold ore price',
     alert: 'Current upgrade must be greater then desired upgrade',
+    howManyItems: 'How many items',
+    howManyItemsTollTip: 'Forge quantity',
   },
   pt: {
     title: 'Calculadora de upgrade - Kakele MMORPG',
@@ -245,6 +247,8 @@ const oreCalculatorJsx = {
     ironPrice: 'Preço Ferro Bruto',
     goldPrice: 'Preço Ouro Bruto',
     alert: 'A forja desejada tem que ser maior que a forja atual',
+    howManyItems: 'Quantos itens',
+    howManyItemsTollTip: 'Quantidade de forjas',
   },
 };
 
