@@ -47,7 +47,7 @@ const UpdateItems = () => {
 
   // Pegar o ultimo ID no arquivo KakeleData.js
   // Novo equip começa em 607
-  const LAST_ID = 606;
+  const LAST_ID = 638;
 
   const manageItens = (tempItems, items) => {
     let lastId = LAST_ID + 1;
