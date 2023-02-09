@@ -1,6 +1,7 @@
 import { equipments, weapons } from '../../../data/kakeleData';
 import tempWeapons from '../../../data/tempWeapons.json';
 import tempEquips from '../../../data/tempEquips.json';
+import newItems from '../../../data/newItems.json';
 import copy from 'copy-to-clipboard';
 
 const UpdateItems = () => {
@@ -44,10 +45,12 @@ const UpdateItems = () => {
   //   }
   // };
 
+  // Pegar o ultimo ID no arquivo KakeleData.js
+  // Novo equip começa em 607
+  const LAST_ID = 606;
+
   const manageItens = (tempItems, items) => {
-    // Pegar o ultimo ID no arquivo KakeleData.js
-    // Novo equip começa em 568
-    let lastId = 592;
+    let lastId = LAST_ID + 1;
 
     const updatedItens = tempItems.map(item => {
       const oldItem = items.find(i => i.en === item.en);
@@ -80,10 +83,25 @@ const UpdateItems = () => {
 
   const getAllNewItens = () => {
     const newItens = [...tempEquips, ...tempWeapons].filter(
-      item => item.id > 567,
+      item => item.id > LAST_ID,
     );
     copy(JSON.stringify(newItens));
   };
+
+  const addPtFromNewItemsToTempItems = (tempItems, newItems) => {
+    const updated = tempItems.map(item => {
+      const newItem = newItems.find(i => i.en === item.en);
+      if (newItem)
+        return {
+          ...item,
+          ...newItem,
+        };
+
+      return item;
+    });
+    copy(JSON.stringify(updated));
+  };
+
   return (
     <div className="container">
       <div className="d-flex flex-column align-items-center">
@@ -104,7 +122,19 @@ const UpdateItems = () => {
           Adicionar propriedades as Temp Weapons
         </button>
         <button className="mb-1" onClick={() => getAllNewItens()}>
-          Copy new items
+          Copiar novos items
+        </button>
+        <button
+          className="mb-1"
+          onClick={() => addPtFromNewItemsToTempItems(tempEquips, newItems)}
+        >
+          Adcionar PT aos tempEquips
+        </button>
+        <button
+          className="mb-1"
+          onClick={() => addPtFromNewItemsToTempItems(tempWeapons, newItems)}
+        >
+          Adcionar PT as tempWeapons
         </button>
       </div>
     </div>
